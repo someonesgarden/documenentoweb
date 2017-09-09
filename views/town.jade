@@ -1,0 +1,103 @@
+extends layout
+
+block header
+    link(rel='stylesheet', href='/css/style.css')
+
+block content
+
+    div#loader
+        p
+    a-scene
+        a-assets
+            video#er_ginza(src="./media/er/ginza.mp4", muted, autoplay,loop="true")
+            //video#er_setagata(src="./media/er/setagaya.mp4", muted, autoplay,loop="true")
+
+            img#img_er_akiba_night(src="./img/er/akiba-night.jpg")
+            img#img_er_hakozaki_night(src="./img/er/hakozaki-night.jpg")
+            img#img_er_shinbashi(src="./img/er/shinbashi.jpg")
+            img#img_er_swit(src="./img/vr/switzerland.jpg")
+
+            img#as_grid(src="./img/grid.png", crossorigin="anonymous")
+            img#as_yataimura(src="./img/vr/thumb/tokyo-01.jpg")
+            img#as_kaidokafe(src="./img/vr/thumb/tokyo-02.jpg")
+            img#as_matsumoto(src="./img/vr/thumb/tokyo-03.jpg")
+            img#as_waterline(src="./img/vr/thumb/tokyo-04.jpg")
+            img#docu_board(src="./img/docu/docu-board.png")
+
+        a-sky#sky(src="#er_ginza")
+
+        a-curvedimage#cu_yataimura(src="#as_yataimura", transparent="true", height="2", radius="3", theta-length="40", rotation="0 240 0", position="0 0 -2")
+        a-curvedimage#cu_kaidokafe(src="#as_kaidokafe", transparent="true", height="2", radius="3", theta-length="40", rotation="0 190 0", position="0 0 -2")
+        a-curvedimage#cu_matsumoto(src="#as_matsumoto", transparent="true", height="2", radius="3", theta-length="40", rotation="0 130 0", position="0 0 -2")
+        a-curvedimage#cu_waterline(src="#as_waterline", transparent="true", height="2", radius="3", theta-length="40", rotation="0 80 0", position="0 0 -2")
+
+        a-curvedimage#cu_yataimura2(src="#as_yataimura", transparent="true", height="2", radius="3", theta-length="40", rotation="0 -18 0", position="0 0 0.6")
+        a-curvedimage#cu_waterline2(src="#as_waterline", transparent="true", height="2", radius="3", theta-length="40", rotation="0 -68 0", position="0 0 0.6")
+        a-curvedimage#cu_kaidokafe2(src="#as_kaidokafe", transparent="true", height="2", radius="3", theta-length="40", rotation="0 30 0", position="0 0 0.6")
+
+        a-entity
+            a-entity(camera, look-controls, wasd-controls)
+                a-entity(position="0 0 -3", scale="0.2 0.2 0.2", geometry="primitive:ring;radiusOuter:0.20;radiusInner:0.13;", material="color:#ADD8E6;shader:flat", cursor="maxDistance:30; fuse:true")
+                    a-animation(begin="click", easing="ease-in", attribute="scale", fill="backwards", from="0.1 0.1 0.1", to="1 1 1", dur="150")
+                    a-animation(begin="fusing", easing="ease-in", attribute="scale", fill="forwards", from="1 1 1", to="0.2 0.2 0.2", dur="1500")
+
+    script.
+
+        var scene = document.querySelector('a-scene');
+        var run = function () {
+            document.getElementById("loader").classList.add("hidden");
+
+            //
+            scene.enterVR();
+
+            setTimeout(function () {
+                scene.enterVR();
+            }, 100);
+
+        }
+        if (scene.hasLoaded) {
+            run();
+
+        } else {
+            scene.addEventListener('loaded', run);
+        }
+
+        document.querySelector("#cu_yataimura").addEventListener('click', function(){
+            console.log("cu_horseshoe");
+            document.getElementById("sky").setAttribute("src","#img_er_akiba_night");
+
+        });
+
+        document.querySelector("#cu_kaidokafe").addEventListener('click', function(){
+            console.log("cu_atlantic");
+            document.getElementById("sky").setAttribute("src","#img_er_hakozaki_night");
+        });
+
+        document.querySelector("#cu_matsumoto").addEventListener('click', function(){
+            console.log("cu_swit");
+
+            location.href = "/vrtheatre";
+        });
+
+        document.querySelector("#cu_waterline").addEventListener('click', function(){
+            console.log("cu_bcplace");
+            document.getElementById("sky").setAttribute("src","#img_er_shinbashi");
+        });
+
+        document.querySelector("#cu_yataimura2").addEventListener('click', function () {
+            console.log("cu_bcplace");
+            document.getElementById("sky").setAttribute("src", "#er_ginza");
+        });
+
+        document.querySelector("#cu_waterline2").addEventListener('click', function () {
+            console.log("cu_bcplace");
+            document.getElementById("sky").setAttribute("src", "#img_er_shinbashi");
+        });
+
+
+        document.querySelector("#cu_kaidokafe2").addEventListener('click', function () {
+            console.log("cu_atlantic");
+            document.getElementById("sky").setAttribute("src", "#img_er_swit");
+        });
+
+

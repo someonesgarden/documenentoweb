@@ -1,0 +1,24 @@
+{
+  "name": "aframenode",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Daisuke Nishimura <d@someonesgarden.org>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html2canvas": "^0.4.1",
+    "aframe": "^0.6.1",
+    "jquery": "^3.2.1",
+    "d3": "3.5.17"
+  }
+}

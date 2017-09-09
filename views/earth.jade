@@ -1,0 +1,87 @@
+extends layout
+
+block header
+  link(rel='stylesheet', href='/css/style.css')
+
+block content
+
+    div#loader
+        p loading...
+
+    div#target1.target
+        img(src="img/aframe-logo.jpg")
+        div.cf
+            a(href="http://yahoo.co.jp")
+                h3 A-Frame
+            p A-Frameは簡単にWeb VRが実現できるフレームワークです。
+        p.detail 320px × 200px
+
+    div#target2.target
+        img(src="img/aframe-logo.jpg")
+        div.cf
+            h3 A-Frame
+            p A-Frameは簡単にWeb VRが実現できるフレームワークです。
+        p.detail 320px × 200px
+
+    div#target3.target
+        img(src="img/aframe-logo.jpg")
+        div.cf
+            h3 A-Frame
+            p A-Frameは簡単にWeb VRが実現できるフレームワークです。
+        p.detail 320px × 200px
+    div#target4.target
+        img(src="img/aframe-logo.jpg")
+        div.cf
+            h3 A-Frame
+            p A-Frameは簡単にWeb VRが実現できるフレームワークです。
+        p.detail 320px × 200px
+    div#target5.target
+        img(src="img/aframe-logo.jpg")
+        div.cf
+            h3 A-Frame
+            p A-Frameは簡単にWeb VRが実現できるフレームワークです。
+        p.detail 320px × 200px
+    div#target6.target
+        img(src="img/aframe-logo.jpg")
+        div.cf
+            h3 A-Frame
+            p A-Frameは簡単にWeb VRが実現できるフレームワークです。
+        p.detail 320px × 200px
+
+
+
+    a-scene
+        a-assets
+            img#sky(src="./img/sunrise.jpg")
+            img(src="./img/grid.png", crossorigin="anonymous", id="grid")
+
+        a-entity(position="0 -10 0", rotation="-90 0 0", geometry="primitive:plane; width:10000;height:10000;", material="src:#grid; repeat:10000 10000; transparent: true;metalness:0.6, roughness: 0.4; sphericalEnvMap: #sky;")
+
+        a-sky(src="#sky", rotation="0 -90 0")
+
+        a-entity(scale="4 4 4 ", geometry="primitive:box;", position="0 4 -10", material="color: #c5b2a0; metalness:1, roughness:0.3; sphericalEnvMap: #sky")
+            a-animation(easing="linear", attribute="rotation", dur="10000", to="0 0 360", repeat="infinite")
+
+        a-entity(light="color:red;intensity:0.5;", position="-5 5 15")
+
+        a-plane(position="-18  6 0", width="16", height="10", material="shader:html;target: #target1;")
+        a-plane(position="  0  6 0", width="16", height="10", material="shader:html;target: #target2;")
+        a-plane(position=" 18  6 0", width="16",  height="10", material="shader:html;target: #target3;")
+        a-plane(position="-18 -6 0", width="16",  height="10", material="shader:html;target: #target4;")
+        a-plane(position="  0 -6 0", width="16",  height="10", material="shader:html;target: #target5;")
+        a-plane(position=" 18 -6 0", width="16",  height="10", material="shader:html;target: #target6;")
+
+        a-entity(camera, wasd-controls, look-controls, position="0 0 20")
+
+    script.
+
+        var scene = document.querySelector('a-scene');
+        var run = function () {
+            document.getElementById("loader").classList.add("hidden");
+        }
+        if (scene.hasLoaded) {
+            run();
+        } else {
+            scene.addEventListener('loaded', run);
+        }
+

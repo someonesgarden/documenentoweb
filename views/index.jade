@@ -1,0 +1,121 @@
+extends layout
+
+block header
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/loader.css')
+
+block content
+
+    div#loader(style="position: absolute; height: 100%; width: 100%;"): div.spinner
+    div(style="position: absolute; height: 100%; width: 100%;")
+
+        a-scene
+            a-assets
+                a-asset-item#small-mtl(src="assets/models/camerahouse/small.mtl")
+                a-asset-item#small-obj(src="assets/models/camerahouse/small.obj")
+                a-asset-item#large-obj(src="assets/models/camerahouse/large.obj")
+                img#img_doculogo(src="assets/img/documement2.png")
+                img#img_shinagawajuku(src="assets/img/shinagawajuku.png")
+                img#img_aboutfes(src="assets/img/about_fes.png")
+                img#img_bug(src="assets/img/bugs.png")
+                img#img_businessman(src="assets/img/businessman.png")
+                img#img_shadow(src="assets/img/radial-shadow-2.png")
+
+
+            a-curvedimage#doculogo(src="#img_doculogo", radius="5.7", theta-length="36", height="3", position="0 2.8 -1", opacity="0.82")
+                a-animation(attribute="rotation", from="0 10 0", to="0 200 0", delay="500", dur="1000")
+
+            a-entity#model_small(position="0 0 -3")
+                a-animation(attribute="rotation", from="0 -30 0", to="0 330 0", dur="15000", easing="linear", repeat="indefinite")
+                a-collada-model(position="-.35 0 .55", rotation="0 -20 0", scale="1.5 1.5 1.5", obj-model="obj: #small-obj; mtl: #small-mtl")
+                a-image#shadow(src="#img_shadow", rotation="-90 0 0", scale="2.5 1.5 1.5")
+
+            a-entity#model_large(position="0 0 -3")
+                a-animation(attribute="rotation", from="0 330 0", to="0 -30 0", dur="20000", repeat="indefinite", easing="linear")
+                a-collada-model(position="-.35 0 .55", rotation="0 -20 0", scale="1.5 1.5 1.5", obj-model="obj: #large-obj; mtl: #small-mtl")
+
+            a-image#businessman.newspanel(src="#img_businessman", width="7", height="5", scale="0.2 0.5 0.2", auto_rotate_y, mode="-1", auto_rotate_rate="1")
+                a-animation(attribute="position", from="0 2.8 -6", to="2.25 2.8 -6", delay="1000", dur="1000")
+
+            a-entity#bug
+                a-cylinder#bug_cylinger(color="#121343", height="0.02", radius="0.8", auto_rotate_z, mode="-1")
+                    a-animation(attribute="rotation", from="-270 0 0", to="-90 0 0", dur="750", delay="1000", fill="both")
+                    a-animation(attribute="position", from="8 0 -9", to="8 3.5 -9", dur="750", delay="1000", fill="both")
+                    a-image(src="#img_bug", width="2", height="1", rotation="90 0 0", position="-0.05 -.086 0", scale=".8 1.3 .8")
+
+            a-curvedimage#about_fes(src="#img_aboutfes", radius="9.2", theta-length="18", height="2.4", position="0 0.92 0", scale=".4 .4 .4")
+                a-animation(attribute="rotation", from="0 180 0", to="0 213 0", delay="750", dur="1000")
+
+            a-curvedimage#about_town(src="#img_shinagawajuku", radius="11.5", theta-length="18", height="1.7", position="0 0.85 0", scale=".36 .60 .36")
+                a-animation(attribute="rotation", from="0 180 0", to="0 130 0", delay="750", dur="1000")
+
+            a-entity
+                a-cylinder(position="0 0.5 0", radius="6", height="1.6", side="back", open-ended="true", color="#FFF")
+
+            a-sky(color="#ECECEC")
+            a-light(type="directional", color="#fff", intensity="0.2", position="-1 2 1")
+            a-light(type="ambient", color="#fff")
+            a-entity(position="0 1.5 0")
+                a-entity#camera(camera, look-controls, wasd-controls, mouse-cursor)
+                    a-entity#cursor(position=cursor_out_pos, scale="0.2 0.2 0.2", geometry="primitive:ring;radiusOuter:0.20;radiusInner:0.13;", material="color:#ADD8E6;shader:flat", cursor="maxDistance:100; fuse:true;")
+                        a-animation(begin="click", easing="ease-in", attribute="scale", fill="backwards", from="0.1 0.1 0.1", to="1 1 1", dur="150")
+                        a-animation(begin="fusing", easing="ease-in", attribute="scale", fill="forwards", from="1 1 1", to="0.2 0.2 0.2", dur="1200")
+
+    script.
+        var cursor_out_pos = "0 12.2 -1.3";
+        var cursor_in_pos = "0 0.2 -1.3";
+        var scene = document.querySelector('a-scene');
+        var run = function () {
+            return document.getElementById("loader").classList.add("hidden");
+        };
+        if (scene.hasLoaded) {
+            run();
+        }
+        else {
+            scene.addEventListener('loaded', run);
+        }
+        //ENTER / EXIT VR
+        document.querySelector('a-scene').addEventListener('enter-vr', function () {
+            console.log("ENTERED VR");
+            var cursor = document.querySelector("#cursor");
+            cursor.setAttribute('position', cursor_in_pos);
+        });
+        document.querySelector('a-scene').addEventListener('exit-vr', function () {
+            console.log("EXIT VR");
+            var cursor = document.querySelector("#cursor");
+            cursor.setAttribute('position', cursor_out_pos);
+        });
+
+        ////////// CLICK EVENT
+        document.querySelector("#doculogo").addEventListener('click', function () {
+            console.log("logo");
+        });
+
+        document.querySelector("#bug").addEventListener('click', function () {
+            var img_cylinder = this.querySelector("#bug_cylinger");
+            var mode = img_cylinder.getAttribute("mode");
+            img_cylinder.setAttribute("mode", mode * (-1));
+        });
+
+        document.querySelector(".newspanel").addEventListener('click', function () {
+            console.log(this.getAttribute("id"));
+            var mode = this.getAttribute("mode");
+            this.setAttribute("mode", mode * (-1));
+        });
+
+        document.querySelector("#doculogo").addEventListener('click', function(){
+           console.log("Docu Logo");
+        });
+
+        document.querySelector("#about_fes").addEventListener('click', function(){
+            console.log("About Fes");
+        });
+
+        document.querySelector("#about_town").addEventListener('click', function(){
+           console.log("About Town");
+        });
+
+
+
+
+    script(src="js/aframe/components/index.js")

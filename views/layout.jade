@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+
+    script.
+      window.WebVRConfig = {
+        BUFFER_SCALE: 1,
+      CARDBOARD_UI_DISABLED: true,
+      ROTATE_INSTRUCTIONS_DISABLED: true,
+      TOUCH_PANNER_DISABLED: true,
+      MOUSE_KEYBOARD_CONTROLS_DISABLED: true
+      };
+
+    script(src="vendor/jquery/dist/jquery.js")
+    script(src="vendor/d3/d3.js")
+    script(src="vendor/aframe/dist/aframe-master.js")
+    script(src="vendor/aframe-html-shader/dist/aframe-html-shader.min.js")
+    script(src="vendor/html2canvas/build/html2canvas.min.js")
+    script(src="js/aframe-mouse-cursor-component.min.js")
+    link(rel="stylesheet", href="css/style.css")
+
+    block header
+
+  body
+    block content
+
+

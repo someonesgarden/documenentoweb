@@ -1,0 +1,73 @@
+extends layout
+
+block header
+  link(rel='stylesheet', href='/css/style.css')
+
+block content
+
+    div#loader
+        p loading...
+
+    a-scene
+        a-assets
+            img#as_sky(src="./img/sunrise.jpg")
+            img#as_grid(src="./img/grid.png", crossorigin="anonymous")
+            img#as_atlantic(src="./img/vr/thumb/atlanticthumb.jpg")
+            img#as_bcplace(src="./img/vr/thumb/bcplacethumb.jpg")
+            img#as_swit(src="./img/vr/thumb/switzerlandthumb.jpg")
+            img#as_horseshoe(src="./img/vr/thumb/horsethumb.jpg")
+
+        a-sky#sky(src="#as_sky")
+
+        a-curvedimage#cu_swit(src="#as_swit", transparent="true", height="2", radius="3", theta-length="40", rotation="0 240 0", position="0 0 -2")
+        a-curvedimage#cu_horseshoe(src="#as_horseshoe", transparent="true", height="2", radius="3", theta-length="40", rotation="0 190 0", position="0 0 -2")
+        a-curvedimage#cu_atlantic(src="#as_atlantic", transparent="true", height="2", radius="3", theta-length="40", rotation="0 130 0", position="0 0 -2")
+        a-curvedimage#cu_bcplace(src="#as_bcplace", transparent="true", height="2", radius="3", theta-length="40", rotation="0 80 0", position="0 0 -2")
+
+        a-entity
+            a-entity(camera, look-controls, wasd-controls)
+                a-entity(position="0 0 -3", scale="0.2 0.2 0.2", geometry="primitive:ring;radiusOuter:0.20;radiusInner:0.13;", material="color:#ADD8E6;shader:flat", cursor="maxDistance:30; fuse:true")
+                    a-animation(begin="click", easing="ease-in", attribute="scale", fill="backwards", from="0.1 0.1 0.1", to="1 1 1", dur="150")
+                    a-animation(begin="fusing", easing="ease-in", attribute="scale", fill="forwards", from="1 1 1", to="0.2 0.2 0.2", dur="1500")
+
+    script.
+
+        var scene = document.querySelector('a-scene');
+        var run = function () {
+            document.getElementById("loader").classList.add("hidden");
+
+            //
+            scene.enterVR();
+
+            setTimeout(function () {
+                scene.enterVR();
+            }, 100);
+
+        }
+        if (scene.hasLoaded) {
+            run();
+
+        } else {
+            scene.addEventListener('loaded', run);
+        }
+
+        document.querySelector("#cu_horseshoe").addEventListener('click', function(){
+           console.log("cu_horseshoe");
+            document.getElementById("sky").setAttribute("src","img/vr/horseshoe.jpg");
+
+        });
+
+        document.querySelector("#cu_atlantic").addEventListener('click', function(){
+           console.log("cu_atlantic");
+            document.getElementById("sky").setAttribute("src","img/vr/atlantic.jpg");
+        });
+
+        document.querySelector("#cu_swit").addEventListener('click', function(){
+           console.log("cu_swit");
+            document.getElementById("sky").setAttribute("src","img/vr/switzerland.jpg");
+        });
+
+        document.querySelector("#cu_bcplace").addEventListener('click', function(){
+           console.log("cu_bcplace");
+            document.getElementById("sky").setAttribute("src","img/vr/bcplace.jpg");
+        });

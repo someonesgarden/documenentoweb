@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>3D Interactive Hotel Room</title>
+
+    <script>
+        /* WebVR初期設定 */
+        window.WebVRConfig = {
+            BUFFER_SCALE: 1,
+            CARDBOARD_UI_DISABLED: true,
+            ROTATE_INSTRUCTIONS_DISABLED: true,
+            TOUCH_PANNER_DISABLED: true,
+            MOUSE_KEYBOARD_CONTROLS_DISABLED: true
+        };
+    </script>
+    <script src="vendor/aframe/dist/aframe-master.js"></script>
+    <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
+    <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+    <script src="vendor/aframe-html-shader/dist/aframe-html-shader.min.js"></script>
+    <script src="vendor/html2canvas/build/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Oswald:700|Poppins:500|Ubuntu:500" rel="stylesheet">
+    <link rel="stylesheet" href="css/hotel.css">
+
+</head>
+<body>
+
+<div id="loader">
+    <p>loading...</p>
+</div>
+
+<div id="ja_room1" class="target">
+    <img src="img/samurai.png" alt="A-Frame">
+    <div class="cf"><h3>Room1</h3><p>本文です。</p></div>
+    <p class="detail">カテゴリーなど。</p>
+</div>
+
+<div id="ja_room2" class="target">
+    <img src="img/samurai.png" alt="A-Frame">
+    <div class="cf"><h3>Room2</h3><p>本文です。</p></div>
+    <p class="detail">カテゴリーなど。</p>
+</div>
+
+
+<div id="ja_technoroom" class="target">
+    <img src="img/samurai.png" alt="A-Frame">
+    <div class="cf"><h3>Technoroom</h3><p>本文です。</p></div>
+    <p class="detail">カテゴリーなど。</p>
+</div>
+
+<div id="ja_visitbeach" class="target">
+    <img src="img/samurai.png" alt="A-Frame">
+    <div class="cf"><h3>Visit Beach</h3><p>本文です。</p></div>
+    <p class="detail">カテゴリーなど。</p>
+</div>
+
+<div id="ja_visitcoast" class="target">
+    <img src="img/samurai.png" alt="A-Frame">
+    <div class="cf"><h3>Visit Coast</h3><p>本文です。</p></div>
+    <p class="detail">カテゴリーなど。</p>
+</div>
+
+
+
+<a-scene>
+    <a-assets>
+        <video src="media/er/hotel/room1.mp4" id="room1_vid" autoplay></video>
+        <video src="media/er/hotel/room2.mp4" id="room2_vid"></video>
+        <video src="media/er/hotel/visitbeach.mp4" id="visitbeach_vid"></video>
+        <video src="media/er/hotel/visitcoast.mp4" id="visitcoast_vid"></video>
+        <video src="media/er/hotel/technoroom.mp4" id="technoroom_vid"></video>
+    </a-assets>
+
+
+    <a-entity position="0 2.2 4">
+        <a-entity camera look-controls wasd-controls>
+            <a-entity position="0 0 -3" geometry="primitive:ring;radiusOuter:0.30;radiusInner:0.20;" material="color:olive" cursor="fuse:true">
+                <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+                <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+            </a-entity>
+        </a-entity>
+    </a-entity>
+
+    <a-plane cbackgnd id="room1" position="5 0 -4" width="5" height="2.5" material="shader:html;target:#ja_room1;opacity:0.98;"></a-plane>
+    <a-plane cbackgnd id="room2" position="5 3 -4" width="5" height="2.5" material="shader:html;target:#ja_room2;opacity:0.98;"></a-plane>
+    <a-plane cbackgnd id="technoroom" position="5 6 -4" width="5" height="2.5" material="shader:html;target:#ja_technoroom;opacity:0.98;"></a-plane>
+    <a-plane cbackgnd id="visitbeach" position="5 9 -4" width="5" height="2.5" material="shader:html;target:#ja_visitbeach;opacity:0.98;"></a-plane>
+    <a-plane cbackgnd id="visitcoast" position="5 12 -4" width="5" height="2.5" material="shader:html;target:#ja_visitcoast;opacity:0.98;"></a-plane>
+
+    <a-videosphere src="#room1_vid" id="backgnd"></a-videosphere>
+
+    <!--<a-sky color="red"></a-sky>-->
+</a-scene>
+<script>
+    var scene = document.querySelector('a-scene');
+    var run = function () {
+        document.getElementById("loader").classList.add("hidden");
+    }
+
+    if (scene.hasLoaded) {
+        run();
+    } else {
+        scene.addEventListener('loaded', run);
+    }
+
+    AFRAME.registerComponent('cbackgnd', {
+
+        init:function(){
+            this.el.addEventListener('click',function(){
+
+                var next_clicked_id = this.getAttribute("id");// get the id of the clicked text
+                var backgnd_el = document.getElementById("backgnd"); // get the element for the background
+                var next_vid_src = "#"+ next_clicked_id +"_vid"; // make the src using the current id
+                var current_vid_src = backgnd_el.getAttribute("src"); // get the previous
+                var current_vid_id = current_vid_src.substring(1, current_vid_src.length);
+                var current_vid_el = document.getElementById(current_vid_id);
+                var next_vid_el = document.getElementById(next_clicked_id +"_vid");
+                current_vid_el.pause();
+                backgnd_el.setAttribute('src',next_vid_src);
+                next_vid_el.play();
+
+            });
+        }
+
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

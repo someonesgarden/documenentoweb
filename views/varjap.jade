@@ -1,0 +1,100 @@
+extends layout
+
+block header
+  link(rel='stylesheet', href='/css/style.css')
+
+block content
+
+    div#loader
+        p loading...
+
+    div#target1.target
+        img(src="img/vr/thumb/film_thumb.jpg")
+        div.cf
+            h3 タイトル
+            p ダミーテキスト。ダミーテキスト。
+        p.detail 320px × 200px
+
+    div#target2.target
+        img(src="img/vr/thumb/film_thumb.jpg")
+        div.cf
+            h3 タイトル
+            p ダミーテキスト。ダミーテキスト。
+        p.detail 320px × 200px
+
+    div#target3.target
+        img(src="img/vr/thumb/film_thumb.jpg")
+        div.cf
+            h3 タイトル
+            p ダミーテキスト。ダミーテキスト。
+        p.detail 320px × 200px
+    div#target4.target
+        img(src="img/vr/thumb/film_thumb.jpg")
+        div.cf
+            h3 タイトル
+            p ダミーテキスト。ダミーテキスト
+        p.detail 320px × 200px
+    div#target5.target
+        img(src="img/vr/thumb/film_thumb.jpg")
+        div.cf
+            h3 タイトル
+            p ダミーテキスト。ダミーテキスト
+        p.detail 320px × 200px
+    div#target6.target
+        img(src="img/vr/thumb/film_thumb.jpg")
+        div.cf
+            h3 タイトル
+            p ダミーテキスト。ダミーテキスト。
+        p.detail 320px × 200px
+
+
+    a-scene
+        a-assets
+            img#sky(src="./img/sunrise.jpg")
+            img(src="./img/grid.png", crossorigin="anonymous", id="grid")
+
+        a-entity(position="0 -10 0", rotation="-90 0 0", geometry="primitive:plane; width:10000;height:10000;", material="src:#grid; repeat:10000 10000; transparent: true;metalness:0.6, roughness: 0.4; sphericalEnvMap: #sky;")
+
+        a-sky(src="#sky", rotation="0 -90 0")
+
+        a-entity(scale="4 4 4 ", geometry="primitive:box;", position="0 4 -10", material="color: #c5b2a0; metalness:1, roughness:0.3; sphericalEnvMap: #sky")
+            a-animation(easing="linear", attribute="rotation", dur="10000", to="0 0 360", repeat="infinite")
+
+        a-entity(light="color:red;intensity:0.5;", position="-5 5 15")
+
+        a-plane(position="-18  6 0", width="16", height="10", material="shader:html;target: #target1;")
+        a-plane(position="  0  6 0", width="16", height="10", material="shader:html;target: #target2;")
+        a-plane(position=" 18  6 0", width="16",  height="10", material="shader:html;target: #target3;")
+        a-plane(position="-18 -6 0", width="16",  height="10", material="shader:html;target: #target4;")
+        a-plane(position="  0 -6 0", width="16",  height="10", material="shader:html;target: #target5;")
+        a-plane(position=" 18 -6 0", width="16",  height="10", material="shader:html;target: #target6;")
+
+
+        a-entity
+            a-entity(camera, look-controls, wasd-controls,position="0 0 20")
+                a-entity(position="0 0 -3", scale="0.2 0.2 0.2", geometry="primitive:ring;radiusOuter:0.20;radiusInner:0.13;", material="color:#ADD8E6;shader:flat", cursor="maxDistance:30; fuse:true")
+                    a-animation(begin="click", easing="ease-in", attribute="scale", fill="backwards", from="0.1 0.1 0.1", to="1 1 1", dur="150")
+                    a-animation(begin="fusing", easing="ease-in", attribute="scale", fill="forwards", from="1 1 1", to="0.2 0.2 0.2", dur="1500")
+
+
+    script.
+
+        var scene = document.querySelector('a-scene');
+        var run = function () {
+            document.getElementById("loader").classList.add("hidden");
+
+            //
+            scene.enterVR();
+
+            setTimeout(function () {
+                scene.enterVR();
+            }, 100);
+
+        }
+        if (scene.hasLoaded) {
+            run();
+
+        } else {
+            scene.addEventListener('loaded', run);
+        }
+

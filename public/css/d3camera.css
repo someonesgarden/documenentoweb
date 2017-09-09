@@ -1,0 +1,22 @@
+
+body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; background-color: white;
+}
+.a-canvas {
+    height: calc(100% - 120px) !important;
+}
+.a-enter-vr {
+    bottom: 140px;
+}
+#hud {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+}
+svg#path2d {
+    position:absolute;
+    left:0;
+    bottom: 0;
+    height: 120px;
+    width: 300px;
+}

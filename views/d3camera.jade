@@ -1,0 +1,21 @@
+extends layout
+
+block header
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/d3camera.css')
+
+
+block content
+
+    div#scene(style="height:100%;width:100%;")
+        a-scene
+            a-light(color="#da47da", position="0 5 0", type="ambient")
+            a-entity#vehicle(camera, look-controls, wasd-controls)
+            //a-entity#camera(camera, look-controls, wasd-controls)
+            a-entity(light="type: point; color: #EEE; intensity: 0.5", position="0 3 0")
+            a-sky(color="#ecfcf4")
+    div#hud
+        svg#path2d
+
+    script(src="js/aframe/_d3camera.js")
+
