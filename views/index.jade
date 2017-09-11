@@ -1,123 +1,224 @@
 extends layout
 
 block header
-    link(rel='stylesheet', href='/css/style.css')
     link(rel='stylesheet', href='/css/loader.css')
+    link(rel='stylesheet', href='/css/billboard.css')
 
 block content
 
     div#loader(style="position: absolute; height: 100%; width: 100%;"): div.spinner
+
+    div#vertical_menu
+        div#menu1.target(style="background-image:url('assets/img/program/doglegs_thumb.png');background-size:cover;background-position:50% 50%;")
+            p.detail 11/3 AM11:00
+        div#menu2.target(style="background-image:url('assets/img/program/kaihoku.png');background-size:cover;background-position:50% 50%;")
+            p.detail 11/3 AM11:00
+        div#menu3.target(style="background-image:url('assets/img/program/heishia.png');background-size:cover;background-position:50% 50%;")
+            p.detail 11/3 AM11:00
+        div#menu4.target(style="background-image:url('assets/img/program/urubo.png');background-size:cover;background-position:50% 50%;")
+            p.detail 11/3 AM11:00
+        div#menu5.target(style="background-image:url('assets/img/program/unknown1.png');background-size:cover;background-position:50% 50%;")
+            p.detail 11/3 AM11:00
+        div#menu6.target(style="background-image:url('assets/img/program/unknown2.png');background-size:cover;background-position:50% 50%;")
+            p.detail 11/3 AM11:00
+
+
+
+
     div(style="position: absolute; height: 100%; width: 100%;")
 
         a-scene
             a-assets
+                video#er_ginza(src="./media/er/ginza.mp4", muted, autoplay,loop="true")
+
                 a-asset-item#small-mtl(src="assets/models/camerahouse/small.mtl")
                 a-asset-item#small-obj(src="assets/models/camerahouse/small.obj")
                 a-asset-item#large-obj(src="assets/models/camerahouse/large.obj")
-
                 a-asset-item#earth-mtl(src="assets/models/earth/earth.mtl")
                 a-asset-item#earth-obj(src="assets/models/earth/earth.obj")
                 img#img_doculogo(src="assets/img/documement2.png")
                 img#img_shinagawajuku(src="assets/img/shinagawajuku.png")
                 img#img_aboutfes(src="assets/img/about_fes.png")
-                img#img_bug(src="assets/img/bugs.png")
+
                 img#img_businessman(src="assets/img/businessman.png")
                 igm#img_tabitabi(src="assets/img/tabitabi.png")
                 img#img_shadow(src="assets/img/radial-shadow-2.png")
 
+                //logos
+                img#logo_bug(src="assets/img/buglogo.png")
+                img#logo_tokyodocs(src="assets/img/tokyodocs_logo.jpg")
+                img#logo_sog(src="assets/img/sog_logo.png")
 
-            a-curvedimage#doculogo(src="#img_doculogo", radius="5.7", theta-length="36", height="3", position="0 2.8 -1", opacity="0.82")
-                a-animation(attribute="rotation", from="0 10 0", to="0 200 0", delay="500", dur="1000")
-
-            a-entity#earth(position="0 0 -3")
+            a-entity#earth(position="0 45 -3")
                 a-animation(attribute="rotation", from="0 -30 0", to="0 330 0", dur="15000", easing="linear", repeat="indefinite")
                 a-collada-model(position="0 0 0", rotation="0 -20 0", scale="1.5 1.5 1.5", obj-model="obj: #earth-obj; mtl: #earth-mtl")
                 a-image#shadow(src="#img_shadow", rotation="-90 0 0", scale="2.5 1.5 1.5")
 
-
-            a-entity#model_small(position="0 0 -3")
+            a-entity#house_small(position="0 0 -3")
                 a-animation(attribute="rotation", from="0 -30 0", to="0 330 0", dur="15000", easing="linear", repeat="indefinite")
                 a-collada-model(position="0 0 0", rotation="0 -20 0", scale="1.5 1.5 1.5", obj-model="obj: #small-obj; mtl: #small-mtl")
+                    a-animation(attribute="rotation", from="0 0 0", to="10 0 0", dur="12000", easing="ease-in-out", repeat="indefinite", direction="alternate")
                 a-image#shadow(src="#img_shadow", rotation="-90 0 0", scale="2.5 1.5 1.5")
 
-            a-entity#model_large(position="0 0 -3")
+            a-entity#house_large(position="0 0 -3")
                 a-animation(attribute="rotation", from="0 330 0", to="0 -30 0", dur="20000", repeat="indefinite", easing="linear")
                 a-collada-model(position="-.35 0 .55", rotation="0 -20 0", scale="1.5 1.5 1.5", obj-model="obj: #large-obj; mtl: #small-mtl")
 
-            a-image#businessman.newspanel(src="#img_businessman", width="7", height="5", scale="0.2 0.5 0.2", auto_rotate_y, mode="-1", auto_rotate_rate="1")
-                a-animation(attribute="position", from="0 2.8 -6", to="2.25 2.3 -5", delay="1000", dur="1000")
 
-            a-image#tabitabi.newspanel(src="#img_tabitabi", width="7", height="5", scale="0.2 0.5 0.2", auto_rotate_y, mode="-1", auto_rotate_rate="1")
-                a-animation(attribute="position", from="0 2.0 -6", to="3.25 2.45 -4.1", delay="1300", dur="1000")
+            a-cylinder#nav_zone(position="0 0 0", radius="6", height="1.6", side="back", open-ended="true", color="#FFF")
+                a-cylinder(position="0 0 0", radius="5.99", height="0.06    ", side="back", open-ended="true", color="red")
+
+                a-image#panel_businessman(src="#img_businessman", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", cylinderize, y=1.8, angle_to="290")
+                    a-animation(attribute="angle", from="0", to="290", delay="1000", dur="2000")
+
+                a-image#panel_tabitabi(src="#img_tabitabi", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", cylinderize, y=1.8, angle_to="300")
+                    a-animation(attribute="angle", from="0", to="300", delay="1000", dur="2000")
+
+                a-image#panel_tabitabi2(src="#img_tabitabi", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", cylinderize, y=1.8, angle_to="310")
+                    a-animation(attribute="angle", from="0", to="310", delay="1000", dur="2000")
+
+                a-image#doculogo(src="#img_doculogo", width="5", height="5", scale="0.5 0.5 1", opacity="0.8", auto_rotate, axis="y", cylinderize, y=2.2, angle_to="230")
+                    a-animation(attribute="angle", from="10", to="230", delay="2000", dur="2000")
 
 
+                a-curvedimage#about_fes(src="#img_aboutfes", radius="5.9", height="1.6", theta-length="20", position="0 0 0")
+                    a-animation(attribute="rotation", from="0 0 0", to="0 210 0", delay="750", dur="1000")
 
-            a-entity#bug
-                a-cylinder#bug_cylinger(color="#121343", height="0.02", radius="0.8", auto_rotate_z, mode="-1")
-                    a-animation(attribute="rotation", from="-270 0 0", to="-90 0 0", dur="750", delay="1000", fill="both")
-                    a-animation(attribute="position", from="8 0 -9", to="8 8 -9", dur="750", delay="1000", fill="both")
-                    a-image(src="#img_bug", width="2", height="1", rotation="90 0 0", position="-0.05 -.086 0", scale=".8 1.3 .8")
+                a-curvedimage#about_town(src="#img_shinagawajuku", radius="5.9",height="1.6", theta-length="18")
+                    a-animation(attribute="rotation", from="0 0 0", to="0 130 0", delay="750", dur="1000")
 
-            a-curvedimage#about_fes(src="#img_aboutfes", radius="9.2", theta-length="18", height="2.4", position="0 0.92 0", scale=".4 .4 .4")
-                a-animation(attribute="rotation", from="0 180 0", to="0 213 0", delay="750", dur="1000")
+                a-curvedimage#bug(alink, src="#logo_bug", radius="5.7",height="0.5", theta-length="6", position="0 -0.3 0", href="http://bugdoc.tokyo/")
+                    a-animation(attribute="rotation", from="0 0 0", to="0 231 0", delay="750", dur="1000")
 
-            a-curvedimage#about_town(src="#img_shinagawajuku", radius="11.5", theta-length="18", height="1.7", position="0 0.85 0", scale=".36 .60 .36")
-                a-animation(attribute="rotation", from="0 180 0", to="0 130 0", delay="750", dur="1000")
+                a-curvedimage#tokyodocs(alink, src="#logo_tokyodocs", radius="5.7",height="0.5", theta-length="10", position="0 -0.3 0",href="http://tokyodocs.jp/")
+                    a-animation(attribute="rotation", from="0 0 0", to="0 238 0", delay="750", dur="1000")
 
-            a-entity
-                a-cylinder(position="0 0.5 0", radius="6", height="1.6", side="back", open-ended="true", color="#FFF")
+                a-curvedimage#sog(alink, src="#logo_sog", radius="5.7",height="0.5", theta-length="10", position="0 -0.3 0",href="http://someonesgarden.org")
+                    a-animation(attribute="rotation", from="0 0 0", to="0 248 0", delay="750", dur="1000")
 
             a-sky(color="#ECECEC")
+
+            a-entity#schedule(position="0 45 -3",rotation="0 4 0")
+                a-plane(cbackgnd, position="0 0 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu1;opacity:0.90;")
+                a-plane(cbackgnd, position="0 0.7 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu2;opacity:0.90;")
+                a-plane(cbackgnd, position="0 1.4 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu3;opacity:0.90;")
+                a-plane(cbackgnd, position="0 2.1 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu4;opacity:0.90;")
+                a-plane(cbackgnd, position="0 2.8 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu5;opacity:0.90;")
+                a-plane(cbackgnd, position="0 3.5 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu6;opacity:0.90;")
+
             a-light(type="directional", color="#fff", intensity="0.2", position="-1 2 1")
             a-light(type="ambient", color="#fff")
 
-            a-entity(position="0 1.5 0.1")
+            a-entity(position="0 2 0.1")
                 a-entity#camera(camera, look-controls, wasd-controls, mouse-cursor)
-                    a-entity#cursor(position=cursor_out_pos, scale="0.2 0.2 0.2", geometry="primitive:ring;radiusOuter:0.20;radiusInner:0.13;", material="color:#ADD8E6;shader:flat", cursor="maxDistance:100; fuse:true;")
+                    a-entity#cursor(position=CURSOR_OUT, scale="1 1 1", geometry="primitive:ring;radiusOuter:0.20;radiusInner:0.13;", material="color:#ADD8E6;shader:flat", cursor="maxDistance:100; fuse:true;")
                         a-animation(begin="click", easing="ease-in", attribute="scale", fill="backwards", from="0.1 0.1 0.1", to="1 1 1", dur="150")
                         a-animation(begin="fusing", easing="ease-in", attribute="scale", fill="forwards", from="1 1 1", to="0.2 0.2 0.2", dur="1200")
 
+            a-circle(position="0 43 4",rotation="90 0 0", radius="30",color="#000000")
+    script(src="js/aframe/components/index.js")
     script.
-        var cursor_out_pos = "0 12.2 -1.3";
-        var cursor_in_pos = "0 0.2 -1.3";
+
+        document.VR = false;
+
+
+        var CURSOR_OUT = "0 12.2 -1.3";
+        var CURSOR_IN = "0 0.2 -1.3";
+        
         var scene = document.querySelector('a-scene');
+
+        var sky = document.querySelector('a-sky');
+        var earth = d3.select("#earth");
+        var house = d3.select('#house_small');
+        var schedule = d3.select('#schedule');
+        document.mode = "house";
+        document.visible_model = house;
+
+        var largehouse = d3.select('#house_large');
+        var cursor = document.querySelector("#cursor");
+
         var run = function () {
-            return document.getElementById("loader").classList.add("hidden");
+            document.getElementById("loader").classList.add("hidden");
+            createHtmlList();
         };
+
         if (scene.hasLoaded) {
-            run();
+            //run();
+            //createHtmlList();
         }
         else {
             scene.addEventListener('loaded', run);
+            console.log(scene.hasLoaded);
         }
+
+        var createHtmlList = function(){
+
+        };
+
+
         //ENTER / EXIT VR
         document.querySelector('a-scene').addEventListener('enter-vr', function () {
             console.log("ENTERED VR");
-            var cursor = document.querySelector("#cursor");
-            cursor.setAttribute('position', cursor_in_pos);
+            cursor.setAttribute('position', CURSOR_IN);
+            document.VR = true;
         });
         document.querySelector('a-scene').addEventListener('exit-vr', function () {
             console.log("EXIT VR");
-            var cursor = document.querySelector("#cursor");
-            cursor.setAttribute('position', cursor_out_pos);
+            cursor.setAttribute('position', CURSOR_OUT);
+            document.VR = false;
         });
 
         ////////// CLICK EVENT
         document.querySelector("#doculogo").addEventListener('click', function () {
-            console.log("logo");
+            switchModel("house");
         });
 
         document.querySelector("#bug").addEventListener('click', function () {
-            var img_cylinder = this.querySelector("#bug_cylinger");
-            var mode = img_cylinder.getAttribute("mode");
-            img_cylinder.setAttribute("mode", mode * (-1));
+
         });
 
-        document.querySelector(".newspanel").addEventListener('click', function () {
-            console.log(this.getAttribute("id"));
-            var mode = this.getAttribute("mode");
-            this.setAttribute("mode", mode * (-1));
+        document.querySelector("#panel_businessman").addEventListener('click', function () {
+            switchModel("schedule");
         });
+
+        document.querySelector("#panel_tabitabi").addEventListener('click', function () {
+            switchModel("earth");
+        });
+
+
+
+        var switchModel = function(model){
+
+            var model_to_change = null;
+            var model_y = 0;
+
+            if(model=="earth"){
+                sky.setAttribute("src", "");
+                model_to_change = earth;
+            }else if(model=="house"){
+                model_to_change = house;
+            }else if(model="schedule"){
+                model_to_change = schedule;
+            }
+
+                model_y = model_to_change.attr("position").y;
+                if (model_y == 45) {
+                    var tween = new AFRAME.TWEEN.Tween({y: 45, ly: 0})
+                        .to({y: 0, ly: 80}, 1400)
+                        //to()までの数値変化のイージング種類
+                        .easing(TWEEN.Easing.Elastic.InOut)
+                        .onUpdate(function () {
+                            model_to_change.attr({position: "0 " + this.y + " -3"});
+                            document.visible_model.attr({position: "0 " + (45 - this.y) + " -3"});
+                        })
+                        .onComplete(function () {
+                            document.mode = model;
+                            document.visible_model = model_to_change;
+                        });
+                    tween.start();
+                }
+        }
+
 
         document.querySelector("#doculogo").addEventListener('click', function(){
            console.log("Docu Logo");
@@ -125,13 +226,53 @@ block content
 
         document.querySelector("#about_fes").addEventListener('click', function(){
             console.log("About Fes");
+
         });
 
         document.querySelector("#about_town").addEventListener('click', function(){
            console.log("About Town");
+
+            var largehouse_y = largehouse.attr("position").y;
+            if (largehouse_y == 0) {
+
+                var tween = new AFRAME.TWEEN.Tween({y: 0})
+                    .to({y: 80}, 1400)
+                    //to()までの数値変化のイージング種類
+                    .easing(TWEEN.Easing.Circular.Out)
+                    .onUpdate(function () {
+                        largehouse.attr({
+                            position: "0 " + this.y + " -3"
+                        });
+                    })
+                    .onComplete(function () {
+                    });
+                tween.start();
+            }
+            sky.setAttribute("src", "#er_ginza");
+        });
+
+        document.querySelector("#earth").addEventListener('click', function(){
+                console.log("earth clicked");
+        });
+
+        document.querySelector("#house_small").addEventListener('click',function(){
+            var largehouse_y = largehouse.attr("position").y;
+            if (largehouse_y ==80) {
+                sky.setAttribute("src", "");
+
+                var tween = new AFRAME.TWEEN.Tween({y: 80})
+                    .to({y: 0}, 400)
+                    //to()までの数値変化のイージング種類
+                    .easing(TWEEN.Easing.Circular.In)
+                    .onUpdate(function () {
+                        largehouse.attr({
+                            position: "0 " + this.y + " -3"
+                        });
+                    })
+                    .onComplete(function () {
+                    });
+                tween.start();
+            }
         });
 
 
-
-
-    script(src="js/aframe/components/index.js")

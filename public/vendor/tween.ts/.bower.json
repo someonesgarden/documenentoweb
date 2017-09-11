@@ -1,0 +1,35 @@
+{
+  "name": "tween.ts",
+  "version": "0.1.2",
+  "homepage": "https://github.com/edsilv/tween.ts",
+  "authors": [
+    "edsilv <ed@edsilv.com>"
+  ],
+  "description": "TypeScript tweening engine",
+  "main": "src/Tween.ts",
+  "keywords": [
+    "TypeScript",
+    "Tween",
+    "Tweening",
+    "Animation",
+    "AMD"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.2",
+    "commit": "ca05f195f2de88ca288d796667bb9169ea2b2cf6"
+  },
+  "_source": "https://github.com/edsilv/tween.ts.git",
+  "_target": "^0.1.2",
+  "_originalSource": "tween.ts",
+  "_direct": true
+}

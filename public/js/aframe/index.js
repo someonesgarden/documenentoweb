@@ -30,6 +30,7 @@ document.querySelector("#bug").addEventListener('click', function () {
     img_cylinder.setAttribute("mode", mode * (-1));
 });
 document.querySelector("#businessman").addEventListener('click', function () {
-    var mode = this.getAttribute("mode");
-    this.setAttribute("mode", mode * (-1));
+});
+document.querySelector("#earth").addEventListener('click', function () {
+    console.log("earth clicked");
 });

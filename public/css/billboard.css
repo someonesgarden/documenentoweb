@@ -1,0 +1,93 @@
+.target {
+    position: absolute;
+    width: 320px;
+    height: 180px;
+    font-size: 100%;
+    background-color: #FFF;
+    display: hidden;
+    /*z-index: 1;*/
+}
+
+.target>img {
+    float: left;
+    display: block;
+    width: 32%;
+    padding: 4% 0 4% 4%;
+}
+
+.target>div {
+    margin-left: 6%;
+    width: 52%;
+    padding: 4%;
+    position:relataive;
+}
+
+.target>.detail {
+    /*font-family: 'Anton', sans-serif;*/
+    /*font-family: 'Righteous', cursive;*/
+    /*font-family: 'Amatic SC', cursive;*/
+    font-family: 'Playfair Display SC', serif;
+    font-size:38px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0,0,0,0.3);
+    margin: 0;
+    position:absolute;
+    bottom:0;
+}
+
+.target h1{
+    font-weight: bold;
+    color:white;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.target h2{
+    font-weight: bold;
+    color:white;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.target p{
+    font-weight: bold;
+    color:white;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.target h3{
+    font-weight: bold;
+    color:white;
+    -webkit-text-stroke: 2px #fff;
+}
+
+#target2 {
+    width: 640px;
+    height: 400px;
+    font-size: 200%;
+}
+
+#target3 {
+    width: 960px;
+    height: 600px;
+    font-size: 300%;
+}
+
+#target4 {
+    width: 1280px;
+    height: 800px;
+    font-size: 400%;
+}
+
+#target5 {
+    width: 1600px;
+    height: 1000px;
+    font-size: 500%;
+}
+
+#target6 {
+    width: 3200px;
+    height: 2000px;
+    font-size: 1000%;
+}

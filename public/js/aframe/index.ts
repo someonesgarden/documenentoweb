@@ -26,6 +26,7 @@ document.querySelector('a-scene').addEventListener('exit-vr', function() {
 });
 
 
+
 document.querySelector("#doculogo").addEventListener('click', function() {
     console.log("logo");
 });
@@ -39,6 +40,10 @@ document.querySelector("#bug").addEventListener('click', function() {
 
 
 document.querySelector("#businessman").addEventListener('click', function() {
-    var mode = this.getAttribute("mode");
-    this.setAttribute("mode",mode*(-1));
+
+});
+
+
+document.querySelector("#earth").addEventListener('click', function() {
+console.log("earth clicked");
 });
