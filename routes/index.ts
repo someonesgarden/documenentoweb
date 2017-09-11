@@ -9,9 +9,20 @@ router.get('/vrviewer', (req,res, next)=> {
   res.render('vrviewer', {title: 'VR Viewer'});
 });
 
-router.get('/vrtheatre', (req,res, next)=> {
-    res.render('vrtheatre', {title: 'VR THEATRE'});
+// router.get('/vrtheatre', function(req,res, next){
+//     res.render('vrtheatre', {title: 'VR THEATRE'});
+// });
+
+router.get('/vrtheatre', function(req,res,next){
+    console.log("this is apen!!!!");
+
+    console.log(req.query); // for logging
+    var movie = req.query.movie  ? req.query.movie : "doglegs.mp4";
+
+    res.render('vrtheatre', {title: 'VR THEATRE', movie:movie});
 });
+
+
 
 router.get('/d3', (req,res, next)=>{
    res.render('d3', {title:'D3'});

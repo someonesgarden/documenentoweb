@@ -23,8 +23,6 @@ block content
             p.detail 11/3 AM11:00
 
 
-
-
     div(style="position: absolute; height: 100%; width: 100%;")
 
         a-scene
@@ -99,12 +97,12 @@ block content
             a-sky(color="#ECECEC")
 
             a-entity#schedule(position="0 45 -3",rotation="0 4 0")
-                a-plane(cbackgnd, position="0 0 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu1;opacity:0.90;")
-                a-plane(cbackgnd, position="0 0.7 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu2;opacity:0.90;")
-                a-plane(cbackgnd, position="0 1.4 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu3;opacity:0.90;")
-                a-plane(cbackgnd, position="0 2.1 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu4;opacity:0.90;")
-                a-plane(cbackgnd, position="0 2.8 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu5;opacity:0.90;")
-                a-plane(cbackgnd, position="0 3.5 0", width="6", height="3", scale="0.2 0.2 0.2" material="shader:html;target:#menu6;opacity:0.90;")
+                a-plane.sche(schelink, position="0 0 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#menu1;opacity:0.90;", movie="doglegs.mp4")
+                a-plane.sche(schelink, position="0 0.7 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#menu2;opacity:0.90;", movie="uruho.mp4")
+                a-plane.sche(schelink, position="0 1.4 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#menu3;opacity:0.90;", movie="heishi_a.mp4")
+                a-plane.sche(schelink, position="0 2.1 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#menu4;opacity:0.90;", movie="uruho.mp4")
+                a-plane.sche(schelink, position="0 2.8 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#menu5;opacity:0.90;", movie="uruho.mp4")
+                a-plane.sche(schelink, position="0 3.5 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#menu6;opacity:0.90;", movie="uruho.mp4")
 
             a-light(type="directional", color="#fff", intensity="0.2", position="-1 2 1")
             a-light(type="ambient", color="#fff")
@@ -121,6 +119,18 @@ block content
 
         document.VR = false;
 
+        var getDevice = (function () {
+            var ua = navigator.userAgent;
+            if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+                return 'sp';
+            } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+                return 'tab';
+            } else {
+                return 'other';
+            }
+        })();
+
+        console.log(getDevice);
 
         var CURSOR_OUT = "0 12.2 -1.3";
         var CURSOR_IN = "0 0.2 -1.3";
@@ -139,8 +149,16 @@ block content
 
         var run = function () {
             document.getElementById("loader").classList.add("hidden");
-            createHtmlList();
+            if (getDevice == 'sp') {
+                scene.enterVR();
+                setTimeout(function () {
+                    scene.enterVR();
+                }, 1000);
+            }
         };
+
+
+
 
         if (scene.hasLoaded) {
             //run();
@@ -151,9 +169,7 @@ block content
             console.log(scene.hasLoaded);
         }
 
-        var createHtmlList = function(){
 
-        };
 
 
         //ENTER / EXIT VR
@@ -274,5 +290,6 @@ block content
                 tween.start();
             }
         });
+
 
 

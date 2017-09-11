@@ -1,3 +1,15 @@
+AFRAME.registerComponent('schelink', {
+
+    init:function(){
+        var thisentity = this.el;
+        var movie = thisentity.getAttribute('movie');
+        thisentity.addEventListener('click',function(){
+            console.log(movie);
+            location.href="http://localhost:3000/vrtheatre?movie="+movie;
+        })
+    }
+});
+
 AFRAME.registerComponent('alink', {
 
     init:function(){
