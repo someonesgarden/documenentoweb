@@ -5,7 +5,7 @@ AFRAME.registerComponent('schelink', {
         var movie = thisentity.getAttribute('movie');
         thisentity.addEventListener('click',function(){
             console.log(movie);
-            location.href="http://localhost:3000/vrtheatre?movie="+movie;
+            location.href="/vrtheatre?movie="+movie;
         })
     }
 });

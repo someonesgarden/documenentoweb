@@ -1,5 +1,12 @@
 var express = require('express');
 var router = express.Router();
+var basicAuth = require('basic-auth-connect');
+const fs = require('fs');
+
+router.use(basicAuth('tabitabi','bitabita'));
+
+const parser = require('ua-parser-js');
+
 
 router.get('/earth', (req,res, next)=> {
   res.render('earth', {title: 'Earth'});
@@ -34,7 +41,20 @@ router.get('/d3camera', (req,res, next)=>{
 
 
 router.get('/', (req, res, next)=> {
-  res.render('index', { title: 'DOCU-MEMENTO映画祭' });
+
+    const agent = parser(req.headers['user-agent']);
+    const device_type = agent.device.type;
+    console.log("================================================");
+    console.log(agent.device.type);
+    console.log("================================================");
+
+    if(device_type=="mobile"){
+        res.render('index_mobile', { title: 'DOCU-MEMENTO映画祭VR', moble:true});
+    }else{
+        res.render('index', { title: 'DOCU-MEMENTO映画祭', mobile:false});
+    }
+
+
 });
 
 module.exports = router;

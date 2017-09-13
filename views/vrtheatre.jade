@@ -6,14 +6,15 @@ block header
 block content
 
     div#loader
-        p  laoding....
+        p  loading....
 
     a-scene
         a-assets
             //a-asset-item#sofa(src="models/sofa.dae")
+            video#eiga(src="/media/#{movie}", autoplay="true",loop="true")
 
         a-entity
-            a-entity(camera, position="0 1.7 7.5", look-controls="enabled:true", cursor-visible="enabled:false", wasd-controls="enabled:true")
+            a-entity(camera, position="0 1.7 7.5", look-controls="enabled:true", cursor-visible="enabled:false", wasd-controls="enabled:true", mouse-cursor)
                 a-entity(position="0 0 -3", scale="0.2 0.2 0.2", geometry="primitive:ring;radiusOuter:0.20;radiusInner:0.13;", material="color:#ADD8E6;shader:flat", cursor="maxDistance:30; fuse:true")
                     a-animation(begin="click", easing="ease-in", attribute="scale", fill="backwards", from="0.1 0.1 0.1", to="1 1 1", dur="150")
                     a-animation(begin="fusing", easing="ease-in", attribute="scale", fill="forwards", from="1 1 1", to="0.2 0.2 0.2", dur="1500")
@@ -23,10 +24,13 @@ block content
         // Ceiling
         a-entity(geometry="primitive:box;depth:0.1;height:24;width:22", position="0 12.5 2", rotation="-90 0 0", material="shader:standard;side:bottom;src:url(/img/theatre/stars.jpg)")
         // Front Wall
+
         a-entity(geometry="primitive:box;depth:0.1; height:12;width:22", position="0 6.5 -10", material="shader:standard;color:#000")
         // Back Wall
+
         a-entity(geometry="primitive:box;depth:0.1; height:12;width:22", position="0 6.5 14", material="shader:standard;color:#000")
         // Side Walls
+
         a-entity(geometry="primitive:box;depth:0.1;height:12;width:24", position="11 6.5 2", rotation="0 90 0", material="shader:standard;roughness:1;src:url(/img/theatre/wall.jpg)")
         a-entity(geometry="primitive:box;depth:0.1;height:12;width:24", position="-11 6.5 2", rotation="0 90 0", material="shader:standard;roughness:1;src:url(/img/theatre/wall.jpg)")
         //Molding
@@ -56,14 +60,19 @@ block content
         a-entity(geometry="primitive:box;depth:0.5;height:1;width:0.7",position="-10.5 9.5 -7.5", rotation="-10 90 0", material="shader:standard;roughness:0.7;color:#000")
         a-entity(geometry="primitive:box;depth:0.5;height:1;width:0.7",position="10.5 9.5 12", rotation="-10 90 0", material="shader:standard;roughness:0.7;color:#000")
         a-entity(geometry="primitive:box;depth:0.5;height:1;width:0.7",position="-10.5 9.5 12", rotation="-10 90 0", material="shader:standard;roughness:0.7;color:#000")
+
         //Door
         a-entity#door(geometry="primitive:plane;height:2;width:1", position="5 1.5 13.93", material="shader:flat;side:back;transparent:true;src:url(/img/theatre/door.png)")
+        a-entity#door2(geometry="primitive:plane;height:2;width:1", position="10.665 1.775 -1.788", rotation="0 90 0",material="shader:flat;side:back;transparent:true;src:url(/img/theatre/door.png)")
+
         //Exit-Sign
         a-entity#exit_sign(geometry="primitive:plane;height:0.5;width:0.6", position="5 3.5 13.93", material="shader:flat;side:back;transparent:true;src:url(/img/theatre/exit-sign.png)")
-        a-entity(geometry="primitive:box;depth:2;height:16;width:18", position="0 2.8 -9.1", material="shader:standard;color:#000")
+        a-entity#exit_sign2(geometry="primitive:plane;height:0.5;width:0.6", position="10.665 3.6 -1.788",rotation="0 90 0", material="shader:flat;side:back;transparent:true;src:url(/img/theatre/exit-sign.png)")
+
+        a-entity#screen_back(geometry="primitive:box;depth:2;height:16;width:18", position="0 2.8 -9.1", material="shader:standard;color:#000")
         //a-collada-model#sofa(src="#sofa", scale="1 1 1", position="0 0.35 7.6", rotation="0 90 0")
         //video
-        a-video(src="/media/#{movie}", autoplay="true", width="19",height="11",position="0 5.5 -8")
+        a-video(src="#eiga", autoplay="true", width="19",height="11",position="0 5.5 -8")
     script.
 
         //var movie = "/media/#{movie}";
@@ -89,6 +98,15 @@ block content
             location.href = "/";
         });
 
+        document.querySelector("#exit_sign2").addEventListener('click', function () {
+            location.href = "/";
+        });
+
         document.querySelector("#door").addEventListener('click', function () {
+            location.href = "/";
+        });
+
+
+        document.querySelector("#door2").addEventListener('click', function () {
             location.href = "/";
         });
