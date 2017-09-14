@@ -1,0 +1,13 @@
+# Blender MTL File: 'infobox.blend'
+# Material Count: 1
+
+newmtl Material
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.905627 1.000000 0.938567
+Ks 1.000000 1.000000 1.000000
+Ke 1.811253 2.000000 1.877135
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd  fes_column.jpg

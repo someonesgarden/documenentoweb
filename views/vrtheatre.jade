@@ -6,12 +6,12 @@ block header
 block content
 
     div#loader
-        p  loading....
+        p  まもなく予告編の上映が始まります....
 
     a-scene
         a-assets
             //a-asset-item#sofa(src="models/sofa.dae")
-            video#eiga(src="/media/#{movie}", autoplay="true",loop="true")
+            video#eiga(src="/media/#{movie}", autoplay,loop="true")
 
         a-entity
             a-entity(camera, position="0 1.7 7.5", look-controls="enabled:true", cursor-visible="enabled:false", wasd-controls="enabled:true", mouse-cursor)

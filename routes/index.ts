@@ -3,7 +3,7 @@ var router = express.Router();
 var basicAuth = require('basic-auth-connect');
 const fs = require('fs');
 
-router.use(basicAuth('tabitabi','bitabita'));
+//router.use(basicAuth('tabitabi','bitabita'));
 
 const parser = require('ua-parser-js');
 
@@ -49,9 +49,9 @@ router.get('/', (req, res, next)=> {
     console.log("================================================");
 
     if(device_type=="mobile"){
-        res.render('index_mobile', { title: 'DOCU-MEMENTO映画祭VR', moble:true});
+        res.render('index_new', { title: 'DOCU-MEMENTO映画祭VR', mobile:true});
     }else{
-        res.render('index', { title: 'DOCU-MEMENTO映画祭', mobile:false});
+        res.render('index_new', { title: 'DOCU-MEMENTO映画祭', mobile:false});
     }
 
 

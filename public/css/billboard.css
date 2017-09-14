@@ -4,6 +4,10 @@
     height: 180px;
     font-size: 100%;
     background-color: #FFF;
+
+    background-size:cover;
+    background-position:50% 50%;
+
     display: hidden;
     /*z-index: 1;*/
 }
