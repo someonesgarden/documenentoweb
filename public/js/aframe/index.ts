@@ -1,3 +1,5 @@
+
+
 var cursor_out_pos = "0 12.2 -1.3";
 var cursor_in_pos = "0 0.2 -1.3";
 var scene = document.querySelector('a-scene');

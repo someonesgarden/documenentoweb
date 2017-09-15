@@ -35,10 +35,10 @@ block content
                 a-asset-item#lantan-mtl(src="assets/models/lantan/lantan.mtl")
                 a-asset-item#lantan-obj(src="assets/models/lantan/lantan.obj")
 
-                img#img_doculogo(src="assets/img/documement2.png")
+                //img#img_doculogo(src="assets/img/documement2.png")
                 img#img_shinagawajuku(src="assets/img/shinagawajuku.png")
                 img#img_docsnight(src="assets/img/tokyodocsnight.png")
-                img#img_aboutfes(src="assets/img/about_fes.png")
+                img#img_aboutfes(src="assets/img/documement_info.png")
 
                 img#img_businessman(src="assets/img/businessman.png")
                 img#img_tabitabi(src="assets/img/tabitabi.png")
@@ -53,9 +53,16 @@ block content
                 img#logo_tokyodocs(src="assets/img/tokyodocs_logo.jpg")
                 img#logo_sog(src="assets/img/sog_logo.png")
 
+                //panelers
+                img#panel_matsui_front(src="assets/img/panelists/panel_matsui_color.png")
+                img#panel_matsui_back(src="assets/img/panelists/panel_matsui.png")
+
+                img#panel_yonemoto_front(src="assets/img/panelists/panel_yonemoto_color.png")
+                img#panel_yonemoto_back(src="assets/img/panelists/panel_yonemoto.png")
 
 
 
+            //MODELS
             a-entity#lantan(position="3 3.5 -5")
                 a-animation(attribute="rotation", from="0 100 0", to="0 -260 0", dur="15000", easing="linear", repeat="indefinite")
                 a-collada-model(position="0 0 0", rotation="0 20 0", scale="1.5 1.5 1.5", obj-model="obj: #lantan-obj; mtl: #lantan-mtl")
@@ -85,49 +92,36 @@ block content
                 a-animation(attribute="rotation", from="0 330 0", to="0 -30 0", dur="20000", repeat="indefinite", easing="linear")
                 a-collada-model(position="-.35 0 .55", rotation="0 -20 0", scale="1.5 1.5 1.5", obj-model="obj: #large-obj; mtl: #small-mtl")
 
-
+            //Programs
             a-cylinder#nav_zone(position="0 0 0", radius="6", height="1.6", side="back", open-ended="true", color="#FFF")
-                a-cylinder(position="0 0 0", radius="5.99", height="0.06    ", side="back", open-ended="true", color="red")
+                a-cylinder(position="0 0 0", radius="5.99", height="0.03", side="back", open-ended="true", color="#ef12a4")
 
-                a-image#panel_businessman(src="#img_businessman", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", cylinderize, y=1.8, angle_to="290")
-                    a-animation(attribute="angle", from="0", to="290", delay="1000", dur="2000")
+                a-image#panel_businessman(cylinderize, src="#img_businessman", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="290", angle="0", def_angle="290")
+                a-image#panel_tabitabi(cylinderize, src="#img_tabitabi", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="300", angle="0", def_angle="300")
+                a-image#panel_tokyodocs(cylinderize, src="#img_tokyodocs", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="310", angle="0", def_angle="310")
+                a-image#panel_colorsofasia(cylinderize, src="#img_colorsofasia", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="320", angle="0", def_angle="320")
+                a-image#panel_kaihouku(cylinderize, src="#img_kaihouku", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="330", angle="0", def_angle="330")
 
-                a-image#panel_tabitabi(src="#img_tabitabi", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", cylinderize, y=1.8, angle_to="300")
-                    a-animation(attribute="angle", from="0", to="300", delay="1000", dur="2000")
-
-                a-image#panel_tokyodocs(src="#img_tokyodocs", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", cylinderize, y=1.8, angle_to="310")
-                    a-animation(attribute="angle", from="0", to="310", delay="1000", dur="2000")
-
-                a-image#panel_colorsofasia(src="#img_colorsofasia", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", cylinderize, y=1.8, angle_to="320")
-                    a-animation(attribute="angle", from="0", to="320", delay="1000", dur="2000")
-
-                a-image#panel_kaihouku(src="#img_kaihouku", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", cylinderize, y=1.8, angle_to="330")
-                    a-animation(attribute="angle", from="0", to="330", delay="1000", dur="2000")
+            //Panellers
+            a-image#paneler_matsui(paneler, src="#panel_matsui_front", width="3", height="8", position="0 0 3", scale="0.5 0.5 0.5", backsrc="#panel_matsui_back", y=1.8, angle="120",angle_to="230", def_angle="230")
+            a-image#paneler_yonemoto(paneler, src="#panel_yonemoto_front", width="3", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_yonemoto_back", y=1.8, angle="120",angle_to="250", def_angle="250")
+            a-image#paneler_yonemoto2(paneler, src="#panel_yonemoto_front", width="3", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_yonemoto_back", y=1.8, angle="120",angle_to="270", def_angle="270")
+            a-image#paneler_matsui2(paneler, src="#panel_matsui_front", width="3", height="8", position="0 0 3", scale="0.5 0.5 0.5", backsrc="#panel_matsui_back", y=1.8, angle="120",angle_to="210", def_angle="210")
 
 
-            a-image#doculogo(src="#img_doculogo", width="5", height="5", scale="0.5 0.5 1", opacity="0.8", auto_rotate, axis="y", cylinderize, y=2.2, angle_to="230")
-                    a-animation(attribute="angle", from="10", to="230", delay="2000", dur="2000")
+            //LOGO
+            //a-image#doculogo(cylinderize, src="#img_doculogo", width="5", height="5", scale="0.5 0.5 1", opacity="0.8", auto_rotate, axis="y", y=2.2, angle_to="230", angle="0", def_angle="230")
 
-                a-curvedimage#about_fes(src="#img_aboutfes", radius="5.9", height="1.6", theta-length="20", position="0 0 0")
-                    a-animation(attribute="rotation", from="0 0 0", to="0 210 0", delay="750", dur="1000")
+            //On CURVE MENU
 
-                a-curvedimage#about_town(src="#img_shinagawajuku", radius="5.9",height="1.5", theta-length="15")
-                    a-animation(attribute="rotation", from="0 0 0", to="0 145 0", delay="750", dur="1000")
+            a-curvedimage#about_town(curvemenu, src="#img_shinagawajuku", radius="5.9",height="1.5", theta-length="15", angle="0",angle_to="145", def_angle="145")
+            a-curvedimage#about_docsnight(curvemenu, src="#img_docsnight", radius="5.9",height="1.5", theta-length="14", angle="0", angle_to="128", def_angle="128")
 
-                a-curvedimage#about_docsnight(src="#img_docsnight", radius="5.9",height="1.5", theta-length="14")
-                    a-animation(attribute="rotation", from="0 0 0", to="0 128 0", delay="750", dur="1000")
+            a-curvedimage#about_fes(curvemenu, src="#img_aboutfes", radius="5.9", height="1.6", theta-length="30", position="0 0 0", angle="0", angle_to="203", def_angle="203")
+            a-curvedimage#bug(curvemenu, alink, src="#logo_bug", radius="5.7",height="0.5", theta-length="6", position="0 -0.3 0", href="http://bugdoc.tokyo/", angle="0",angle_to="235", def_angle="235")
+            a-curvedimage#tokyodocs(curvemenu, alink, src="#logo_tokyodocs", radius="5.7",height="0.5", theta-length="10", position="0 -0.3 0",href="http://tokyodocs.jp/", angle="0", angle_to="242", def_angle="242")
+            a-curvedimage#sog(curvemenu, alink, src="#logo_sog", radius="5.7",height="0.5", theta-length="10", position="0 -0.3 0",href="http://someonesgarden.org", angle="0", angle_to="252", def_angle="252")
 
-
-                a-curvedimage#bug(alink, src="#logo_bug", radius="5.7",height="0.5", theta-length="6", position="0 -0.3 0", href="http://bugdoc.tokyo/")
-                    a-animation(attribute="rotation", from="0 0 0", to="0 231 0", delay="750", dur="1000")
-
-                a-curvedimage#tokyodocs(alink, src="#logo_tokyodocs", radius="5.7",height="0.5", theta-length="10", position="0 -0.3 0",href="http://tokyodocs.jp/")
-                    a-animation(attribute="rotation", from="0 0 0", to="0 238 0", delay="750", dur="1000")
-
-                a-curvedimage#sog(alink, src="#logo_sog", radius="5.7",height="0.5", theta-length="10", position="0 -0.3 0",href="http://someonesgarden.org")
-                    a-animation(attribute="rotation", from="0 0 0", to="0 248 0", delay="750", dur="1000")
-
-            a-sky(color="#ECECEC")
 
             a-entity#schedule(position="0 45 -3",rotation="0 4 0")
                 a-plane(schelink, position="0 4.2 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#sche1_img1;opacity:0.90;", movie="doglegs.mp4")
@@ -137,8 +131,11 @@ block content
                 a-plane(schelink, position="0 2.8 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#sche1_img5;opacity:0.90;", movie="uruho.mp4")
                 a-plane(schelink, position="0 3.5 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#sche1_img6;opacity:0.90;", movie="doglegs.mp4")
 
+            //LIGHT & CAMERA & SKY
             a-light(type="directional", color="#fff", intensity="0.2", position="-1 2 1")
             a-light(type="ambient", color="#fff")
+            a-sky(color="#ECECEC")
+            a-circle(position="0 43 4",rotation="90 0 0", radius="30",color="#000000")
 
             a-entity(position="0 2 0.1")
                 a-entity#camera(camera, look-controls, wasd-controls, mouse-cursor)
@@ -149,44 +146,30 @@ block content
                             a-animation(begin="fusing", easing="ease-in", attribute="scale", fill="forwards", from="1 1 1", to="0.2 0.2 0.2", dur="1200")
                     else
 
-            a-circle(position="0 43 4",rotation="90 0 0", radius="30",color="#000000")
+
+    script(src="js/lib/common.js")
     script(src="js/aframe/components/index.js")
     script.
 
         document.VR = false;
-
-        var getDevice = (function () {
-            var ua = navigator.userAgent;
-            if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
-                return 'sp';
-            } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
-                return 'tab';
-            } else {
-                return 'other';
-            }
-        })();
-
-        console.log(getDevice);
-
         var CURSOR_OUT = "0 12.2 -1.3";
         var CURSOR_IN = "0 0.2 -1.3";
         var mobile = #{mobile};
-
         var scene = document.querySelector('a-scene');
-
-        var sky = document.querySelector('a-sky');
+        var sky   = document.querySelector('a-sky');
         var earth = d3.select("#earth");
         var house = d3.select('#house_small');
         var schedule = d3.select('#schedule');
         var amagi = d3.select('#amagi');
         var infobox = d3.select('#infobox');
+        var largehouse = d3.select('#house_large');
+        var cursor = document.querySelector("#cursor");
+
+        var panel_kaihouku = document.querySelector('#panel_kaihouku');
 
 
         document.mode = "house";
         document.visible_model = house;
-
-        var largehouse = d3.select('#house_large');
-        var cursor = document.querySelector("#cursor");
 
         var run = function () {
             document.getElementById("loader").classList.add("hidden");
@@ -199,13 +182,8 @@ block content
         };
 
 
-        if (scene.hasLoaded) {
-            //run();
-            //createHtmlList();
-        }
-        else {
+        if (!scene.hasLoaded) {
             scene.addEventListener('loaded', run);
-            console.log(scene.hasLoaded);
         }
 
 
@@ -228,13 +206,25 @@ block content
         });
 
         ////////// CLICK EVENT
-        document.querySelector("#doculogo").addEventListener('click', function () {
-            switchModel("house");
-        });
+        //document.querySelector("#doculogo").addEventListener('click', function () {
+        //    switchModel("house");
+        //});
 
         document.querySelector("#bug").addEventListener('click', function () {
-
+            panel_kaihouku.setAttribute('angle','30');
         });
+
+        document.querySelector("#bug").addEventListener('mouseenter', function () {
+            panel_kaihouku.setAttribute('angle_to', '210');
+            panel_kaihouku.pause();
+            panel_kaihouku.play();
+        });
+        document.querySelector("#bug").addEventListener('mouseleave', function () {
+            panel_kaihouku.setAttribute('angle_to', panel_kaihouku.getAttribute('def_angle'));
+            panel_kaihouku.pause();
+            panel_kaihouku.play();
+        });
+
 
         document.querySelector("#panel_businessman").addEventListener('click', function () {
             switchModel("schedule");
@@ -243,7 +233,6 @@ block content
         document.querySelector("#panel_tabitabi").addEventListener('click', function () {
             switchModel("earth");
         });
-
 
         document.querySelector("#panel_tokyodocs").addEventListener('click', function () {
             console.log("tokyodokc");
@@ -289,14 +278,8 @@ block content
         }
 
 
-        document.querySelector("#doculogo").addEventListener('click', function(){
-            console.log("Docu Logo");
-        });
-
         document.querySelector("#about_fes").addEventListener('click', function(){
-            console.log("About Fes");
             switchModel("infobox");
-
         });
 
         document.querySelector("#about_town").addEventListener('click', function(){
@@ -329,7 +312,6 @@ block content
             var largehouse_y = largehouse.attr("position").y;
             if (largehouse_y ==80) {
                 sky.setAttribute("src", "");
-
                 var tween = new AFRAME.TWEEN.Tween({y: 80})
                     .to({y: 0}, 400)
                     //to()までの数値変化のイージング種類

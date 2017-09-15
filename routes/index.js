@@ -1,3 +1,5 @@
+/// <reference path="../typings/node/node.d.ts" />
+/// <reference path="../typings/express/express.d.ts" />
 var express = require('express');
 var router = express.Router();
 var basicAuth = require('basic-auth-connect');
@@ -10,11 +12,7 @@ router.get('/earth', function (req, res, next) {
 router.get('/vrviewer', function (req, res, next) {
     res.render('vrviewer', { title: 'VR Viewer' });
 });
-// router.get('/vrtheatre', function(req,res, next){
-//     res.render('vrtheatre', {title: 'VR THEATRE'});
-// });
 router.get('/vrtheatre', function (req, res, next) {
-    console.log("this is apen!!!!");
     console.log(req.query); // for logging
     var movie = req.query.movie ? req.query.movie : "doglegs.mp4";
     res.render('vrtheatre', { title: 'VR THEATRE', movie: movie });
@@ -24,6 +22,9 @@ router.get('/d3', function (req, res, next) {
 });
 router.get('/d3camera', function (req, res, next) {
     res.render('d3camera', { title: 'D3Camera' });
+});
+router.get('/react', function (req, res, next) {
+    res.render('react', { title: 'REACT' });
 });
 router.get('/', function (req, res, next) {
     var agent = parser(req.headers['user-agent']);
