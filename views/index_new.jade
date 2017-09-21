@@ -8,7 +8,6 @@ block content
 
     div#loader(style="position: absolute; height: 100%; width: 100%;"): div.spinner
 
-
     div#sche1_img1.target(style="background-image:url('assets/img/program/doglegs_thumb.png');"): p.detail 11/3 AM11:00
     div#sche1_img2.target(style="background-image:url('assets/img/program/kaihoku.png');"): p.detail 11/3 AM11:00
     div#sche1_img3.target(style="background-image:url('assets/img/program/heishia.png');"): p.detail 11/3 AM11:00
@@ -20,8 +19,14 @@ block content
 
         a-scene
             a-assets
-                video#er_ginza(src="media/er/ginza.mp4", muted, autoplay,loop="true")
+                //360 Videos
+                video#er_yataimura(src="media/er/shinagawa/yataimura.mp4", muted, autoplay,loop="true")
+                video#er_honshoji(src="media/er/shinagawa/honshoji.mp4", muted, autoplay,loop="true")
+                video#er_matsumoto(src="media/er/shinagawa/matsumoto.mp4", muted, autoplay,loop="true")
+                video#er_tokaido(src="media/er/shinagawa/tokaido1.mp4", muted, autoplay,loop="true")
+                video#er_kaidocafe(src="media/er/shinagawa/kaidocafe.mp4", muted, autoplay,loop="true")
 
+                //3D Models
                 a-asset-item#small-mtl(src="assets/models/camerahouse/small.mtl")
                 a-asset-item#small-obj(src="assets/models/camerahouse/small.obj")
                 a-asset-item#large-obj(src="assets/models/camerahouse/large.obj")
@@ -31,13 +36,14 @@ block content
                 a-asset-item#amagi-obj(src="assets/models/amagi/amagi.obj")
                 a-asset-item#infobox-mtl(src="assets/models/infobox/box.mtl")
                 a-asset-item#infobox-obj(src="assets/models/infobox/box.obj")
-
                 a-asset-item#lantan-mtl(src="assets/models/lantan/lantan.mtl")
                 a-asset-item#lantan-obj(src="assets/models/lantan/lantan.obj")
 
+                // About
                 //img#img_doculogo(src="assets/img/documement2.png")
-                img#img_shinagawajuku(src="assets/img/shinagawajuku.png")
-                img#img_docsnight(src="assets/img/tokyodocsnight.png")
+                img#img_kaijo(src="assets/img/kaijo.png")
+                img#img_toudansha(src="assets/img/toudansha.png")
+                img#img_program(src="assets/img/program.png")
                 img#img_aboutfes(src="assets/img/documement_info.png")
 
                 img#img_businessman(src="assets/img/businessman.png")
@@ -46,27 +52,40 @@ block content
                 img#img_colorsofasia(src="assets/img/colorsofasia.png")
                 img#img_kaihouku(src="assets/img/kaihouku.png")
 
+                img#img_vanue_yataimura(src="assets/img/venue/shinagawa_yataimura.png")
+                img#img_vanue_honshoji(src="assets/img/venue/shinagawa_honsyoji.png")
+                img#img_vanue_matsumoto(src="assets/img/venue/shinagawa_matsumoto.png")
+                img#img_vanue_kaidocafe(src="assets/img/venue/shinagawa_kaidocafe.png")
+
                 img#img_shadow(src="assets/img/radial-shadow-2.png")
 
                 //logos
-                img#logo_bug(src="assets/img/buglogo.png")
-                img#logo_tokyodocs(src="assets/img/tokyodocs_logo.jpg")
-                img#logo_sog(src="assets/img/sog_logo.png")
+                img#img_logo_bug(src="assets/img/buglogo.png")
+                img#img_logo_tokyodocs(src="assets/img/tokyodocs_logo.jpg")
+                img#img_logo_sog(src="assets/img/sog_logo.png")
 
                 //panelers
-                img#panel_matsui_front(src="assets/img/panelists/panel_matsui_color.png")
-                img#panel_matsui_back(src="assets/img/panelists/panel_matsui.png")
+                //松井
+                img#panel_matsui_front(src="assets/img/panelists/color_matsui.png")
+                img#panel_matsui_back(src="assets/img/panelists/matsui.png")
+                //米本
+                img#panel_yonemoto_front(src="assets/img/panelists/color_yonemoto.png")
+                img#panel_yonemoto_back(src="assets/img/panelists/yonemoto.png")
+                //ota
+                img#panel_ota_front(src="assets/img/panelists/color_ota.png")
+                img#panel_ota_back(src="assets/img/panelists/ota.png")
+                //uchiyama
+                img#panel_uchiyama_front(src="assets/img/panelists/color_uchiyama.png")
+                img#panel_uchiyama_back(src="assets/img/panelists/uchiyama.png")
 
-                img#panel_yonemoto_front(src="assets/img/panelists/panel_yonemoto_color.png")
-                img#panel_yonemoto_back(src="assets/img/panelists/panel_yonemoto.png")
 
 
 
-            //MODELS
+
+            ///////////////////  3D MODELS
             a-entity#lantan(position="3 3.5 -5")
                 a-animation(attribute="rotation", from="0 100 0", to="0 -260 0", dur="15000", easing="linear", repeat="indefinite")
                 a-collada-model(position="0 0 0", rotation="0 20 0", scale="1.5 1.5 1.5", obj-model="obj: #lantan-obj; mtl: #lantan-mtl")
-
 
             a-entity#amagi(position="0 45 -3")
                 a-animation(attribute="rotation", from="0 -30 0", to="0 330 0", dur="15000", easing="linear", repeat="indefinite")
@@ -92,37 +111,33 @@ block content
                 a-animation(attribute="rotation", from="0 330 0", to="0 -30 0", dur="20000", repeat="indefinite", easing="linear")
                 a-collada-model(position="-.35 0 .55", rotation="0 -20 0", scale="1.5 1.5 1.5", obj-model="obj: #large-obj; mtl: #small-mtl")
 
-            //Programs
-            a-cylinder#nav_zone(position="0 0 0", radius="6", height="1.6", side="back", open-ended="true", color="#FFF")
-                a-cylinder(position="0 0 0", radius="5.99", height="0.03", side="back", open-ended="true", color="#ef12a4")
+            /////////////////  Programs
+            a-cylinder#nav_zone(position="0 0 0", radius="6", height="1.6", side="back", open-ended="true", color="#FFF",opacity="0.2")
+                a-cylinder(position="0 0 0", radius="5.99", height="0.03", side="back", open-ended="true", color="#ef12a4",opacity="0.5")
 
-                a-image#panel_businessman(cylinderize, src="#img_businessman", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="290", angle="0", def_angle="290")
-                a-image#panel_tabitabi(cylinderize, src="#img_tabitabi", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="300", angle="0", def_angle="300")
-                a-image#panel_tokyodocs(cylinderize, src="#img_tokyodocs", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="310", angle="0", def_angle="310")
-                a-image#panel_colorsofasia(cylinderize, src="#img_colorsofasia", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="320", angle="0", def_angle="320")
-                a-image#panel_kaihouku(cylinderize, src="#img_kaihouku", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="330", angle="0", def_angle="330")
+                a-image#prog_businessman(cylinderize, src="#img_businessman", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="290", angle="0", def_angle="290")
+                a-image#prog_tabitabi(cylinderize, src="#img_tabitabi", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="300", angle="0", def_angle="300")
+                a-image#prog_tokyodocs(cylinderize, src="#img_tokyodocs", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="310", angle="0", def_angle="310")
+                a-image#prog_colorsofasia(cylinderize, src="#img_colorsofasia", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="320", angle="0", def_angle="320")
+                a-image#prog_kaihouku(cylinderize, src="#img_kaihouku", width="5", height="10", scale="0.2 0.2 1", auto_rotate, axis="y", y=1.8, angle_to="330", angle="0", def_angle="330")
 
-            //Panellers
-            a-image#paneler_matsui(paneler, src="#panel_matsui_front", width="3", height="8", position="0 0 3", scale="0.5 0.5 0.5", backsrc="#panel_matsui_back", y=1.8, angle="120",angle_to="230", def_angle="230")
-            a-image#paneler_yonemoto(paneler, src="#panel_yonemoto_front", width="3", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_yonemoto_back", y=1.8, angle="120",angle_to="250", def_angle="250")
-            a-image#paneler_yonemoto2(paneler, src="#panel_yonemoto_front", width="3", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_yonemoto_back", y=1.8, angle="120",angle_to="270", def_angle="270")
-            a-image#paneler_matsui2(paneler, src="#panel_matsui_front", width="3", height="8", position="0 0 3", scale="0.5 0.5 0.5", backsrc="#panel_matsui_back", y=1.8, angle="120",angle_to="210", def_angle="210")
+            /////////////////  Panellers
+            a-image#paneller_ota(paneler, src="#panel_ota_front", width="3", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_ota_back", y=1.8, angle="120",angle_to="220", def_angle="270")
+            a-image#paneller_matsui(paneler, src="#panel_matsui_front", width="3", height="8", position="0 0 3", scale="0.5 0.5 0.5", backsrc="#panel_matsui_back", y=1.8, angle="120",angle_to="235", def_angle="230")
+            a-image#paneller_yonemoto(paneler, src="#panel_yonemoto_front", width="3", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_yonemoto_back", y=1.8, angle="120",angle_to="250", def_angle="250")
 
-
-            //LOGO
-            //a-image#doculogo(cylinderize, src="#img_doculogo", width="5", height="5", scale="0.5 0.5 1", opacity="0.8", auto_rotate, axis="y", y=2.2, angle_to="230", angle="0", def_angle="230")
 
             //On CURVE MENU
-
-            a-curvedimage#about_town(curvemenu, src="#img_shinagawajuku", radius="5.9",height="1.5", theta-length="15", angle="0",angle_to="145", def_angle="145")
-            a-curvedimage#about_docsnight(curvemenu, src="#img_docsnight", radius="5.9",height="1.5", theta-length="14", angle="0", angle_to="128", def_angle="128")
-
+            a-curvedimage#about_town(curvemenu, src="#img_kaijo", radius="5.9",height="1.0", theta-length="12", angle="0",angle_to="145", def_angle="145")
+            a-curvedimage#about_toudansha(curvemenu, src="#img_toudansha", radius="5.9",height="1.0", theta-length="12", angle="0",angle_to="130", def_angle="130")
+            a-curvedimage#about_program(curvemenu, src="#img_program", radius="5.9",height="1.0", theta-length="12", angle="0",angle_to="115", def_angle="115")
             a-curvedimage#about_fes(curvemenu, src="#img_aboutfes", radius="5.9", height="1.6", theta-length="30", position="0 0 0", angle="0", angle_to="203", def_angle="203")
-            a-curvedimage#bug(curvemenu, alink, src="#logo_bug", radius="5.7",height="0.5", theta-length="6", position="0 -0.3 0", href="http://bugdoc.tokyo/", angle="0",angle_to="235", def_angle="235")
-            a-curvedimage#tokyodocs(curvemenu, alink, src="#logo_tokyodocs", radius="5.7",height="0.5", theta-length="10", position="0 -0.3 0",href="http://tokyodocs.jp/", angle="0", angle_to="242", def_angle="242")
-            a-curvedimage#sog(curvemenu, alink, src="#logo_sog", radius="5.7",height="0.5", theta-length="10", position="0 -0.3 0",href="http://someonesgarden.org", angle="0", angle_to="252", def_angle="252")
 
+            a-curvedimage#logo_bug(curvemenu, alink, src="#img_logo_bug", radius="5.7",height="0.5", theta-length="6", position="0 -0.3 0", href="http://bugdoc.tokyo/", angle="0",angle_to="235", def_angle="235")
+            a-curvedimage#logo_tokyodocs(curvemenu, alink, src="#img_logo_tokyodocs", radius="5.7",height="0.5", theta-length="10", position="0 -0.3 0",href="http://tokyodocs.jp/", angle="0", angle_to="242", def_angle="242")
+            a-curvedimage#logo_sog(curvemenu, alink, src="#img_logo_sog", radius="5.7",height="0.5", theta-length="10", position="0 -0.3 0",href="http://someonesgarden.org", angle="0", angle_to="252", def_angle="252")
 
+            //////////////////   Schedule
             a-entity#schedule(position="0 45 -3",rotation="0 4 0")
                 a-plane(schelink, position="0 4.2 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#sche1_img1;opacity:0.90;", movie="doglegs.mp4")
                 a-plane(schelink, position="0 0.7 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#sche1_img2;opacity:0.90;", movie="uruho.mp4")
@@ -131,7 +146,7 @@ block content
                 a-plane(schelink, position="0 2.8 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#sche1_img5;opacity:0.90;", movie="uruho.mp4")
                 a-plane(schelink, position="0 3.5 0", width="6", height="3", scale="0.2 0.2 0.2", material="shader:html;target:#sche1_img6;opacity:0.90;", movie="doglegs.mp4")
 
-            //LIGHT & CAMERA & SKY
+            //////////////////   LIGHT & CAMERA & SKY
             a-light(type="directional", color="#fff", intensity="0.2", position="-1 2 1")
             a-light(type="ambient", color="#fff")
             a-sky(color="#ECECEC")
@@ -150,29 +165,60 @@ block content
     script(src="js/lib/common.js")
     script(src="js/aframe/components/index.js")
     script.
-
         document.VR = false;
         var CURSOR_OUT = "0 12.2 -1.3";
         var CURSOR_IN = "0 0.2 -1.3";
         var mobile = #{mobile};
+
+        var loader = document.getElementById("loader");
+        var cursor = document.querySelector("#cursor");
+
         var scene = document.querySelector('a-scene');
         var sky   = document.querySelector('a-sky');
+
+        //3dmodel
+        var lantan = d3.select("#lantan");
         var earth = d3.select("#earth");
         var house = d3.select('#house_small');
+        var largehouse = d3.select('#house_large');
         var schedule = d3.select('#schedule');
         var amagi = d3.select('#amagi');
         var infobox = d3.select('#infobox');
-        var largehouse = d3.select('#house_large');
-        var cursor = document.querySelector("#cursor");
 
-        var panel_kaihouku = document.querySelector('#panel_kaihouku');
+        //Programs
+        var prog_businessman = document.querySelector('#prog_businessman');
+        var prog_tabitabi = document.querySelector('#prog_tabitabi');
+        var prog_tokyodocs = document.querySelector('#prog_tokyodocs');
+        var prog_colorsofasia = document.querySelector('#prog_colorsofasia');
+        var prog_kaihouku = document.querySelector('#prog_kaihouku');
+
+        var programs = [prog_businessman,prog_tabitabi,prog_tokyodocs,prog_colorsofasia,prog_kaihouku];
+
+        //Panellers
+        var paneller_ota = document.querySelector('#paneller_ota');
+        var paneller_matsui = document.querySelector('#paneller_matsui');
+        var paneller_yonemoto = document.querySelector('#paneller_yonemoto');
+
+        var panellers = [paneller_ota,paneller_matsui,paneller_yonemoto];
+
+        // About
+        var about_town = d3.select('#about_town');
+        var about_toudansha = d3.select('#about_toudansha');
+        var about_program = d3.select('#about_program');
+        var about_fes = d3.select('#about_fes');
+
+        // Logo
+        var logo_bug = document.querySelector("#logo_bug");
+        var logo_tokyodocs = document.querySelector("#logo_tokyodocs");
+        var logo_sog = document.querySelector("#logo_sog");
 
 
         document.mode = "house";
         document.visible_model = house;
 
+        /////////// INIT
         var run = function () {
-            document.getElementById("loader").classList.add("hidden");
+            loader.classList.add("hidden");
             if (getDevice == 'sp') {
                 scene.enterVR();
                 setTimeout(function () {
@@ -181,76 +227,22 @@ block content
             }
         };
 
-
         if (!scene.hasLoaded) {
             scene.addEventListener('loaded', run);
         }
 
-
-        //ENTER / EXIT VR
-        document.querySelector('a-scene').addEventListener('enter-vr', function () {
-            console.log("ENTERED VR");
-            if(mobile){
-                cursor.setAttribute('position', CURSOR_IN);
-                cursor.setAttribute('cursor',"maxDistance:100; fuse:true;");
-            }
-            document.VR = true;
-        });
-        document.querySelector('a-scene').addEventListener('exit-vr', function () {
-            console.log("EXIT VR");
-            if(mobile) {
-                cursor.setAttribute('position', CURSOR_OUT);
-                cursor.setAttribute('cursor', "maxDistance:100; fuse:false;");
-            }
-            document.VR = false;
-        });
-
-        ////////// CLICK EVENT
-        //document.querySelector("#doculogo").addEventListener('click', function () {
-        //    switchModel("house");
-        //});
-
-        document.querySelector("#bug").addEventListener('click', function () {
-            panel_kaihouku.setAttribute('angle','30');
-        });
-
-        document.querySelector("#bug").addEventListener('mouseenter', function () {
-            panel_kaihouku.setAttribute('angle_to', '210');
-            panel_kaihouku.pause();
-            panel_kaihouku.play();
-        });
-        document.querySelector("#bug").addEventListener('mouseleave', function () {
-            panel_kaihouku.setAttribute('angle_to', panel_kaihouku.getAttribute('def_angle'));
-            panel_kaihouku.pause();
-            panel_kaihouku.play();
-        });
-
-
-        document.querySelector("#panel_businessman").addEventListener('click', function () {
-            switchModel("schedule");
-        });
-
-        document.querySelector("#panel_tabitabi").addEventListener('click', function () {
-            switchModel("earth");
-        });
-
-        document.querySelector("#panel_tokyodocs").addEventListener('click', function () {
-            console.log("tokyodokc");
-            switchModel("amagi");
-        });
-
-
-        var switchModel = function(model){
+        ///////////// FUNCTION
+        var switchModel = function (model) {
 
             var model_to_change = null;
             var model_y = 0;
 
-            if(model=="earth"){
+            if (model == "earth") {
                 sky.setAttribute("src", "");
                 model_to_change = earth;
-            }else if(model=="house"){
+            } else if (model == "house") {
                 model_to_change = house;
-            }else if(model=="schedule"){
+            } else if (model == "schedule") {
                 model_to_change = schedule;
             } else if (model == "amagi") {
                 model_to_change = amagi;
@@ -278,13 +270,76 @@ block content
         }
 
 
-        document.querySelector("#about_fes").addEventListener('click', function(){
+        //ENTER / EXIT VR
+        scene.addEventListener('enter-vr', function () {
+            console.log("ENTERED VR");
+            if(mobile){
+                cursor.setAttribute('position', CURSOR_IN);
+                cursor.setAttribute('cursor',"maxDistance:100; fuse:true;");
+            }
+            document.VR = true;
+        });
+        scene.addEventListener('exit-vr', function () {
+            console.log("EXIT VR");
+            if(mobile) {
+                cursor.setAttribute('position', CURSOR_OUT);
+                cursor.setAttribute('cursor', "maxDistance:100; fuse:false;");
+            }
+            document.VR = false;
+        });
+
+
+        ////////// EVENT ////////////////
+
+        // Logo
+        logo_bug.addEventListener('click', function () {
+            moveMenuItem(prog_kaihouku,30);
+        });
+
+         logo_bug.addEventListener('mouseenter', function () {
+             console.log("logo_bu");
+            moveMenuItem(prog_kaihouku,200);
+        });
+         logo_bug.addEventListener('mouseleave', function () {
+            moveMenuItem2DefPos(prog_kaihouku);
+        });
+
+
+         // About
+
+        about_fes.on('click', function () {
             switchModel("infobox");
         });
 
-        document.querySelector("#about_town").addEventListener('click', function(){
+
+        about_town.on('mouseenter',function(){
+           console.log("about_town_mouseenter");
+
+            for(var i = 0;i<programs.length;i++){
+                moveMenuItem(programs[i],360);
+            }
+            for(var j=0;j<panellers.length;j++){
+                moveMenuItem(panellers[j],0);
+            }
+        });
+
+        about_town.on('mouseleave', function(){
+            console.log("about_town_mouseleave");
+
+            for (var i = 0; i < programs.length; i++) {
+                moveMenuItem2DefPos(programs[i]);
+            }
+
+            for (var i = 0; i < panellers.length; i++) {
+                moveMenuItem2DefPos(panellers[i]);
+            }
+        })
+
+        about_town.on('click', function () {
             console.log("About Town");
 
+
+            /*
             var largehouse_y = largehouse.attr("position").y;
             if (largehouse_y == 0) {
 
@@ -301,14 +356,35 @@ block content
                     });
                 tween.start();
             }
-            sky.setAttribute("src", "#er_ginza");
+            sky.setAttribute("src", "#er_honshoji");
+            */
         });
 
-        document.querySelector("#earth").addEventListener('click', function(){
+
+        // Program
+
+        prog_businessman.addEventListener('click', function () {
+            switchModel("schedule");
+        });
+
+        prog_tabitabi.addEventListener('click', function () {
+            switchModel("earth");
+        });
+
+        prog_tokyodocs.addEventListener('click', function () {
+            console.log("tokyodokc");
+            switchModel("amagi");
+        });
+
+
+        // 3d model
+
+        earth.on('click', function(){
             console.log("earth clicked");
         });
 
-        document.querySelector("#house_small").addEventListener('click',function(){
+        house.on('click',function(){
+            console.log("house clicked");
             var largehouse_y = largehouse.attr("position").y;
             if (largehouse_y ==80) {
                 sky.setAttribute("src", "");

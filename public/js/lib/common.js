@@ -8,3 +8,17 @@ var getDevice = (function () {
         return 'other';
     }
 })();
+
+
+var moveMenuItem = function(obj,angle){
+    obj.setAttribute('angle_to', angle);
+    obj.pause();
+    obj.play();
+}
+
+var moveMenuItem2DefPos = function (obj) {
+    var ang = obj.getAttribute('def_angle');
+    obj.setAttribute('angle_to', ang);
+    obj.pause();
+    obj.play();
+}
