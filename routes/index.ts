@@ -39,7 +39,7 @@ router.get('/react',(req,res,next)=>{
 });
 
 
-router.get('/', (req, res, next)=> {
+router.get('/dev', (req, res, next)=> {
 
     const agent = parser(req.headers['user-agent']);
     const device_type = agent.device.type;
@@ -52,8 +52,22 @@ router.get('/', (req, res, next)=> {
     }else{
         res.render('index_new', { title: 'DOCU-MEMENTO映画祭', mobile:false});
     }
+});
 
 
+router.get('/', (req, res, next)=> {
+
+    const agent = parser(req.headers['user-agent']);
+    const device_type = agent.device.type;
+    console.log("================================================");
+    console.log(agent.device.type);
+    console.log("================================================");
+
+    if(device_type=="mobile"){
+        res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭VR', mobile:true});
+    }else{
+        res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭', mobile:false});
+    }
 });
 
 module.exports = router;

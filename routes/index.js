@@ -26,7 +26,7 @@ router.get('/d3camera', function (req, res, next) {
 router.get('/react', function (req, res, next) {
     res.render('react', { title: 'REACT' });
 });
-router.get('/', function (req, res, next) {
+router.get('/dev', function (req, res, next) {
     var agent = parser(req.headers['user-agent']);
     var device_type = agent.device.type;
     console.log("================================================");
@@ -37,6 +37,19 @@ router.get('/', function (req, res, next) {
     }
     else {
         res.render('index_new', { title: 'DOCU-MEMENTO映画祭', mobile: false });
+    }
+});
+router.get('/', function (req, res, next) {
+    var agent = parser(req.headers['user-agent']);
+    var device_type = agent.device.type;
+    console.log("================================================");
+    console.log(agent.device.type);
+    console.log("================================================");
+    if (device_type == "mobile") {
+        res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭VR', mobile: true });
+    }
+    else {
+        res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭', mobile: false });
     }
 });
 module.exports = router;

@@ -1,3 +1,13 @@
+AFRAME.registerComponent('num3d', {
+
+    init:function(){
+        var thisentity = this.el;
+        var num = thisentity.getAttribute('num');
+        thisentity.setAttribute('obj-model',"obj: #num"+num+"-obj; mtl: #num"+num+"-mtl");
+    }
+});
+
+
 AFRAME.registerComponent('paneler', {
 
     angleChange:function(angle,radius,y){
@@ -10,6 +20,7 @@ AFRAME.registerComponent('paneler', {
         var thisentity = this.el;
         var backimg = thisentity.getAttribute('backsrc');
         var frontimg = thisentity.getAttribute('src');
+        var name = thisentity.getAttribute('name');
         thisentity.addEventListener('mouseenter',function(){
             console.log(backimg);
             thisentity.setAttribute('src',backimg);
@@ -17,6 +28,17 @@ AFRAME.registerComponent('paneler', {
         thisentity.addEventListener('mouseleave',function(){
             console.log(frontimg);
             thisentity.setAttribute('src',frontimg);
+        });
+
+        thisentity.addEventListener('click',function(){
+            var d1 = thisentity.querySelector('.d1');  var d1=d1.getAttribute('num');
+            var d2 = thisentity.querySelector('.d2');  var d2=d2.getAttribute('num');
+            var d3 = thisentity.querySelector('.d3');  var d3=d3.getAttribute('num');
+
+            var point = parseInt(d1+d2+d3);
+            console.log("num="+point);
+
+
         });
     },
 
@@ -58,7 +80,6 @@ AFRAME.registerComponent('paneler', {
 
     tick: function () {
     }
-
 });
 
 
