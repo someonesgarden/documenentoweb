@@ -1,9 +1,96 @@
+AFRAME.registerComponent('arrow', {
+
+    countUp:function(){
+
+        var thisentity = this.el;
+        var type = thisentity.getAttribute('type');
+        var parententity = thisentity.parentEl;
+        var name = parententity.getAttribute("name");
+        var d1 = parententity.querySelector('.d1');
+        var d2 = parententity.querySelector('.d2');
+        var d3 = parententity.querySelector('.d3');
+        var point = parseInt(d1.getAttribute("num")+d2.getAttribute("num")+ d3.getAttribute("num"));
+
+        //count up
+        if(type=="up"){
+            if(point<999){
+                point = point + 1;
+            }
+        }else{
+            if(point>0){
+                point = point - 1;
+            }
+        }
+
+        window.socket_voting({
+            name:name,
+            point:point
+        });
+
+        var p_str = ('000'+ point).slice(-3);
+        var d1_ = p_str.substr(0,1);
+        var d2_ = p_str.substr(1,1);
+        var d3_ = p_str.substr(2,1);
+
+        d1.setAttribute("num",d1_);
+        d2.setAttribute("num",d2_);
+        d3.setAttribute("num",d3_);
+
+        d1.pause();d1.play();
+        d2.pause();d2.play();
+        d3.pause();d3.play();
+
+        window.votes[name] = p_str;
+
+        $.post("/voteapi", window.votes,
+            function(data){
+                console.log("resdata",data);
+            }
+        );
+    },
+
+
+   init:function(){
+       var thisentity = this.el;
+       var that = this;
+
+       var type = thisentity.getAttribute('type');
+
+       thisentity.setAttribute('obj-model',"obj: #"+type+"-obj; mtl: #"+type+"-mtl");
+
+       if(type=="up"){
+           thisentity.setAttribute("position","0.8 4.2 0");
+       }else{
+           thisentity.setAttribute("position","-0.8 4.2 0");
+       }
+
+       thisentity.addEventListener('click',function(){
+           that.countUp();
+       });
+
+   }
+});
+
+
+
 AFRAME.registerComponent('num3d', {
 
-    init:function(){
+    setNum3D:function(){
         var thisentity = this.el;
         var num = thisentity.getAttribute('num');
         thisentity.setAttribute('obj-model',"obj: #num"+num+"-obj; mtl: #num"+num+"-mtl");
+    },
+
+    init:function(){
+        this.setNum3D();
+    },
+
+    play:function(){
+        this.setNum3D();
+    },
+
+    pause:function(){
+
     }
 });
 
@@ -16,34 +103,57 @@ AFRAME.registerComponent('paneler', {
         return {'x':x,'y':y,'z':z};
     },
 
+    countUp:function(){
+
+        var thisentity = this.el;
+        var d1 = thisentity.querySelector('.d1');
+        var d2 = thisentity.querySelector('.d2');
+        var d3 = thisentity.querySelector('.d3');
+
+        var point = parseInt(d1.getAttribute("num")+d2.getAttribute("num")+ d3.getAttribute("num"));
+
+
+        //count up
+        point = point + 1;
+
+        var p_str = ('000'+ point).slice( -3 );
+
+        var d1_ = p_str.substr(0,1);
+        var d2_ = p_str.substr(1,1);
+        var d3_ = p_str.substr(2,1);
+
+        d1.setAttribute("num",d1_);
+        d2.setAttribute("num",d2_);
+        d3.setAttribute("num",d3_);
+
+        d1.pause();d1.play();
+        d2.pause();d2.play();
+        d3.pause();d3.play();
+
+    },
+
     init:function(){
         var thisentity = this.el;
         var backimg = thisentity.getAttribute('backsrc');
         var frontimg = thisentity.getAttribute('src');
         var name = thisentity.getAttribute('name');
+        var that = this;
         thisentity.addEventListener('mouseenter',function(){
-            console.log(backimg);
+            //console.log(backimg);
             thisentity.setAttribute('src',backimg);
         });
         thisentity.addEventListener('mouseleave',function(){
-            console.log(frontimg);
+            //console.log(frontimg);
             thisentity.setAttribute('src',frontimg);
         });
 
         thisentity.addEventListener('click',function(){
-            var d1 = thisentity.querySelector('.d1');  var d1=d1.getAttribute('num');
-            var d2 = thisentity.querySelector('.d2');  var d2=d2.getAttribute('num');
-            var d3 = thisentity.querySelector('.d3');  var d3=d3.getAttribute('num');
-
-            var point = parseInt(d1+d2+d3);
-            console.log("num="+point);
-
-
+           //that.countUp();
         });
     },
 
     setupAnimation:function() {
-        console.log("setupAnimation");
+        //console.log("setupAnimation");
         var thisentity = this.el;
         var radius = 6.2;
 
@@ -62,7 +172,6 @@ AFRAME.registerComponent('paneler', {
                 thisentity.setAttribute('rotation',{'x':0,'y':-this.ang-90,'z':0});
             })
             .onComplete(function(){
-                console.log("ang1",ang1);
                 thisentity.setAttribute('angle',ang1);
             })
             .delay(300)
@@ -70,11 +179,11 @@ AFRAME.registerComponent('paneler', {
     },
 
     pause: function () {
-        console.log("pause");
+        //console.log("pause");
     },
 
     play:function(){
-        console.log("play");
+        //console.log("play");
         this.setupAnimation();
     },
 
@@ -89,7 +198,7 @@ AFRAME.registerComponent('schelink', {
         var thisentity = this.el;
         var movie = thisentity.getAttribute('movie');
         thisentity.addEventListener('click',function(){
-            console.log(movie);
+            //console.log(movie);
             location.href="/vrtheatre?movie="+movie;
         })
     }
@@ -115,7 +224,7 @@ AFRAME.registerComponent('curvemenu', {
         },
 
         setupAnimation:function(){
-            console.log("curvemenu,setmpAnimation")
+            //console.log("curvemenu,setmpAnimation")
             var thisentity = this.el;
             var ang0 = thisentity.getAttribute('angle');
             var ang1 = thisentity.getAttribute('angle_to');
@@ -128,7 +237,7 @@ AFRAME.registerComponent('curvemenu', {
                     thisentity.setAttribute('rotation',{'x':0,'y':this.ang,'z':0});
                 })
                 .onComplete(function(){
-                    console.log("ang1",ang1);
+                    //console.log("ang1",ang1);
                     thisentity.setAttribute('angle',ang1);
                 })
                 .delay(100)
@@ -157,7 +266,7 @@ AFRAME.registerComponent('cylinderize', {
     },
 
     setupAnimation:function() {
-        console.log("setupAnimation");
+        //console.log("setupAnimation");
         var thisentity = this.el;
         var radius = 5.94;
 
@@ -176,7 +285,7 @@ AFRAME.registerComponent('cylinderize', {
                 thisentity.setAttribute('rotation',{'x':0,'y':-this.ang-90,'z':0});
             })
             .onComplete(function(){
-                console.log("ang1",ang1);
+                //console.log("ang1",ang1);
                 thisentity.setAttribute('angle',ang1);
             })
             .delay(300)
@@ -184,11 +293,11 @@ AFRAME.registerComponent('cylinderize', {
     },
 
     pause: function () {
-      console.log("pause");
+      //console.log("pause");
     },
 
     play:function(){
-        console.log("play");
+        //console.log("play");
         this.setupAnimation();
     },
 

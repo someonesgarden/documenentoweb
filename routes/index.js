@@ -4,8 +4,16 @@ var express = require('express');
 var router = express.Router();
 var basicAuth = require('basic-auth-connect');
 var fs = require('fs');
-//router.use(basicAuth('tabitabi','bitabita'));
 var parser = require('ua-parser-js');
+//router.use(basicAuth('tabitabi','bitabita'));
+//ファイルの書き込み関数
+function writeFile(path, data) {
+    fs.writeFile(path, data, function (err) {
+        if (err) {
+            throw err;
+        }
+    });
+}
 router.get('/earth', function (req, res, next) {
     res.render('earth', { title: 'Earth' });
 });
@@ -51,5 +59,10 @@ router.get('/', function (req, res, next) {
     else {
         res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭', mobile: false });
     }
+});
+router.post('/voteapi', function (req, res, next) {
+    var obj = { "vote": req.body };
+    writeFile("public/data/vote.json", JSON.stringify(obj));
+    res.send("voteapi");
 });
 module.exports = router;
