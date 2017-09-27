@@ -89,3 +89,16 @@ body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; background-color: 
   height: 2000px;
   font-size: 1000%;
 }
+
+p.titlelogo{
+  font-family: 'Work Sans', sans-serif;
+  font-size:2em;
+  color:white;
+  font-weight:bold;
+  padding:10px;
+}
+
+img.titleheader{
+  height:100%;
+  padding:3px;
+}

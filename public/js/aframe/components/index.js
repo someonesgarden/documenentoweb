@@ -1,3 +1,12 @@
+AFRAME.registerComponent('panelbox', {
+    init:function(){
+        var thisentity = this.el;
+        thisentity.addEventListener('click',function(){
+            switchModel("house");
+        });
+    }
+});
+
 AFRAME.registerComponent('arrow', {
 
     countUp:function(){
@@ -71,8 +80,6 @@ AFRAME.registerComponent('arrow', {
    }
 });
 
-
-
 AFRAME.registerComponent('num3d', {
 
     setNum3D:function(){
@@ -93,104 +100,6 @@ AFRAME.registerComponent('num3d', {
 
     }
 });
-
-
-AFRAME.registerComponent('paneler', {
-
-    angleChange:function(angle,radius,y){
-        var x = radius * Math.cos(angle * (Math.PI / 180));
-        var z = radius * Math.sin(angle * (Math.PI / 180));
-        return {'x':x,'y':y,'z':z};
-    },
-
-    countUp:function(){
-
-        var thisentity = this.el;
-        var d1 = thisentity.querySelector('.d1');
-        var d2 = thisentity.querySelector('.d2');
-        var d3 = thisentity.querySelector('.d3');
-
-        var point = parseInt(d1.getAttribute("num")+d2.getAttribute("num")+ d3.getAttribute("num"));
-
-
-        //count up
-        point = point + 1;
-
-        var p_str = ('000'+ point).slice( -3 );
-
-        var d1_ = p_str.substr(0,1);
-        var d2_ = p_str.substr(1,1);
-        var d3_ = p_str.substr(2,1);
-
-        d1.setAttribute("num",d1_);
-        d2.setAttribute("num",d2_);
-        d3.setAttribute("num",d3_);
-
-        d1.pause();d1.play();
-        d2.pause();d2.play();
-        d3.pause();d3.play();
-
-    },
-
-    init:function(){
-        var thisentity = this.el;
-        var backimg = thisentity.getAttribute('backsrc');
-        var frontimg = thisentity.getAttribute('src');
-        var name = thisentity.getAttribute('name');
-        var that = this;
-        thisentity.addEventListener('mouseenter',function(){
-            //console.log(backimg);
-            thisentity.setAttribute('src',backimg);
-        });
-        thisentity.addEventListener('mouseleave',function(){
-            //console.log(frontimg);
-            thisentity.setAttribute('src',frontimg);
-        });
-
-        thisentity.addEventListener('click',function(){
-           //that.countUp();
-        });
-    },
-
-    setupAnimation:function() {
-        //console.log("setupAnimation");
-        var thisentity = this.el;
-        var radius = 6.2;
-
-        var ang0 = thisentity.getAttribute('angle');
-        var y0 =  thisentity.getAttribute('y');
-        var ang1 = thisentity.getAttribute('angle_to');
-
-        var that = this;
-
-        new AFRAME.TWEEN.Tween({'ang':ang0})
-            .to({'ang':ang1}, 2000)
-            .easing(AFRAME.TWEEN.Easing.Quadratic.Out)
-            .onUpdate(function () {
-                var pos1 = that.angleChange(`${this.ang}`,radius,y0);
-                thisentity.setAttribute('position', {'x':pos1.x,'y':pos1.y, 'z':pos1.z});
-                thisentity.setAttribute('rotation',{'x':0,'y':-this.ang-90,'z':0});
-            })
-            .onComplete(function(){
-                thisentity.setAttribute('angle',ang1);
-            })
-            .delay(300)
-            .start();
-    },
-
-    pause: function () {
-        //console.log("pause");
-    },
-
-    play:function(){
-        //console.log("play");
-        this.setupAnimation();
-    },
-
-    tick: function () {
-    }
-});
-
 
 AFRAME.registerComponent('schelink', {
 
@@ -217,17 +126,129 @@ AFRAME.registerComponent('alink', {
     }
 });
 
+AFRAME.registerComponent('paneler', {
+
+    angleChange:function(angle,radius,y){
+        var x = radius * Math.cos(angle * (Math.PI / 180));
+        var z = radius * Math.sin(angle * (Math.PI / 180));
+        return {'x':x,'y':y,'z':z};
+    },
+
+    countUp:function(){
+
+        var thisentity = this.el;
+        var d1 = thisentity.querySelector('.d1');
+        var d2 = thisentity.querySelector('.d2');
+        var d3 = thisentity.querySelector('.d3');
+
+        var point = parseInt(d1.getAttribute("num")+d2.getAttribute("num")+ d3.getAttribute("num"));
+
+        //count up
+        point = point + 1;
+
+        var p_str = ('000'+ point).slice( -3 );
+
+        var d1_ = p_str.substr(0,1);
+        var d2_ = p_str.substr(1,1);
+        var d3_ = p_str.substr(2,1);
+
+        d1.setAttribute("num",d1_);
+        d2.setAttribute("num",d2_);
+        d3.setAttribute("num",d3_);
+
+        d1.pause();d1.play();
+        d2.pause();d2.play();
+        d3.pause();d3.play();
+
+    },
+
+    init:function(){
+        var thisentity = this.el;
+        var n = thisentity.getAttribute('n');
+        var name = thisentity.getAttribute('name');
+        thisentity.angle = 0;
+        //thisentity.angle_to = 70+15*n;
+        thisentity.angle_to = 90;
+
+        var backimg = thisentity.getAttribute('backsrc');
+        var frontimg = thisentity.getAttribute('src');
+        var name = thisentity.getAttribute('name');
+        var that = this;
+        thisentity.addEventListener('mouseenter',function(){
+            //console.log(backimg);
+            thisentity.setAttribute('src',backimg);
+        });
+        thisentity.addEventListener('mouseleave',function(){
+            //console.log(frontimg);
+            thisentity.setAttribute('src',frontimg);
+        });
+
+        thisentity.addEventListener('click',function(){
+            console.log(name);
+            switchModel("panelbox1");
+        });
+    },
+
+    setupAnimation:function() {
+        //console.log("setupAnimation");
+        var thisentity = this.el;
+        var radius = 6.2;
+        //var y0 =  thisentity.getAttribute('y');
+        var y0 = 1.8;
+
+        var n = thisentity.getAttribute('n');
+
+        var ang0 = thisentity.angle;
+
+        //var ang1 = thisentity.getAttribute('angle_to');
+        var ang1 = thisentity.angle_to;
+
+        //var ang1 = 70+15*n;
+
+        var that = this;
+
+        new AFRAME.TWEEN.Tween({'ang':ang0})
+            .to({'ang':ang1}, 2000)
+            .easing(AFRAME.TWEEN.Easing.Quadratic.Out)
+            .onUpdate(function () {
+                var pos1 = that.angleChange(`${this.ang}`,radius,y0);
+                thisentity.setAttribute('position', {'x':pos1.x,'y':pos1.y, 'z':pos1.z});
+                thisentity.setAttribute('rotation',{'x':0,'y':-this.ang-90,'z':0});
+            })
+            .onComplete(function(){
+                thisentity.angle=ang1;
+            })
+            .delay(120)
+            .start();
+    },
+
+    pause: function () {
+        //console.log("pause");
+    },
+
+    play:function(){
+        //console.log("play");
+        this.setupAnimation();
+    },
+
+    tick: function () {
+    }
+});
+
+
 AFRAME.registerComponent('curvemenu', {
 
         init:function(){
-
+            var thisentity = this.el;
+            var n = thisentity.getAttribute('n');
+            thisentity.angle = 0;
+            thisentity.angle_to = 115+15*n;
         },
-
         setupAnimation:function(){
             //console.log("curvemenu,setmpAnimation")
             var thisentity = this.el;
-            var ang0 = thisentity.getAttribute('angle');
-            var ang1 = thisentity.getAttribute('angle_to');
+            var ang0 = thisentity.angle;
+            var ang1 = thisentity.angle_to;
 
             var that = this;
             new AFRAME.TWEEN.Tween({'ang':ang0})
@@ -238,7 +259,10 @@ AFRAME.registerComponent('curvemenu', {
                 })
                 .onComplete(function(){
                     //console.log("ang1",ang1);
-                    thisentity.setAttribute('angle',ang1);
+
+                    //thisentity.setAttribute('angle',ang1);
+                    thisentity.angle = ang1;
+
                 })
                 .delay(100)
                 .start();
@@ -248,11 +272,9 @@ AFRAME.registerComponent('curvemenu', {
         play:function(){
             this.setupAnimation()
         }
-
-
 });
 
-AFRAME.registerComponent('cylinderize', {
+AFRAME.registerComponent('prog', {
 
     angleChange:function(angle,radius,y){
         var x = radius * Math.cos(angle * (Math.PI / 180));
@@ -263,6 +285,11 @@ AFRAME.registerComponent('cylinderize', {
     init:function() {
         //initで初期だけ定義する代わりに、
         //play(),pause()の仕組みを利用して擬似的にinitと関数呼び出しを実現している
+        var thisentity = this.el;
+        var n = thisentity.getAttribute('n');
+        thisentity.angle = 0;
+        //thisentity.angle_to = 290+10*n;
+        thisentity.angle_to = 90;
     },
 
     setupAnimation:function() {
@@ -270,9 +297,12 @@ AFRAME.registerComponent('cylinderize', {
         var thisentity = this.el;
         var radius = 5.94;
 
-        var ang0 = thisentity.getAttribute('angle');
-        var y0 =  thisentity.getAttribute('y');
-        var ang1 = thisentity.getAttribute('angle_to');
+        //var ang0 = thisentity.getAttribute('angle');
+        var ang0 = thisentity.angle;
+        //var y0 =  thisentity.getAttribute('y');
+        var y0 = 1.8;
+        //var ang1 = thisentity.getAttribute('angle_to');
+        var ang1 = thisentity.angle_to;
 
         var that = this;
 
@@ -286,7 +316,8 @@ AFRAME.registerComponent('cylinderize', {
             })
             .onComplete(function(){
                 //console.log("ang1",ang1);
-                thisentity.setAttribute('angle',ang1);
+                //thisentity.setAttribute('angle',ang1);
+                thisentity.angle=ang1;
             })
             .delay(300)
             .start();
@@ -318,7 +349,7 @@ AFRAME.registerComponent('auto_rotate', {
         var myrotate = document.createElement("a-animation");
         var axis = thisentity.getAttribute('axis');
 
-        var angle_to = 270-thisentity.getAttribute('angle_to');
+        var angle_to = 30-thisentity.angle_to;
         var random_angle = (Math.floor(Math.random() * 3) * 360+angle_to);
 
         myrotate.setAttribute('attribute', "rotation");
@@ -328,7 +359,7 @@ AFRAME.registerComponent('auto_rotate', {
 
         if (axis == "x") {
             angles = random_angle+' 0 0';
-        }else if(axis=="y"){
+        }else{
             angles = '0 '+random_angle+' 0';
         }
 
