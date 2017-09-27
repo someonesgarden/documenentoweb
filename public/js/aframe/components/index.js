@@ -4,7 +4,14 @@ AFRAME.registerComponent('panelbox', {
         thisentity.addEventListener('click',function(){
             switchModel("house");
         });
-    }
+    },
+    pause: function () {
+        console.log("panelbox:pause");
+    },
+
+    play:function(){
+        console.log("panelbox:play");
+    },
 });
 
 AFRAME.registerComponent('arrow', {
@@ -184,8 +191,12 @@ AFRAME.registerComponent('paneler', {
         });
 
         thisentity.addEventListener('click',function(){
-            console.log(name);
-            switchModel("panelbox1");
+
+            switchPanelBox(name);
+            var collada = panelbox1selector.querySelector('a-collada-model');
+            collada.setAttribute("obj-model","obj: #panelbox-obj; mtl: #panelbox-"+name+"-mtl");
+            panelbox1selector.pause();
+            panelbox1selector.play();
         });
     },
 

@@ -44,7 +44,8 @@ block content
 
                 a-asset-item#panelbox-obj(src="assets/models/panelbox/box.obj")
                 a-asset-item#panelbox-mtl(src="assets/models/panelbox/box.mtl")
-
+                a-asset-item#panelbox-uchiyama-mtl(src="assets/models/panelbox/uchiyama.mtl")
+                a-asset-item#panelbox-yonemoto-mtl(src="assets/models/panelbox/yonemoto.mtl")
 
                 //3D models - numbers
                 a-asset-item#num0-mtl(src="assets/models/numbers/0.mtl")
@@ -74,7 +75,6 @@ block content
                 a-asset-item#down-mtl(src="assets/models/arrow/down.mtl")
                 a-asset-item#down-obj(src="assets/models/arrow/down.obj")
 
-
                 // About
                 //img#img_doculogo(src="assets/img/documement2.png")
                 img#img_kaijo(src="assets/img/cmenu_venue.png")
@@ -89,10 +89,10 @@ block content
                 img#img_colorsofasia(src="assets/img/colorsofasia.png")
                 img#img_kaihouku(src="assets/img/kaihouku.png")
 
-                img#img_vanue_yataimura(src="assets/img/venue/shinagawa_yataimura.png")
-                img#img_vanue_honshoji(src="assets/img/venue/shinagawa_honsyoji.png")
-                img#img_vanue_matsumoto(src="assets/img/venue/shinagawa_matsumoto.png")
-                img#img_vanue_kaidocafe(src="assets/img/venue/shinagawa_kaidocafe.png")
+                img#img_venue_yataimura(src="assets/img/venue/shinagawa_yataimura.png")
+                img#img_venue_honshoji(src="assets/img/venue/shinagawa_honsyoji.png")
+                img#img_venue_matsumoto(src="assets/img/venue/shinagawa_matsumoto.png")
+                img#img_venue_kaidocafe(src="assets/img/venue/shinagawa_kaidocafe.png")
 
                 img#img_shadow(src="assets/img/radial-shadow-2.png")
 
@@ -148,10 +148,9 @@ block content
 
             ///////////////////  3D MODELS
 
-
             a-entity#panelbox1(panelbox, position="0 45 -3")
                 a-animation(attribute="rotation", from="0 100 0", to="0 -260 0", dur="15000", easing="linear", repeat="indefinite")
-                a-collada-model(position="0 0 0", rotation="0 20 0", scale="1 1 1", obj-model="obj: #panelbox-obj; mtl: #panelbox-mtl")
+                a-collada-model(position="0 0 0", rotation="0 20 0", scale="0.8 0.8 0.8", obj-model="obj: #panelbox-obj; mtl: #panelbox-mtl")
 
             a-entity#lantan(position="0.5 45 -3")
                 a-animation(attribute="rotation", from="0 100 0", to="0 -260 0", dur="15000", easing="linear", repeat="indefinite")
@@ -191,6 +190,12 @@ block content
                     a-image#prog_tokyodocs(prog, type="prog", src="#img_tokyodocs", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=2)
                     a-image#prog_colorsofasia(prog, type="prog", src="#img_colorsofasia", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=3)
                     a-image#prog_kaihouku(prog, type="prog", src="#img_kaihouku", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=4)
+
+                a-entity#venues
+                    a-image#venue_yataimura(prog, type="prog", src="#img_venue_yataimura", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=0)
+                    a-image#venue_honshoji(prog, type="prog", src="#img_venue_honshoji", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=1)
+                    a-image#venue_matsumoto(prog, type="prog", src="#img_venue_matsumoto", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=2)
+                    a-image#venue_kaidocafe(prog, type="prog", src="#img_venue_kaidocafe", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=3)
 
             /////////////////  Panellers
 
@@ -353,6 +358,7 @@ block content
         var amagi = d3.select('#amagi');
         var infobox = d3.select('#infobox');
         var panelbox1 = d3.select('#panelbox1');
+        var panelbox1selector = document.querySelector('#panelbox1');
 
         //Programs
         var prog_businessman = document.querySelector('#prog_businessman');
@@ -466,6 +472,32 @@ block content
             scene.addEventListener('loaded', run);
         }
 
+
+        ///////////// FUNCTION
+        var switchPanelBox = function (name) {
+
+            var model_to_change = panelbox1;
+            var model_y = 0;
+
+            model_y = model_to_change.attr("position").y;
+            if (model_y == 45) {
+                var tween = new AFRAME.TWEEN.Tween({y: 45, ly: 0})
+                    .to({y: 0, ly: 80}, 1400)
+                    //to()までの数値変化のイージング種類
+                    .easing(TWEEN.Easing.Elastic.InOut)
+                    .onUpdate(function () {
+                        model_to_change.attr({position: "0 " + this.y + " -3"});
+                        document.visible_model.attr({position: "0 " + (45 - this.y) + " -3"});
+                    })
+                    .onComplete(function () {
+                        document.mode = "panelbox1";
+                        document.visible_model = panelbox1;
+                    });
+                tween.start();
+            }
+        }
+
+
         ///////////// FUNCTION
         var switchModel = function (model) {
 
@@ -500,26 +532,6 @@ block content
                     model_to_change = house;
                     break;
             }
-
-            /*
-            if (model == "earth") {
-                sky.setAttribute("src", "");
-                model_to_change = earth;
-            } else if (model == "house") {
-                model_to_change = house;
-            } else if (model == "schedule") {
-                model_to_change = schedule;
-            } else if (model == "amagi") {
-                model_to_change = amagi;
-            }
-            else if (model == "infobox") {
-                model_to_change = infobox;
-            } else if (model == "lantan") {
-                model_to_change = lantan;
-            }else{
-                model_to_change = house;
-            }
-            */
 
             model_y = model_to_change.attr("position").y;
             if (model_y == 45) {
