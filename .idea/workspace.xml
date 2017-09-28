@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55982872-3994-4767-a8e1-b9ed15e2e292" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/cmenu_program.png" afterPath="$PROJECT_DIR$/public/assets/img/cmenu_program.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/infobox/fes_column.jpg" afterPath="$PROJECT_DIR$/public/assets/models/infobox/fes_column.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/venue/shinagawa_honsyoji.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/venue/shinagawa_kaidocafe.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/venue/shinagawa_matsumoto.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/venue/shinagawa_yataimura.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/aframe/components/index.js" afterPath="$PROJECT_DIR$/public/js/aframe/components/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/lib/common.js" afterPath="$PROJECT_DIR$/public/js/lib/common.js" />
@@ -24,8 +26,8 @@
       <file leaf-file-name="index_new.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index_new.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="167" column="91" lean-forward="true" selection-start-line="167" selection-start-column="91" selection-end-line="167" selection-end-column="91" />
+            <state relative-caret-position="-999">
+              <caret line="719" column="56" lean-forward="true" selection-start-line="719" selection-start-column="56" selection-end-line="719" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -41,26 +43,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/lib/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="23" />
+            <state relative-caret-position="630">
+              <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/aframe/components/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="374" column="14" lean-forward="true" selection-start-line="374" selection-start-column="14" selection-end-line="374" selection-end-column="14" />
+            <state relative-caret-position="480">
+              <caret line="312" column="44" lean-forward="false" selection-start-line="312" selection-start-column="44" selection-end-line="312" selection-end-column="44" />
               <folding>
                 <element signature="e#380#2192#0" expanded="false" />
                 <element signature="e#2230#2579#0" expanded="false" />
                 <element signature="e#2620#2893#0" expanded="false" />
                 <element signature="e#2931#3220#0" expanded="false" />
+                <element signature="e#3260#6543#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -127,9 +130,9 @@
       <find>town</find>
       <find>child</find>
       <find>switchModel</find>
-      <find>type=&quot;ve</find>
       <find>children</find>
       <find>def_angle</find>
+      <find>type=&quot;ve</find>
     </findStrings>
     <replaceStrings>
       <replace>img</replace>
@@ -143,8 +146,8 @@
       <replace>0 45 -3</replace>
       <replace>prog_</replace>
       <replace>panel_</replace>
-      <replace>venu</replace>
       <replace>prog</replace>
+      <replace>venu</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -201,9 +204,9 @@
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/assets/models/infobox/box.obj" />
         <option value="$PROJECT_DIR$/views/index_tmp.jade" />
-        <option value="$PROJECT_DIR$/public/js/lib/common.js" />
-        <option value="$PROJECT_DIR$/views/index_new.jade" />
         <option value="$PROJECT_DIR$/public/js/aframe/components/index.js" />
+        <option value="$PROJECT_DIR$/views/index_new.jade" />
+        <option value="$PROJECT_DIR$/public/js/lib/common.js" />
       </list>
     </option>
   </component>
@@ -225,8 +228,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="28" />
-    <option name="y" value="55" />
+    <option name="x" value="120" />
+    <option name="y" value="23" />
     <option name="width" value="1892" />
     <option name="height" value="1177" />
   </component>
@@ -275,14 +278,6 @@
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="programs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -487,12 +482,12 @@
       <workItem from="1505472032244" duration="13558000" />
       <workItem from="1505513388400" duration="20524000" />
       <workItem from="1505969498372" duration="25677000" />
-      <workItem from="1506495031372" duration="25309000" />
+      <workItem from="1506495031372" duration="28341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254278000" />
+    <option name="totallyTimeSpent" value="257310000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -504,7 +499,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="28" y="55" width="1892" height="1177" extended-state="0" />
+    <frame x="120" y="23" width="1892" height="1177" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -516,7 +511,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0509915" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.033050045" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -574,11 +569,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/img/program/doglegs_thumb.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/img/theatre/stars.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -853,32 +843,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/img/venues/shinagawa_honshoji.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/aframe/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="312" column="44" lean-forward="false" selection-start-line="312" selection-start-column="44" selection-end-line="312" selection-end-column="44" />
+          <folding>
+            <element signature="e#380#2192#0" expanded="false" />
+            <element signature="e#2230#2579#0" expanded="false" />
+            <element signature="e#2620#2893#0" expanded="false" />
+            <element signature="e#2931#3220#0" expanded="false" />
+            <element signature="e#3260#6543#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/index_new.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="167" column="91" lean-forward="true" selection-start-line="167" selection-start-column="91" selection-end-line="167" selection-end-column="91" />
+        <state relative-caret-position="-999">
+          <caret line="719" column="56" lean-forward="true" selection-start-line="719" selection-start-column="56" selection-end-line="719" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/lib/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="23" />
+        <state relative-caret-position="630">
+          <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/aframe/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="374" column="14" lean-forward="true" selection-start-line="374" selection-start-column="14" selection-end-line="374" selection-end-column="14" />
-          <folding>
-            <element signature="e#380#2192#0" expanded="false" />
-            <element signature="e#2230#2579#0" expanded="false" />
-            <element signature="e#2620#2893#0" expanded="false" />
-            <element signature="e#2931#3220#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

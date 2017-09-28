@@ -310,8 +310,8 @@ AFRAME.registerComponent('prog', {
 
         //var ang0 = thisentity.getAttribute('angle');
         var ang0 = thisentity.angle;
-        //var y0 =  thisentity.getAttribute('y');
-        var y0 = 1.8;
+        var y0 =  thisentity.getAttribute('y') ? thisentity.getAttribute('y') : 1.8;
+        //var y0 = 1.8;
         //var ang1 = thisentity.getAttribute('angle_to');
         var ang1 = thisentity.angle_to;
 

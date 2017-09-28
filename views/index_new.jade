@@ -76,13 +76,15 @@ block content
                 a-asset-item#down-obj(src="assets/models/arrow/down.obj")
 
                 // About
-                //img#img_doculogo(src="assets/img/documement2.png")
                 img#img_kaijo(src="assets/img/cmenu_venue.png")
                 img#img_toudansha(src="assets/img/cmenu_toudansha.png")
                 img#img_program(src="assets/img/cmenu_program.png")
                 img#img_aboutfes(src="assets/img/cmenu_documemento.png")
                 img#img_aboutfes_j(src="assets/img/cmenu_documemento_j.png")
 
+                img#topinfo1(src="assets/img/top_info1.png")
+
+                //PROGRAMS
                 img#img_prog_honshoji0311(src="assets/img/programs/prog_honshoji0311.png")
                 img#img_prog_kaido0311(src="assets/img/programs/prog_kaido0311.png")
                 img#img_prog_kaido0411(src="assets/img/programs/prog_kaido0411.png")
@@ -95,11 +97,14 @@ block content
                 img#img_prog_yatai0411(src="assets/img/programs/prog_yatai0411.png")
                 img#img_prog_yatai0420(src="assets/img/programs/prog_yatai0420.png")
 
-
-                img#img_venue_yataimura(src="assets/img/venue/shinagawa_yataimura.png")
-                img#img_venue_honshoji(src="assets/img/venue/shinagawa_honsyoji.png")
-                img#img_venue_matsumoto(src="assets/img/venue/shinagawa_matsumoto.png")
-                img#img_venue_kaidocafe(src="assets/img/venue/shinagawa_kaidocafe.png")
+                //VENUES
+                img#img_venue_yataimura(src="assets/img/venues/shinagawa_yataimura.png")
+                img#img_venue_honshoji(src="assets/img/venues/shinagawa_honshoji.png")
+                img#img_venue_matsumoto(src="assets/img/venues/shinagawa_matsumoto.png")
+                img#img_venue_kaidocafe(src="assets/img/venues/shinagawa_kaido.png")
+                img#img_venue_kenkou(src="assets/img/venues/shinagawa_kenkou.png")
+                img#img_venue_kuromon(src="assets/img/venues/shinagawa_kuromon.png")
+                img#img_venue_unagi(src="assets/img/venues/shinagawa_unagi.png")
 
                 img#img_shadow(src="assets/img/radial-shadow-2.png")
 
@@ -207,8 +212,14 @@ block content
                 a-entity#venues
                     a-image#venue_yataimura(prog, type="venue", src="#img_venue_yataimura", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=0)
                     a-image#venue_honshoji(prog, type="venue", src="#img_venue_honshoji", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=1)
-                    a-image#venue_matsumoto(prog, type="venue", src="#img_venue_matsumoto", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=4)
-                    a-image#venue_kaidocafe(prog, type="venue", src="#img_venue_kaidocafe", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=5)
+                    a-image#venue_matsumoto(prog, type="venue", src="#img_venue_matsumoto", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=2)
+                    a-image#venue_kaidocafe(prog, type="venue", src="#img_venue_kaidocafe", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=6)
+                    a-image#venue_kenkou(prog, type="venue", src="#img_venue_kenkou", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=7)
+                    a-image#venue_kuromon(prog, type="venue", src="#img_venue_kuromon", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=8)
+                    a-image#venue_unagi(prog, type="venue", src="#img_venue_unagi", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=9)
+
+                a-entity#topinfo
+                    a-image#top_topinfo1(prog, type="topinfo", src="#topinfo1", y=2.0, width="4", height="6", scale="0.5 0.5 1", n=0)
 
             /////////////////  Panellers
 
@@ -373,28 +384,25 @@ block content
         var panelbox1 = d3.select('#panelbox1');
         var panelbox1selector = document.querySelector('#panelbox1');
 
+        //top infos
+        var top_topinfo1 = document.querySelector('#top_topinfo1');
+
+        var topinfos = [
+            top_topinfo1
+        ];
+
         //Programs
         var prog_honshoji0311 = document.querySelector('#prog_honshoji0311');
-        var prog_honshoji0411 = document.querySelector('#prog_honshoji0411');
         var prog_kaido0311 = document.querySelector('#prog_kaido0311');
         var prog_kaido0411 = document.querySelector('#prog_kaido0411');
         var prog_kenkou0411 = document.querySelector('#prog_kenkou0411');
         var prog_kenkou0414 = document.querySelector('#prog_kenkou0414');
-
         var prog_matsumoto0311 = document.querySelector('#prog_matsumoto0311');
         var prog_matsumoto0411 = document.querySelector('#prog_matsumoto0411');
-
         var prog_unagi0410 = document.querySelector('#prog_unagi0410');
-
         var prog_yatai0311 = document.querySelector('#prog_yatai0311');
         var prog_yatai0411 = document.querySelector('#prog_yatai0411');
         var prog_yatai0420 = document.querySelector('#prog_yatai0420');
-
-        var prog_businessman = document.querySelector('#prog_businessman');
-        var prog_tabitabi = document.querySelector('#prog_tabitabi');
-        var prog_tokyodocs = document.querySelector('#prog_tokyodocs');
-        var prog_colorsofasia = document.querySelector('#prog_colorsofasia');
-        var prog_kaihouku = document.querySelector('#prog_kaihouku');
 
         var programs = [
             prog_honshoji0311,
@@ -405,15 +413,23 @@ block content
             prog_yatai0311,prog_yatai0411,prog_yatai0420
         ];
 
-
         //venue
-
         var venue_yataimura = document.querySelector('#venue_yataimura');
         var venue_honshoji  = document.querySelector('#venue_honshoji');
         var venue_matsumoto = document.querySelector('#venue_matsumoto');
         var venue_kaidocafe = document.querySelector('#venue_kaidocafe');
+        var venue_kenkou = document.querySelector('#venue_kenkou');
+        var venue_kuromon = document.querySelector('#venue_kuromon');
+        var venue_unagi = document.querySelector('#venue_unagi');
 
-        var venues = [venue_yataimura,venue_honshoji,venue_matsumoto,venue_kaidocafe];
+        var venues = [
+            venue_yataimura,
+            venue_honshoji,
+            venue_matsumoto,
+            venue_kaidocafe,
+            venue_kenkou,
+            venue_kuromon,
+            venue_unagi];
 
         //Panellers
         var paneller_uchiyama = document.querySelector('#paneller_uchiyama');
@@ -634,6 +650,11 @@ block content
          // About
         about_program.on('click',function(){
             switchModel("house");
+
+            for (var i = 0; i < topinfos.length; i++) {
+                moveMenuItem(topinfos[i], 90);
+            }
+
             for (var i = 0; i < programs.length; i++) {
                 moveMenuItem2DefPos(programs[i]);
             }
@@ -650,6 +671,9 @@ block content
 
         about_fes.on('click', function () {
             switchModel("infobox");
+            for (var i = 0; i < topinfos.length; i++) {
+                moveMenuItem2DefPos(topinfos[i]);
+            }
 
             for (var i = 0; i < programs.length; i++) {
                 moveMenuItem(programs[i], 90);
@@ -665,6 +689,9 @@ block content
 
         about_fes_j.on('click', function () {
             switchModel("house");
+            for (var i = 0; i < topinfos.length; i++) {
+                moveMenuItem2DefPos(topinfos[i]);
+            }
 
             for (var i = 0; i < programs.length; i++) {
                 moveMenuItem(programs[i], 90);
@@ -682,6 +709,10 @@ block content
         about_venu.on('click', function () {
             switchModel("lantan");
 
+            for (var i = 0; i < topinfos.length; i++) {
+                moveMenuItem(topinfos[i], 90);
+            }
+
             for (var j = 0; j < programs.length; j++) {
                 moveMenuItem(programs[j], 90);
             }
@@ -698,6 +729,11 @@ block content
 
         about_toudansha.on('click', function(){
             switchModel("house");
+
+            for (var i = 0; i < topinfos.length; i++) {
+                moveMenuItem(topinfos[i], 90);
+            }
+
                 for (var i = 0; i < panellers.length; i++) {
                     moveMenuItem2DefPos(panellers[i]);
                 }
@@ -796,6 +832,11 @@ block content
 
 
         };
+
+
+        setTimeout(function(){
+            moveMenuItem(top_topinfo1, 230);
+        },2000);
 
 
         window.socketresponse = socketresponse;
