@@ -83,11 +83,18 @@ block content
                 img#img_aboutfes(src="assets/img/cmenu_documemento.png")
                 img#img_aboutfes_j(src="assets/img/cmenu_documemento_j.png")
 
-                img#img_businessman(src="assets/img/businessman.png")
-                img#img_tabitabi(src="assets/img/tabitabi.png")
-                img#img_tokyodocs(src="assets/img/tokyodocs.png")
-                img#img_colorsofasia(src="assets/img/colorsofasia.png")
-                img#img_kaihouku(src="assets/img/kaihouku.png")
+                img#img_prog_honshoji0311(src="assets/img/programs/prog_honshoji0311.png")
+                img#img_prog_kaido0311(src="assets/img/programs/prog_kaido0311.png")
+                img#img_prog_kaido0411(src="assets/img/programs/prog_kaido0411.png")
+                img#img_prog_kenkou0411(src="assets/img/programs/prog_kenkou0411.png")
+                img#img_prog_kenkou0414(src="assets/img/programs/prog_kenkou0414.png")
+                img#img_prog_matsumoto0311(src="assets/img/programs/prog_matsumoto0311.png")
+                img#img_prog_matsumoto0411(src="assets/img/programs/prog_matsumoto0411.png")
+                img#img_prog_unagi0410(src="assets/img/programs/prog_unagi0410.png")
+                img#img_prog_yatai0311(src="assets/img/programs/prog_yatai0311.png")
+                img#img_prog_yatai0411(src="assets/img/programs/prog_yatai0411.png")
+                img#img_prog_yatai0420(src="assets/img/programs/prog_yatai0420.png")
+
 
                 img#img_venue_yataimura(src="assets/img/venue/shinagawa_yataimura.png")
                 img#img_venue_honshoji(src="assets/img/venue/shinagawa_honsyoji.png")
@@ -185,17 +192,23 @@ block content
                 a-cylinder(position="0 0 0", radius="5.99", height="0.03", side="back", open-ended="true", color="#ef12a4",opacity="0.5")
 
                 a-entity#programs
-                    a-image#prog_businessman(prog, type="prog", src="#img_businessman", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=0)
-                    a-image#prog_tabitabi(prog, type="prog", src="#img_tabitabi", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=1)
-                    a-image#prog_tokyodocs(prog, type="prog", src="#img_tokyodocs", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=2)
-                    a-image#prog_colorsofasia(prog, type="prog", src="#img_colorsofasia", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=3)
-                    a-image#prog_kaihouku(prog, type="prog", src="#img_kaihouku", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=4)
+                    a-image#prog_honshoji0311(prog, type="prog", src="#img_prog_honshoji0311", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=0)
+                    a-image#prog_kaido0311(prog, type="prog", src="#img_prog_kaido0311", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=1)
+                    a-image#prog_kaido0411(prog, type="prog", src="#img_prog_kaido0411", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=2)
+                    a-image#prog_kenkou0411(prog, type="prog", src="#img_prog_kenkou0411", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=3)
+                    a-image#prog_kenkou0414(prog, type="prog", src="#img_prog_kenkou0414", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=4)
+                    a-image#prog_matsumoto0311(prog, type="prog", src="#img_prog_matsumoto0311", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=6)
+                    a-image#prog_matsumoto0411(prog, type="prog", src="#img_prog_matsumoto0411", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=7)
+                    a-image#prog_unagi0410(prog, type="prog", src="#img_prog_unagi0410", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=8)
+                    a-image#prog_yatai0311(prog, type="prog", src="#img_prog_yatai0311", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=9)
+                    a-image#prog_yatai0411(prog, type="prog", src="#img_prog_yatai0411", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=10)
+                    a-image#prog_yatai0420(prog, type="prog", src="#img_prog_yatai0420", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=11)
 
                 a-entity#venues
-                    a-image#venue_yataimura(prog, type="prog", src="#img_venue_yataimura", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=0)
-                    a-image#venue_honshoji(prog, type="prog", src="#img_venue_honshoji", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=1)
-                    a-image#venue_matsumoto(prog, type="prog", src="#img_venue_matsumoto", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=2)
-                    a-image#venue_kaidocafe(prog, type="prog", src="#img_venue_kaidocafe", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=3)
+                    a-image#venue_yataimura(prog, type="venue", src="#img_venue_yataimura", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=0)
+                    a-image#venue_honshoji(prog, type="venue", src="#img_venue_honshoji", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=1)
+                    a-image#venue_matsumoto(prog, type="venue", src="#img_venue_matsumoto", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=4)
+                    a-image#venue_kaidocafe(prog, type="venue", src="#img_venue_kaidocafe", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=5)
 
             /////////////////  Panellers
 
@@ -361,13 +374,46 @@ block content
         var panelbox1selector = document.querySelector('#panelbox1');
 
         //Programs
+        var prog_honshoji0311 = document.querySelector('#prog_honshoji0311');
+        var prog_honshoji0411 = document.querySelector('#prog_honshoji0411');
+        var prog_kaido0311 = document.querySelector('#prog_kaido0311');
+        var prog_kaido0411 = document.querySelector('#prog_kaido0411');
+        var prog_kenkou0411 = document.querySelector('#prog_kenkou0411');
+        var prog_kenkou0414 = document.querySelector('#prog_kenkou0414');
+
+        var prog_matsumoto0311 = document.querySelector('#prog_matsumoto0311');
+        var prog_matsumoto0411 = document.querySelector('#prog_matsumoto0411');
+
+        var prog_unagi0410 = document.querySelector('#prog_unagi0410');
+
+        var prog_yatai0311 = document.querySelector('#prog_yatai0311');
+        var prog_yatai0411 = document.querySelector('#prog_yatai0411');
+        var prog_yatai0420 = document.querySelector('#prog_yatai0420');
+
         var prog_businessman = document.querySelector('#prog_businessman');
         var prog_tabitabi = document.querySelector('#prog_tabitabi');
         var prog_tokyodocs = document.querySelector('#prog_tokyodocs');
         var prog_colorsofasia = document.querySelector('#prog_colorsofasia');
         var prog_kaihouku = document.querySelector('#prog_kaihouku');
 
-        var programs = [prog_businessman,prog_tabitabi,prog_tokyodocs,prog_colorsofasia,prog_kaihouku];
+        var programs = [
+            prog_honshoji0311,
+            prog_kaido0311,prog_kaido0411,
+            prog_kenkou0411,prog_kenkou0414,
+            prog_matsumoto0311,prog_matsumoto0411,
+            prog_unagi0410,
+            prog_yatai0311,prog_yatai0411,prog_yatai0420
+        ];
+
+
+        //venue
+
+        var venue_yataimura = document.querySelector('#venue_yataimura');
+        var venue_honshoji  = document.querySelector('#venue_honshoji');
+        var venue_matsumoto = document.querySelector('#venue_matsumoto');
+        var venue_kaidocafe = document.querySelector('#venue_kaidocafe');
+
+        var venues = [venue_yataimura,venue_honshoji,venue_matsumoto,venue_kaidocafe];
 
         //Panellers
         var paneller_uchiyama = document.querySelector('#paneller_uchiyama');
@@ -572,7 +618,6 @@ block content
 
 
         ////////// EVENT ////////////////
-
         // Logo
         //        logo_bug.addEventListener('click', function () {
         //            moveMenuItem(prog_kaihouku,30);
@@ -587,8 +632,6 @@ block content
         //        });
 
          // About
-
-
         about_program.on('click',function(){
             switchModel("house");
             for (var i = 0; i < programs.length; i++) {
@@ -597,6 +640,10 @@ block content
 
             for (var j = 0; j < panellers.length; j++) {
                 moveMenuItem(panellers[j], 90);
+            }
+
+            for (var j = 0; j < venues.length; j++) {
+                moveMenuItem(venues[j], 90);
             }
         });
 
@@ -610,6 +657,10 @@ block content
             for (var j = 0; j < panellers.length; j++) {
                 moveMenuItem(panellers[j], 90);
             }
+
+            for (var j = 0; j < venues.length; j++) {
+                moveMenuItem(venues[j], 90);
+            }
         });
 
         about_fes_j.on('click', function () {
@@ -621,13 +672,28 @@ block content
             for (var j = 0; j < panellers.length; j++) {
                 moveMenuItem(panellers[j], 90);
             }
+
+            for (var j = 0; j < venues.length; j++) {
+                moveMenuItem(venues[j], 90);
+            }
+
         });
 
         about_venu.on('click', function () {
             switchModel("lantan");
-            console.log("About Town");
-        });
 
+            for (var j = 0; j < programs.length; j++) {
+                moveMenuItem(programs[j], 90);
+            }
+
+            for (var j = 0; j < panellers.length; j++) {
+                moveMenuItem(panellers[j], 90);
+            }
+
+            for (var j = 0; j < venues.length; j++) {
+                moveMenuItem2DefPos(venues[j]);
+            }
+        });
 
 
         about_toudansha.on('click', function(){
@@ -640,24 +706,21 @@ block content
                 moveMenuItem(programs[i], 90);
             }
 
+            for (var j = 0; j < venues.length; j++) {
+                moveMenuItem(venues[j], 90);
+            }
         });
 
         about_venu.on('mouseenter',function(){
            console.log("about_town_mouseenter");
-
-
         });
 
         about_venu.on('mouseleave', function(){
             console.log("about_town_mouseleave");
-
-
         })
 
-
-
         // Program
-
+        /*
         prog_businessman.addEventListener('click', function () {
             switchModel("schedule");
         });
@@ -670,6 +733,7 @@ block content
             console.log("tokyodokc");
             switchModel("amagi");
         });
+        */
 
 
         // 3d model

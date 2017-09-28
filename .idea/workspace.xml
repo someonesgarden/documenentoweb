@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55982872-3994-4767-a8e1-b9ed15e2e292" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/cmenu_program.png" afterPath="$PROJECT_DIR$/public/assets/img/cmenu_program.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/infobox/fes_column.jpg" afterPath="$PROJECT_DIR$/public/assets/models/infobox/fes_column.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/panelbox/box.mtl" afterPath="$PROJECT_DIR$/public/assets/models/panelbox/box.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/data/vote.json" afterPath="$PROJECT_DIR$/public/data/vote.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/aframe/components/index.js" afterPath="$PROJECT_DIR$/public/js/aframe/components/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/lib/common.js" afterPath="$PROJECT_DIR$/public/js/lib/common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index_new.jade" afterPath="$PROJECT_DIR$/views/index_new.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index_tmp.jade" afterPath="$PROJECT_DIR$/views/index_tmp.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,45 +24,8 @@
       <file leaf-file-name="index_new.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index_new.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="133" column="76" lean-forward="true" selection-start-line="133" selection-start-column="76" selection-end-line="133" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_tmp.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/index_tmp.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="58" column="179" lean-forward="false" selection-start-line="58" selection-start-column="179" selection-end-line="58" selection-end-column="179" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fes_column.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/models/infobox/fes_column.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="box.obj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/models/infobox/box.obj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="box.mtl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/models/infobox/box.mtl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="187">
+              <caret line="167" column="91" lean-forward="true" selection-start-line="167" selection-start-column="91" selection-end-line="167" selection-end-column="91" />
               <folding />
             </state>
           </provider>
@@ -71,7 +34,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="839">
+            <state relative-caret-position="878">
               <caret line="102" column="14" lean-forward="false" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
               <folding />
             </state>
@@ -81,18 +44,18 @@
       <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/lib/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="585">
+              <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/aframe/components/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="196" column="89" lean-forward="false" selection-start-line="196" selection-start-column="89" selection-end-line="196" selection-end-column="89" />
+            <state relative-caret-position="396">
+              <caret line="374" column="14" lean-forward="true" selection-start-line="374" selection-start-column="14" selection-end-line="374" selection-end-column="14" />
               <folding>
                 <element signature="e#380#2192#0" expanded="false" />
                 <element signature="e#2230#2579#0" expanded="false" />
@@ -163,10 +126,10 @@
       <find>curvemenu</find>
       <find>town</find>
       <find>child</find>
-      <find>def_angle</find>
       <find>switchModel</find>
-      <find>children</find>
       <find>type=&quot;ve</find>
+      <find>children</find>
+      <find>def_angle</find>
     </findStrings>
     <replaceStrings>
       <replace>img</replace>
@@ -180,8 +143,8 @@
       <replace>0 45 -3</replace>
       <replace>prog_</replace>
       <replace>panel_</replace>
-      <replace>prog</replace>
       <replace>venu</replace>
+      <replace>prog</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -236,11 +199,11 @@
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/public/js/lib/common.js" />
         <option value="$PROJECT_DIR$/public/assets/models/infobox/box.obj" />
-        <option value="$PROJECT_DIR$/public/js/aframe/components/index.js" />
-        <option value="$PROJECT_DIR$/views/index_new.jade" />
         <option value="$PROJECT_DIR$/views/index_tmp.jade" />
+        <option value="$PROJECT_DIR$/public/js/lib/common.js" />
+        <option value="$PROJECT_DIR$/views/index_new.jade" />
+        <option value="$PROJECT_DIR$/public/js/aframe/components/index.js" />
       </list>
     </option>
   </component>
@@ -262,8 +225,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="23" />
+    <option name="x" value="28" />
+    <option name="y" value="55" />
     <option name="width" value="1892" />
     <option name="height" value="1177" />
   </component>
@@ -305,6 +268,21 @@
               <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="programs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -509,12 +487,12 @@
       <workItem from="1505472032244" duration="13558000" />
       <workItem from="1505513388400" duration="20524000" />
       <workItem from="1505969498372" duration="25677000" />
-      <workItem from="1506495031372" duration="20269000" />
+      <workItem from="1506495031372" duration="25309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249238000" />
+    <option name="totallyTimeSpent" value="254278000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -526,7 +504,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="23" width="1892" height="1177" extended-state="0" />
+    <frame x="28" y="55" width="1892" height="1177" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -538,7 +516,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20774315" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0509915" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -822,39 +800,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="102" column="14" lean-forward="false" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/socketio/client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/infobox/fes_column.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/infobox/box.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/infobox/box.obj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -867,40 +816,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/models/infobox/box.mtl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/models/infobox/box.obj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/models/infobox/fes_column.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index_tmp.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="878">
+          <caret line="102" column="14" lean-forward="false" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index_new.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="167" column="91" lean-forward="true" selection-start-line="167" selection-start-column="91" selection-end-line="167" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/lib/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="585">
+          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/aframe/components/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="196" column="89" lean-forward="false" selection-start-line="196" selection-start-column="89" selection-end-line="196" selection-end-column="89" />
+        <state relative-caret-position="396">
+          <caret line="374" column="14" lean-forward="true" selection-start-line="374" selection-start-column="14" selection-end-line="374" selection-end-column="14" />
           <folding>
             <element signature="e#380#2192#0" expanded="false" />
             <element signature="e#2230#2579#0" expanded="false" />
             <element signature="e#2620#2893#0" expanded="false" />
             <element signature="e#2931#3220#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index_new.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="133" column="76" lean-forward="true" selection-start-line="133" selection-start-column="76" selection-end-line="133" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index_tmp.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="58" column="179" lean-forward="false" selection-start-line="58" selection-start-column="179" selection-end-line="58" selection-end-column="179" />
-          <folding />
         </state>
       </provider>
     </entry>

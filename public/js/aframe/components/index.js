@@ -360,7 +360,9 @@ AFRAME.registerComponent('auto_rotate', {
         var myrotate = document.createElement("a-animation");
         var axis = thisentity.getAttribute('axis');
 
-        var angle_to = 30-thisentity.angle_to;
+        var n = thisentity.getAttribute("n");
+
+        var angle_to = 60-10*n;
         var random_angle = (Math.floor(Math.random() * 3) * 360+angle_to);
 
         myrotate.setAttribute('attribute', "rotation");
