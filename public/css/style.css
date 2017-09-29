@@ -102,3 +102,17 @@ img.titleheader{
   height:100%;
   padding:3px;
 }
+
+.topnav{
+  user-select: none; /* CSS3 */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari、Chromeなど */
+  -ms-user-select: none; /* IE10かららしい */
+
+  position:absolute;
+  height:60px;
+  width:100%;
+  top:0px;
+  background-color:rgba(40,10,20,0.7);
+  z-index:100;
+}

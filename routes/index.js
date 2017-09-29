@@ -47,6 +47,9 @@ router.get('/dev', function (req, res, next) {
         res.render('index_new', { title: 'DOCU-MEMENTO映画祭', mobile: false });
     }
 });
+router.get('/i', function (req, res, next) {
+    res.render('index_i', { title: 'DOCU-MEMENTO映画祭@i', mobile: true });
+});
 router.get('/', function (req, res, next) {
     var agent = parser(req.headers['user-agent']);
     var device_type = agent.device.type;
@@ -54,7 +57,8 @@ router.get('/', function (req, res, next) {
     console.log(agent.device.type);
     console.log("================================================");
     if (device_type == "mobile") {
-        res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭VR', mobile: true });
+        res.render('index_i', { title: 'DOCU-MEMENTO映画祭@i', mobile: true });
+        //res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭VR', mobile:true});
     }
     else {
         res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭', mobile: false });

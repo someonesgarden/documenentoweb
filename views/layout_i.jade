@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title= title
+
+    //socketIO
+    script(src="/socket.io/socket.io.js")
+    script(src="/js/socketio/client.js")
+
+    script(src="/vendor/jquery/dist/jquery.js")
+    script(src="https://unpkg.com/react@15/dist/react.min.js")
+    script(src="https://unpkg.com/react-dom@15/dist/react-dom.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js")
+    script(src="/vendor/bootstrap/dist/js/bootstrap.js")
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/earlyaccess/mplus1p.css")
+    link(rel="stylesheet", href="/vendor/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/style.css")
+
+    block header
+
+  body(style="background-color:#F0E3D2;")
+    block content
+
+

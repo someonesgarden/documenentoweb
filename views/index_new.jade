@@ -3,6 +3,9 @@ extends layout
 block header
     link(rel='stylesheet', href='/css/loader.css')
     link(rel='stylesheet', href='/css/billboard.css')
+    script.
+        var mobile = #{mobile};
+    script(src="js/lib/common.js")
 
 block content
 
@@ -16,7 +19,7 @@ block content
     div#sche1_img6.target(style="background-image:url('assets/img/program/unknown2.png');"): p.detail 11/3 AM11:00
 
     if !mobile
-        div(style="position:absolute;height:60px;width:100%;top:0px;background-color:rgba(40,10,20,0.7);z-index:100;")
+        div.topnav
                 img.titleheader(src="assets/img/documemento_header.png")
     div(style="position: absolute; height: 100%; width: 100%;")
 
@@ -48,25 +51,19 @@ block content
                 a-asset-item#panelbox-yonemoto-mtl(src="assets/models/panelbox/yonemoto.mtl")
 
                 //3D models - numbers
-                a-asset-item#num0-mtl(src="assets/models/numbers/0.mtl")
+                a-asset-item#black-mtl(src="assets/models/numbers/black.mtl")
+                a-asset-item#red-mtl(src="assets/models/numbers/red.mtl")
+
+                a-asset-item#num_-obj(src="assets/models/numbers/slash.obj")
                 a-asset-item#num0-obj(src="assets/models/numbers/0.obj")
-                a-asset-item#num1-mtl(src="assets/models/numbers/1.mtl")
                 a-asset-item#num1-obj(src="assets/models/numbers/1.obj")
-                a-asset-item#num2-mtl(src="assets/models/numbers/2.mtl")
                 a-asset-item#num2-obj(src="assets/models/numbers/2.obj")
-                a-asset-item#num3-mtl(src="assets/models/numbers/3.mtl")
                 a-asset-item#num3-obj(src="assets/models/numbers/3.obj")
-                a-asset-item#num4-mtl(src="assets/models/numbers/4.mtl")
                 a-asset-item#num4-obj(src="assets/models/numbers/4.obj")
-                a-asset-item#num5-mtl(src="assets/models/numbers/5.mtl")
                 a-asset-item#num5-obj(src="assets/models/numbers/5.obj")
-                a-asset-item#num6-mtl(src="assets/models/numbers/6.mtl")
                 a-asset-item#num6-obj(src="assets/models/numbers/6.obj")
-                a-asset-item#num7-mtl(src="assets/models/numbers/7.mtl")
                 a-asset-item#num7-obj(src="assets/models/numbers/7.obj")
-                a-asset-item#num8-mtl(src="assets/models/numbers/8.mtl")
                 a-asset-item#num8-obj(src="assets/models/numbers/8.obj")
-                a-asset-item#num9-mtl(src="assets/models/numbers/9.mtl")
                 a-asset-item#num9-obj(src="assets/models/numbers/9.obj")
 
                 //3D models - arrow
@@ -82,7 +79,7 @@ block content
                 img#img_aboutfes(src="assets/img/cmenu_documemento.png")
                 img#img_aboutfes_j(src="assets/img/cmenu_documemento_j.png")
 
-                img#topinfo1(src="assets/img/top_info1.png")
+                //img#topinfo1(src="assets/img/top_info1.png")
 
                 //PROGRAMS
                 img#img_prog_honshoji0311(src="assets/img/programs/prog_honshoji0311.png")
@@ -93,9 +90,9 @@ block content
                 img#img_prog_matsumoto0311(src="assets/img/programs/prog_matsumoto0311.png")
                 img#img_prog_matsumoto0411(src="assets/img/programs/prog_matsumoto0411.png")
                 img#img_prog_unagi0410(src="assets/img/programs/prog_unagi0410.png")
-                img#img_prog_yatai0311(src="assets/img/programs/prog_yatai0311.png")
-                img#img_prog_yatai0411(src="assets/img/programs/prog_yatai0411.png")
-                img#img_prog_yatai0420(src="assets/img/programs/prog_yatai0420.png")
+                img#img_prog_yatai0311(src="assets/img/programs/prog_yatai0317.png")
+                img#img_prog_yatai0411(src="assets/img/programs/prog_yatai0417.png")
+                img#img_prog_yatai0420(src="assets/img/programs/prog_yatai0320.png")
 
                 //VENUES
                 img#img_venue_yataimura(src="assets/img/venues/shinagawa_yataimura.png")
@@ -197,29 +194,64 @@ block content
                 a-cylinder(position="0 0 0", radius="5.99", height="0.03", side="back", open-ended="true", color="#ef12a4",opacity="0.5")
 
                 a-entity#programs
-                    a-image#prog_honshoji0311(prog, type="prog", src="#img_prog_honshoji0311", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=0)
-                    a-image#prog_kaido0311(prog, type="prog", src="#img_prog_kaido0311", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=1)
-                    a-image#prog_kaido0411(prog, type="prog", src="#img_prog_kaido0411", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=2)
-                    a-image#prog_kenkou0411(prog, type="prog", src="#img_prog_kenkou0411", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=3)
-                    a-image#prog_kenkou0414(prog, type="prog", src="#img_prog_kenkou0414", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=4)
-                    a-image#prog_matsumoto0311(prog, type="prog", src="#img_prog_matsumoto0311", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=6)
-                    a-image#prog_matsumoto0411(prog, type="prog", src="#img_prog_matsumoto0411", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=7)
-                    a-image#prog_unagi0410(prog, type="prog", src="#img_prog_unagi0410", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=8)
-                    a-image#prog_yatai0311(prog, type="prog", src="#img_prog_yatai0311", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=9)
-                    a-image#prog_yatai0411(prog, type="prog", src="#img_prog_yatai0411", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=10)
-                    a-image#prog_yatai0420(prog, type="prog", src="#img_prog_yatai0420", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=11)
+                    a-image#prog_honshoji0311(prog, type="prog", src="#img_prog_honshoji0311", width="5", height="13", scale="0.2 0.2 1", auto_rotate, n=0)
+                    a-image#prog_kaido0311(prog, type="prog", src="#img_prog_kaido0311", width="5", height="13", scale="0.2 0.2 1", auto_rotate, n=1)
+                    a-image#prog_kaido0411(prog, type="prog", src="#img_prog_kaido0411", width="5", height="13", scale="0.2 0.2 1", auto_rotate, n=2)
+                    a-image#prog_kenkou0411(prog, type="prog", src="#img_prog_kenkou0411", width="5", height="13", scale="0.2 0.2 1", auto_rotate, n=3)
+                    a-image#prog_kenkou0414(prog, type="prog", src="#img_prog_kenkou0414", width="5", height="13", scale="0.2 0.2 1", auto_rotate, n=4)
+                    a-image#prog_matsumoto0311(prog, type="prog", src="#img_prog_matsumoto0311", width="5", height="13", scale="0.2 0.2 1", auto_rotate, n=6)
+                    a-image#prog_matsumoto0411(prog, type="prog", src="#img_prog_matsumoto0411", width="5", height="13", scale="0.2 0.2 1", auto_rotate, n=7)
+                    a-image#prog_unagi0410(prog, type="prog", src="#img_prog_unagi0410", width="5", height="13", scale="0.2 0.2 1", auto_rotate, n=8)
+                    a-image#prog_yatai0311(prog, type="prog", src="#img_prog_yatai0311", width="5", height="13", scale="0.2 0.2 1", auto_rotate, n=9)
+                    a-image#prog_yatai0411(prog, type="prog", src="#img_prog_yatai0411", width="5", height="13", scale="0.2 0.2 1", auto_rotate, n=10)
+                    a-image#prog_yatai0420(prog, type="prog", src="#img_prog_yatai0420", width="5", height="13", scale="0.2 0.2 1", auto_rotate, n=11)
 
                 a-entity#venues
-                    a-image#venue_yataimura(prog, type="venue", src="#img_venue_yataimura", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=0)
-                    a-image#venue_honshoji(prog, type="venue", src="#img_venue_honshoji", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=1)
-                    a-image#venue_matsumoto(prog, type="venue", src="#img_venue_matsumoto", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=2)
-                    a-image#venue_kaidocafe(prog, type="venue", src="#img_venue_kaidocafe", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=6)
-                    a-image#venue_kenkou(prog, type="venue", src="#img_venue_kenkou", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=7)
-                    a-image#venue_kuromon(prog, type="venue", src="#img_venue_kuromon", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=8)
-                    a-image#venue_unagi(prog, type="venue", src="#img_venue_unagi", width="5", height="10", scale="0.2 0.2 1", auto_rotate, n=9)
+                    a-image#venue_yataimura(venu, name="yataimura", type="venue", src="#img_venue_yataimura", width="5", height="12", scale="0.2 0.2 1", auto_rotate, n=0)
+                        a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
+                        a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                        a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                    a-image#venue_honshoji(venu, name="honshoji", type="venue", src="#img_venue_honshoji", width="5", height="12", scale="0.2 0.2 1", auto_rotate, n=1)
+                        a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
+                        a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                        a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                    a-image#venue_matsumoto(venu, name="matsumoto", type="venue", src="#img_venue_matsumoto", width="5", height="12", scale="0.2 0.2 1", auto_rotate, n=2)
+                        a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
+                        a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                        a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                    a-image#venue_kaidocafe(venu, name="kaido", type="venue", src="#img_venue_kaidocafe", width="5", height="12", scale="0.2 0.2 1", auto_rotate, n=6)
+                        a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
+                        a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                        a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                    a-image#venue_kenkou(venu, name="kenkou", type="venue", src="#img_venue_kenkou", width="5", height="12", scale="0.2 0.2 1", auto_rotate, n=7)
+                        a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
+                        a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                        a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                    a-image#venue_kuromon(venu, name="kuromon", type="venue", src="#img_venue_kuromon", width="5", height="12", scale="0.2 0.2 1", auto_rotate, n=8)
+                        a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
+                        a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                        a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                    a-image#venue_unagi(venu, name="unagi", type="venue", src="#img_venue_unagi", width="5", height="12", scale="0.2 0.2 1", auto_rotate, n=9)
+                        a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                        a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
+                        a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
+                        a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
                 a-entity#topinfo
-                    a-image#top_topinfo1(prog, type="topinfo", src="#topinfo1", y=2.0, width="4", height="6", scale="0.5 0.5 1", n=0)
+                    a-image#top_topinfo1(prog, type="topinfo", src="assets/img/top_info1.png", y=2.0, width="4", height="6", scale="0.5 0.5 1", n=0)
 
             /////////////////  Panellers
 
@@ -359,488 +391,7 @@ block content
                     else
 
 
-    script(src="js/lib/common.js")
     script(src="js/aframe/components/index.js")
-    script.
-        document.VR = false;
-        var CURSOR_OUT = "0 12.2 -1.3";
-        var CURSOR_IN = "0 0.2 -1.3";
-        var mobile = #{mobile};
-
-        var loader = document.getElementById("loader");
-        var cursor = document.querySelector("#cursor");
-
-        var scene = document.querySelector('a-scene');
-        var sky   = document.querySelector('a-sky');
-
-        //3dmodel
-        var lantan = d3.select("#lantan");
-        var earth = d3.select("#earth");
-        var house = d3.select('#house_small');
-        var largehouse = d3.select('#house_large');
-        var schedule = d3.select('#schedule');
-        var amagi = d3.select('#amagi');
-        var infobox = d3.select('#infobox');
-        var panelbox1 = d3.select('#panelbox1');
-        var panelbox1selector = document.querySelector('#panelbox1');
-
-        //top infos
-        var top_topinfo1 = document.querySelector('#top_topinfo1');
-
-        var topinfos = [
-            top_topinfo1
-        ];
-
-        //Programs
-        var prog_honshoji0311 = document.querySelector('#prog_honshoji0311');
-        var prog_kaido0311 = document.querySelector('#prog_kaido0311');
-        var prog_kaido0411 = document.querySelector('#prog_kaido0411');
-        var prog_kenkou0411 = document.querySelector('#prog_kenkou0411');
-        var prog_kenkou0414 = document.querySelector('#prog_kenkou0414');
-        var prog_matsumoto0311 = document.querySelector('#prog_matsumoto0311');
-        var prog_matsumoto0411 = document.querySelector('#prog_matsumoto0411');
-        var prog_unagi0410 = document.querySelector('#prog_unagi0410');
-        var prog_yatai0311 = document.querySelector('#prog_yatai0311');
-        var prog_yatai0411 = document.querySelector('#prog_yatai0411');
-        var prog_yatai0420 = document.querySelector('#prog_yatai0420');
-
-        var programs = [
-            prog_honshoji0311,
-            prog_kaido0311,prog_kaido0411,
-            prog_kenkou0411,prog_kenkou0414,
-            prog_matsumoto0311,prog_matsumoto0411,
-            prog_unagi0410,
-            prog_yatai0311,prog_yatai0411,prog_yatai0420
-        ];
-
-        //venue
-        var venue_yataimura = document.querySelector('#venue_yataimura');
-        var venue_honshoji  = document.querySelector('#venue_honshoji');
-        var venue_matsumoto = document.querySelector('#venue_matsumoto');
-        var venue_kaidocafe = document.querySelector('#venue_kaidocafe');
-        var venue_kenkou = document.querySelector('#venue_kenkou');
-        var venue_kuromon = document.querySelector('#venue_kuromon');
-        var venue_unagi = document.querySelector('#venue_unagi');
-
-        var venues = [
-            venue_yataimura,
-            venue_honshoji,
-            venue_matsumoto,
-            venue_kaidocafe,
-            venue_kenkou,
-            venue_kuromon,
-            venue_unagi];
-
-        //Panellers
-        var paneller_uchiyama = document.querySelector('#paneller_uchiyama');
-        var paneller_yonemoto = document.querySelector('#paneller_yonemoto');
-        var paneller_matsui = document.querySelector('#paneller_matsui');
-        var paneller_ota = document.querySelector('#paneller_ota');
-        var paneller_fujioka = document.querySelector('#paneller_fujioka');
-        var paneller_takeoka = document.querySelector('#paneller_takeoka');
-
-        var paneller_okuma = document.querySelector('#paneller_okuma');
-        var paneller_kan = document.querySelector('#paneller_kan');
-        var paneller_tanaka = document.querySelector('#paneller_tanaka');
-        var paneller_hidaka = document.querySelector('#paneller_hidaka');
-        var paneller_shikai = document.querySelector('#paneller_shikai');
-        var paneller_tokyo = document.querySelector('#paneller_tokyo');
-        var paneller_deguchi = document.querySelector('#paneller_deguchi');
-        var paneller_tsurusaki = document.querySelector('#paneller_tsurusaki');
-
-        var panellers = [
-            paneller_uchiyama,
-            paneller_yonemoto,
-            paneller_matsui,
-            paneller_ota,
-            paneller_fujioka,
-            paneller_takeoka,
-            paneller_okuma,
-            paneller_kan,
-            paneller_tanaka,
-            paneller_hidaka,
-            paneller_shikai,
-            paneller_tokyo,
-            paneller_deguchi,
-            paneller_tsurusaki
-        ];
-        // About
-        var about_venu = d3.select('#about_venu');
-        var about_toudansha = d3.select('#about_toudansha');
-        var about_program = d3.select('#about_program');
-        var about_fes = d3.select('#about_fes');
-        var about_fes_j = d3.select('#about_fes_j');
-        // Logo
-        var logo_bug = document.querySelector("#logo_bug");
-        var logo_tokyodocs = document.querySelector("#logo_tokyodocs");
-        var logo_sog = document.querySelector("#logo_sog");
-        var votes;
-
-
-        document.mode = "infobox";
-        document.visible_model = infobox;
-
-
-        /////////// VoteDataLoader
-        var jsondataloader = function(){
-            d3.json("data/vote.json", function (error, data) {
-
-                votes = data.vote;
-
-                for (var i = 0; i < panellers.length; i++) {
-                    var p = panellers[i];
-
-                    var name = p.getAttribute("name");
-                    var d1 = p.querySelector('.d1');
-                    var d2 = p.querySelector('.d2');
-                    var d3 = p.querySelector('.d3');
-
-                    var p_str = votes[name];
-
-                    var d1_ = p_str.substr(0, 1);
-                    var d2_ = p_str.substr(1, 1);
-                    var d3_ = p_str.substr(2, 1);
-
-                    d1.setAttribute("num", d1_);
-                    d2.setAttribute("num", d2_);
-                    d3.setAttribute("num", d3_);
-
-                    d1.pause();
-                    d1.play();
-                    d2.pause();
-                    d2.play();
-                    d3.pause();
-                    d3.play();
-                }
-            });
-        };
-
-
-        //////////// LOAD VOte DATA
-        jsondataloader();
-
-        /////////// INIT
-        var run = function () {
-            loader.classList.add("hidden");
-            if (getDevice == 'sp') {
-                scene.enterVR();
-                setTimeout(function () {
-                    scene.enterVR();
-                }, 1000);
-            }
-        };
-
-        if (!scene.hasLoaded) {
-            scene.addEventListener('loaded', run);
-        }
-
-
-        ///////////// FUNCTION
-        var switchPanelBox = function (name) {
-
-            var model_to_change = panelbox1;
-            var model_y = 0;
-
-            model_y = model_to_change.attr("position").y;
-            if (model_y == 45) {
-                var tween = new AFRAME.TWEEN.Tween({y: 45, ly: 0})
-                    .to({y: 0, ly: 80}, 1400)
-                    //to()までの数値変化のイージング種類
-                    .easing(TWEEN.Easing.Elastic.InOut)
-                    .onUpdate(function () {
-                        model_to_change.attr({position: "0 " + this.y + " -3"});
-                        document.visible_model.attr({position: "0 " + (45 - this.y) + " -3"});
-                    })
-                    .onComplete(function () {
-                        document.mode = "panelbox1";
-                        document.visible_model = panelbox1;
-                    });
-                tween.start();
-            }
-        }
-
-
-        ///////////// FUNCTION
-        var switchModel = function (model) {
-
-            var model_to_change = null;
-            var model_y = 0;
-
-            switch(model){
-
-                case "earth":
-                    sky.setAttribute("src", "");
-                    model_to_change = earth;
-                    break;
-                case "house":
-                    model_to_change = house;
-                    break;
-                case "schedule":
-                    model_to_change = schedule;
-                    break;
-                case "amagi":
-                    model_to_change = amagi;
-                    break;
-                case "infobox":
-                    model_to_change = infobox;
-                    break;
-                case "lantan":
-                    model_to_change = lantan;
-                    break;
-                case "panelbox1":
-                    model_to_change = panelbox1;
-                    break;
-                default:
-                    model_to_change = house;
-                    break;
-            }
-
-            model_y = model_to_change.attr("position").y;
-            if (model_y == 45) {
-                var tween = new AFRAME.TWEEN.Tween({y: 45, ly: 0})
-                    .to({y: 0, ly: 80}, 1400)
-                    //to()までの数値変化のイージング種類
-                    .easing(TWEEN.Easing.Elastic.InOut)
-                    .onUpdate(function () {
-                        model_to_change.attr({position: "0 " + this.y + " -3"});
-                        document.visible_model.attr({position: "0 " + (45 - this.y) + " -3"});
-                    })
-                    .onComplete(function () {
-                        document.mode = model;
-                        document.visible_model = model_to_change;
-                    });
-                tween.start();
-            }
-        }
-
-
-        //ENTER / EXIT VR
-        scene.addEventListener('enter-vr', function () {
-            console.log("ENTERED VR");
-            if(mobile){
-                cursor.setAttribute('position', CURSOR_IN);
-                cursor.setAttribute('cursor',"maxDistance:100; fuse:true;");
-            }
-            document.VR = true;
-        });
-        scene.addEventListener('exit-vr', function () {
-            console.log("EXIT VR");
-            if(mobile) {
-                cursor.setAttribute('position', CURSOR_OUT);
-                cursor.setAttribute('cursor', "maxDistance:100; fuse:false;");
-            }
-            document.VR = false;
-        });
-
-
-        ////////// EVENT ////////////////
-        // Logo
-        //        logo_bug.addEventListener('click', function () {
-        //            moveMenuItem(prog_kaihouku,30);
-        //        });
-        //
-        //         logo_bug.addEventListener('mouseenter', function () {
-        //             console.log("logo_bu");
-        //            moveMenuItem(prog_kaihouku,200);
-        //        });
-        //         logo_bug.addEventListener('mouseleave', function () {
-        //            moveMenuItem2DefPos(prog_kaihouku);
-        //        });
-
-         // About
-        about_program.on('click',function(){
-            switchModel("house");
-
-            for (var i = 0; i < topinfos.length; i++) {
-                moveMenuItem(topinfos[i], 90);
-            }
-
-            for (var i = 0; i < programs.length; i++) {
-                moveMenuItem2DefPos(programs[i]);
-            }
-
-            for (var j = 0; j < panellers.length; j++) {
-                moveMenuItem(panellers[j], 90);
-            }
-
-            for (var j = 0; j < venues.length; j++) {
-                moveMenuItem(venues[j], 90);
-            }
-        });
-
-
-        about_fes.on('click', function () {
-            switchModel("infobox");
-            for (var i = 0; i < topinfos.length; i++) {
-                moveMenuItem2DefPos(topinfos[i]);
-            }
-
-            for (var i = 0; i < programs.length; i++) {
-                moveMenuItem(programs[i], 90);
-            }
-            for (var j = 0; j < panellers.length; j++) {
-                moveMenuItem(panellers[j], 90);
-            }
-
-            for (var j = 0; j < venues.length; j++) {
-                moveMenuItem(venues[j], 90);
-            }
-        });
-
-        about_fes_j.on('click', function () {
-            switchModel("house");
-            for (var i = 0; i < topinfos.length; i++) {
-                moveMenuItem2DefPos(topinfos[i]);
-            }
-
-            for (var i = 0; i < programs.length; i++) {
-                moveMenuItem(programs[i], 90);
-            }
-            for (var j = 0; j < panellers.length; j++) {
-                moveMenuItem(panellers[j], 90);
-            }
-
-            for (var j = 0; j < venues.length; j++) {
-                moveMenuItem(venues[j], 90);
-            }
-
-        });
-
-        about_venu.on('click', function () {
-            switchModel("lantan");
-
-            for (var i = 0; i < topinfos.length; i++) {
-                moveMenuItem(topinfos[i], 90);
-            }
-
-            for (var j = 0; j < programs.length; j++) {
-                moveMenuItem(programs[j], 90);
-            }
-
-            for (var j = 0; j < panellers.length; j++) {
-                moveMenuItem(panellers[j], 90);
-            }
-
-            for (var j = 0; j < venues.length; j++) {
-                moveMenuItem2DefPos(venues[j]);
-            }
-        });
-
-
-        about_toudansha.on('click', function(){
-            switchModel("house");
-
-            for (var i = 0; i < topinfos.length; i++) {
-                moveMenuItem(topinfos[i], 90);
-            }
-
-                for (var i = 0; i < panellers.length; i++) {
-                    moveMenuItem2DefPos(panellers[i]);
-                }
-
-            for (var i = 0; i < programs.length; i++) {
-                moveMenuItem(programs[i], 90);
-            }
-
-            for (var j = 0; j < venues.length; j++) {
-                moveMenuItem(venues[j], 90);
-            }
-        });
-
-        about_venu.on('mouseenter',function(){
-           console.log("about_town_mouseenter");
-        });
-
-        about_venu.on('mouseleave', function(){
-            console.log("about_town_mouseleave");
-        })
-
-        // Program
-        /*
-        prog_businessman.addEventListener('click', function () {
-            switchModel("schedule");
-        });
-
-        prog_tabitabi.addEventListener('click', function () {
-            switchModel("earth");
-        });
-
-        prog_tokyodocs.addEventListener('click', function () {
-            console.log("tokyodokc");
-            switchModel("amagi");
-        });
-        */
-
-
-        // 3d model
-
-        earth.on('click', function(){
-            console.log("earth clicked");
-        });
-
-        house.on('click',function(){
-            console.log("house clicked");
-            var largehouse_y = largehouse.attr("position").y;
-            if (largehouse_y ==80) {
-                sky.setAttribute("src", "");
-                var tween = new AFRAME.TWEEN.Tween({y: 80})
-                    .to({y: 0}, 400)
-                    //to()までの数値変化のイージング種類
-                    .easing(TWEEN.Easing.Circular.In)
-                    .onUpdate(function () {
-                        largehouse.attr({
-                            position: "0 " + this.y + " -3"
-                        });
-                    })
-                    .onComplete(function () {
-                    });
-                tween.start();
-            }
-        });
-
-
-        //SOCKET.IO
-        var socketresponse = function (data) {
-            console.log("socketresponse test",data);
-
-            var point = data.value.point;
-
-            var paneller = document.querySelector('a-image#paneller_'+data.value.name);
-            var thisentity = paneller.el;
-            console.log("name=",paneller.getAttribute('name'));
-
-            var d1 = paneller.querySelector('.d1');
-            var d2 = paneller.querySelector('.d2');
-            var d3 = paneller.querySelector('.d3');
-
-            var p_str = ('000' + point).slice(-3);
-
-            var d1_ = p_str.substr(0, 1);
-            var d2_ = p_str.substr(1, 1);
-            var d3_ = p_str.substr(2, 1);
-
-            d1.setAttribute("num", d1_);
-            d2.setAttribute("num", d2_);
-            d3.setAttribute("num", d3_);
-
-            d1.pause();
-            d1.play();
-            d2.pause();
-            d2.play();
-            d3.pause();
-            d3.play();
-
-
-        };
-
-
-        setTimeout(function(){
-            moveMenuItem(top_topinfo1, 230);
-        },2000);
-
-
-        window.socketresponse = socketresponse;
-        window.votes = votes;
-
+    script(src="js/aframe/index_main.js")
 
 

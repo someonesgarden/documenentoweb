@@ -63,6 +63,12 @@ router.get('/dev', (req, res, next)=> {
 });
 
 
+
+router.get('/i', (req, res, next)=> {
+    res.render('index_i', { title: 'DOCU-MEMENTO映画祭@i', mobile:true});
+});
+
+
 router.get('/', (req, res, next)=> {
 
     const agent = parser(req.headers['user-agent']);
@@ -72,7 +78,8 @@ router.get('/', (req, res, next)=> {
     console.log("================================================");
 
     if(device_type=="mobile"){
-        res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭VR', mobile:true});
+        res.render('index_i', { title: 'DOCU-MEMENTO映画祭@i', mobile:true});
+        //res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭VR', mobile:true});
     }else{
         res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭', mobile:false});
     }

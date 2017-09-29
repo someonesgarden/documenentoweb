@@ -1,0 +1,90 @@
+extends layout_i
+
+block header
+    link(rel="stylesheet", href="/css/mobile.css")
+
+block content
+    nav#myNavbar.navbar.navbar-default.navbar-inverse.navbar-fixed-top(role="navigation")
+        div.container
+            div.navbar-header
+                button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbarCollapse")
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href="#")
+                    strong DOCU MEMENTO 2017
+
+            div.collapse.navbar-collapse#navbarCollapse
+                    ul.nav.navbar-nav
+                        li.active
+                            a(href="http://docu-memento.com:3000/dev") VRモード
+                        li.active
+                            a(href="#") ピッチ投票
+
+    div.container(style="margin-top:36px;")
+
+        div.row(style="height:330px;background-image:url('assets/img/smt/top_img.png');background-size:contain;background-repeat:no-repeat;background-position:50% 50%;")
+
+        div.row.text-center
+            div.col.col-xs-12(style="padding-bottom:5px;")
+                a(href="http://docu-memento.com:3000/dev")
+                    img(src="assets/img/smt/mobile_banner1.png", width="100%", style="border:5px solid white;")
+
+            div.col.col-xs-12
+                img(src="assets/img/smt/mobile_banner2.png", width="100%", style="border:5px solid white;")
+                br
+        div.row.well-lg
+            div.infoarea
+                div.col-xs-12
+                    h3 第一回<br/>ドキュ・メメント映画祭
+                    h4 １１月３日〜４日 @品川宿
+                    hr
+
+                div.col.col-xs-3.text-danger
+                    p 上映作品
+                div.col-xs-9
+                    p 『えぐられた眼』（徐童監督） / 『DOGLEGS』(北島行徳出演） / 『解放区』(太田信吾監督） / ほか
+
+                div.col.col-xs-3.text-danger
+                    p 登壇者
+                div.col-xs-9
+                    p さいとうりょうじ / 河合宏樹 / 真野勉（BRT) / 西原孝至 / 太田信吾 / 河崎純真 / 中込孝規 / Maki (黒瀬 万紀) / プロギャンブラーのぶき / 松井至 / 竹岡寛俊 / 内山直樹 / 日高成樹 / SATO-C / 汪楠 / 安達茉莉子 / 関強 / 藤岡朝子 / 西村大助 / 津留崎麻子 / 米本直樹 / 桑山篤 / 東京小童 / 桜木奈央子 / 中村真夕 / 奥間勝也 / リキシャーズ
+
+                div.col.col-xs-3.text-danger
+                    p 会  場
+                div.col-xs-9
+                    p <strong>北品川一帯</strong> <br/>（KAIDO book&coffee / 一龍屋台村 / 本照寺 / うなぎのねどこ / レンタルスペース松本 / 品川健康センター他)
+
+                div.col.col-xs-3.text-danger
+                    p 料金
+                div.col-xs-9
+                    p <strong>1,500円</strong>  （一龍屋台村以外）<br/>※ 上映＆登壇ライブ、各回2時間制。
+                    p <strong>3000円 </strong>＠一龍屋台村(決勝大会＆上映) <br/> ※ 食べ放題ドリンク別。16:00~23:00まで。
+
+                div.col.col-xs-3.text-danger
+                    p 目  的
+                div.col-xs-9
+                    p <strong>ドキュメンタリー文化の形成/<br/>地域振興</strong>
+                div.col.col-xs-3.text-danger
+                    p 主  催
+                div.col-xs-9
+                    p ドキュ・メメント実行委員会
+
+                div.col.col-xs-3.text-danger
+                    p 協  賛
+                div.col-xs-9
+                    p Tokyo Docs / 株式会社テムジン
+                div.col.col-xs-3.text-danger
+                    p 協  力
+                div.col-xs-9
+                    p 旧東海道品川宿周辺まちづくり協議会 / なぎさの会 / DD Center / SOMEONE'S GARDEN
+                div.col.col-xs-3.text-danger
+                    p 後  援
+                div.col-xs-9
+                    p 品川区 / 一般社団法人しながわ観光協会
+                div.col.col-xs-3.text-danger
+                    p 連絡先
+                div.col-xs-9
+                    p <a href="mailto:bug.document@gmail.com">mailto:bug.document@gmail.com</a>
+                br(clear="all")

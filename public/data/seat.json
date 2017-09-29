@@ -1,0 +1,22 @@
+{
+  "seats":{
+    "reserved": {
+      "honshoji": "00",
+      "kaido": "00",
+      "kenkou": "00",
+      "kuromon": "00",
+      "matsumoto": "00",
+      "unagi": "16",
+      "yataimura": "18"
+    },
+    "max": {
+      "honshoji": "50",
+      "kaido": "40",
+      "kenkou": "45",
+      "kuromon": "52",
+      "matsumoto": "55",
+      "unagi": "46",
+      "yataimura": "58"
+    }
+  }
+}
