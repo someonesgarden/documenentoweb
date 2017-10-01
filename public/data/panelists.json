@@ -1,0 +1,100 @@
+{
+  "kawai": {
+    "name": "河合宏樹",
+    "img": "kawai",
+    "title": "河合さんのタイトル"
+  },
+  "saitoh": {
+    "name": "さいとうりょうじ",
+    "img": "saitoh",
+    "title": "さいとうさんのタイトル"
+  },
+  "ota": {
+    "name": "太田信吾",
+    "img": "ota",
+    "title": "太田さんのタイトル"
+  },
+  "nobuki": {
+    "name": "プロギャンブラーのぶき",
+    "img": "nobuki"
+  },
+  "matsui": {
+    "name": "松井至",
+    "img": "matsui"
+  },
+  "takeoka": {
+    "name": "竹岡寛俊",
+    "img": "takeoka"
+  },
+  "uchiyama": {
+    "name": "内山直樹",
+    "img": "uchiyama",
+    "title": ""
+  },
+  "hidaka": {
+    "name": "日高成樹",
+    "img": "hidaka"
+  },
+  "kawasaki": {
+    "name": "河崎純真"
+  },
+  "kan": {
+    "name": "関強",
+    "img": "kan"
+  },
+  "fujioka": {
+    "name": "藤岡朝子",
+    "img": "fujioka"
+  },
+  "someonesgarden": {
+    "name": "サムワンズガーデン",
+    "img": "someonesgarden"
+  },
+  "yonemoto": {
+    "name": "米本直樹",
+    "img": "yonemoto",
+    "title": "『ドキュメンタリーの未来：その時テレビにできること。』"
+  },
+  "tokyo": {
+    "name": "東京小童",
+    "img": "tokyo"
+  },
+  "nakamura": {
+    "name": "中村真夕",
+    "img": "nakamura"
+  },
+  "okuma": {
+    "name": "奥間勝也",
+    "img": "okuma"
+  },
+  "rikishers": {
+    "name": "リキシャーズ"
+  },
+  "mano": {
+    "name": "真野勉（BRT)"
+  },
+  "nishihara": {
+    "name": "西原孝至"
+  },
+  "nakagome": {
+    "name": "中込孝規"
+  },
+  "maki": {
+    "name": "Maki (黒瀬 万紀)"
+  },
+  "sato": {
+    "name": "SATO-C"
+  },
+  "kou": {
+    "name": "汪楠"
+  },
+  "adachi": {
+    "name": "安達茉莉子"
+  },
+  "kuwayama": {
+    "name": "桑山篤"
+  },
+  "sakuragi": {
+    "name": "桜木奈央子"
+  }
+}

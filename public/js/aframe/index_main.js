@@ -74,15 +74,15 @@ var paneller_matsui = document.querySelector('#paneller_matsui');
 var paneller_ota = document.querySelector('#paneller_ota');
 var paneller_fujioka = document.querySelector('#paneller_fujioka');
 var paneller_takeoka = document.querySelector('#paneller_takeoka');
-
 var paneller_okuma = document.querySelector('#paneller_okuma');
 var paneller_kan = document.querySelector('#paneller_kan');
-var paneller_tanaka = document.querySelector('#paneller_tanaka');
 var paneller_hidaka = document.querySelector('#paneller_hidaka');
-var paneller_shikai = document.querySelector('#paneller_shikai');
 var paneller_tokyo = document.querySelector('#paneller_tokyo');
-var paneller_deguchi = document.querySelector('#paneller_deguchi');
-var paneller_tsurusaki = document.querySelector('#paneller_tsurusaki');
+var paneller_someonesgarden = document.querySelector('#paneller_someonesgarden');
+var paneller_kawai = document.querySelector('#paneller_kawai');
+var paneller_nobuki = document.querySelector('#paneller_nobuki');
+var paneller_saitoh = document.querySelector('#paneller_saitoh');
+var paneller_nakamura = document.querySelector('#paneller_nakamura');
 
 var panellers = [
     paneller_uchiyama,
@@ -93,12 +93,13 @@ var panellers = [
     paneller_takeoka,
     paneller_okuma,
     paneller_kan,
-    paneller_tanaka,
     paneller_hidaka,
-    paneller_shikai,
     paneller_tokyo,
-    paneller_deguchi,
-    paneller_tsurusaki
+    paneller_someonesgarden,
+    paneller_kawai,
+    paneller_nobuki,
+    paneller_saitoh,
+    paneller_nakamura
 ];
 // About
 var about_venu = d3.select('#about_venu');
@@ -133,10 +134,20 @@ var jsondataloader = function(){
             var d3 = p.querySelector('.d3');
 
             var p_str = votes[name];
-
-            var d1_ = p_str.substr(0, 1); d1.setAttribute("num", d1_); d1.pause(); d1.play();
-            var d2_ = p_str.substr(1, 1); d2.setAttribute("num", d2_); d2.pause(); d2.play();
-            var d3_ = p_str.substr(2, 1); d3.setAttribute("num", d3_); d3.pause(); d3.play();
+            if(p_str!=undefined) {
+                var d1_ = p_str.substr(0, 1);
+                d1.setAttribute("num", d1_);
+                d1.pause();
+                d1.play();
+                var d2_ = p_str.substr(1, 1);
+                d2.setAttribute("num", d2_);
+                d2.pause();
+                d2.play();
+                var d3_ = p_str.substr(2, 1);
+                d3.setAttribute("num", d3_);
+                d3.pause();
+                d3.play();
+            }
         }
     });
 

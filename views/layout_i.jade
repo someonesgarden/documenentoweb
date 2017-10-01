@@ -10,18 +10,32 @@ html
     script(src="/js/socketio/client.js")
 
     script(src="/vendor/jquery/dist/jquery.js")
+    script(src="/vendor/d3/d3.js")
     script(src="https://unpkg.com/react@15/dist/react.min.js")
     script(src="https://unpkg.com/react-dom@15/dist/react-dom.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js")
     script(src="/vendor/bootstrap/dist/js/bootstrap.js")
 
+    script(src="/vendor/angular/angular.js")
+    script(src="/vendor/angular-local-storage/dist/angular-local-storage.js")
+    script(src="/vendor/angular-animate/angular-animate.js")
+    script(src="/vendor/angular-cookies/angular-cookies.js")
+    script(src="/vendor/angular-resource/angular-resource.js")
+    script(src="/vendor/angular-route/angular-route.js")
+    script(src="/vendor/angular-sanitize/angular-sanitize.js")
+    script(src="/vendor/angular-touch/angular-touch.js")
+
     link(rel="stylesheet", href="https://fonts.googleapis.com/earlyaccess/mplus1p.css")
     link(rel="stylesheet", href="/vendor/bootstrap/dist/css/bootstrap.min.css")
     link(rel="stylesheet", href="/css/style.css")
+    script.
+        var app = angular.module('voteApp', ["ngResource"]);
 
     block header
 
-  body(style="background-color:#F0E3D2;")
+  body(ng-app="voteApp", style="background-color:#F0E3D2;")
     block content
+
+
 
 

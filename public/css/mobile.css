@@ -15,3 +15,50 @@ body {
     color: #555555;
     padding: 12px;
 }
+
+#vote_list{
+
+}
+
+#vote_list .panel_area{
+    border:3px solid white;
+    position:relative;
+    margin-bottom:5px;
+
+}
+
+#vote_list .panel_item{
+    margin-bottom:12px;
+}
+
+#vote_list .panel_buttons{
+    position:absolute;bottom:10px;right:0px;
+}
+
+#vote_list .vote_sep{
+    height:8px;
+}
+
+
+#vote_list .panel_img{
+    width:100%;
+    width:auto;
+    max-height:150px;
+}
+
+.panel_buttons .vote_button{
+    font-weight:bold; border-bottom:2px solid black;margin:1px; padding:1px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.panel_buttons .vote_num{
+    background-color:white;font-weight:bold; margin:1px; padding:1px;
+    user-select: none; /* CSS3 */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari、Chromeなど */
+    -ms-user-select: none; /* IE10かららしい */
+}
+
+
+

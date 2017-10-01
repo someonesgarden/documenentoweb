@@ -74,9 +74,9 @@ AFRAME.registerComponent('arrow', {
        thisentity.setAttribute('obj-model',"obj: #"+type+"-obj; mtl: #"+type+"-mtl");
 
        if(type=="up"){
-           thisentity.setAttribute("position","0.8 4.2 0");
+           thisentity.setAttribute("position","0.52 3 0");
        }else{
-           thisentity.setAttribute("position","-0.8 4.2 0");
+           thisentity.setAttribute("position","-0.52 3 0");
        }
 
        thisentity.addEventListener('click',function(){

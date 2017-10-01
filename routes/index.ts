@@ -18,6 +18,20 @@ function writeFile(path, data) {
     });
 }
 
+function ObjArraySort(ary, key, order) {
+    var reverse = 1;
+    if(order && order.toLowerCase() == "desc")
+        reverse = -1;
+    ary.sort(function(a, b) {
+        if(a[key] < b[key])
+            return -1 * reverse;
+        else if(a[key] == b[key])
+            return 0;
+        else
+            return 1 * reverse;
+    });
+}
+
 
 router.get('/earth', (req,res, next)=> {
   res.render('earth', {title: 'Earth'});
@@ -65,7 +79,19 @@ router.get('/dev', (req, res, next)=> {
 
 
 router.get('/i', (req, res, next)=> {
-    res.render('index_i', { title: 'DOCU-MEMENTO映画祭@i', mobile:true});
+    res.render('index_i', { title: 'DOCU-MEMENTO映画祭VR', mobile:true});
+});
+
+router.get('/v', (req, res, next)=> {
+    var json = fs.readFileSync("public/data/panelists.json","utf-8");
+    var obj = JSON.parse(json);
+
+    var panels = obj.panels;
+    //var panels_len = Object.keys(panels).length;
+
+    console.log("obj_len=",Object.keys(obj));
+
+    res.render('vote_i', { title: 'DOCU-MEMENTO投票システム', mobile:true,panels:panels});
 });
 
 
@@ -88,7 +114,20 @@ router.get('/', (req, res, next)=> {
 
 router.post('/voteapi', (req, res, next)=> {
 
-    var obj = {"vote":req.body};
+    var votes = req.body;
+    var ary = [];
+
+    for(var i=0;i<Object.keys(votes).length;i++){
+            ary[i]={'vote':votes[Object.keys(votes)[i]], 'name':Object.keys(votes)[i]};
+    }
+
+    ObjArraySort(ary,'vote',"desc");
+    votes = {};
+    for(var i=0;i<ary.length;i++){
+        votes[ary[i].name] = ary[i].vote;
+    }
+
+    var obj = {"vote":votes};
     writeFile("public/data/vote.json", JSON.stringify(obj));
     res.send("voteapi");
 });
