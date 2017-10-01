@@ -63,13 +63,19 @@ router.get('/dev', function (req, res, next) {
 router.get('/i', function (req, res, next) {
     res.render('index_i', { title: 'DOCU-MEMENTO映画祭VR', mobile: true });
 });
+//VOTE
 router.get('/v', function (req, res, next) {
-    var json = fs.readFileSync("public/data/panelists.json", "utf-8");
-    var obj = JSON.parse(json);
-    var panels = obj.panels;
-    //var panels_len = Object.keys(panels).length;
-    console.log("obj_len=", Object.keys(obj));
-    res.render('vote_i', { title: 'DOCU-MEMENTO投票システム', mobile: true, panels: panels });
+    //var json    = fs.readFileSync("public/data/panelists.json","utf-8");
+    //var obj     = JSON.parse(json);
+    //var panels  = obj.panels;
+    res.render('vote_i', { title: 'DOCU-MEMENTO投票システム', mobile: true });
+});
+//SEAT
+router.get('/s', function (req, res, next) {
+    //var json    = fs.readFileSync("public/data/panelists.json","utf-8");
+    //var obj     = JSON.parse(json);
+    //var panels  = obj.panels;
+    res.render('seat_i', { title: 'DOCU-MEMENTO投票システム', mobile: true });
 });
 router.get('/', function (req, res, next) {
     var agent = parser(req.headers['user-agent']);

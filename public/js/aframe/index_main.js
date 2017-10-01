@@ -14,7 +14,6 @@ var lantan = d3.select("#lantan");
 var earth = d3.select("#earth");
 var house = d3.select('#house_small');
 var largehouse = d3.select('#house_large');
-var schedule = d3.select('#schedule');
 var amagi = d3.select('#amagi');
 var infobox = d3.select('#infobox');
 var panelbox1 = d3.select('#panelbox1');
@@ -108,17 +107,12 @@ var about_program = d3.select('#about_program');
 var about_fes = d3.select('#about_fes');
 var about_fes_j = d3.select('#about_fes_j');
 // Logo
-var logo_bug = document.querySelector("#logo_bug");
-var logo_tokyodocs = document.querySelector("#logo_tokyodocs");
-var logo_sog = document.querySelector("#logo_sog");
 var votes;
 var reserved;
 var seat_max;
 
-
 document.mode = "infobox";
 document.visible_model = infobox;
-
 
 /////////// VoteDataLoader
 var jsondataloader = function(){
@@ -240,9 +234,6 @@ var switchModel = function (model) {
             break;
         case "house":
             model_to_change = house;
-            break;
-        case "schedule":
-            model_to_change = schedule;
             break;
         case "amagi":
             model_to_change = amagi;

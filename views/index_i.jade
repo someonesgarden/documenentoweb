@@ -18,9 +18,14 @@ block content
             div.collapse.navbar-collapse#navbarCollapse
                     ul.nav.navbar-nav
                         li.active
+                            a(href="/i") トップ
+                        li
                             a(href="/dev") VRモード
-                        li.active
+                        li
                             a(href="/v") ピッチ投票
+                        li
+                            a(href="/s") 席状況
+
 
     div.container(style="margin-top:36px;")
 
@@ -30,10 +35,12 @@ block content
             div.col.col-xs-12(style="padding-bottom:5px;")
                 a(href="/dev")
                     img(src="assets/img/smt/mobile_banner1.png", width="100%", style="border:5px solid white;")
-
-            div.col.col-xs-12
+            div.col.col-xs-12(style="padding-bottom:5px;")
                 a(href="/v")
                     img(src="assets/img/smt/mobile_banner2.png", width="100%", style="border:5px solid white;")
+            div.col.col-xs-12(style="padding-bottom:5px;")
+                a(href="/s")
+                    img(src="assets/img/smt/mobile_banner3.png", width="100%", style="border:5px solid white;")
                 br
         div.row.well-lg
             div.infoarea

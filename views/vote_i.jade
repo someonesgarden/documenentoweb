@@ -18,10 +18,14 @@ block content
 
             div.collapse.navbar-collapse#navbarCollapse
                     ul.nav.navbar-nav
+                        li
+                            a(href="/i") トップ
+                        li
+                            a(href="/dev") VRモード
                         li.active
-                            a(href="/i") スマホトップに戻る
-                        li.active
-                            a(href="http://docu-memento.com:3000/dev") VRモード
+                            a(href="/v") ピッチ投票
+                        li
+                            a(href="/s") 席状況
 
     div.container#AppController(ng-controller="AppController", style="margin-top:56px;")
         div.row(style="height:260px;background-image:url('assets/img/smt/top_img_vote.png');background-size:contain;background-repeat:no-repeat;background-position:50% 50%;")
@@ -50,13 +54,11 @@ block content
                                         div.col-xs-2
                                             h3.text-center.vote_button(ng-click="downaction(key)") ↓
                                         div.col-xs-4
-                                            h3.vote_num {{val ? val: '000' | uppercase}}
+                                            h3.vote_num {{val ? val+'': '000' | numberFixedLen:3 }}
     script.
         var socketresponse = function (data) {
             var element = document.getElementById("AppController");
             var $scope = angular.element(element).scope();
-
-
             $scope.votes[data.value.name] = data.value.point;
             $scope.votes = votesSort($scope.votes);
             if (!$scope.$$phase) {

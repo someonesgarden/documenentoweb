@@ -1,0 +1,114 @@
+extends layout_i
+
+block header
+    link(rel="stylesheet", href="/css/mobile.css")
+    script(src="js/lib/common.js")
+
+block content
+    nav#myNavbar.navbar.navbar-default.navbar-inverse.navbar-fixed-top(role="navigation")
+        div.container
+            div.navbar-header
+                button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbarCollapse")
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href="#")
+                    strong DOCUMEMENTO 席情報
+
+            div.collapse.navbar-collapse#navbarCollapse
+                    ul.nav.navbar-nav
+                        li
+                            a(href="/i") トップ
+                        li
+                            a(href="/dev") VRモード
+                        li
+                            a(href="/v") ピッチ投票
+                        li.active
+                            a(href="/s") 席状況
+
+    div.container#AppController(ng-controller="AppController", style="margin-top:56px;")
+        div.row(style="height:260px;background-image:url('assets/img/smt/top_img2.png');background-size:contain;background-repeat:no-repeat;background-position:50% 50%;")
+
+        div.row.well-lg
+            div#vote_list
+                div.col.col-xs-12
+                    div.row.panel_area
+                        div.col.col-xs-3
+                            img.panel_img.ng-cloak(src="assets/img/smt/venues-matsumoto.png", style="padding-top:10px;")
+                        div.col.col-xs-9.panel_item
+                            h4.text-right 松本邸
+                            p.text-right 松本邸の説明。
+                        div.col-xs-12.vote_sep
+                        div.panel_buttons
+                                div.col-xs-12
+                                    h3.vote_num {{seats.reserved['matsumoto'] | numberFixedLen:2 }} / {{seats.max['matsumoto'] | numberFixedLen:2 }}
+                div.col.col-xs-12
+                    div.row.panel_area
+                        div.col.col-xs-3
+                            img.panel_img.ng-cloak(src="assets/img/smt/venues-yatai.png", style="padding-top:10px;")
+                        div.col.col-xs-9.panel_item
+                            h4.text-right 一龍屋台村
+                            p.text-right 一龍屋台村の説明。
+                        div.col-xs-12.vote_sep
+                        div.panel_buttons
+                            div.col-xs-12
+                                h3.vote_num {{seats.reserved['yataimura'] | numberFixedLen:2 }} / {{seats.max['yataimura'] | numberFixedLen:2 }}
+                div.col.col-xs-12
+                    div.row.panel_area
+                        div.col.col-xs-3
+                            img.panel_img.ng-cloak(src="assets/img/smt/venues-honshoji.png", style="padding-top:10px;")
+                        div.col.col-xs-9.panel_item
+                            h4.text-right 本照寺
+                            p.text-right 本照寺の説明。
+                        div.col-xs-12.vote_sep
+                        div.panel_buttons
+                            div.col-xs-12
+                                h3.vote_num {{seats.reserved['honshoji'] | numberFixedLen:2 }} / {{seats.max['honshoji'] | numberFixedLen:2 }}
+
+                div.col.col-xs-12
+                    div.row.panel_area
+                        div.col.col-xs-3
+                            img.panel_img.ng-cloak(src="assets/img/smt/venues-kaido.png", style="padding-top:10px;")
+                        div.col.col-xs-9.panel_item
+                            h4.text-right KAIDO<br/>Books & Cafe
+                            p.text-right KAIDO Cafeの説明。
+                        div.col-xs-12.vote_sep
+                        div.panel_buttons
+                            div.col-xs-12
+                                h3.vote_num {{seats.reserved['kaido'] | numberFixedLen:2 }} / {{seats.max['kaido'] | numberFixedLen:2 }}
+
+
+                div.col.col-xs-12
+                    div.row.panel_area
+                        div.col.col-xs-3
+                            img.panel_img.ng-cloak(src="assets/img/smt/venues-kenkou.png", style="padding-top:10px;")
+                        div.col.col-xs-9.panel_item
+                            h4.text-right 品川健康センター
+                            p.text-right 品川健康センターの説明。
+                        div.col-xs-12.vote_sep
+                        div.panel_buttons
+                            div.col-xs-12
+                                h3.vote_num {{seats.reserved['kenkou'] | numberFixedLen:2 }} / {{seats.max['kenkou'] | numberFixedLen:2 }}
+    script.
+        var socketresponse = function (data) {
+            var element = document.getElementById("AppController");
+            var $scope = angular.element(element).scope();
+            $scope.votes[data.value.name] = data.value.point;
+            $scope.votes = votesSort($scope.votes);
+            if (!$scope.$$phase) {
+                $scope.$apply();
+            }
+        };
+
+        app.controller('AppController', ['$scope', '$http','$window',  function ($scope, $http,$window) {
+
+            $scope.seats ={};
+
+            $http.get('./data/seat.json')
+                .then(function(res){
+                    $scope.seats = res.data.seats;
+                });
+
+
+        }]);
