@@ -12,8 +12,6 @@ var io        = require(path.resolve(path.join('./socketio', 'socket.server.js')
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
-
-
 process.on('uncaughtException', function(err){
     console.log(err);
 });

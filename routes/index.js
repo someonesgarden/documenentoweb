@@ -2,10 +2,8 @@
 /// <reference path="../typings/express/express.d.ts" />
 var express = require('express');
 var router = express.Router();
-var basicAuth = require('basic-auth-connect');
 var fs = require('fs');
 var parser = require('ua-parser-js');
-//router.use(basicAuth('tabitabi','bitabita'));
 //ファイルの書き込み関数
 function writeFile(path, data) {
     fs.writeFile(path, data, function (err) {

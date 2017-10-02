@@ -3,11 +3,8 @@
 
 var express = require('express');
 var router = express.Router();
-var basicAuth = require('basic-auth-connect');
 var fs = require('fs');
 var parser = require('ua-parser-js');
-
-//router.use(basicAuth('tabitabi','bitabita'));
 
 //ファイルの書き込み関数
 function writeFile(path, data) {
@@ -90,6 +87,8 @@ router.get('/v', (req, res, next)=> {
     res.render('vote_i', { title: 'DOCU-MEMENTO投票システム', mobile:true});
 });
 
+
+
 //SEAT
 router.get('/s', (req, res, next)=> {
     //var json    = fs.readFileSync("public/data/panelists.json","utf-8");
@@ -135,7 +134,6 @@ router.post('/voteapi', (req, res, next)=> {
     writeFile("public/data/vote.json", JSON.stringify(obj));
     res.send("voteapi");
 });
-
 
 
 module.exports = router;
