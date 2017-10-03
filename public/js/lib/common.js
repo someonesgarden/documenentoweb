@@ -25,7 +25,7 @@ var moveMenuItem2DefPos = function (obj) {
     var ang  = 0;
 
     if(type=="panel"){
-        ang = 190+10*n;
+        ang = 170+10*n;
     } else if(type=="venue"){
         ang = 217+12*n;
     }else if(type=="prog"){

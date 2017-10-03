@@ -82,6 +82,9 @@ var paneller_kawai = document.querySelector('#paneller_kawai');
 var paneller_nobuki = document.querySelector('#paneller_nobuki');
 var paneller_saitoh = document.querySelector('#paneller_saitoh');
 var paneller_nakamura = document.querySelector('#paneller_nakamura');
+var paneller_adachi = document.querySelector('#paneller_adachi');
+var paneller_miyashita = document.querySelector('#paneller_miyashita');
+var paneller_sakuragi = document.querySelector('#paneller_sakuragi');
 
 var panellers = [
     paneller_uchiyama,
@@ -98,7 +101,10 @@ var panellers = [
     paneller_kawai,
     paneller_nobuki,
     paneller_saitoh,
-    paneller_nakamura
+    paneller_nakamura,
+    paneller_adachi,
+    paneller_miyashita,
+    paneller_sakuragi
 ];
 // About
 var about_venu = d3.select('#about_venu');
@@ -182,6 +188,9 @@ jsondataloader();
 /////////// INIT
 var run = function () {
     loader.classList.add("hidden");
+    setTimeout(function(){
+        moveMenuItem(top_topinfo1, 235);
+    },4000);
     if (getDevice == 'sp') {
         scene.enterVR();
         setTimeout(function () {
@@ -484,14 +493,8 @@ var socketresponse = function (data) {
     d2.play();
     d3.pause();
     d3.play();
-
-
 };
 
-
-setTimeout(function(){
-    moveMenuItem(top_topinfo1, 230);
-},2000);
 
 
 window.socketresponse = socketresponse;

@@ -67,6 +67,21 @@
     "name": "奥間勝也",
     "img": "okuma"
   },
+  "adachi": {
+    "name": "安達茉莉子",
+    "img":"adachi",
+    "title":"『言葉とイラスト』で物語を。"
+  },
+  "sakuragi": {
+    "name": "桜木奈央子",
+    "img":"sakuragi",
+    "title":"アフリカ星空映画館。子どもたちに「別の生き方の可能性」を"
+  },
+  "miyashita": {
+    "name": "宮下千峰",
+    "img":"miyashita",
+    "title":"私、学校作ります。"
+  },
   "rikishers": {
     "name": "リキシャーズ"
   },
@@ -88,13 +103,7 @@
   "kou": {
     "name": "汪楠"
   },
-  "adachi": {
-    "name": "安達茉莉子"
-  },
   "kuwayama": {
     "name": "桑山篤"
-  },
-  "sakuragi": {
-    "name": "桜木奈央子"
   }
 }

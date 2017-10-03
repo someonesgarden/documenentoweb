@@ -9,7 +9,7 @@ block header
 
 block content
 
-    div#loader(style="position: absolute; height: 100%; width: 100%;"): div.spinner
+    div#loader(style="position: absolute; height: 100%; width: 100%;background-color:green;z-index:0;"): div.spinner(style="margin-top:30%")
 
     if !mobile
         div.topnav
@@ -18,7 +18,7 @@ block content
         a-scene
             a-assets
                 //360 Videos
-                video#er_yataimura(src="media/er/shinagawa/yataimura.mp4", muted, autoplay,loop="true")
+                //video#er_yataimura(src="media/er/shinagawa/yataimura.mp4", muted, autoplay,loop="true")
                 //video#er_honshoji(src="media/er/shinagawa/honshoji.mp4", muted, autoplay,loop="true")
                 //video#er_matsumoto(src="media/er/shinagawa/matsumoto.mp4", muted, autoplay,loop="true")
                 //video#er_tokaido(src="media/er/shinagawa/tokaido1.mp4", muted, autoplay,loop="true")
@@ -30,8 +30,8 @@ block content
                 a-asset-item#large-obj(src="assets/models/camerahouse/large.obj")
                 a-asset-item#earth-mtl(src="assets/models/earth/earth.mtl")
                 a-asset-item#earth-obj(src="assets/models/earth/earth.obj")
-                a-asset-item#amagi-mtl(src="assets/models/amagi/amagi.mtl")
-                a-asset-item#amagi-obj(src="assets/models/amagi/amagi.obj")
+                //a-asset-item#amagi-mtl(src="assets/models/amagi/amagi.mtl")
+                //a-asset-item#amagi-obj(src="assets/models/amagi/amagi.obj")
                 a-asset-item#infobox-mtl(src="assets/models/infobox/box.mtl")
                 a-asset-item#infobox-obj(src="assets/models/infobox/box.obj")
                 a-asset-item#lantan-mtl(src="assets/models/lantan/lantan.mtl")
@@ -71,7 +71,7 @@ block content
                 img#img_aboutfes(src="assets/img/cmenu_documemento.png")
                 img#img_aboutfes_j(src="assets/img/cmenu_documemento_j.png")
 
-                //img#topinfo1(src="assets/img/top_info1.png")
+                img#topinfo1(src="assets/img/top_info1024.png")
 
                 //PROGRAMS
                 img#img_prog_honshoji0311(src="assets/img/programs/prog_honshoji0311.png")
@@ -148,6 +148,16 @@ block content
                 //中村
                 img#panel_nakamura_front(src="assets/img/panelists/p_text_nakamura.png")
                 img#panel_nakamura_back(src="assets/img/panelists/p_nakamura.png")
+                //安達
+                img#panel_adachi_front(src="assets/img/panelists/p_text_adachi.png")
+                img#panel_adachi_back(src="assets/img/panelists/p_adachi.png")
+                //桜木
+                img#panel_sakuragi_front(src="assets/img/panelists/p_text_sakuragi.png")
+                img#panel_sakuragi_back(src="assets/img/panelists/p_sakuragi.png")
+                //宮下
+                img#panel_miyashita_front(src="assets/img/panelists/p_text_miyashita.png")
+                img#panel_miyashita_back(src="assets/img/panelists/p_miyashita.png")
+
 
 
             ///////////////////  3D MODELS
@@ -160,7 +170,7 @@ block content
                 a-animation(attribute="rotation", from="0 100 0", to="0 -260 0", dur="15000", easing="linear", repeat="indefinite")
                 a-collada-model(position="0 0 0", rotation="0 20 0", scale="1.5 1.5 1.5", obj-model="obj: #lantan-obj; mtl: #lantan-mtl")
 
-            a-entity#amagi(position="0 45 -3")
+            //a-entity#amagi(position="0 45 -3")
                 a-animation(attribute="rotation", from="0 -30 0", to="0 330 0", dur="15000", easing="linear", repeat="indefinite")
                 a-collada-model(position="0 0 0", rotation="0 -20 0", scale="1.5 1.5 1.5", obj-model="obj: #amagi-obj; mtl: #amagi-mtl")
                 a-image#shadow(src="#img_shadow", rotation="-90 0 0", scale="2.5 1.5 1.5")
@@ -246,7 +256,7 @@ block content
                         a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
                 a-entity#topinfo
-                    a-image#top_topinfo1(prog, type="topinfo", src="assets/img/top_info1.png", y=2.0, width="4", height="6", scale="0.5 0.5 1", n=0)
+                    a-image#top_topinfo1(prog, type="topinfo", src="#topinfo1", y=2.3, width="4", height="6", scale="0.5 0.5 1", n=0)
 
             /////////////////  Panellers
 
@@ -355,6 +365,28 @@ block content
                     a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
+
+                a-image#paneller_adachi(name="adachi", type="panel", paneler, src="#panel_adachi_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_adachi_back", n=15)
+                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
+
+                a-image#paneller_miyashita(name="miyashita", type="panel", paneler, src="#panel_miyashita_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_miyashita_back", n=16)
+                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
+
+                a-image#paneller_sakuragi(name="sakuragi", type="panel", paneler, src="#panel_sakuragi_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_sakuragi_back", n=17)
+                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
+
 
 
             //On CURVE MENU
