@@ -1,22 +1,33 @@
 {
   "seats":{
     "reserved": {
-      "honshoji": "20",
-      "kaido": "00",
-      "kenkou": "00",
-      "kuromon": "00",
-      "matsumoto": "00",
-      "unagi": "16",
-      "yataimura": "18"
+      "honshoji0311": "20",
+      "honshoji0411": "00",
+      "kaido0311": "00",
+      "kaido0411": "00",
+      "kenkou0411": "00",
+      "kenkou0414": "16",
+      "matsumoto0311": "18",
+      "matsumoto0411": "18",
+      "unagi0410": "18",
+      "yatai0311": "18",
+      "yatai0411": "18",
+      "yatai0420": "18"
     },
     "max": {
-      "honshoji": "50",
-      "kaido": "40",
-      "kenkou": "45",
-      "kuromon": "52",
-      "matsumoto": "55",
-      "unagi": "46",
-      "yataimura": "58"
+      "honshoji0311": "40",
+      "honshoji0411": "40",
+      "kaido0311": "50",
+      "kaido0411": "50",
+      "kenkou0411": "30",
+      "kenkou0414": "30",
+      "matsumoto0311": "58",
+      "matsumoto0411": "58",
+      "unagi0410": "58",
+      "yatai0311": "58",
+      "yatai0411": "68",
+      "yatai0420": "68"
     }
   }
 }
+

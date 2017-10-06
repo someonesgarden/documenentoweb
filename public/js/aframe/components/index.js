@@ -396,8 +396,15 @@ AFRAME.registerComponent('venu', {
     init:function() {
         var thisentity = this.el;
         var n = thisentity.getAttribute('n');
+        var name =thisentity.getAttribute('name');
         thisentity.angle = 0;
         thisentity.angle_to = 90;
+
+        thisentity.addEventListener('click',function(){
+            console.log("venu=",name);
+            largehousemove("video",name);
+        });
+
     },
 
     setupAnimation:function() {

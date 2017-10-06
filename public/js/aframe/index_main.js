@@ -14,6 +14,7 @@ var lantan = d3.select("#lantan");
 var earth = d3.select("#earth");
 var house = d3.select('#house_small');
 var largehouse = d3.select('#house_large');
+var largehouseselector   = document.querySelector('#house_large');
 var amagi = d3.select('#amagi');
 var infobox = d3.select('#infobox');
 var panelbox1 = d3.select('#panelbox1');
@@ -28,6 +29,7 @@ var topinfos = [
 
 //Programs
 var prog_honshoji0311 = document.querySelector('#prog_honshoji0311');
+var prog_honshoji0411 = document.querySelector('#prog_honshoji0411');
 var prog_kaido0311 = document.querySelector('#prog_kaido0311');
 var prog_kaido0411 = document.querySelector('#prog_kaido0411');
 var prog_kenkou0411 = document.querySelector('#prog_kenkou0411');
@@ -41,6 +43,7 @@ var prog_yatai0420 = document.querySelector('#prog_yatai0420');
 
 var programs = [
     prog_honshoji0311,
+    prog_honshoji0411,
     prog_kaido0311,prog_kaido0411,
     prog_kenkou0411,prog_kenkou0414,
     prog_matsumoto0311,prog_matsumoto0411,
@@ -156,9 +159,9 @@ var jsondataloader = function(){
         reserved = data.seats.reserved;
         seat_max = data.seats.max;
 
-        for(var i = 0; i< venues.length; i++){
+        for(var i = 0; i< programs.length; i++){
 
-            var v = venues[i];
+            var v = programs[i];
             var name = v.getAttribute("name");
             var d1 = v.querySelector('.d1');
             var d2 = v.querySelector('.d2');
@@ -173,12 +176,10 @@ var jsondataloader = function(){
             var d3_ = max_str.substr(0, 1); d3.setAttribute("num", d3_); d3.pause(); d3.play();
             var d4_ = max_str.substr(1, 1); d4.setAttribute("num", d4_); d4.pause(); d4.play();
 
-
         }
 
     });
 };
-
 
 
 
@@ -190,7 +191,8 @@ var run = function () {
     loader.classList.add("hidden");
     setTimeout(function(){
         moveMenuItem(top_topinfo1, 235);
-    },4000);
+    },1000);
+
     if (getDevice == 'sp') {
         scene.enterVR();
         setTimeout(function () {
@@ -316,6 +318,7 @@ scene.addEventListener('exit-vr', function () {
 // About
 about_program.on('click',function(){
     switchModel("house");
+    largehousemove("back");
 
     for (var i = 0; i < topinfos.length; i++) {
         moveMenuItem(topinfos[i], 90);
@@ -337,6 +340,7 @@ about_program.on('click',function(){
 
 about_fes.on('click', function () {
     switchModel("infobox");
+    largehousemove("back");
     for (var i = 0; i < topinfos.length; i++) {
         moveMenuItem2DefPos(topinfos[i]);
     }
@@ -355,6 +359,7 @@ about_fes.on('click', function () {
 
 about_fes_j.on('click', function () {
     switchModel("house");
+    largehousemove("back");
     for (var i = 0; i < topinfos.length; i++) {
         moveMenuItem2DefPos(topinfos[i]);
     }
@@ -394,6 +399,7 @@ about_venu.on('click', function () {
 
 about_toudansha.on('click', function(){
     switchModel("house");
+    largehousemove("back");
 
     for (var i = 0; i < topinfos.length; i++) {
         moveMenuItem(topinfos[i], 90);
@@ -412,13 +418,7 @@ about_toudansha.on('click', function(){
     }
 });
 
-about_venu.on('mouseenter',function(){
-    console.log("about_town_mouseenter");
-});
 
-about_venu.on('mouseleave', function(){
-    console.log("about_town_mouseleave");
-})
 
 // Program
 /*
@@ -439,28 +439,75 @@ prog_tokyodocs.addEventListener('click', function () {
 
 // 3d model
 
-earth.on('click', function(){
-    console.log("earth clicked");
-});
 
-house.on('click',function(){
-    console.log("house clicked");
+var largehousemove = function(mode,videourl=""){
+
+    console.log("videourl=",videourl);
+
     var largehouse_y = largehouse.attr("position").y;
-    if (largehouse_y ==80) {
-        sky.setAttribute("src", "");
-        var tween = new AFRAME.TWEEN.Tween({y: 80})
-            .to({y: 0}, 400)
+
+    var y0 = 0;
+    var y1 = 80;
+
+    if(mode=="video"){
+        sky.setAttribute("src", "/assets/video/"+videourl+".mp4");
+    }
+
+
+    if (mode=="video" && largehouse_y < 80) {
+        y0 = largehouse_y;
+        y1 = 80;
+
+        var tween = new AFRAME.TWEEN.Tween({y: y0})
+            .to({y: y1}, 400)
             //to()までの数値変化のイージング種類
             .easing(TWEEN.Easing.Circular.In)
             .onUpdate(function () {
                 largehouse.attr({
                     position: "0 " + this.y + " -3"
                 });
+                largehouseselector.pause();
             })
             .onComplete(function () {
             });
         tween.start();
+
     }
+
+    else if (mode=="back" && largehouse_y >0) {
+        y0 = largehouse_y;
+        y1 = 0;
+
+        var tween = new AFRAME.TWEEN.Tween({y: y0})
+            .to({y: y1}, 1400)
+            //to()までの数値変化のイージング種類
+            .easing(TWEEN.Easing.Circular.Out)
+            .onUpdate(function () {
+                largehouse.attr({
+                    position: "0 " + this.y + " -3"
+                });
+                largehouseselector.play();
+            })
+            .onComplete(function () {
+                sky.setAttribute("src", "");
+            });
+        tween.start();
+    }
+
+
+
+
+
+}
+
+earth.on('click', function(){
+    console.log("earth clicked");
+});
+
+house.on('click',function(){
+    console.log("house clicked");
+    largehousemove("back");
+
 });
 
 

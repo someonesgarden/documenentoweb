@@ -17,6 +17,10 @@ app.all('/admin', basicAuth(function(user, password) {
     return user === 'tabitabi' && password === 'bitabita';
 }));
 
+app.all('/dev', basicAuth(function(user, password) {
+    return user === 'tabitabi' && password === 'bitabita';
+}));
+
 app.all('/v', basicAuth(function(user, password) {
     return user === 'tabitabi' && password === 'bitabita';
 }));
