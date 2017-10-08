@@ -29,7 +29,7 @@ var moveMenuItem2DefPos = function (obj) {
     } else if(type=="venue"){
         ang = 217+12*n;
     }else if(type=="prog"){
-        ang = 210+10*n;
+        ang = 220+10*n;
     }else if(type=="topinfo"){
         ang = 230+10*n;
     }else{

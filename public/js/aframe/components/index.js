@@ -20,7 +20,7 @@ AFRAME.registerComponent('arrow', {
         var thisentity = this.el;
         var type = thisentity.getAttribute('type');
         var parententity = thisentity.parentEl;
-        var name = parententity.getAttribute("name");
+        var name = parententity.getAttribute("id");
         var d1 = parententity.querySelector('.d1');
         var d2 = parententity.querySelector('.d2');
         var d3 = parententity.querySelector('.d3');
@@ -209,15 +209,13 @@ AFRAME.registerComponent('paneler', {
 
     init:function(){
         var thisentity = this.el;
-        var n = thisentity.getAttribute('n');
-        var name = thisentity.getAttribute('name');
         thisentity.angle = 0;
         //thisentity.angle_to = 70+15*n;
         thisentity.angle_to = 90;
 
         var backimg = thisentity.getAttribute('backsrc');
         var frontimg = thisentity.getAttribute('src');
-        var name = thisentity.getAttribute('name');
+        var name = thisentity.getAttribute('id');
         var that = this;
         thisentity.addEventListener('mouseenter',function(){
             //console.log(backimg);
@@ -334,10 +332,14 @@ AFRAME.registerComponent('prog', {
         //initで初期だけ定義する代わりに、
         //play(),pause()の仕組みを利用して擬似的にinitと関数呼び出しを実現している
         var thisentity = this.el;
+
         var n = thisentity.getAttribute('n');
         thisentity.angle = 0;
         //thisentity.angle_to = 290+10*n;
         thisentity.angle_to = 90;
+        thisentity.addEventListener('click',function(){
+           console.log("prog");
+        });
     },
 
     setupAnimation:function() {

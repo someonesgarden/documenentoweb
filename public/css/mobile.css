@@ -16,15 +16,13 @@ body {
     padding: 12px;
 }
 
-#vote_list{
 
-}
 
+/* Vote _list */
 #vote_list .panel_area{
     border:3px solid white;
     position:relative;
     margin-bottom:5px;
-
 }
 
 #vote_list .panel_item{
@@ -46,6 +44,66 @@ body {
     max-height:150px;
 }
 
+/* Seat_List */
+
+#seat_list h1{
+    padding:2px 0px 2px 0px;margin:0;font-size:18px;font-weight:bold;
+}
+
+
+#seat_list h2{
+    font-size:18px;
+    padding:0;
+}
+
+#seat_list h3{
+    font-size:16px;
+    font-weight:bold;
+    padding:0;
+}
+
+#seat_list h4{
+    font-size:20px;
+    padding:0;
+    padding-bottom:8px;
+    margin:0;
+
+}
+
+#seat_list .panel_area{
+    border:3px solid white;
+    position:relative;
+    margin-bottom:5px;
+    background:rgba(255,255,255,0.3);
+}
+
+.panel_area .date_area{
+    background-color:#fff;color:#222;padding:0;
+}
+
+
+#seat_list .panel_item{
+    margin-bottom:12px;
+}
+
+#seat_list .panel_buttons{
+    position:absolute;bottom:10px;right:0px;
+}
+
+#seat_list .vote_sep{
+    height:8px;
+}
+
+
+#seat_list .panel_img{
+    padding-top:10px;
+    width:100%;
+    height:auto;
+    border-bottom:10px solid white;
+}
+
+
+
 .panel_buttons .vote_button{
     font-weight:bold; border-bottom:2px solid black;margin:1px; padding:1px;
     cursor: pointer;
@@ -59,6 +117,7 @@ body {
     -webkit-user-select: none; /* Safari、Chromeなど */
     -ms-user-select: none; /* IE10かららしい */
 }
+
 
 
 

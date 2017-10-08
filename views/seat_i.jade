@@ -17,81 +17,35 @@ block content
                     strong DOCUMEMENTO 席情報
 
             div.collapse.navbar-collapse#navbarCollapse
-                    ul.nav.navbar-nav
-                        li
-                            a(href="/i") トップ
-                        li
-                            a(href="/dev") VRモード
-                        li
-                            a(href="/v") ピッチ投票
-                        li.active
-                            a(href="/s") 席状況
-                        li
-                            a(href="/admin") 管理者用
+                ul.nav.navbar-nav
+                    li
+                        a(href="/i") トップ
+                    li
+                        a(href="/dev") VRモード
+                    li
+                        a(href="/v") ピッチ投票
+                    li.active
+                        a(href="/s") 席状況
+                    li
+                        a(href="/admin") 管理者用
 
     div.container#AppController(ng-controller="AppController", style="margin-top:17px;")
         div.row(style="height:260px;background-image:url('assets/img/smt/top_img2.png');background-size:contain;background-repeat:no-repeat;background-position:50% 50%;")
 
         div.row.well-lg
-            div#vote_list
-                div.col.col-xs-12
-                    div.row.panel_area
-                        div.col.col-xs-3
-                            img.panel_img.ng-cloak(src="assets/img/smt/venues-matsumoto.png", style="padding-top:10px;")
-                        div.col.col-xs-9.panel_item
-                            h4.text-right 松本邸
-                            p.text-right 松本邸の説明。
-                        div.col-xs-12.vote_sep
-                        div.panel_buttons
-                                div.col-xs-12
-                                    h3.vote_num {{seats.reserved['matsumoto'] | numberFixedLen:2 }} / {{seats.max['matsumoto'] | numberFixedLen:2 }}
-                div.col.col-xs-12
-                    div.row.panel_area
-                        div.col.col-xs-3
-                            img.panel_img.ng-cloak(src="assets/img/smt/venues-yatai.png", style="padding-top:10px;")
-                        div.col.col-xs-9.panel_item
-                            h4.text-right 一龍屋台村
-                            p.text-right 一龍屋台村の説明。
-                        div.col-xs-12.vote_sep
-                        div.panel_buttons
-                            div.col-xs-12
-                                h3.vote_num {{seats.reserved['yataimura'] | numberFixedLen:2 }} / {{seats.max['yataimura'] | numberFixedLen:2 }}
-                div.col.col-xs-12
-                    div.row.panel_area
-                        div.col.col-xs-3
-                            img.panel_img.ng-cloak(src="assets/img/smt/venues-honshoji.png", style="padding-top:10px;")
-                        div.col.col-xs-9.panel_item
-                            h4.text-right 本照寺
-                            p.text-right 本照寺の説明。
-                        div.col-xs-12.vote_sep
-                        div.panel_buttons
-                            div.col-xs-12
-                                h3.vote_num {{seats.reserved['honshoji'] | numberFixedLen:2 }} / {{seats.max['honshoji'] | numberFixedLen:2 }}
+            div#seat_list.col.col-xs-12
 
-                div.col.col-xs-12
-                    div.row.panel_area
-                        div.col.col-xs-3
-                            img.panel_img.ng-cloak(src="assets/img/smt/venues-kaido.png", style="padding-top:10px;")
-                        div.col.col-xs-9.panel_item
-                            h4.text-right KAIDO<br/>Books & Cafe
-                            p.text-right KAIDO Cafeの説明。
-                        div.col-xs-12.vote_sep
-                        div.panel_buttons
-                            div.col-xs-12
-                                h3.vote_num {{seats.reserved['kaido'] | numberFixedLen:2 }} / {{seats.max['kaido'] | numberFixedLen:2 }}
+                div.row.panel_area(ng-repeat="(key,val) in seats")
+                    div.col-xs-12.date_area
+                        h1 {{parseDate(val.date) | date:'M/d'}} {{val.time}} @{{val.venue}}<span style="float:right;font-size:22px;"> {{val.num | numberFixedLen:2 }} <span style="color:orange;">/  {{val.max | numberFixedLen:2 }}</span></span>
+                    div.col.col-xs-4
+                        img.panel_img.ng-cloak(src="assets/img/smt/programs/prog_{{key}}.png")
+                    div.col.col-xs-8.panel_item.text-right
+                        h3(ng-bind-html="val.subtitle")
+                        h4.text-right(ng-bind-html="val.title")
+                        p.text-right(ng-bind-html="val.desc")
 
 
-                div.col.col-xs-12
-                    div.row.panel_area
-                        div.col.col-xs-3
-                            img.panel_img.ng-cloak(src="assets/img/smt/venues-kenkou.png", style="padding-top:10px;")
-                        div.col.col-xs-9.panel_item
-                            h4.text-right 品川健康センター
-                            p.text-right 品川健康センターの説明。
-                        div.col-xs-12.vote_sep
-                        div.panel_buttons
-                            div.col-xs-12
-                                h3.vote_num {{seats.reserved['kenkou'] | numberFixedLen:2 }} / {{seats.max['kenkou'] | numberFixedLen:2 }}
     script.
         var socketresponse = function (data) {
             var element = document.getElementById("AppController");
@@ -103,13 +57,21 @@ block content
             }
         };
 
-        app.controller('AppController', ['$scope', '$http','$window',  function ($scope, $http,$window) {
+        app.controller('AppController', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
-            $scope.seats ={};
+            $scope.programs = {};
 
-            $http.get('./data/seat.json')
-                .then(function(res){
+            $scope.parseDate = function (d) {
+                var rep = d.replace(/-/g, "/");
+                date = Date.parse(rep);
+                return new Date(date);
+            }
+
+
+            $http.get('./data/seats.json')
+                .then(function (res) {
                     $scope.seats = res.data.seats;
+
                 });
 
 

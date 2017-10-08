@@ -48,9 +48,8 @@ router.get('/react', function (req, res, next) {
 router.get('/dev', function (req, res, next) {
     var agent = parser(req.headers['user-agent']);
     var device_type = agent.device.type;
-    console.log("================================================");
-    console.log(agent.device.type);
-    console.log("================================================");
+    //var json    = fs.readFileSync("public/data/panelists.json","utf-8");
+    //var obj     = JSON.parse(json);
     if (device_type == "mobile") {
         res.render('index_new', { title: 'DOCU-MEMENTO映画祭VR', mobile: true });
     }
@@ -70,9 +69,9 @@ router.get('/v', function (req, res, next) {
 });
 //SEAT
 router.get('/s', function (req, res, next) {
-    //var json    = fs.readFileSync("public/data/panelists.json","utf-8");
-    //var obj     = JSON.parse(json);
-    //var panels  = obj.panels;
+    res.render('seat_i', { title: 'DOCU-MEMENTO投票システム', mobile: true });
+});
+router.get('/prog', function (req, res, next) {
     res.render('seat_i', { title: 'DOCU-MEMENTO投票システム', mobile: true });
 });
 router.get('/', function (req, res, next) {

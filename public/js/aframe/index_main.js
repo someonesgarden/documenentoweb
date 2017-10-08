@@ -22,93 +22,22 @@ var panelbox1selector = document.querySelector('#panelbox1');
 
 //top infos
 var top_topinfo1 = document.querySelector('#top_topinfo1');
-
 var topinfos = [
     top_topinfo1
 ];
 
-//Programs
-var prog_honshoji0311 = document.querySelector('#prog_honshoji0311');
-var prog_honshoji0411 = document.querySelector('#prog_honshoji0411');
-var prog_kaido0311 = document.querySelector('#prog_kaido0311');
-var prog_kaido0411 = document.querySelector('#prog_kaido0411');
-var prog_kenkou0411 = document.querySelector('#prog_kenkou0411');
-var prog_kenkou0414 = document.querySelector('#prog_kenkou0414');
-var prog_matsumoto0311 = document.querySelector('#prog_matsumoto0311');
-var prog_matsumoto0411 = document.querySelector('#prog_matsumoto0411');
-var prog_unagi0410 = document.querySelector('#prog_unagi0410');
-var prog_yatai0311 = document.querySelector('#prog_yatai0311');
-var prog_yatai0411 = document.querySelector('#prog_yatai0411');
-var prog_yatai0420 = document.querySelector('#prog_yatai0420');
+var programs    = document.querySelectorAll('a-entity#programs a-image');
+for(var i=0;i<programs.length;i++){
+    programs[i].setAttribute('n',i);
+}
+var panellers   = document.querySelectorAll('a-entity#panellers a-image');
+for(var i=0;i<panellers.length;i++){
+    panellers[i].setAttribute('n',i);
+}
 
-var programs = [
-    prog_honshoji0311,
-    prog_honshoji0411,
-    prog_kaido0311,prog_kaido0411,
-    prog_kenkou0411,prog_kenkou0414,
-    prog_matsumoto0311,prog_matsumoto0411,
-    prog_unagi0410,
-    prog_yatai0311,prog_yatai0411,prog_yatai0420
-];
+var venues      = document.querySelectorAll('a-entity#venues a-image');
 
-//venue
-var venue_yataimura = document.querySelector('#venue_yataimura');
-var venue_honshoji  = document.querySelector('#venue_honshoji');
-var venue_matsumoto = document.querySelector('#venue_matsumoto');
-var venue_kaidocafe = document.querySelector('#venue_kaidocafe');
-var venue_kenkou = document.querySelector('#venue_kenkou');
-var venue_kuromon = document.querySelector('#venue_kuromon');
-var venue_unagi = document.querySelector('#venue_unagi');
 
-var venues = [
-    venue_yataimura,
-    venue_honshoji,
-    venue_matsumoto,
-    venue_kaidocafe,
-    venue_kenkou,
-    venue_kuromon,
-    venue_unagi];
-
-//Panellers
-var paneller_uchiyama = document.querySelector('#paneller_uchiyama');
-var paneller_yonemoto = document.querySelector('#paneller_yonemoto');
-var paneller_matsui = document.querySelector('#paneller_matsui');
-var paneller_ota = document.querySelector('#paneller_ota');
-var paneller_fujioka = document.querySelector('#paneller_fujioka');
-var paneller_takeoka = document.querySelector('#paneller_takeoka');
-var paneller_okuma = document.querySelector('#paneller_okuma');
-var paneller_kan = document.querySelector('#paneller_kan');
-var paneller_hidaka = document.querySelector('#paneller_hidaka');
-var paneller_tokyo = document.querySelector('#paneller_tokyo');
-var paneller_someonesgarden = document.querySelector('#paneller_someonesgarden');
-var paneller_kawai = document.querySelector('#paneller_kawai');
-var paneller_nobuki = document.querySelector('#paneller_nobuki');
-var paneller_saitoh = document.querySelector('#paneller_saitoh');
-var paneller_nakamura = document.querySelector('#paneller_nakamura');
-var paneller_adachi = document.querySelector('#paneller_adachi');
-var paneller_miyashita = document.querySelector('#paneller_miyashita');
-var paneller_sakuragi = document.querySelector('#paneller_sakuragi');
-
-var panellers = [
-    paneller_uchiyama,
-    paneller_yonemoto,
-    paneller_matsui,
-    paneller_ota,
-    paneller_fujioka,
-    paneller_takeoka,
-    paneller_okuma,
-    paneller_kan,
-    paneller_hidaka,
-    paneller_tokyo,
-    paneller_someonesgarden,
-    paneller_kawai,
-    paneller_nobuki,
-    paneller_saitoh,
-    paneller_nakamura,
-    paneller_adachi,
-    paneller_miyashita,
-    paneller_sakuragi
-];
 // About
 var about_venu = d3.select('#about_venu');
 var about_toudansha = d3.select('#about_toudansha');
@@ -131,7 +60,7 @@ var jsondataloader = function(){
         for (var i = 0; i < panellers.length; i++) {
             var p = panellers[i];
 
-            var name = p.getAttribute("name");
+            var name = p.getAttribute("id");
             var d1 = p.querySelector('.d1');
             var d2 = p.querySelector('.d2');
             var d3 = p.querySelector('.d3');
@@ -419,27 +348,7 @@ about_toudansha.on('click', function(){
 });
 
 
-
-// Program
-/*
-prog_businessman.addEventListener('click', function () {
-    switchModel("schedule");
-});
-
-prog_tabitabi.addEventListener('click', function () {
-    switchModel("earth");
-});
-
-prog_tokyodocs.addEventListener('click', function () {
-    console.log("tokyodokc");
-    switchModel("amagi");
-});
-*/
-
-
 // 3d model
-
-
 var largehousemove = function(mode,videourl=""){
 
     console.log("videourl=",videourl);
@@ -493,12 +402,7 @@ var largehousemove = function(mode,videourl=""){
             });
         tween.start();
     }
-
-
-
-
-
-}
+};
 
 earth.on('click', function(){
     console.log("earth clicked");
@@ -516,9 +420,7 @@ var socketresponse = function (data) {
     console.log("socketresponse test",data);
 
     var point = data.value.point;
-
-    var paneller = document.querySelector('a-image#paneller_'+data.value.name);
-    var thisentity = paneller.el;
+    var paneller = document.querySelector('a-image#'+data.value.name);
 
     var d1 = paneller.querySelector('.d1');
     var d2 = paneller.querySelector('.d2');
@@ -541,7 +443,6 @@ var socketresponse = function (data) {
     d3.pause();
     d3.play();
 };
-
 
 
 window.socketresponse = socketresponse;

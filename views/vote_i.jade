@@ -102,12 +102,11 @@ block content
                     $scope.$apply();
                 }
 
-
                 $http.post('/voteapi', $scope.votes)
                     .then(function (res) {
                         $window.socket_voting({
                             name: key,
-                            point: vote
+                            point: vote+""
                         });
                     });
             };
@@ -131,7 +130,7 @@ block content
                     .then(function(res){
                         $window.socket_voting({
                             name: key,
-                            point: vote
+                            point: vote+""
                         });
                     });
             };
