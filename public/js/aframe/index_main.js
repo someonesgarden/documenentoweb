@@ -46,8 +46,7 @@ var about_fes = d3.select('#about_fes');
 var about_fes_j = d3.select('#about_fes_j');
 // Logo
 var votes;
-var reserved;
-var seat_max;
+var seats;
 
 document.mode = "infobox";
 document.visible_model = infobox;
@@ -83,33 +82,26 @@ var jsondataloader = function(){
         }
     });
 
-    d3.json("data/seat.json", function(error, data){
-
-        reserved = data.seats.reserved;
-        seat_max = data.seats.max;
-
+    d3.json("data/seats.json", function(error, data){
+        seats = data.seats;
         for(var i = 0; i< programs.length; i++){
-
             var v = programs[i];
             var name = v.getAttribute("name");
             var d1 = v.querySelector('.d1');
             var d2 = v.querySelector('.d2');
             var d3 = v.querySelector('.d3');
             var d4 = v.querySelector('.d4');
-
-            var res_str = reserved[name];
-            var max_str = seat_max[name];
-
-            var d1_ = res_str.substr(0, 1); d1.setAttribute("num", d1_); d1.pause(); d1.play();
-            var d2_ = res_str.substr(1, 1); d2.setAttribute("num", d2_); d2.pause(); d2.play();
-            var d3_ = max_str.substr(0, 1); d3.setAttribute("num", d3_); d3.pause(); d3.play();
-            var d4_ = max_str.substr(1, 1); d4.setAttribute("num", d4_); d4.pause(); d4.play();
-
+            if(seats[name]!=undefined){
+                var res_str = seats[name].num;
+                var max_str = seats[name].max;
+                var d1_ = res_str.substr(0, 1); d1.setAttribute("num", d1_); d1.pause(); d1.play();
+                var d2_ = res_str.substr(1, 1); d2.setAttribute("num", d2_); d2.pause(); d2.play();
+                var d3_ = max_str.substr(0, 1); d3.setAttribute("num", d3_); d3.pause(); d3.play();
+                var d4_ = max_str.substr(1, 1); d4.setAttribute("num", d4_); d4.pause(); d4.play();
+            }
         }
-
     });
 };
-
 
 
 //////////// LOAD VOte DATA

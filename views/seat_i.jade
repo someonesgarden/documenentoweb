@@ -37,14 +37,15 @@ block content
 
                 div.row.panel_area(ng-repeat="(key,val) in seats")
                     div.col-xs-12.date_area
-                        h1 {{parseDate(val.date) | date:'M/d'}} {{val.time}} @{{val.venue}}<span style="float:right;font-size:22px;"> {{val.num | numberFixedLen:2 }} <span style="color:orange;">/  {{val.max | numberFixedLen:2 }}</span></span>
+                        h1 {{parseDate(val.date) | date:'M/d'}} {{val.time}} <span style="float:right;">@{{val.venue}}</span>
+                        h1 <span style="float:right;font-size:22px;"> 予約数 {{val.num | numberFixedLen:2 }} <span style="color:orange;">/  席数{{val.max | numberFixedLen:2 }}</span></span>
+
                     div.col.col-xs-4
                         img.panel_img.ng-cloak(src="assets/img/smt/programs/prog_{{key}}.png")
                     div.col.col-xs-8.panel_item.text-right
                         h3(ng-bind-html="val.subtitle")
                         h4.text-right(ng-bind-html="val.title")
                         p.text-right(ng-bind-html="val.desc")
-
 
     script.
         var socketresponse = function (data) {
@@ -71,8 +72,5 @@ block content
             $http.get('./data/seats.json')
                 .then(function (res) {
                     $scope.seats = res.data.seats;
-
                 });
-
-
         }]);

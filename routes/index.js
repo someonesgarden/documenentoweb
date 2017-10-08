@@ -67,6 +67,10 @@ router.get('/v', function (req, res, next) {
     //var panels  = obj.panels;
     res.render('vote_i', { title: 'DOCU-MEMENTO投票システム', mobile: true });
 });
+//ADMIN
+router.get('/admin', function (req, res, next) {
+    res.render('admin_i', { title: '管理者用ページ', mobile: true });
+});
 //SEAT
 router.get('/s', function (req, res, next) {
     res.render('seat_i', { title: 'DOCU-MEMENTO投票システム', mobile: true });
@@ -87,6 +91,12 @@ router.get('/', function (req, res, next) {
     else {
         res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭', mobile: false });
     }
+});
+router.post('/seatapi', function (req, res, next) {
+    var seats = req.body;
+    var obj = { "seats": seats };
+    writeFile("public/data/seats.json", JSON.stringify(obj));
+    res.send("seatapi");
 });
 router.post('/voteapi', function (req, res, next) {
     var votes = req.body;

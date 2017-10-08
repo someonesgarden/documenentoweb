@@ -16,19 +16,19 @@
       "yatai0420": "18"
     },
     "max": {
-      "honshoji0311": "40",
-      "honshoji0411": "40",
-      "kaido0311": "50",
-      "kaido0411": "50",
-      "kenkou0411": "30",
-      "kenkou0414": "30",
-      "matsumoto0311": "58",
-      "matsumoto0411": "58",
-      "unagi0410": "58",
-      "unagi0414": "58",
-      "yatai0311": "58",
-      "yatai0411": "68",
-      "yatai0420": "68"
+      "honshoji0311": "50",
+      "honshoji0411": "60",
+      "kaido0311": "70",
+      "kaido0411": "80",
+      "kenkou0411": "90",
+      "kenkou0414": "92",
+      "matsumoto0311": "93",
+      "matsumoto0411": "94",
+      "unagi0410": "95",
+      "unagi0414": "96",
+      "yatai0311": "97",
+      "yatai0411": "98",
+      "yatai0420": "99"
     }
   }
 }
