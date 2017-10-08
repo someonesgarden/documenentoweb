@@ -57,6 +57,18 @@ block content
                 $scope.$apply();
             }
         };
+        var socketseatresponse = function(data){
+            var element = document.getElementById("AppController");
+            var $scope = angular.element(element).scope();
+            $scope.seats = data.value.seats;
+            if (!$scope.$$phase) {
+                $scope.$apply();
+            }
+        }
+
+        var socketvoteresetresponse = function () {
+            console.log("socketvoteresetresponse");
+        };
 
         app.controller('AppController', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
@@ -68,9 +80,12 @@ block content
                 return new Date(date);
             }
 
-
             $http.get('./data/seats.json')
                 .then(function (res) {
                     $scope.seats = res.data.seats;
                 });
         }]);
+
+        window.socketvoteresetresponse = socketvoteresetresponse;
+        window.socketseatresponse = socketseatresponse;
+        window.socketresponse = socketresponse;

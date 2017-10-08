@@ -18,14 +18,32 @@ var onReceive = function(data){
 
 
 var socket_voting = function(data){
-  console.log("socket Voting", data);
     socket.emit('socket_voting', data);
 };
+
+var socket_seating = function(data){
+    console.log("socket_Seating",data);
+    socket.emit("socket_seating", data);
+}
+
+var socket_reset_votes = function(){
+    console.log("socket_reset_votes");
+    socket.emit("socket_reset_votes",{});
+}
 
 var onBroadcastVote = function(data){
     console.log("onBroadcastVote",data);
     socketresponse(data); // IN -> index_new.jade
 }
+
+var onBroadcastSeat = function(data){
+    console.log("onBroadcastSeat",data);
+    socketseatresponse(data); // IN -> index_new.jade
+}
+
+
+
+
 
 
 /////////////////////////////////////////////
@@ -35,8 +53,11 @@ socket.on('connect', function(){emit('login')});
 socket.on('disconnect', function(client){console.log("socket::disconnect",client)});
 socket.on('recieve', onReceive);
 socket.on('broadcastvote',onBroadcastVote);
+socket.on('broadcastseat',onBroadcastSeat);
 
 
 /////////////////////////////////////////////
 window.emit = emit;
 window.socket_voting = socket_voting;
+window.socket_seating = socket_seating;
+

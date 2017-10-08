@@ -47,27 +47,28 @@ block content
                     div.col-xs-4
                         h3 予約数 {{val.num | numberFixedLen:2 }}
                     div.col-xs-4(style="background-color:#fff;")
-                        h3.text-center.vote_button(ng-click="upaction(key,'num')") ↑
+                        h3.text-center.vote_button.nr(ng-click="upaction(key,'num')") ↑
                     div.col-xs-4(style="background-color:#aaa;")
-                        h3.text-center.vote_button(ng-click="downaction(key,'num')") ↓
+                        h3.text-center.vote_button.nr(ng-click="downaction(key,'num')") ↓
 
                     div.col-xs-4
                         h3(style="color:orange") 最大数 {{val.max | numberFixedLen:2 }}
                     div.col-xs-4(style="background-color:#ffe;")
-                        h3.text-center.vote_button(style="color:orange", ng-click="upaction(key,'max')") ↑
+                        h3.text-center.vote_button.nr(style="color:orange", ng-click="upaction(key,'max')") ↑
                     div.col-xs-4(style="background-color:#bba;")
-                        h3.text-center.vote_button(style="color:orange", ng-click="downaction(key,'max')") ↓
+                        h3.text-center.vote_button.nr(style="color:orange", ng-click="downaction(key,'max')") ↓
 
                     div.col.col-xs-4
                         img.panel_img.ng-cloak(src="assets/img/smt/programs/prog_{{key}}.png")
                     div.col.col-xs-8.panel_item.text-right
                         h3(ng-bind-html="val.subtitle")
                         h4.text-right(ng-bind-html="val.title")
-
     script.
         var socketresponse = function (data) {
+            console.log(data.value);
             var element = document.getElementById("AppController");
             var $scope = angular.element(element).scope();
+
             $scope.votes[data.value.name] = data.value.point;
             $scope.votes = votesSort($scope.votes);
             if (!$scope.$$phase) {
@@ -78,9 +79,25 @@ block content
         app.controller('AppController', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
             $scope.programs = {};
+            $scope.votes = {};
+            d3.json("data/vote.json", function (error, data) {
+                $scope.votes = data.vote;
+            });
+
 
             $scope.resetvotes = function(){
-                console.log("resetvotes");
+                angular.forEach($scope.votes, function (val, key) {
+                    $scope.votes[key] = "000";
+                });
+                $http.post('/voteapi', $scope.votes)
+                    .then(function (res) {
+                        $window.socket_voting({
+                            name: "reset",
+                            point:  "000",
+                            votes:$scope.votes
+                        });
+                    });
+
             }
 
             $scope.parseDate = function (d) {
@@ -103,46 +120,51 @@ block content
                     case "num":
                         if(num<max){
                             num++;
+                            num = ('00' + num).slice(-2);
                             $scope.seats[key].num = num+"";
                         }
                         break;
                     default:
                         max++;
+                        max = ('00' + max).slice(-2);
                         $scope.seats[key].max = max+"";
                         break;
                 }
-
-
                 $http.post('/seatapi', $scope.seats)
                     .then(function (res) {
-                        console.log(res);
+                        $window.socket_seating({
+                            name: key,
+                            seats: $scope.seats
+                        });
                     });
-
             };
 
             $scope.downaction = function (key, mode) {
                 var num = parseInt($scope.seats[key].num);
                 var max = parseInt($scope.seats[key].max);
 
-                switch (mode) {
-                    //mode="num"
+                switch (mode){
                     case "num":
                         if (num > 0 ) {
                             num--;
+                            num = ('00' + num).slice(-2);
                             $scope.seats[key].num = num+"";
                         }
                         break;
                     default:
                         if(max>0){
                             max--;
+                            max = ('00' + max).slice(-2);
                             $scope.seats[key].max = max+"";
                         }
                         break;
                 }
-
                 $http.post('/seatapi', $scope.seats)
                     .then(function (res) {
-                        console.log("res");
+                        $window.socket_seating({
+                            name: key,
+                            seats: $scope.seats
+                        });
                     });
             };
         }]);

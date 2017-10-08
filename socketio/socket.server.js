@@ -33,10 +33,20 @@ var listeners=function(socket) {
             });
     });
 
+
     socket.on('socket_voting', function (data) {
         log(socket,"on::socket_voting",data);
         socket.broadcast.emit(
             'broadcastvote', {
+                value: data,
+                time: dateformat(new Date(), 'yyyy-mm-dd HH:MM:ss')
+            });
+    });
+
+    socket.on('socket_seating', function (data) {
+        log(socket,"on::socket_voting",data);
+        socket.broadcast.emit(
+            'broadcastseat', {
                 value: data,
                 time: dateformat(new Date(), 'yyyy-mm-dd HH:MM:ss')
             });

@@ -73,10 +73,10 @@ router.get('/admin', function (req, res, next) {
 });
 //SEAT
 router.get('/s', function (req, res, next) {
-    res.render('seat_i', { title: 'DOCU-MEMENTO投票システム', mobile: true });
+    res.render('seat_i', { title: 'DOCU-MEMENTO座席確認', mobile: true });
 });
 router.get('/prog', function (req, res, next) {
-    res.render('seat_i', { title: 'DOCU-MEMENTO投票システム', mobile: true });
+    res.render('seat_i', { title: 'DOCU-MEMENTO座席確認', mobile: true });
 });
 router.get('/', function (req, res, next) {
     var agent = parser(req.headers['user-agent']);

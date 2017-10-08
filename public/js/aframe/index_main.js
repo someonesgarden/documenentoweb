@@ -2,12 +2,10 @@ document.VR = false;
 var CURSOR_OUT = "0 12.2 -1.3";
 var CURSOR_IN = "0 0.2 -1.3";
 
-
 var loader = document.getElementById("loader");
 var cursor = document.querySelector("#cursor");
-
-var scene = document.querySelector('a-scene');
-var sky   = document.querySelector('a-sky');
+var scene  = document.querySelector('a-scene');
+var sky    = document.querySelector('a-sky');
 
 //3dmodel
 var lantan = d3.select("#lantan");
@@ -35,7 +33,7 @@ for(var i=0;i<panellers.length;i++){
     panellers[i].setAttribute('n',i);
 }
 
-var venues      = document.querySelectorAll('a-entity#venues a-image');
+var venues = document.querySelectorAll('a-entity#venues a-image');
 
 
 // About
@@ -54,53 +52,62 @@ document.visible_model = infobox;
 /////////// VoteDataLoader
 var jsondataloader = function(){
     d3.json("data/vote.json", function (error, data) {
-
         votes = data.vote;
-        for (var i = 0; i < panellers.length; i++) {
-            var p = panellers[i];
-
-            var name = p.getAttribute("id");
-            var d1 = p.querySelector('.d1');
-            var d2 = p.querySelector('.d2');
-            var d3 = p.querySelector('.d3');
-
-            var p_str = votes[name];
-            if(p_str!=undefined) {
-                var d1_ = p_str.substr(0, 1);
-                d1.setAttribute("num", d1_);
-                d1.pause();
-                d1.play();
-                var d2_ = p_str.substr(1, 1);
-                d2.setAttribute("num", d2_);
-                d2.pause();
-                d2.play();
-                var d3_ = p_str.substr(2, 1);
-                d3.setAttribute("num", d3_);
-                d3.pause();
-                d3.play();
-            }
-        }
+        console.log("votes");
+        console.log(votes);
+        for(var i = 0; i < panellers.length; i++) setVoteDigit(panellers[i], votes);
     });
 
     d3.json("data/seats.json", function(error, data){
-        seats = data.seats;
-        for(var i = 0; i< programs.length; i++){
-            var v = programs[i];
-            var name = v.getAttribute("name");
-            var d1 = v.querySelector('.d1');
-            var d2 = v.querySelector('.d2');
-            var d3 = v.querySelector('.d3');
-            var d4 = v.querySelector('.d4');
-            if(seats[name]!=undefined){
-                var res_str = seats[name].num;
-                var max_str = seats[name].max;
-                var d1_ = res_str.substr(0, 1); d1.setAttribute("num", d1_); d1.pause(); d1.play();
-                var d2_ = res_str.substr(1, 1); d2.setAttribute("num", d2_); d2.pause(); d2.play();
-                var d3_ = max_str.substr(0, 1); d3.setAttribute("num", d3_); d3.pause(); d3.play();
-                var d4_ = max_str.substr(1, 1); d4.setAttribute("num", d4_); d4.pause(); d4.play();
-            }
-        }
+        for(var i = 0; i< programs.length; i++) setDigit(programs[i], data.seats);
     });
+};
+
+var setVoteDigit = function(p, votes){
+    var name = p.getAttribute("id");
+    var d1 = p.querySelector('.d1');
+    var d2 = p.querySelector('.d2');
+    var d3 = p.querySelector('.d3');
+
+    var p_str = votes[name];
+    if(p_str!=undefined) {
+        
+        if(!isNaN(p_str)) p_str =('000' + p_str).slice(-3); //数値の場合、3桁の文字列に変換
+
+        var d1_ = p_str.substr(0, 1);
+        d1.setAttribute("num", d1_);
+        d1.pause();
+        d1.play();
+        var d2_ = p_str.substr(1, 1);
+        d2.setAttribute("num", d2_);
+        d2.pause();
+        d2.play();
+        var d3_ = p_str.substr(2, 1);
+        d3.setAttribute("num", d3_);
+        d3.pause();
+        d3.play();
+    }
+};
+
+
+
+var setDigit = function(v, seats){
+    var name = v.getAttribute("id");
+    var d1 = v.querySelector('.d1');
+    var d2 = v.querySelector('.d2');
+    var d3 = v.querySelector('.d3');
+    var d4 = v.querySelector('.d4');
+
+    console.log("name=",name);
+    console.log("seats=",seats);
+    if(seats[name]!=undefined){
+        var res_str = seats[name].num;
+        var max_str = seats[name].max;
+        var d1_ = res_str.substr(0, 1); d1.setAttribute("num", d1_); d1.pause(); d1.play();
+        var d2_ = res_str.substr(1, 1); d2.setAttribute("num", d2_); d2.pause(); d2.play();
+        var d3_ = max_str.substr(0, 1); d3.setAttribute("num", d3_); d3.pause(); d3.play();
+        var d4_ = max_str.substr(1, 1); d4.setAttribute("num", d4_); d4.pause(); d4.play();
+    }
 };
 
 
@@ -403,40 +410,21 @@ earth.on('click', function(){
 house.on('click',function(){
     console.log("house clicked");
     largehousemove("back");
-
 });
 
 
 //SOCKET.IO
 var socketresponse = function (data) {
-    console.log("socketresponse test",data);
+    console.log("socketresponse test",data.value.votes);
+    for(var i = 0; i < panellers.length; i++) setVoteDigit(panellers[i], data.value.votes);
+};
 
-    var point = data.value.point;
-    var paneller = document.querySelector('a-image#'+data.value.name);
-
-    var d1 = paneller.querySelector('.d1');
-    var d2 = paneller.querySelector('.d2');
-    var d3 = paneller.querySelector('.d3');
-
-    var p_str = ('000' + point).slice(-3);
-
-    var d1_ = p_str.substr(0, 1);
-    var d2_ = p_str.substr(1, 1);
-    var d3_ = p_str.substr(2, 1);
-
-    d1.setAttribute("num", d1_);
-    d2.setAttribute("num", d2_);
-    d3.setAttribute("num", d3_);
-
-    d1.pause();
-    d1.play();
-    d2.pause();
-    d2.play();
-    d3.pause();
-    d3.play();
+var socketseatresponse = function(data){
+    console.log("data=",data);
+    for(var i = 0; i< programs.length; i++) setDigit(programs[i], data.value.seats);
 };
 
 
+window.socketseatresponse = socketseatresponse;
 window.socketresponse = socketresponse;
 window.votes = votes;
-

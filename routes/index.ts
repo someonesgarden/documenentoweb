@@ -95,11 +95,11 @@ router.get('/admin', (req, res, next) => {
 
 //SEAT
 router.get('/s', (req, res, next) => {
-    res.render('seat_i', {title: 'DOCU-MEMENTO投票システム', mobile: true});
+    res.render('seat_i', {title: 'DOCU-MEMENTO座席確認', mobile: true});
 });
 
 router.get('/prog', (req, res, next) => {
-    res.render('seat_i', {title: 'DOCU-MEMENTO投票システム', mobile: true});
+    res.render('seat_i', {title: 'DOCU-MEMENTO座席確認', mobile: true});
 });
 
 

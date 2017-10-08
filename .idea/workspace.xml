@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55982872-3994-4767-a8e1-b9ed15e2e292" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/admin_i.jade" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/data/seat.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/data/vote2.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/data/seat.json" afterPath="$PROJECT_DIR$/public/data/seat.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mobile.css" afterPath="$PROJECT_DIR$/public/css/mobile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/data/seats.json" afterPath="$PROJECT_DIR$/public/data/seats.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/data/vote.json" afterPath="$PROJECT_DIR$/public/data/vote.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/aframe/components/index.js" afterPath="$PROJECT_DIR$/public/js/aframe/components/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/aframe/index_main.js" afterPath="$PROJECT_DIR$/public/js/aframe/index_main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/socketio/client.js" afterPath="$PROJECT_DIR$/public/js/socketio/client.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.ts" afterPath="$PROJECT_DIR$/routes/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socketio/socket.server.js" afterPath="$PROJECT_DIR$/socketio/socket.server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin_i.jade" afterPath="$PROJECT_DIR$/views/admin_i.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index_new.jade" afterPath="$PROJECT_DIR$/views/index_new.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout_i.jade" afterPath="$PROJECT_DIR$/views/layout_i.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/seat_i.jade" afterPath="$PROJECT_DIR$/views/seat_i.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/vote_i.jade" afterPath="$PROJECT_DIR$/views/vote_i.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,103 +32,147 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="262">
-      <file leaf-file-name="index_main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/aframe/index_main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-921">
-              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/index.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="145" column="30" lean-forward="true" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-              <folding>
-                <marker date="1507459004000" expanded="true" signature="55529:55546" ph="..." />
-                <marker date="1507459004000" expanded="true" signature="55529:55564" ph="..." />
-                <marker date="1507459004000" expanded="true" signature="55529:55577" ph="..." />
-                <marker date="1507459004000" expanded="true" signature="55529:55592" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_i.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/admin_i.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="49" column="81" lean-forward="true" selection-start-line="49" selection-start-column="81" selection-end-line="49" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seats.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/data/seats.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="2856" lean-forward="false" selection-start-line="0" selection-start-column="2856" selection-end-line="0" selection-end-column="2856" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vote_i.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/vote_i.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="110" column="23" lean-forward="true" selection-start-line="104" selection-start-column="16" selection-end-line="110" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/lib/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_new.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index_new.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="284" column="130" lean-forward="false" selection-start-line="284" selection-start-column="130" selection-end-line="284" selection-end-column="130" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_new20171008.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index_new20171008.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4238">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.8564426">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="262">
+          <file leaf-file-name="index_main.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/js/aframe/index_main.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-4485">
+                  <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="layout_i.jade" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/views/layout_i.jade">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/routes/index.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="133">
+                  <caret line="101" column="50" lean-forward="false" selection-start-line="101" selection-start-column="50" selection-end-line="101" selection-end-column="50" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="seat_i.jade" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/views/seat_i.jade">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="780">
+                  <caret line="52" column="33" lean-forward="false" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="vote_i.jade" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/views/vote_i.jade">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1215">
+                  <caret line="81" column="32" lean-forward="false" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="vote_backup.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/data/vote_backup.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/js/aframe/components/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#381#2375#0" expanded="false" />
+                    <element signature="e#2413#2923#0" expanded="false" />
+                    <element signature="e#3852#4125#0" expanded="false" />
+                    <element signature="e#4163#4452#0" expanded="false" />
+                    <element signature="e#4492#7711#0" expanded="false" />
+                    <element signature="e#4535#4698#0" expanded="false" />
+                    <element signature="e#7753#8981#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="socket.server.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/socketio/socket.server.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="439">
+                  <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="admin_i.jade" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/views/admin_i.jade">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-390">
+                  <caret line="96" column="28" lean-forward="false" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="46" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index_new.jade" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/views/index_new.jade">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1770">
+                  <caret line="298" column="0" lean-forward="false" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
+                  <folding>
+                    <element signature="n#a-entity#0;n#a-cylinder#0;n#a-scene#0;n#div#1;n#block#1;n#!!top" expanded="false" />
+                    <element signature="n#a-entity#1;n#a-cylinder#0;n#a-scene#0;n#div#1;n#block#1;n#!!top" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="vote.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/data/vote.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="354" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="354" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="panelists.json" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/data/panelists.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="898">
+                  <caret line="108" column="1" lean-forward="true" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -133,11 +186,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>console.log</find>
-      <find>moveMenuItem2DefPos</find>
-      <find>prog</find>
-      <find>cylinderize</find>
-      <find>curvemenu</find>
       <find>town</find>
       <find>child</find>
       <find>switchModel</find>
@@ -161,8 +209,13 @@
       <find>top_topinfo1</find>
       <find>venues</find>
       <find>window</find>
-      <find>votes</find>
+      <find>angular.fo</find>
       <find>name</find>
+      <find>kuwayama</find>
+      <find>ma</find>
+      <find>socketvoteresetresponse</find>
+      <find>socket_voting</find>
+      <find>votes</find>
     </findStrings>
     <replaceStrings>
       <replace>img</replace>
@@ -187,15 +240,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/data/vote2.json" />
-        <option value="$PROJECT_DIR$/public/assets/models/infobox/box.obj" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/public/assets/models/numbers/red.mtl" />
         <option value="$PROJECT_DIR$/public/js/aframe/main.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/js/ang/zpad.js" />
         <option value="$PROJECT_DIR$/public/js/ang_filter/zpad.js" />
         <option value="$PROJECT_DIR$/bin/www" />
@@ -224,20 +273,24 @@
         <option value="$PROJECT_DIR$/public/assets/models/panelbox/box_someonesgarden.mtl" />
         <option value="$PROJECT_DIR$/public/assets/models/panelbox/box_tokyo.mtl" />
         <option value="$PROJECT_DIR$/public/assets/models/panelbox/box_saitoh.mtl" />
-        <option value="$PROJECT_DIR$/public/css/mobile.css" />
-        <option value="$PROJECT_DIR$/views/layout_i.jade" />
         <option value="$PROJECT_DIR$/public/js/lib/common.js" />
-        <option value="$PROJECT_DIR$/public/js/aframe/components/index.js" />
+        <option value="$PROJECT_DIR$/public/data/seat.json" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/css/mobile.css" />
+        <option value="$PROJECT_DIR$/views/index_new.jade" />
+        <option value="$PROJECT_DIR$/views/seat_i.jade" />
+        <option value="$PROJECT_DIR$/public/js/socketio/client.js" />
+        <option value="$PROJECT_DIR$/socketio/socket.server.js" />
+        <option value="$PROJECT_DIR$/views/admin_i.jade" />
+        <option value="$PROJECT_DIR$/public/data/seats.json" />
+        <option value="$PROJECT_DIR$/public/data/vote_backup.json" />
         <option value="$PROJECT_DIR$/views/vote_i.jade" />
         <option value="$PROJECT_DIR$/public/data/vote.json" />
-        <option value="$PROJECT_DIR$/public/data/seat.json" />
-        <option value="$PROJECT_DIR$/views/index_new.jade" />
         <option value="$PROJECT_DIR$/public/js/aframe/index_main.js" />
-        <option value="$PROJECT_DIR$/views/seat_i.jade" />
+        <option value="$PROJECT_DIR$/views/layout_i.jade" />
+        <option value="$PROJECT_DIR$/public/js/aframe/components/index.js" />
         <option value="$PROJECT_DIR$/routes/index.ts" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/public/data/seats.json" />
-        <option value="$PROJECT_DIR$/views/admin_i.jade" />
       </list>
     </option>
   </component>
@@ -259,8 +312,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="8" />
-    <option name="y" value="23" />
+    <option name="x" value="5" />
+    <option name="y" value="32" />
     <option name="width" value="1892" />
     <option name="height" value="1176" />
   </component>
@@ -327,7 +380,22 @@
               <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="aframe" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="socketio" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -354,6 +422,11 @@
               <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="socketio" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -513,12 +586,12 @@
       <workItem from="1507021651866" duration="17136000" />
       <workItem from="1507260866615" duration="396000" />
       <workItem from="1507261450996" duration="11077000" />
-      <workItem from="1507448914753" duration="8118000" />
+      <workItem from="1507448914753" duration="23539000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359676000" />
+    <option name="totallyTimeSpent" value="375097000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -530,19 +603,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="8" y="23" width="1892" height="1176" extended-state="0" />
+    <frame x="5" y="32" width="1892" height="1176" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22810811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22810811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972324" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15595463" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04536862" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -560,7 +633,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15595463" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -592,7 +665,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/socketio/socket.server.js</url>
-          <line>70</line>
+          <line>80</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="5" />
@@ -600,28 +673,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/index_new_backup20171001.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="61" lean-forward="false" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/ang/zpad.js" />
-    <entry file="file://$PROJECT_DIR$/public/js/ang_filter/zpad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -646,13 +697,6 @@
     <entry file="file://$PROJECT_DIR$/public/assets/img/panelists/p_text_adachi.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/data/panelists.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1283">
-          <caret line="108" column="1" lean-forward="true" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index_i.jade">
@@ -830,36 +874,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout_i.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/aframe/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding>
-            <element signature="e#37#342#0" expanded="false" />
-            <element signature="e#2225#2735#0" expanded="false" />
-            <element signature="e#2779#3623#0" expanded="false" />
-            <element signature="e#3664#3937#0" expanded="false" />
-            <element signature="e#3975#4264#0" expanded="false" />
-            <element signature="e#4347#4510#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/mobile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index_new20171008.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4238">
@@ -876,42 +890,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/data/vote.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="true" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/seat_i.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index_new.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="284" column="130" lean-forward="false" selection-start-line="284" selection-start-column="130" selection-end-line="284" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/lib/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/vote_i.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="110" column="23" lean-forward="true" selection-start-line="104" selection-start-column="16" selection-end-line="110" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -921,42 +903,149 @@
         <state relative-caret-position="30">
           <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           <folding>
-            <marker date="1507459004000" expanded="true" signature="55529:55546" ph="..." />
-            <marker date="1507459004000" expanded="true" signature="55529:55564" ph="..." />
-            <marker date="1507459004000" expanded="true" signature="55529:55577" ph="..." />
-            <marker date="1507459004000" expanded="true" signature="55529:55592" ph="..." />
+            <marker date="1507483397000" expanded="true" signature="61372:61389" ph="..." />
+            <marker date="1507483397000" expanded="true" signature="61372:61407" ph="..." />
+            <marker date="1507483397000" expanded="true" signature="61372:61420" ph="..." />
+            <marker date="1507483397000" expanded="true" signature="61372:61435" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="124" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/socketio/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/data/seats.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2856" lean-forward="false" selection-start-line="0" selection-start-column="2856" selection-end-line="0" selection-end-column="2856" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="145" column="30" lean-forward="true" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/aframe/index_main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-921">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state relative-caret-position="266">
+          <caret line="130" column="12" lean-forward="true" selection-start-line="130" selection-start-column="12" selection-end-line="130" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/admin_i.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="49" column="81" lean-forward="true" selection-start-line="49" selection-start-column="81" selection-end-line="49" selection-end-column="81" />
+        <state relative-caret-position="-390">
+          <caret line="96" column="28" lean-forward="false" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socketio/socket.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/data/vote_backup.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/data/vote.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="354" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="354" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/vote_i.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="81" column="32" lean-forward="false" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/data/panelists.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="108" column="1" lean-forward="true" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/aframe/index_main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4485">
+          <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout_i.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/aframe/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#381#2375#0" expanded="false" />
+            <element signature="e#2413#2923#0" expanded="false" />
+            <element signature="e#3852#4125#0" expanded="false" />
+            <element signature="e#4163#4452#0" expanded="false" />
+            <element signature="e#4492#7711#0" expanded="false" />
+            <element signature="e#4535#4698#0" expanded="false" />
+            <element signature="e#7753#8981#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/seat_i.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="33" lean-forward="false" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index_new.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1770">
+          <caret line="298" column="0" lean-forward="false" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
+          <folding>
+            <element signature="n#a-entity#0;n#a-cylinder#0;n#a-scene#0;n#div#1;n#block#1;n#!!top" expanded="false" />
+            <element signature="n#a-entity#1;n#a-cylinder#0;n#a-scene#0;n#div#1;n#block#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="101" column="50" lean-forward="false" selection-start-line="101" selection-start-column="50" selection-end-line="101" selection-end-column="50" />
           <folding />
         </state>
       </provider>

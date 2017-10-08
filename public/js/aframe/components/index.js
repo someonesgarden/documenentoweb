@@ -3,6 +3,7 @@ AFRAME.registerComponent('panelbox', {
         var thisentity = this.el;
         thisentity.addEventListener('click',function(){
             switchModel("house");
+
         });
     },
     pause: function () {
@@ -37,10 +38,6 @@ AFRAME.registerComponent('arrow', {
             }
         }
 
-        window.socket_voting({
-            name:name,
-            point:point
-        });
 
         var p_str = ('000'+ point).slice(-3);
         var d1_ = p_str.substr(0,1);
@@ -57,9 +54,17 @@ AFRAME.registerComponent('arrow', {
 
         window.votes[name] = p_str;
 
+        console.log("window.votes");
+        console.log(window.votes);
         $.post("/voteapi", window.votes,
             function(data){
                 console.log("resdata",data);
+                console.log(window.votes);
+                window.socket_voting({
+                    name:name,
+                    point:point,
+                    votes:window.votes
+                });
             }
         );
     },

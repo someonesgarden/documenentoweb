@@ -59,13 +59,18 @@ block content
                                             h3.vote_num {{val ? val+'': '000' | numberFixedLen:3 }}
     script.
         var socketresponse = function (data) {
+            console.log("socket response");
             var element = document.getElementById("AppController");
             var $scope = angular.element(element).scope();
-            $scope.votes[data.value.name] = data.value.point;
+            $scope.votes = data.value.votes;
             $scope.votes = votesSort($scope.votes);
             if (!$scope.$$phase) {
                 $scope.$apply();
             }
+        };
+
+
+        var socketseatresponse = function(data) {
         };
 
         app.controller('AppController', ['$scope', '$http','$window',  function ($scope, $http,$window) {
@@ -106,7 +111,8 @@ block content
                     .then(function (res) {
                         $window.socket_voting({
                             name: key,
-                            point: vote+""
+                            point: vote+"",
+                            votes:$scope.votes
                         });
                     });
             };
@@ -130,7 +136,8 @@ block content
                     .then(function(res){
                         $window.socket_voting({
                             name: key,
-                            point: vote+""
+                            point: vote+"",
+                            votes: $scope.votes
                         });
                     });
             };
