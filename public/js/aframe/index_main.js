@@ -9,7 +9,7 @@ var sky    = document.querySelector('a-sky');
 
 //3dmodel
 var lantan = d3.select("#lantan");
-var earth = d3.select("#earth");
+//var earth = d3.select("#earth");
 var house = d3.select('#house_small');
 var largehouse = d3.select('#house_large');
 var largehouseselector   = document.querySelector('#house_large');
@@ -20,8 +20,12 @@ var panelbox1selector = document.querySelector('#panelbox1');
 
 //top infos
 var top_topinfo1 = document.querySelector('#top_topinfo1');
+var top_topinfo2 = document.querySelector('#top_topinfo2');
+var top_topinfo3 = document.querySelector('#top_topinfo3');
 var topinfos = [
-    top_topinfo1
+    top_topinfo1,
+    top_topinfo2,
+    top_topinfo3
 ];
 
 var programs    = document.querySelectorAll('a-entity#programs a-image');
@@ -51,6 +55,7 @@ document.visible_model = infobox;
 
 /////////// VoteDataLoader
 var jsondataloader = function(){
+    /*
     d3.json("data/vote.json", function (error, data) {
         votes = data.vote;
         console.log("votes");
@@ -58,9 +63,11 @@ var jsondataloader = function(){
         for(var i = 0; i < panellers.length; i++) setVoteDigit(panellers[i], votes);
     });
 
+
     d3.json("data/seats.json", function(error, data){
         for(var i = 0; i< programs.length; i++) setDigit(programs[i], data.seats);
     });
+    */
 };
 
 var setVoteDigit = function(p, votes){
@@ -71,7 +78,7 @@ var setVoteDigit = function(p, votes){
 
     var p_str = votes[name];
     if(p_str!=undefined) {
-        
+
         if(!isNaN(p_str)) p_str =('000' + p_str).slice(-3); //数値の場合、3桁の文字列に変換
 
         var d1_ = p_str.substr(0, 1);
@@ -118,7 +125,12 @@ jsondataloader();
 var run = function () {
     loader.classList.add("hidden");
     setTimeout(function(){
-        moveMenuItem(top_topinfo1, 235);
+
+        for (var i = 0; i < topinfos.length; i++) {
+            moveMenuItem2DefPos(topinfos[i]);
+        }
+
+        //moveMenuItem(top_topinfo1, 235);
     },1000);
 
     if (getDevice == 'sp') {
@@ -169,7 +181,7 @@ var switchModel = function (model) {
 
         case "earth":
             sky.setAttribute("src", "");
-            model_to_change = earth;
+            //model_to_change = earth;
             break;
         case "house":
             model_to_change = house;
@@ -403,9 +415,11 @@ var largehousemove = function(mode,videourl=""){
     }
 };
 
+/*
 earth.on('click', function(){
     console.log("earth clicked");
 });
+*/
 
 house.on('click',function(){
     console.log("house clicked");

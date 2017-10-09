@@ -231,14 +231,15 @@ AFRAME.registerComponent('paneler', {
             thisentity.setAttribute('src',frontimg);
         });
 
+        /*
         thisentity.addEventListener('click',function(){
-
             switchPanelBox(name);
             var collada = panelbox1selector.querySelector('a-collada-model');
             collada.setAttribute("obj-model","obj: #panelbox-obj; mtl: #panelbox-"+name+"-mtl");
             panelbox1selector.pause();
             panelbox1selector.play();
         });
+        */
     },
 
     setupAnimation:function() {
@@ -338,13 +339,21 @@ AFRAME.registerComponent('prog', {
         //play(),pause()の仕組みを利用して擬似的にinitと関数呼び出しを実現している
         var thisentity = this.el;
 
-        var n = thisentity.getAttribute('n');
+        var name = thisentity.getAttribute('id');
+        var type = thisentity.getAttribute('type');
         thisentity.angle = 0;
         //thisentity.angle_to = 290+10*n;
         thisentity.angle_to = 90;
-        thisentity.addEventListener('click',function(){
-           console.log("prog");
-        });
+
+        if(type!="topinfo") {
+            thisentity.addEventListener('click', function () {
+                switchPanelBox(name);
+                var collada = panelbox1selector.querySelector('a-collada-model');
+                collada.setAttribute("obj-model", "obj: #panelbox-obj; mtl: #progbox-" + name + "-mtl");
+                panelbox1selector.pause();
+                panelbox1selector.play();
+            });
+        }
     },
 
     setupAnimation:function() {
@@ -352,12 +361,9 @@ AFRAME.registerComponent('prog', {
         var thisentity = this.el;
         var radius = 5.94;
 
-        //var ang0 = thisentity.getAttribute('angle');
         var ang0 = thisentity.angle;
-        var y0 =  thisentity.getAttribute('y') ? thisentity.getAttribute('y') : 2.1;
-        //var y0 = 1.8;
-        //var ang1 = thisentity.getAttribute('angle_to');
         var ang1 = thisentity.angle_to;
+        var y0   = thisentity.getAttribute('y') ? thisentity.getAttribute('y') : 2.1;
 
         var that = this;
 
@@ -370,8 +376,6 @@ AFRAME.registerComponent('prog', {
                 thisentity.setAttribute('rotation',{'x':0,'y':-this.ang-90,'z':0});
             })
             .onComplete(function(){
-                //console.log("ang1",ang1);
-                //thisentity.setAttribute('angle',ang1);
                 thisentity.angle=ang1;
                 //thisentity.pause();
             })
