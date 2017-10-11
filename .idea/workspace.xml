@@ -124,8 +124,8 @@
       <file leaf-file-name="contact.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/contact.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="41" column="163" lean-forward="false" selection-start-line="41" selection-start-column="163" selection-end-line="41" selection-end-column="163" />
+            <state relative-caret-position="551">
+              <caret line="49" column="102" lean-forward="false" selection-start-line="49" selection-start-column="102" selection-end-line="49" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -271,8 +271,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="40" />
-    <option name="y" value="46" />
+    <option name="x" value="204" />
+    <option name="y" value="23" />
     <option name="width" value="1892" />
     <option name="height" value="1176" />
   </component>
@@ -489,12 +489,12 @@
       <workItem from="1507607979213" duration="558000" />
       <workItem from="1507609297012" duration="948000" />
       <workItem from="1507625902147" duration="831000" />
-      <workItem from="1507693331037" duration="11838000" />
+      <workItem from="1507693331037" duration="12062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="402469000" />
+    <option name="totallyTimeSpent" value="402693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -506,7 +506,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="46" width="1892" height="1176" extended-state="0" />
+    <frame x="204" y="23" width="1892" height="1176" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -946,8 +946,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/contact.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="41" column="163" lean-forward="false" selection-start-line="41" selection-start-column="163" selection-end-line="41" selection-end-column="163" />
+        <state relative-caret-position="551">
+          <caret line="49" column="102" lean-forward="false" selection-start-line="49" selection-start-column="102" selection-end-line="49" selection-end-column="102" />
           <folding />
         </state>
       </provider>

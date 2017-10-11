@@ -43,10 +43,11 @@ block content
                             div.help-block.with-errors
 
                         div.form-group
-                            label お問い合わせ内容
-                            textarea.form-control(cols=40, rows=4, name="content", required)
+                            label.control-label(for="textarea1") <span class="label label-danger">必須項目</span> お問い合わせ内容
+                            textarea#textarea1.form-control(cols=40, rows=4, name="content",data-required-error="お問い合わせ内容をご記入ください", required)
+                            div.help-block.with-errors
 
-                        button#sendbutton(type="submit",onclick="sendingemail()") 送信
+                        button#sendbutton.btn.btn-default(type="submit",onclick="sendingemail()") メールを送信する
                 br(clear="all")
 
                 div#sendingarea
