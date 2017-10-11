@@ -38,8 +38,8 @@ block content
                             input#useremail.form-control(type="text", name="email",placeholder="Eメールを入力", data-required-error="Eメールの入力は必須です", required)
                             div.help-block.with-errors
                         div.form-group
-                            label メールアドレス（間違い防止のため、再度記入ください）
-                            input#useremail2.form-control(type="text", name="email",data-match="#useremail",data-match-error="Eメールが一致しません" placeholder="確認用Eメールを入力",required)
+                            label.control-label(for="useremail2") <span class="label label-danger">必須項目</span> メールアドレス（間違い防止のため、再度記入ください）
+                            input#useremail2.form-control(type="text", name="email",data-match="#useremail",data-match-error="Eメールが一致しません",data-required-error="確認用Eメールの入力は必須です", placeholder="確認用Eメールを入力",required)
                             div.help-block.with-errors
 
                         div.form-group
