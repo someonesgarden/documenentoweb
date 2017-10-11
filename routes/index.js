@@ -4,7 +4,8 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var parser = require('ua-parser-js');
-//ファイルの書き込み関数
+var nodemailer = require('nodemailer');
+// ------------------------------------- ファイルの書き込み関数 -----------------------
 function writeFile(path, data) {
     fs.writeFile(path, data, function (err) {
         if (err) {
@@ -25,6 +26,14 @@ function ObjArraySort(ary, key, order) {
             return 1 * reverse;
     });
 }
+// ---------------------------------- Mailer -----------------------------
+var smtpTransport = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'd@someonesgarden.org',
+        pass: 'atala4649'
+    }
+});
 router.get('/earth', function (req, res, next) {
     res.render('earth', { title: 'Earth' });
 });
@@ -71,6 +80,14 @@ router.get('/v', function (req, res, next) {
 router.get('/admin', function (req, res, next) {
     res.render('admin_i', { title: '管理者用ページ', mobile: true });
 });
+//ABOUT
+router.get('/about', function (req, res, next) {
+    res.render('about', { title: 'ドキュメメントについて', mobile: true });
+});
+//CONTACT
+router.get('/contact', function (req, res, next) {
+    res.render('contact', { title: 'お問い合わせ', mobile: true });
+});
 //SEAT
 router.get('/s', function (req, res, next) {
     res.render('seat_i', { title: 'DOCU-MEMENTO座席確認', mobile: true });
@@ -92,6 +109,51 @@ router.get('/', function (req, res, next) {
         res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭', mobile: false });
     }
 });
+//------ MAIL SENDER ---------------------------------------
+router.post('/contactmail', function (req, res, next) {
+    var name = req.body.name;
+    var useremail = req.body.email;
+    var content = req.body.content;
+    var mailToSenderOptions = {
+        from: 'd <d@someonesgarden.org>',
+        to: useremail,
+        subject: 'ドキュ・メメント実行委員会より[メール送信成功]',
+        text: 'メールが送信されました。',
+        html: 'ご連絡ありがとうございます。<br/>メールが送信されました。<br/>後ほどご連絡差し上げますのでお待ちください。<br/>ドキュ・メメントを引き続きよろしくお願いします。<br/><br/><br/>ドキュメメント実行員会'
+    };
+    var mailToAdminOptions = {
+        from: 'd <d@someonesgarden.org>',
+        to: 'd <d@someonesgarden.org>',
+        subject: name + 'さんからのメールです',
+        text: content,
+        html: content + "<br><hr/>email=" + useremail
+    };
+    smtpTransport.sendMail(mailToSenderOptions, function (error, response) {
+        if (error) {
+            console.log(error);
+            //res.send("mail failed");
+        }
+        else {
+            console.log('Message sent: ' + response.message);
+            //res.send("mail success");
+            //res.render("mailsuccess");
+        }
+        smtpTransport.close();
+    });
+    smtpTransport.sendMail(mailToAdminOptions, function (error, response) {
+        if (error) {
+            console.log(error);
+            res.send("mail failed");
+        }
+        else {
+            console.log('Message sent: ' + response.message);
+            //res.send("mail success");
+            res.render("mailsuccess");
+        }
+        smtpTransport.close();
+    });
+});
+//----- SOCKET FUNCTIONS ---------------------------------------
 router.post('/seatapi', function (req, res, next) {
     var seats = req.body;
     var obj = { "seats": seats };
@@ -113,4 +175,5 @@ router.post('/voteapi', function (req, res, next) {
     writeFile("public/data/vote.json", JSON.stringify(obj));
     res.send("voteapi");
 });
+// --------------------------------------------------------------
 module.exports = router;

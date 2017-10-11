@@ -353,6 +353,12 @@ AFRAME.registerComponent('prog', {
                 panelbox1selector.pause();
                 panelbox1selector.play();
             });
+        }else{
+            thisentity.addEventListener('click', function () {
+                var href = thisentity.getAttribute('href');
+                if(href!=undefined)
+                    window.open(href, 'mywindow1', 'width=600, height=720, menubar=no, toolbar=no, scrollbars=yes');
+            });
         }
     },
 

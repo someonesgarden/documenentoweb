@@ -62,12 +62,13 @@ var jsondataloader = function(){
         console.log(votes);
         for(var i = 0; i < panellers.length; i++) setVoteDigit(panellers[i], votes);
     });
+      */
 
 
     d3.json("data/seats.json", function(error, data){
         for(var i = 0; i< programs.length; i++) setDigit(programs[i], data.seats);
     });
-    */
+
 };
 
 var setVoteDigit = function(p, votes){

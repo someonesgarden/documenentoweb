@@ -16,11 +16,11 @@ block content
     if !mobile
         div.topnav.text-right(style="background-image:url('assets/img/documemento_h60_w350.png');background-size:contain;background-repeat:no-repeat;")
                 ul.list-inline(style="padding:15px;color:white;")
-                    li(style="color:white;margin:5px;border-bottom: solid 3px #EDCAD3;") スケジュール
-                    li(style="color:white;margin:5px;border-bottom: solid 3px #F7A0BC;") プレスリリース
-                    li(style="color:white;margin:5px;border-bottom: solid 3px #87CEFA;") 事業案内
+                    li(style="color:white;margin:5px;border-bottom: solid 3px #EDCAD3;"): a(href="http://docu-memento.com/data/schedule.pdf", target="_blank") スケジュール
+                    li(style="color:white;margin:5px;border-bottom: solid 3px #F7A0BC;"): a(href="http://docu-memento.com/data/docu-memento_release1011.pdf", target="_blank") プレスリリース
+                    li(style="color:white;margin:5px;border-bottom: solid 3px #87CEFA;cursor:pointer;", onclick="window.open('/about', 'mywindow1', 'width=600, height=720, menubar=no, toolbar=no, scrollbars=yes');") 事業案内
                     li(style="color:white;margin:5px;border-bottom: solid 3px #3CE24A;") 実行委員会
-                    li(style="color:white;margin:5px;border-bottom: solid 3px #ACD341;") お問い合わせ
+                    li(style="color:white;margin:5px;border-bottom: solid 3px #ACD341;", onclick="window.open('/contact', 'mywindow1', 'width=600, height=720, menubar=no, toolbar=no, scrollbars=yes');") お問い合わせ
 
     div#VRController(ng-controller="VRController", style="position: absolute; height: 100%; width: 100%;")
 
@@ -275,8 +275,8 @@ block content
                         a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
                     a-image(prog, id="yatai0320", type="prog", src="#img_prog_yatai0320", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
-                        //
-                         a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
+                       //
+                        a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                          a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                          a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
                          a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
@@ -297,7 +297,7 @@ block content
                         a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
                         a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
                     a-image(prog, id="unagi0414", type="prog", src="#img_prog_unagi0414", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
-                        //
+                       //
                          a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                          a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                          a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
@@ -305,7 +305,7 @@ block content
                          a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
                     a-image(prog, id="honshoji0411", type="prog", src="#img_prog_honshoji0411", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
-                       //
+                       ///
                         a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
@@ -360,7 +360,7 @@ block content
                 a-entity#topinfo
                     a-image#top_topinfo1(prog, type="topinfo", src="#topinfo1", y=2.3, width="4", height="6", scale="0.5 0.5 1", n=0)
                     a-image#top_topinfo2(prog, type="topinfo", src="#topinfo2", y=2.3, width="4", height="6", scale="0.5 0.5 1", n=3)
-                    a-image#top_topinfo3(prog, type="topinfo", src="#topinfo3", y=2.3, width="4", height="6", scale="0.5 0.5 1", n=4)
+                    a-image#top_topinfo3(prog, href="/about", type="topinfo", src="#topinfo3", y=2.3, width="4", height="6", scale="0.5 0.5 1", n=4)
 
             /////////////////  Panellers
 

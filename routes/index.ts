@@ -5,8 +5,9 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var parser = require('ua-parser-js');
+var nodemailer = require('nodemailer');
 
-//ファイルの書き込み関数
+// ------------------------------------- ファイルの書き込み関数 -----------------------
 function writeFile(path, data) {
     fs.writeFile(path, data, function (err) {
         if (err) {
@@ -28,6 +29,17 @@ function ObjArraySort(ary, key, order) {
             return 1 * reverse;
     });
 }
+
+// ---------------------------------- Mailer -----------------------------
+
+
+var smtpTransport = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'd@someonesgarden.org',
+        pass: 'atala4649'
+    }
+});
 
 
 router.get('/earth', (req, res, next) => {
@@ -57,23 +69,17 @@ router.get('/react', (req, res, next) => {
     res.render('react', {title: 'REACT'});
 });
 
-
 router.get('/dev', (req, res, next) => {
-
     const agent = parser(req.headers['user-agent']);
     const device_type = agent.device.type;
-
     //var json    = fs.readFileSync("public/data/panelists.json","utf-8");
     //var obj     = JSON.parse(json);
-
-
     if (device_type == "mobile") {
         res.render('index_new', {title: 'DOCU-MEMENTO映画祭VR', mobile: true});
     } else {
         res.render('index_new', {title: 'DOCU-MEMENTO映画祭', mobile: false});
     }
 });
-
 
 router.get('/i', (req, res, next) => {
     res.render('index_i', {title: 'DOCU-MEMENTO映画祭VR', mobile: true});
@@ -87,11 +93,21 @@ router.get('/v', (req, res, next) => {
     res.render('vote_i', {title: 'DOCU-MEMENTO投票システム', mobile: true});
 });
 
-
 //ADMIN
 router.get('/admin', (req, res, next) => {
     res.render('admin_i', {title: '管理者用ページ', mobile: true});
 });
+
+//ABOUT
+router.get('/about', (req, res, next) => {
+    res.render('about', {title: 'ドキュメメントについて', mobile: true});
+});
+
+//CONTACT
+router.get('/contact', (req, res, next) => {
+    res.render('contact', {title: 'お問い合わせ', mobile: true});
+});
+
 
 //SEAT
 router.get('/s', (req, res, next) => {
@@ -104,7 +120,6 @@ router.get('/prog', (req, res, next) => {
 
 
 router.get('/', (req, res, next) => {
-
     const agent = parser(req.headers['user-agent']);
     const device_type = agent.device.type;
     console.log("================================================");
@@ -119,6 +134,62 @@ router.get('/', (req, res, next) => {
     }
 });
 
+//------ MAIL SENDER ---------------------------------------
+
+router.post('/contactmail', (req,res, next) => {
+
+    var name = req.body.name;
+    var useremail = req.body.email;
+    var content = req.body.content;
+
+    var mailToSenderOptions = {
+        from: 'd <d@someonesgarden.org>',
+        to: useremail,
+        subject: 'ドキュ・メメント実行委員会より[メール送信成功]',
+        text: 'メールが送信されました。',
+        html: 'ご連絡ありがとうございます。<br/>メールが送信されました。<br/>後ほどご連絡差し上げますのでお待ちください。<br/>ドキュ・メメントを引き続きよろしくお願いします。<br/><br/><br/>ドキュメメント実行員会'
+    };
+
+    var mailToAdminOptions = {
+        from: 'd <d@someonesgarden.org>',
+        to: 'd <d@someonesgarden.org>',
+        subject: name+'さんからのメールです',
+        text: content,
+        html: content+"<br><hr/>email="+useremail
+    };
+
+    smtpTransport.sendMail(mailToSenderOptions, function(error, response) {
+        if(error){
+            console.log(error);
+            //res.send("mail failed");
+        }else{
+            console.log('Message sent: ' + response.message);
+            //res.send("mail success");
+            //res.render("mailsuccess");
+        }
+        smtpTransport.close();
+    });
+
+    smtpTransport.sendMail(mailToAdminOptions, function(error, response) {
+        if(error){
+            console.log(error);
+            res.send("mail failed");
+        }else{
+            console.log('Message sent: ' + response.message);
+            //res.send("mail success");
+            res.render("mailsuccess");
+        }
+        smtpTransport.close();
+    });
+
+
+
+
+
+});
+
+
+//----- SOCKET FUNCTIONS ---------------------------------------
 
 router.post('/seatapi', (req,res, next) => {
     var seats = req.body;
@@ -127,9 +198,7 @@ router.post('/seatapi', (req,res, next) => {
     res.send("seatapi");
 });
 
-
 router.post('/voteapi', (req, res, next) => {
-
     var votes = req.body;
     var ary = [];
 
@@ -142,11 +211,13 @@ router.post('/voteapi', (req, res, next) => {
     for (var i = 0; i < ary.length; i++) {
         votes[ary[i].name] = ary[i].vote;
     }
-
     var obj = {"vote": votes};
     writeFile("public/data/vote.json", JSON.stringify(obj));
     res.send("voteapi");
 });
+
+
+// --------------------------------------------------------------
 
 
 module.exports = router;

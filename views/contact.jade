@@ -1,0 +1,40 @@
+extends layout_i
+
+block header
+    link(rel="stylesheet", href="/css/mobile.css")
+    style.
+        a, a:hover, a:visited {
+            color:#0033ff;
+        }
+    script.
+        var sendingemail = function() {
+            var sendingarea = document.querySelector('#sendingarea');
+            sendingarea.innerHTML= "<hr><p>送信中です。少々お待ちください.............</p>";
+        }
+
+block content
+    div.container(style="margin-top:5px;")
+        div.row.well-lg
+            div.infoarea
+                div.col-xs-12
+                    h3 お問い合わせ
+                    h4 ご意見・ご質問などお送りください。
+                div.col.col-xs-12
+                    form(action="/contactmail",method="post")
+                        div.form-group
+                            label お名前
+                            input.form-control(type="text", name="name")
+                        div.form-group
+                            label メールアドレス
+                            input.form-control(type="text", name="email")
+                        div.form-group
+                            label メールアドレス（間違い防止のため、再度記入ください）
+                            input.form-control(type="text", name="email")
+
+                        div.form-group
+                            label お問い合わせ内容
+                            textarea.form-control(cols=40, rows=4, name="content")
+                        button(type="submit",onclick="sendingemail()") 送信
+                br(clear="all")
+
+                div#sendingarea

@@ -1,0 +1,22 @@
+extends layout_i
+
+block header
+    link(rel="stylesheet", href="/css/mobile.css")
+    style.
+        a, a:hover, a:visited {
+            color:#0033ff;
+        }
+    script.
+        setTimeout(function(){
+            window.close();
+        },5000);
+
+block content
+    div.container(style="margin-top:5px;")
+        div.row.well-lg
+            div.infoarea
+                div.col-xs-12
+                    h3 メールが送信されました。
+                    h4 ご連絡ありがとうございました。
+                    p このウィンドウは3秒後に自動的に閉じます。
+                br(clear="all")
