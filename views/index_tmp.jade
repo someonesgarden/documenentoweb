@@ -8,6 +8,19 @@ block content
 
     div#loader(style="position: absolute; height: 100%; width: 100%;background-color:green;z-index:0;"): div.spinner(style="margin-top:30%")
 
+    if !mobile
+        div.topnav.text-right(style="background-image:url('assets/img/documemento_h60_w350.png');background-size:contain;background-repeat:no-repeat;")
+            ul.list-inline(style="padding:15px;color:white;")
+
+                li(style="color:white;margin:5px;border-bottom: solid 3px #EDCAD3;"): a(href="http://documemento.peatix.com/view", target="_blank") Peatixで予約
+                li(style="color:white;margin:5px;border-bottom: solid 3px #EF1A32;"): a(href="http://documementows.peatix.com/", target="_blank") ワークショップも予約
+                //li(style="color:white;margin:5px;border-bottom: solid 3px #EDCAD3;"): a(href="http://docu-memento.com/data/schedule.pdf", target="_blank") スケジュール
+                li(style="color:white;margin:5px;border-bottom: solid 3px #F7A0BC;"): a(href="http://docu-memento.com/data/docu-memento_release1011.pdf", target="_blank") プレスリリース
+                li(style="color:white;margin:5px;border-bottom: solid 3px #87CEFA;cursor:pointer;", onclick="window.open('/about', 'mywindow1', 'width=600, height=720, menubar=no, toolbar=no, scrollbars=yes');") 事業案内
+                li(style="color:white;margin:5px;border-bottom: solid 3px #ACD341;", onclick="window.open('/contact', 'mywindow1', 'width=600, height=720, menubar=no, toolbar=no, scrollbars=yes');") お問い合わせ
+
+
+
     div(style="position: absolute; height: 100%; width: 100%;")
 
         a-scene

@@ -125,10 +125,17 @@ AFRAME.registerComponent('auto_rotate', {
         var thisentity = this.el;
         var myrotate = document.createElement("a-animation");
         var axis = thisentity.getAttribute('axis');
+        var type = thisentity.getAttribute('type');
 
         var n = thisentity.getAttribute("n");
 
-        var angle_to = 60-10*n;
+        var angle_to = 180+90-162-10*n;
+
+        if(type=="venue"){
+            angle_to = 225-180-10*n;
+        }
+
+
         var random_angle = (Math.floor(Math.random() * 3) * 360+angle_to);
 
         myrotate.setAttribute('attribute', "rotation");
@@ -245,9 +252,9 @@ AFRAME.registerComponent('paneler', {
     setupAnimation:function() {
         //console.log("setupAnimation");
         var thisentity = this.el;
-        var radius = 6.2;
+        var radius = 5.9;
         //var y0 =  thisentity.getAttribute('y');
-        var y0 = 1.8;
+        var y0 = 2.5;
 
         var n = thisentity.getAttribute('n');
 

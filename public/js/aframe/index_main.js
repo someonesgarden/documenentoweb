@@ -20,11 +20,11 @@ var panelbox1selector = document.querySelector('#panelbox1');
 
 //top infos
 var top_topinfo1 = document.querySelector('#top_topinfo1');
-var top_topinfo2 = document.querySelector('#top_topinfo2');
+//var top_topinfo2 = document.querySelector('#top_topinfo2');
 var top_topinfo3 = document.querySelector('#top_topinfo3');
 var topinfos = [
     top_topinfo1,
-    top_topinfo2,
+   // top_topinfo2,
     top_topinfo3
 ];
 
@@ -66,6 +66,7 @@ var jsondataloader = function(){
 
 
     d3.json("data/seats.json", function(error, data){
+        console.log(programs[i]);
         for(var i = 0; i< programs.length; i++) setDigit(programs[i], data.seats);
     });
 

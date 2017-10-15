@@ -143,16 +143,16 @@ router.post('/contactmail', (req,res, next) => {
     var content = req.body.content;
 
     var mailToSenderOptions = {
-        from: 'd <d@someonesgarden.org>',
+        from: 'bug.document <bug.document@gmail.com>',
         to: useremail,
-        subject: 'ドキュ・メメント実行委員会より[メール送信成功]',
+        subject: 'ドキュ・メメント実行委員会より[メール送信されました]',
         text: 'メールが送信されました。',
         html: 'ご連絡ありがとうございます。<br/>メールが送信されました。<br/>後ほどご連絡差し上げますのでお待ちください。<br/>ドキュ・メメントを引き続きよろしくお願いします。<br/><br/><br/>ドキュメメント実行員会'
     };
 
     var mailToAdminOptions = {
         from: 'd <d@someonesgarden.org>',
-        to: 'd <d@someonesgarden.org>',
+        to: 'bug.document <bug.document@gmail.com>',
         subject: name+'さんからのメールです',
         text: content,
         html: content+"<br><hr/>email="+useremail
