@@ -1,0 +1,37 @@
+extends layout_i
+
+block header
+    link(rel="stylesheet", href="/css/mobile.css")
+    meta(http-equiv="refresh",content="0;URL=/schedule.html")
+    style.
+        a, a:hover, a:visited {
+            color: #ff4197;
+        }
+
+block content
+    div.container(style="margin-top:36px;")
+
+        div.row.well-lg
+            div.infoarea
+                div.col-xs-12
+                    h1 タイムテーブルとイベントの概要・チケット情報
+                    br
+                    hr
+                    h2: a(href="http://docu-memento.com/data/event_schedule.pdf", target="_blank") 概要とチケットについて  &nbsp;&nbsp;
+                        img(src="http://docu-memento.com/data/pdf.png", style="width:35px")
+                    hr
+                    h2: a(href="http://docu-memento.com/data/day1.jpg", target="_blank") 11月3日(DAY1)のタイムテーブル
+                    a(href="http://docu-memento.com/data/day1.jpg", target="_blank"): img(src="http://docu-memento.com/data/day1.jpg", style="width:100%")
+                    br
+                    br
+                    br
+                    br
+                    h2: a(href="http://docu-memento.com/data/day2.jpg", target="_blank") 11月4日(DAY2)のタイムテーブル
+                    a(href="http://docu-memento.com/data/day2.jpg", target="_blank"): img(src="http://docu-memento.com/data/day2.jpg", style="width:100%")
+
+
+                    hr
+                div.col-xs-12
+
+
+                br(clear="all")

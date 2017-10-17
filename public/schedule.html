@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>スケジュール</title><!--socketIO-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/socketio/client.js"></script>
+    <script src="/vendor/jquery/dist/jquery.js"></script>
+    <script src="/vendor/d3/d3.js"></script>
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/vendor/angular/angular.js"></script>
+    <script src="/vendor/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="/vendor/angular-animate/angular-animate.js"></script>
+    <script src="/vendor/angular-cookies/angular-cookies.js"></script>
+    <script src="/vendor/angular-resource/angular-resource.js"></script>
+    <script src="/vendor/angular-route/angular-route.js"></script>
+    <script src="/vendor/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/vendor/angular-touch/angular-touch.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/mplus1p.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/glyphicons/styles/glyphicons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>var app = angular.module('voteApp', ["ngResource", 'ngSanitize']);
+    </script>
+    <script src="js/ang_filter/zpad.js"></script>
+    <link rel="stylesheet" href="/css/mobile.css">
+    <style>a, a:hover, a:visited {
+        color: #ff4197;
+    }
+    </style>
+</head>
+<body ng-app="voteApp" style="background-color:#F0E3D2;">
+<div style="margin-top:36px;" class="container">
+    <div style="height:330px;background-image:url('/assets/img/smt/top_img.png');background-size:contain;background-repeat:no-repeat;background-position:50% 50%;" class="row"></div>
+    <div class="row well-lg">
+        <div class="infoarea">
+
+            <div class="col-xs-12"><h1>タイムテーブルとチケット情報</h1><br>
+                <hr>
+
+          </div>
+            <div class="col-xs-6">
+                <h4><a href="http://docu-memento.com/data/day1.jpg" target="_blank">11月3日(DAY1)のタイムテーブル</a></h4>
+                <a href="http://docu-memento.com/data/day1.jpg" target="_blank"><img
+                    src="http://docu-memento.com/data/day1.jpg" style="width:100%"></a>
+            </div>
+            <div class="col-xs-6">
+                <h4><a href="http://docu-memento.com/data/day2.jpg" target="_blank">11月4日(DAY2)のタイムテーブル</a></h4>
+                <a href="http://docu-memento.com/data/day2.jpg" target="_blank"><img
+                    src="http://docu-memento.com/data/day2.jpg" style="width:100%"></a>
+            </div>
+
+            <div class="col-xs-12">
+                <h2>【チケット】</h2>
+                <p >
+                ★【昼の部】→[２０００円/当日払い]　 　上映＋登壇ライブ+旅旅トーク、出入り自由のチケット　<br/>
+                ★【夜の部】→[３０００円/当日払い]      「一龍 屋台村」での上映＋登壇ライブのチケット(食べ放題付き/飲み物別)<br/>
+                ★【フリーパス】→[４０００円/当日払い] 　昼の部、夜の部(食べ放題付き/飲み物別)を両方楽しめるお得な一日パス<br/>
+                ★【ダンス/ヨガ ワークショップ】→[各１０００円/当日払い]<br/>
+                ★【はけご作りワークショップ】→[一人２８００円/親子３２００円/当日払い]<br/>
+                   </p>
+                <p class="small">
+                ※二日通し券はご用意しておりません。<br/>
+                ※ワークショップは別料金です(フリーパスに含まれません)。<br/>
+                ※当日各会場での現金払いのみとなります。直接会場にお越しください。<br/>
+                </p>
+
+                <hr>
+
+                <h2>【タイムテーブル】</h2>
+
+                 <h3>11/3(金) - 【本照寺】</h3>
+                <h4></h4>
+                <p>
+                <strong>13:00～15:00 <a href="/assets/site/prog_hourou.html">放浪ドキュメンタリストによる『日本未公開の最先端ショート・ドキュメンタリー5選』①</a></strong><br>
+
+                『With All Our Cameras』/ 監督 ：Miguel Beraza / 26分 /　スペイン・ハンガリー<br/>
+                ～ロッテルダム国際映画祭正式出品<br/>
+                『Pulse』/ 監督： Robin Petré /  26分 / ハンガリー<br/>
+                ～DocLeipzig銀鳩賞 、DocLisboaグリーンイヤーズ賞<br/>
+                <strong>16:30～19:30 <a href="/assets/site/prog_heishia.html">河合宏樹監督『兵士A』(七尾旅人：主演、180分)上映＆トーク</a></strong><br/>
+                    <br/>
+                </p>
+
+                <h3> 11/3(金) - 【レンタルスペース松本】</h3>
+                <strong>10:00～12:00 <a href="/assets/site/prog_jodou.html">中国インディペンデント映画『えぐられた目玉』</a></strong><br>
+                <p>監督:徐童</p>
+
+                <h3>11/3(金) - 【KAIDO books & coffee】</h3>
+                <strong>10:00～12:00　旅旅トーク (プロギャンブラのぶき/中込孝規/佐藤裕一)</strong><br>
+                <strong>12:30～14:00　登壇ライブ第一部 (関強/西原考至/新福剣士)</strong><br>
+                <strong>14:00～15:30　登壇ライブ第二部 (日髙成樹/さいとうりょうじ/サムワンズガーデン)</strong><br>
+
+                <h3>11/3(金) - 【一龍 屋台村】</h3>
+
+                ※チケット別（食べ放題付き3000円）<br/>
+
+                <strong>16:00～17:30　ヒース・カズンス監督『Dog Legs』(90分)上映</strong><br>
+                <strong>17:30～18:00　『Dog Legs』出演者：北島行徳トーク</strong><br>
+                <strong>18:00～18:30　交流タイム</strong><br>
+                <strong>18:30～20:00　登壇ライブ第三部 (米本直樹・儀間真利奈/桜木奈央子/中村真夕)</strong><br>
+                <strong>20:00～20:30　交流タイムS</strong><br>
+                <strong>20:30～22:00　登壇ライブ第四部 (河合宏樹/プロギャンブラのぶき/太田信吾)</strong><br>
+                <strong>22:00～23:00　交流タイム</strong><br>
+
+                <h3>11/3(金) - 【北品川一帯】</h3>
+                <strong>10:00～15:00　こどもシネマ映像体験ワークショップ
+                    『こども取材班になってドキュメンタリーを探そう！』</strong>
+                <p>※無料！先着10名：親同伴可。</p>
+                <hr>
+
+                <h3>11/4(土) - 【本照寺】</h3>
+                <strong>12:00～14:00　<a href="/assets/site/prog_hourou.html">放浪ドキュメンタリストによる『日本未公開の最先端ショート・ドキュメンタリー5選』②</a></strong>
+                <p>『Batrachian's Ballad』/ 監督: Leonor Teles /  11分 / ポルトガル <br>
+                    　～ベルリン国際映画祭金熊賞<br>
+                    『Women in Sink』/ 監督:  Iris Zaki / 35分 / イスラエル<br>
+                    　～カルロヴィ・ヴァリ国際映画祭審査員特別賞、英国グリアソン賞学生部門<br>
+                    『また次階！』/ 監督: 桑山篤 / 11分 / ポルトガル<br>
+                    　～ポルトガル映画アカデミー・ソフィア賞学生部門、HotDocs正式出品<br>
+                </p>
+
+
+                <strong>16:30～19:30　<a href="/assets/site/prog_tanaka.html">20代前半の監督たちが鮮烈に描く”家族とコミュニティ”</a></strong> <br>
+                青柳拓監督『ひいくんのあるく町』(47分) <br>
+                加納土監督『沈没家族』(72分) <br>
+
+                <h3>11/4(土) - 【レンタルスペース松本】</h3>
+                <strong>10:00～12:00　Tokyo Docs Colors of Asia 上映＆アジア作家トーク</strong><br>
+                （インドネシア／ネパール／ミャンマー／インドより）<br>
+                <strong>14:30～16:30　Tokyo Docs Colors of Asia 上映＆アジア作家トーク</strong><br>
+                （インドネシア／ネパール／ミャンマー／インドより）<br>
+
+                <h3>11/4(土) - 【KAIDO books & coffee】</h3>
+                <strong>10:00～12:00　旅旅トーク (リキシャーズ/平船智世子/田中義巳)</strong><br>
+                <strong>12:30～14:00　登壇ライブ第一部 (竹岡寛俊/宮下千峰/奥間勝也)</strong><br>
+                <strong>14:30～16:00　登壇ライブ第二部 (安達茉莉子/柳田香帆/SATO-C)</strong><br>
+
+                <h3>11/4(土) - 【一龍 屋台村】</h3>
+
+                <p class="small">
+                    ※チケット別（食べ放題付き3000円）
+                </p>
+
+                <strong>17:00～18:50　太田信吾監督『解放区』(110分)上映</strong><br>
+                <strong>18:50～19:30　交流タイム</strong><br>
+                <strong>19:30～21:00　登壇ライブ第三部 (わんなん/モカ/浜野高宏)</strong><br>
+                <strong>21:00～22:30　登壇ライブ第四部 (マッド・ベン/河崎純真/内山直樹)</strong><br>
+                <strong>22:30～23:00　交流タイム</strong><br>
+
+                <h3>11/4(土) - 【品川健康センター 7F】</h3>
+                <p class="small">
+                ※チケット別（各1000円）
+                </p>
+                <strong>10:00～11:30　『旅×ダンス』中込孝規ダンスワークショップ</strong><br>
+                <strong>14:00～15:30　『ヨガ×ドキュメンタリー』Makiのサークルヨガ体験</strong><br>
+
+                <h3>11/4(土) - 【うなぎのねどこ】</h3>
+                <p class="small">
+                ※チケット別（一人2800円/親子3200円、材料費込み）
+                </p>
+                <strong>10:00～12:30　はけご作りワークショップ第一部</strong><br>
+                <strong>14:00～16:30　はけご作りワークショップ第二部</strong><br>
+
+                <h3>11/4(土) - 【クロモンカフェ】</h3>
+                <strong>16:00～17:00　こどもシネマ完成披露試写会</strong><br>
+
+                <h4>【お問い合わせ先】</h4>
+                <p> ドキュ・メメント実行委員会 <br>
+                    担当者：松井至（携帯080-4132-9042）</p>
+
+                MAIL：<a href="mailto:bug.document@gmail.com">bug.document@gmail.com</a><br>
+                Web：<a href="http://docu-memento.com/">http://docu-memento.com/</a>
+
+            </div>
+
+
+            <br clear="all">
+        </div>
+    </div>
+</div>
+</body>
+</html>

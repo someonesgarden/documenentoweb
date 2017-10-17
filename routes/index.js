@@ -88,6 +88,10 @@ router.get('/about', function (req, res, next) {
 router.get('/contact', function (req, res, next) {
     res.render('contact', { title: 'お問い合わせ', mobile: true });
 });
+//SCHEDULE
+router.get('/schedule', function (req, res, next) {
+    res.render('schedule', { title: 'スケジュール', mobile: true });
+});
 //SEAT
 router.get('/s', function (req, res, next) {
     res.render('seat_i', { title: 'DOCU-MEMENTO座席確認', mobile: true });
@@ -106,7 +110,7 @@ router.get('/', function (req, res, next) {
         //res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭VR', mobile:true});
     }
     else {
-        res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭', mobile: false });
+        res.render('index_new', { title: 'DOCU-MEMENTO映画祭', mobile: false });
     }
 });
 //------ MAIL SENDER ---------------------------------------

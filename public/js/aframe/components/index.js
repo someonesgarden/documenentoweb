@@ -228,6 +228,8 @@ AFRAME.registerComponent('paneler', {
         var backimg = thisentity.getAttribute('backsrc');
         var frontimg = thisentity.getAttribute('src');
         var name = thisentity.getAttribute('id');
+        var audio = thisentity.getAttribute('audio');
+        var href = thisentity.getAttribute('href');
         var that = this;
         thisentity.addEventListener('mouseenter',function(){
             //console.log(backimg);
@@ -237,6 +239,20 @@ AFRAME.registerComponent('paneler', {
             //console.log(frontimg);
             thisentity.setAttribute('src',frontimg);
         });
+
+
+        if(audio !=undefined){
+            thisentity.addEventListener('click', function(){
+                toggleaudio(audio);
+            });
+        }
+
+        if(href!=undefined){
+            thisentity.addEventListener('click',function(){
+                window.open(href, 'pitch_profile', 'width=640, height='+window.innerHeight+', menubar=no, toolbar=no, scrollbars=yes');
+            })
+        }
+
 
         /*
         thisentity.addEventListener('click',function(){
@@ -303,6 +319,14 @@ AFRAME.registerComponent('curvemenu', {
             var n = thisentity.getAttribute('n');
             thisentity.angle = 0;
             thisentity.angle_to = 115+15*n;
+
+            var href = thisentity.getAttribute('href');
+
+            if(href!=undefined){
+                thisentity.addEventListener('click',function(){
+                    window.open(href, 'aremap', 'width=820, height=640, menubar=no, toolbar=no, scrollbars=yes');
+                })
+            }
         },
         setupAnimation:function(){
             //console.log("curvemenu,setmpAnimation")
@@ -348,9 +372,17 @@ AFRAME.registerComponent('prog', {
 
         var name = thisentity.getAttribute('id');
         var type = thisentity.getAttribute('type');
+        var href = thisentity.getAttribute('href');
+
         thisentity.angle = 0;
         //thisentity.angle_to = 290+10*n;
         thisentity.angle_to = 90;
+
+        if(href!=undefined){
+            thisentity.addEventListener('click',function(){
+                window.open(href, 'event_profile', 'width=640, height='+window.innerHeight+', menubar=no, toolbar=no, scrollbars=yes');
+            })
+        }
 
         if(type!="topinfo") {
             thisentity.addEventListener('click', function () {
@@ -376,7 +408,7 @@ AFRAME.registerComponent('prog', {
 
         var ang0 = thisentity.angle;
         var ang1 = thisentity.angle_to;
-        var y0   = thisentity.getAttribute('y') ? thisentity.getAttribute('y') : 2.1;
+        var y0   = thisentity.getAttribute('y') ? thisentity.getAttribute('y') : 2.4;
 
         var that = this;
 

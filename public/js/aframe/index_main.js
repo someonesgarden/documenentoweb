@@ -17,14 +17,15 @@ var amagi = d3.select('#amagi');
 var infobox = d3.select('#infobox');
 var panelbox1 = d3.select('#panelbox1');
 var panelbox1selector = document.querySelector('#panelbox1');
+var areamapbox = d3.select('#areamapbox');
 
 //top infos
 var top_topinfo1 = document.querySelector('#top_topinfo1');
-//var top_topinfo2 = document.querySelector('#top_topinfo2');
+var top_topinfo2 = document.querySelector('#top_topinfo2');
 var top_topinfo3 = document.querySelector('#top_topinfo3');
 var topinfos = [
     top_topinfo1,
-   // top_topinfo2,
+    top_topinfo2,
     top_topinfo3
 ];
 
@@ -46,6 +47,7 @@ var about_toudansha = d3.select('#about_toudansha');
 var about_program = d3.select('#about_program');
 var about_fes = d3.select('#about_fes');
 var about_fes_j = d3.select('#about_fes_j');
+var about_areamap = d3.select('#about_areamap');
 // Logo
 var votes;
 var seats;
@@ -63,7 +65,6 @@ var jsondataloader = function(){
         for(var i = 0; i < panellers.length; i++) setVoteDigit(panellers[i], votes);
     });
       */
-
 
     d3.json("data/seats.json", function(error, data){
         console.log(programs[i]);
@@ -200,6 +201,9 @@ var switchModel = function (model) {
         case "panelbox1":
             model_to_change = panelbox1;
             break;
+        case "areamapbox":
+            model_to_change = areamapbox;
+            break;
         default:
             model_to_change = house;
             break;
@@ -243,24 +247,11 @@ scene.addEventListener('exit-vr', function () {
 });
 
 
-////////// EVENT ////////////////
-// Logo
-//        logo_bug.addEventListener('click', function () {
-//            moveMenuItem(prog_kaihouku,30);
-//        });
-//
-//         logo_bug.addEventListener('mouseenter', function () {
-//             console.log("logo_bu");
-//            moveMenuItem(prog_kaihouku,200);
-//        });
-//         logo_bug.addEventListener('mouseleave', function () {
-//            moveMenuItem2DefPos(prog_kaihouku);
-//        });
-
 // About
 about_program.on('click',function(){
     switchModel("house");
     largehousemove("back");
+    toggleaudio();
 
     for (var i = 0; i < topinfos.length; i++) {
         moveMenuItem(topinfos[i], 90);
@@ -283,6 +274,8 @@ about_program.on('click',function(){
 about_fes.on('click', function () {
     switchModel("infobox");
     largehousemove("back");
+    toggleaudio();
+
     for (var i = 0; i < topinfos.length; i++) {
         moveMenuItem2DefPos(topinfos[i]);
     }
@@ -302,6 +295,8 @@ about_fes.on('click', function () {
 about_fes_j.on('click', function () {
     switchModel("house");
     largehousemove("back");
+    toggleaudio();
+
     for (var i = 0; i < topinfos.length; i++) {
         moveMenuItem2DefPos(topinfos[i]);
     }
@@ -320,6 +315,7 @@ about_fes_j.on('click', function () {
 
 about_venu.on('click', function () {
     switchModel("lantan");
+    toggleaudio();
 
     for (var i = 0; i < topinfos.length; i++) {
         moveMenuItem(topinfos[i], 90);
@@ -342,6 +338,7 @@ about_venu.on('click', function () {
 about_toudansha.on('click', function(){
     switchModel("house");
     largehousemove("back");
+    toggleaudio();
 
     for (var i = 0; i < topinfos.length; i++) {
         moveMenuItem(topinfos[i], 90);
@@ -360,11 +357,31 @@ about_toudansha.on('click', function(){
     }
 });
 
+about_areamap.on('click', function(){
+   console.log("about_areamap");
+    switchModel("areamapbox");
+    largehousemove("back");
+    toggleaudio();
+
+    for (var i = 0; i < topinfos.length; i++) {
+        moveMenuItem2DefPos(topinfos[i]);
+    }
+
+    for (var i = 0; i < programs.length; i++) {
+        moveMenuItem(programs[i], 90);
+    }
+    for (var j = 0; j < panellers.length; j++) {
+        moveMenuItem(panellers[j], 90);
+    }
+
+    for (var j = 0; j < venues.length; j++) {
+        moveMenuItem(venues[j], 90);
+    }
+});
+
 
 // 3d model
 var largehousemove = function(mode,videourl=""){
-
-    console.log("videourl=",videourl);
 
     var largehouse_y = largehouse.attr("position").y;
 
@@ -439,6 +456,7 @@ var socketseatresponse = function(data){
     console.log("data=",data);
     for(var i = 0; i< programs.length; i++) setDigit(programs[i], data.value.seats);
 };
+
 
 
 window.socketseatresponse = socketseatresponse;

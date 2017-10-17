@@ -109,6 +109,12 @@ router.get('/contact', (req, res, next) => {
 });
 
 
+//SCHEDULE
+router.get('/schedule', (req, res, next) => {
+    res.render('schedule', {title: 'スケジュール', mobile: true});
+});
+
+
 //SEAT
 router.get('/s', (req, res, next) => {
     res.render('seat_i', {title: 'DOCU-MEMENTO座席確認', mobile: true});
@@ -130,7 +136,7 @@ router.get('/', (req, res, next) => {
         res.render('index_i', {title: 'DOCU-MEMENTO映画祭@i', mobile: true});
         //res.render('index_tmp', { title: 'DOCU-MEMENTO映画祭VR', mobile:true});
     } else {
-        res.render('index_tmp', {title: 'DOCU-MEMENTO映画祭', mobile: false});
+        res.render('index_new', {title: 'DOCU-MEMENTO映画祭', mobile: false});
     }
 });
 

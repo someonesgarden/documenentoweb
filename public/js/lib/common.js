@@ -1,3 +1,31 @@
+var  toggleaudio = function(audioname=window.nowaudio) {
+
+    if(window.nowaudio != "" && window.nowaudio != audioname){
+        var prev_audio = document.getElementById(window.nowaudio);
+        if(prev_audio != undefined){
+            prev_audio.pause();
+            prev_audio.currentTime = 0;
+            window.nowaudio="";
+        }
+    }
+
+    if(audioname!=""){
+        var audio = document.getElementById(audioname);
+        window.nowaudio = audioname;
+
+        if(audio != undefined){
+            if (audio.paused) {
+                audio.play();
+            }else{
+                audio.pause();
+                audio.currentTime = 0;
+                window.nowaudio = "";
+            }
+        }
+    }
+};
+
+
 var getDevice = (function () {
     var ua = navigator.userAgent;
     if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {

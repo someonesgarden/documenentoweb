@@ -5,21 +5,30 @@ block header
     link(rel='stylesheet', href='/css/billboard.css')
     script.
         var mobile = #{mobile};
+        window.nowaudio = "";
 
     script(src="js/lib/common.js")
 
 block content
-
+    audio(src="assets/mp3/satoc.mp3", id="audio_satoc")
+    audio(src="assets/mp3/adachi.mp3", id="audio_adachi")
+    audio(src="assets/mp3/saitoh.mp3", id="audio_saitoh")
+    audio(src="assets/mp3/hidaka.mp3", id="audio_hidaka")
+    audio(src="assets/mp3/miyashita.mp3", id="audio_miyashita")
+    audio(src="assets/mp3/sakuragi.mp3", id="audio_sakuragi")
+    audio(src="assets/mp3/nakamura.mp3", id="audio_nakamura")
+    audio(src="assets/mp3/nobuki.mp3", id="audio_nobuki")
+    audio(src="assets/mp3/okuma.mp3", id="audio_okuma")
     div#loader(style="position: absolute; height: 100%; width: 100%;background-color:green;z-index:0;"): div.spinner(style="margin-top:30%")
-
-
     if !mobile
         div.topnav.text-right(style="background-image:url('assets/img/documemento_h60_w350.png');background-size:contain;background-repeat:no-repeat;")
+                a(href="/"): p(style="width:100px;height:100%;position:absolute;")
                 ul.list-inline(style="padding:15px;color:white;")
+                    li(style="color:white;margin:5px;border-bottom: solid 3px #EDCAD3;", onclick="window.open('/schedule.html', 'mywindow1', 'width=780, height=950, menubar=no, toolbar=no, scrollbars=yes');") スケジュール
                     li(style="color:white;margin:5px;border-bottom: solid 3px #EDCAD3;"): a(href="http://documemento.peatix.com/view", target="_blank") Peatixで予約
-                    li(style="color:white;margin:5px;border-bottom: solid 3px #EF1A32;"): a(href="http://documementows.peatix.com/", target="_blank") ワークショップも予約
+                    li(style="color:white;margin:5px;border-bottom: solid 3px #EF1A32;"): a(href="http://documementows.peatix.com/", target="_blank") ワークショップ
                     //li(style="color:white;margin:5px;border-bottom: solid 3px #EDCAD3;"): a(href="http://docu-memento.com/data/schedule.pdf", target="_blank") スケジュール
-                    li(style="color:white;margin:5px;border-bottom: solid 3px #F7A0BC;"): a(href="http://docu-memento.com/data/docu-memento_release1011.pdf", target="_blank") プレスリリース
+                    li(style="color:white;margin:5px;border-bottom: solid 3px #F7A0BC;"): a(href="http://docu-memento.com/data/docu-memento_release1011.pdf", target="_blank") 概要
                     li(style="color:white;margin:5px;border-bottom: solid 3px #87CEFA;cursor:pointer;", onclick="window.open('/about', 'mywindow1', 'width=600, height=720, menubar=no, toolbar=no, scrollbars=yes');") 事業案内
                     li(style="color:white;margin:5px;border-bottom: solid 3px #ACD341;", onclick="window.open('/contact', 'mywindow1', 'width=600, height=720, menubar=no, toolbar=no, scrollbars=yes');") お問い合わせ
 
@@ -48,6 +57,7 @@ block content
                 a-asset-item#lantan-obj(src="assets/models/lantan/lantan.obj")
                 a-asset-item#panelbox-obj(src="assets/models/panelbox/box_.obj")
                 a-asset-item#panelbox-mtl(src="assets/models/panelbox/box_.mtl")
+                a-asset-item#areamap-mtl(src="assets/models/panelbox/box_areamap.mtl")
 
                 //Panel BOX
                 a-asset-item#panelbox-uchiyama-mtl(src="assets/models/panelbox/box_uchiyama.mtl")
@@ -69,6 +79,7 @@ block content
                 a-asset-item#panelbox-tokyo-mtl(src="assets/models/panelbox/box_tokyo.mtl")
                 a-asset-item#panelbox-saitoh-mtl(src="assets/models/panelbox/box_saitoh.mtl")
 
+
                 //Prog BOX
                 a-asset-item#progbox-matsumoto0310-mtl(src="assets/models/progbox/box_matsumoto0310.mtl")
                 a-asset-item#progbox-matsumoto0410-mtl(src="assets/models/progbox/box_matsumoto0410.mtl")
@@ -80,28 +91,23 @@ block content
                 a-asset-item#progbox-kaido0413-mtl(src="assets/models/progbox/box_kaido0413.mtl")
                 a-asset-item#progbox-kaido0410-mtl(src="assets/models/progbox/box_kaido0410.mtl")
                 a-asset-item#progbox-kaido0414-mtl(src="assets/models/progbox/box_kaido0414.mtl")
-
                 a-asset-item#progbox-honshoji0313-mtl(src="assets/models/progbox/box_honshoji0313.mtl")
-                a-asset-item#progbox-honshoji0315-mtl(src="assets/models/progbox/box_honshoji0315.mtl")
+                a-asset-item#progbox-honshoji0316-mtl(src="assets/models/progbox/box_honshoji0316.mtl")
                 a-asset-item#progbox-honshoji0411-mtl(src="assets/models/progbox/box_honshoji0411.mtl")
                 a-asset-item#progbox-honshoji0412-mtl(src="assets/models/progbox/box_honshoji0412.mtl")
                 a-asset-item#progbox-honshoji0416-mtl(src="assets/models/progbox/box_honshoji0416.mtl")
-
                 a-asset-item#progbox-yatai0316-mtl(src="assets/models/progbox/box_yatai0316.mtl")
                 a-asset-item#progbox-yatai0318-mtl(src="assets/models/progbox/box_yatai0318.mtl")
+                a-asset-item#progbox-yatai0320-mtl(src="assets/models/progbox/box_yatai0320.mtl")
                 a-asset-item#progbox-yatai0417-mtl(src="assets/models/progbox/box_yatai0417.mtl")
                 a-asset-item#progbox-yatai0419-mtl(src="assets/models/progbox/box_yatai0419.mtl")
                 a-asset-item#progbox-yatai0421-mtl(src="assets/models/progbox/box_yatai0421.mtl")
-
                 a-asset-item#progbox-unagi0410-mtl(src="assets/models/progbox/box_unagi0410.mtl")
                 a-asset-item#progbox-unagi0414-mtl(src="assets/models/progbox/box_unagi0414.mtl")
-
                 a-asset-item#progbox-kenkou0410-mtl(src="assets/models/progbox/box_kenkou0410.mtl")
                 a-asset-item#progbox-kenkou0414-mtl(src="assets/models/progbox/box_kenkou0414.mtl")
-
                 a-asset-item#progbox-kuromon0310-mtl(src="assets/models/progbox/box_kuromon0310.mtl")
                 a-asset-item#progbox-kuromon0415-mtl(src="assets/models/progbox/box_kuromon0415.mtl")
-
 
 
                 //3D models - numbers
@@ -130,10 +136,12 @@ block content
                 img#img_kaijo(src="assets/img/cmenu_venue.png")
                 img#img_toudansha(src="assets/img/cmenu_toudansha.png")
                 img#img_program(src="assets/img/cmenu_program.png")
+                img#img_areamap(src="assets/img/cmenu_areamap.png")
                 img#img_aboutfes(src="assets/img/cmenu_documemento.png")
                 img#img_aboutfes_j(src="assets/img/cmenu_documemento_j.png")
+
                 img#topinfo1(src="assets/img/top_info1024.png")
-                //img#topinfo2(src="assets/img/top_info2_1024.png")
+                img#topinfo2(src="assets/img/top_info2_1024.png")
                 img#topinfo3(src="assets/img/top_info3_1024.png")
 
                 //PROGRAMS
@@ -147,7 +155,7 @@ block content
                 img#img_prog_kaido0413(src="assets/img/p/prog_kaido0413_s.png")
                 img#img_prog_kaido0414(src="assets/img/p/prog_kaido0414_s.png")
                 img#img_prog_honshoji0313(src="assets/img/p/prog_honshoji0313_s.png")
-                img#img_prog_honshoji0315(src="assets/img/p/prog_honshoji0315_s.png")
+                img#img_prog_honshoji0316(src="assets/img/p/prog_honshoji0316_s.png")
                 img#img_prog_honshoji0412(src="assets/img/p/prog_honshoji0412_s.png")
                 img#img_prog_honshoji0416(src="assets/img/p/prog_honshoji0416_s.png")
                 img#img_prog_yatai0316(src="assets/img/p/prog_yatai0316_s.png")
@@ -217,7 +225,7 @@ block content
                 //のぶき
                 img#panel_nobuki_front(src="assets/img/panelists/p_text_nobuki2.png")
                 img#panel_nobuki_back(src="assets/img/panelists/p_nobuki2.png")
-                //斎藤
+                //さいとうりょうじ
                 img#panel_saitoh_front(src="assets/img/panelists/p_text_saitoh.png")
                 img#panel_saitoh_back(src="assets/img/panelists/p_saitoh.png")
                 //中村
@@ -244,14 +252,23 @@ block content
                 //河崎
                 img#panel_kawasaki_front(src="assets/img/panelists/p_text_kawasaki.png")
                 img#panel_kawasaki_back(src="assets/img/panelists/p_kawasaki.png")
-
+                //汪楠
+                img#panel_wannan_front(src="assets/img/panelists/p_text_wannan.png")
+                img#panel_wannan_back(src="assets/img/panelists/p_wannan.png")
+                //柳田
+                img#panel_yanagida_front(src="assets/img/panelists/p_text_yanagida.png")
+                img#panel_yanagida_back(src="assets/img/panelists/p_yanagida.png")
 
 
             ///////////////////  3D MODELS
 
             a-entity#panelbox1(panelbox, position="0 45 -3")
                 a-animation(attribute="rotation", from="0 100 0", to="0 -260 0", dur="15000", easing="linear", repeat="indefinite")
-                a-collada-model(position="0 0 0", rotation="0 20 0", scale="0.8 0.8 0.8", obj-model="obj: #panelbox-obj; mtl: #panelbox-mtl")
+                a-collada-model(position="0 -0.1 0", rotation="0 20 0", scale="0.75 0.75 0.75", obj-model="obj: #panelbox-obj; mtl: #panelbox-mtl")
+
+            a-entity#areamapbox(panelbox, position="0 45 -3")
+                a-animation(attribute="rotation", from="0 100 0", to="0 -260 0", dur="15000", easing="linear", repeat="indefinite")
+                a-collada-model(position="0 -0.1 0", rotation="0 20 0", scale="0.75 0.75 0.75", obj-model="obj: #panelbox-obj; mtl: #areamap-mtl")
 
             a-entity#lantan(position="0.5 45 -3")
                 a-animation(attribute="rotation", from="0 100 0", to="0 -260 0", dur="15000", easing="linear", repeat="indefinite")
@@ -286,7 +303,7 @@ block content
                 a-cylinder(position="0 0 0", radius="5.99", height="0.03", side="back", open-ended="true", color="#ef12a4",opacity="0.5")
 
                 a-entity#programs
-                    a-image(prog, id="matsumoto0310", type="prog", src="#img_prog_matsumoto0310", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
+                    a-image(prog, id="matsumoto0310", type="prog", href="/assets/site/prog_jodou.html" src="#img_prog_matsumoto0310", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
                         a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
@@ -348,28 +365,28 @@ block content
                         a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
                         a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
-                    a-image(prog, id="honshoji0313", type="prog", src="#img_prog_honshoji0313", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
+                    a-image(prog, id="honshoji0313", href="/assets/site/prog_hourou.html", type="prog", src="#img_prog_honshoji0313", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
                         a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
                         a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
                         a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
-                    a-image(prog, id="honshoji0315", type="prog", src="#img_prog_honshoji0315", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
+                    a-image(prog, id="honshoji0316", href="/assets/site/prog_heishia.html", type="prog", src="#img_prog_honshoji0316", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
                         a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
                         a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
                         a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
-                    a-image(prog, id="honshoji0412", type="prog", src="#img_prog_honshoji0412", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
+                    a-image(prog, id="honshoji0412", href="/assets/site/prog_hourou.html", type="prog", src="#img_prog_honshoji0412", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
                         a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
                         a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
                         a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
-                    a-image(prog, id="honshoji0416", type="prog", src="#img_prog_honshoji0416", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
+                    a-image(prog, id="honshoji0416", href="/assets/site/prog_tanaka.html", type="prog", src="#img_prog_honshoji0416", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
                         a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
@@ -460,8 +477,6 @@ block content
                         a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
                         a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
-
-
                 a-entity#venues
                     a-image#venue_yataimura(venu, name="yatai", type="venue", src="#img_venue_yataimura", width="5", height="12", scale="0.2 0.2 1", auto_rotate, n=0)
                     a-image#venue_honshoji(venu, name="honshoji", type="venue", src="#img_venue_honshoji", width="5", height="12", scale="0.2 0.2 1", auto_rotate, n=1)
@@ -475,7 +490,7 @@ block content
                 a-entity#topinfo
                     a-image#top_topinfo1(prog, type="topinfo", src="#topinfo1", y=2.3, width="4", height="6", scale="0.5 0.5 1", n=0)
                     a-image#top_topinfo3(prog, href="/about", type="topinfo", src="#topinfo3", y=2.3, width="4", height="6", scale="0.5 0.5 1", n=4)
-                    //a-image#top_topinfo2(prog, type="topinfo", src="#topinfo2", y=2.3, width="4", height="6", scale="0.5 0.5 1", n=5)
+                    a-image#top_topinfo2(prog, href="https://motion-gallery.net/projects/documemento", type="topinfo", src="#topinfo2", y=2.3, width="4", height="6", scale="0.5 0.5 1", n=5)
 
             /////////////////  Panellers
 
@@ -497,7 +512,7 @@ block content
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
 
-                a-image(id="hidaka", type="panel", paneler, src="#panel_hidaka_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_hidaka_back")
+                a-image(id="hidaka", type="panel", audio="audio_hidaka", href="/assets/site/hidaka.html", paneler, src="#panel_hidaka_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_hidaka_back")
                    //
                     a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
@@ -511,14 +526,14 @@ block content
                     a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="saitoh", type="panel", paneler, src="#panel_saitoh_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_saitoh_back")
+                a-image(id="saitoh", type="panel", audio="audio_saitoh", paneler, src="#panel_saitoh_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_saitoh_back")
                     //
                      a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                      a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="okuma", type="panel", paneler, src="#panel_okuma_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_okuma_back")
+                a-image(id="okuma", type="panel", audio="audio_okuma", href="/assets/site/okuma.html", paneler, src="#panel_okuma_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_okuma_back")
                    //
                     a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
@@ -539,7 +554,7 @@ block content
                     a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="kawasaki", type="panel", paneler, src="#panel_kawasaki_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_kawasaki_back")
+                a-image(id="kawasaki", type="panel", paneler, href="/assets/site/kawasaki.html", src="#panel_kawasaki_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_kawasaki_back")
                     //
                      a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
@@ -560,7 +575,7 @@ block content
                     a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="uchiyama", type="panel", paneler, src="#panel_uchiyama_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_uchiyama_back")
+                a-image(id="uchiyama", type="panel", paneler, href="/assets/site/uchiyama.html",src="#panel_uchiyama_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_uchiyama_back")
                    //
                     a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
@@ -574,63 +589,76 @@ block content
                     a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="nobuki", type="panel", paneler, src="#panel_nobuki_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_nobuki_back")
-                   //
-                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
-                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="nakamura", type="panel", paneler, src="#panel_nakamura_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_nakamura_back")
-                   //
-                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
-                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="adachi", type="panel", paneler, src="#panel_adachi_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_adachi_back")
-                   //
-                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
-                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="miyashita", type="panel", paneler, src="#panel_miyashita_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_miyashita_back")
-                   //
-                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
-                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="sakuragi", type="panel", paneler, src="#panel_sakuragi_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_sakuragi_back")
-                   //
-                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
-                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
-                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="moca", type="panel", paneler, src="#panel_moca_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_moca_back")
+                a-image(id="wannan", type="panel", paneler, src="#panel_wannan_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_wannan_back")
                     //
                      a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                      a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="satoc", type="panel", paneler, src="#panel_satoc_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_satoc_back")
+                a-image(id="nobuki", type="panel", audio="audio_nobuki", paneler, href="/assets/site/nobuki.html", src="#panel_nobuki_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_nobuki_back")
+                   //
+                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
+                a-image(id="nakamura", type="panel", href="/assets/site/nakamura.html", audio="audio_nakamura", paneler, src="#panel_nakamura_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_nakamura_back")
+                   //
+                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
+                a-image(id="adachi", type="panel", audio="audio_adachi", paneler, src="#panel_adachi_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_adachi_back")
+                   //
+                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
+                a-image(id="miyashita", type="panel", audio="audio_miyashita", paneler, href="/assets/site/miyashita.html", src="#panel_miyashita_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_miyashita_back")
+                   //
+                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
+                a-image(id="sakuragi", type="panel", audio="audio_sakuragi", paneler, href="/assets/site/sakuragi.html", src="#panel_sakuragi_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_sakuragi_back")
+                   //
+                    a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
+                    a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
+                a-image(id="moca", type="panel", paneler, href="/assets/site/moca.html", src="#panel_moca_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_moca_back")
                     //
                      a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                      a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="nishihara", type="panel", paneler, src="#panel_nishihara_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_nishihara_back")
+                a-image(id="satoc", type="panel", audio="audio_satoc", paneler, href="/assets/site/satoc.html", src="#panel_satoc_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_satoc_back")
                     //
                      a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                      a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                      a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-
+                a-image(id="nishihara", type="panel", paneler, href="/assets/site/nishihara.html", src="#panel_nishihara_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_nishihara_back")
+                    //
+                     a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                     a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                     a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
+                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
+                a-image(id="yanagida", type="panel", paneler, src="#panel_yanagida_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_yanagida_back")
+                    //
+                     a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                     a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                     a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
+                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
+                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
 
 
             //On CURVE MENU
@@ -638,9 +666,9 @@ block content
                 a-curvedimage#about_venu(curvemenu, type="venue", src="#img_kaijo", radius="5.9",height="1.2", theta-length="14", angle="0",n=0)
                 a-curvedimage#about_program(curvemenu, type="venue", src="#img_program", radius="5.9",height="1.2", theta-length="14", n=1)
                 a-curvedimage#about_toudansha(curvemenu, type="venue", src="#img_toudansha", radius="5.9",height="1.2", theta-length="14", n=2)
-
                 a-curvedimage#about_fes(curvemenu, type="venue", src="#img_aboutfes", radius="5.9", height="1.2", theta-length="14", position="0 0 0", n=6)
                 a-curvedimage#about_fes_j(curvemenu, type="venue", src="#img_aboutfes_j", radius="5.9", height="1.2", theta-length="14", position="0 0 0", n=7)
+                a-curvedimage#about_areamap(curvemenu, type="venue", href="http://docu-memento.com/map.html", src="#img_areamap", radius="5.9", height="1.2", theta-length="14", position="0 0 0", n=8)
 
             //a-curvedimage#logo_bug(curvemenu, type="misc", alink, src="#img_logo_bug", radius="5.7",height="0.5", theta-length="6", position="0 -0.3 0", href="http://bugdoc.tokyo/", angle="0",angle_to="235", def_angle="235")
             //a-curvedimage#logo_tokyodocs(curvemenu, type="misc", alink, src="#img_logo_tokyodocs", radius="5.7",height="0.5", theta-length="10", position="0 -0.3 0",href="http://tokyodocs.jp/", angle="0", angle_to="242", def_angle="242")

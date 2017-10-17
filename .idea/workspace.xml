@@ -2,8 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55982872-3994-4767-a8e1-b9ed15e2e292" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/models/panelbox/box_areamap.mtl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/hidaka.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/kawasaki.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/miyashita.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/moca.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/nakamura.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/nishihara.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/nobuki.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/prog_heishia.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/prog_hourou.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/prog_jodou.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/prog_tanaka.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/sakuragi.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/satoc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/site/uchiyama.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/schedule.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/schedule.jade" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0310.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0414.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0315.mtl" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0316.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/cmenu_documemento.png" afterPath="$PROJECT_DIR$/public/assets/img/cmenu_documemento.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/cmenu_documemento_j.png" afterPath="$PROJECT_DIR$/public/assets/img/cmenu_documemento_j.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/cmenu_program.png" afterPath="$PROJECT_DIR$/public/assets/img/cmenu_program.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/cmenu_toudansha.png" afterPath="$PROJECT_DIR$/public/assets/img/cmenu_toudansha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/cmenu_venue.png" afterPath="$PROJECT_DIR$/public/assets/img/cmenu_venue.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/documemento_h60_w350.png" afterPath="$PROJECT_DIR$/public/assets/img/documemento_h60_w350.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_honshoji0313_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_honshoji0313_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_honshoji0315_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_honshoji0315_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_honshoji0412_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_honshoji0412_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_honshoji0416_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_honshoji0416_s.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0310_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0310_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0312_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0312_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0313_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0313_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0410_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0410_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0414_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_kaido0414_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_kenkou0414_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_kenkou0414_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_kuromon0310_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_kuromon0310_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_kuromon0415_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_kuromon0415_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_matsumoto0410_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_matsumoto0410_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_matsumoto0414_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_matsumoto0414_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_yatai0318_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_yatai0318_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_yatai0320_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_yatai0320_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_yatai0419_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_yatai0419_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/p/prog_yatai0421_s.png" afterPath="$PROJECT_DIR$/public/assets/img/p/prog_yatai0421_s.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/img/top_info2_1024.png" afterPath="$PROJECT_DIR$/public/assets/img/top_info2_1024.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0416.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0416.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0310.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0310.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0312.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0312.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0313.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0313.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0410.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0410.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0414.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0414.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_kenkou0414.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_kenkou0414.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_kuromon0310.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_kuromon0310.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_kuromon0415.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_kuromon0415.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_matsumoto0410.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_matsumoto0410.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_matsumoto0414.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_matsumoto0414.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0318.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0318.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0320.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0320.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0419.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0419.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0421.png" afterPath="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0421.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/aframe/components/index.js" afterPath="$PROJECT_DIR$/public/js/aframe/components/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/aframe/index_main.js" afterPath="$PROJECT_DIR$/public/js/aframe/index_main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/lib/common.js" afterPath="$PROJECT_DIR$/public/js/lib/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.ts" afterPath="$PROJECT_DIR$/routes/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index_new.jade" afterPath="$PROJECT_DIR$/views/index_new.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index_tmp.jade" afterPath="$PROJECT_DIR$/views/index_tmp.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,12 +82,65 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="262">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="306">
       <file leaf-file-name="index_new.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index_new.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7155">
-              <caret line="477" column="22" lean-forward="false" selection-start-line="477" selection-start-column="22" selection-end-line="477" selection-end-column="22" />
+            <state relative-caret-position="352">
+              <caret line="26" column="162" lean-forward="false" selection-start-line="26" selection-start-column="162" selection-end-line="26" selection-end-column="162" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schedule.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/schedule.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="38" column="52" lean-forward="false" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prog_tanaka.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assets/site/prog_tanaka.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="37" column="38" lean-forward="false" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#4;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#7;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#9;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#10;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#13;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="okuma.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/site/okuma.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schedule.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/schedule.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="61" lean-forward="false" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -30,48 +149,18 @@
       <file leaf-file-name="index_main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/aframe/index_main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="889">
+              <caret line="462" column="7" lean-forward="false" selection-start-line="462" selection-start-column="0" selection-end-line="462" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bubbles.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/samples/bubbles.html">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hotel_room.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/samples/hotel_room.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jap_text.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/samples/jap_text.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lesson1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/samples/lesson1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1029">
+              <caret line="117" column="6" lean-forward="false" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -80,44 +169,16 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/aframe/components/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="119" column="17" lean-forward="true" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
+            <state relative-caret-position="96">
+              <caret line="382" column="71" lean-forward="true" selection-start-line="382" selection-start-column="71" selection-end-line="382" selection-end-column="91" />
               <folding>
+                <element signature="e#37#343#0" expanded="false" />
                 <element signature="e#381#2375#0" expanded="false" />
                 <element signature="e#2413#2923#0" expanded="false" />
+                <element signature="e#2967#3948#0" expanded="false" />
                 <element signature="e#3989#4262#0" expanded="false" />
                 <element signature="e#4300#4589#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lesson2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/samples/lesson2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lesson3.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/samples/lesson3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_tmp.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index_tmp.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="19" selection-end-column="205" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -136,9 +197,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>children</find>
-      <find>def_angle</find>
-      <find>jsondataloader</find>
       <find>addEvent</find>
       <find>click</find>
       <find>&quot;key&quot;</find>
@@ -152,7 +210,6 @@
       <find>large</find>
       <find>top_topinfo1</find>
       <find>venues</find>
-      <find>window</find>
       <find>angular.fo</find>
       <find>name</find>
       <find>kuwayama</find>
@@ -166,6 +223,10 @@
       <find>ng-</find>
       <find>http</find>
       <find>scope</find>
+      <find>panelbox1</find>
+      <find>lantan</find>
+      <find>window</find>
+      <find>window.</find>
     </findStrings>
     <replaceStrings>
       <replace>img</replace>
@@ -190,34 +251,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/data/vote.json" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0311.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0411.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0311.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0411.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_matsumoto0311.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_matsumoto0411.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0317.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0417.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_unagi0414.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_unagi0410.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_kenkou0411.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_kenkou0414.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0420.mtl" />
-        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0320.mtl" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/views/vote_i.jade" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/public/about.html" />
-        <option value="$PROJECT_DIR$/views/about.jade" />
         <option value="$PROJECT_DIR$/views/mailsuccess.jade" />
         <option value="$PROJECT_DIR$/views/layout_i.jade" />
         <option value="$PROJECT_DIR$/views/contact.jade" />
         <option value="$PROJECT_DIR$/views/index.jade" />
-        <option value="$PROJECT_DIR$/views/index_tmp.jade" />
-        <option value="$PROJECT_DIR$/routes/index.ts" />
-        <option value="$PROJECT_DIR$/public/js/lib/common.js" />
-        <option value="$PROJECT_DIR$/public/js/aframe/components/index.js" />
         <option value="$PROJECT_DIR$/public/assets/models/progbox/box_kenkou0410.mtl" />
         <option value="$PROJECT_DIR$/public/assets/models/progbox/box_kuromon0310.mtl" />
         <option value="$PROJECT_DIR$/public/assets/models/progbox/box_kuromon0415.mtl" />
@@ -239,8 +276,32 @@
         <option value="$PROJECT_DIR$/public/assets/models/progbox/box_yatai0421.mtl" />
         <option value="$PROJECT_DIR$/public/data/seats.json" />
         <option value="$PROJECT_DIR$/public/assets/models/progbox/box_kaido0410.mtl" />
-        <option value="$PROJECT_DIR$/views/index_new.jade" />
+        <option value="$PROJECT_DIR$/public/assets/models/panelbox/box_areamap.mtl" />
+        <option value="$PROJECT_DIR$/views/index_tmp.jade" />
+        <option value="$PROJECT_DIR$/routes/index.ts" />
         <option value="$PROJECT_DIR$/public/js/aframe/index_main.js" />
+        <option value="$PROJECT_DIR$/public/js/lib/common.js" />
+        <option value="$PROJECT_DIR$/public/assets/site/hidaka.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/nakamura.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/nishihara.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/sakuragi.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/miyashita.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/nobuki.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/moca.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/kawasaki.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/satoc.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/uchiyama.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/prog_heishia.html" />
+        <option value="$PROJECT_DIR$/public/js/aframe/components/index.js" />
+        <option value="$PROJECT_DIR$/public/assets/site/prog_kuwayama.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/prog_hourou.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/prog_jodou.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/okuma.html" />
+        <option value="$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0316.mtl" />
+        <option value="$PROJECT_DIR$/views/schedule.jade" />
+        <option value="$PROJECT_DIR$/views/index_new.jade" />
+        <option value="$PROJECT_DIR$/public/schedule.html" />
+        <option value="$PROJECT_DIR$/public/assets/site/prog_tanaka.html" />
       </list>
     </option>
   </component>
@@ -262,10 +323,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="59" />
-    <option name="y" value="43" />
-    <option name="width" value="1691" />
-    <option name="height" value="1176" />
+    <option name="x" value="604" />
+    <option name="y" value="908" />
+    <option name="width" value="1539" />
+    <option name="height" value="1177" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -283,8 +344,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -306,17 +365,14 @@
               <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="samples" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DocuMementWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="socketio" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DocuMementWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -327,6 +383,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -351,11 +409,11 @@
       <recent name="$PROJECT_DIR$/public/media/er/shinagawa" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/assets/models/progbox" />
+      <recent name="$PROJECT_DIR$/public/assets/site" />
       <recent name="$PROJECT_DIR$/views" />
-      <recent name="$PROJECT_DIR$/public/data" />
-      <recent name="$PROJECT_DIR$/public/assets/video" />
       <recent name="$PROJECT_DIR$/public/assets/models/panelbox" />
+      <recent name="$PROJECT_DIR$/public/assets/models/progbox" />
+      <recent name="$PROJECT_DIR$/public/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -484,12 +542,15 @@
       <workItem from="1507743811740" duration="3783000" />
       <workItem from="1507882009589" duration="2236000" />
       <workItem from="1507996472825" duration="12113000" />
-      <workItem from="1508060977754" duration="7000" />
+      <workItem from="1508060977754" duration="891000" />
+      <workItem from="1508083463308" duration="8036000" />
+      <workItem from="1508196753001" duration="746000" />
+      <workItem from="1508197633122" duration="17530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="420929000" />
+    <option name="totallyTimeSpent" value="448125000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -501,18 +562,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="43" width="1691" height="1176" extended-state="0" />
+    <frame x="604" y="908" width="1539" height="1177" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27046695" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21442886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972324" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35066164" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09726157" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -549,296 +611,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/about.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/mailsuccess.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/vendor/aframe/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/vendor/aframe-html-shader/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout_i.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="49" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="150" column="6" lean-forward="false" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/contact.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="56" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/lib/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kenkou0414.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kuromon0310.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kuromon0415.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_matsumoto0311.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_matsumoto0310.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_matsumoto0410.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_matsumoto0414.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kaido0310.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kaido0312.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kaido0313.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kaido0413.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0313.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0412.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0315.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0416.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_yatai0317.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_yatai0316.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_yatai0316.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kenkou0410.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_yatai0318.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_yatai0419.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_yatai0421.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/data/seats.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="203" column="21" lean-forward="true" selection-start-line="203" selection-start-column="21" selection-end-line="203" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kaido0410.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kaido0414.mtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kenkou0411.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_kenkou0411.mtl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/aframe/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="119" column="17" lean-forward="true" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
-          <folding>
-            <element signature="e#381#2375#0" expanded="false" />
-            <element signature="e#2413#2923#0" expanded="false" />
-            <element signature="e#3989#4262#0" expanded="false" />
-            <element signature="e#4300#4589#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index_tmp.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="19" selection-end-column="205" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,19 +623,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index_new.jade">
+    <entry file="file://$PROJECT_DIR$/public/assets/models/panelbox/box_areamap.mtl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7155">
-          <caret line="477" column="22" lean-forward="false" selection-start-line="477" selection-start-column="22" selection-end-line="477" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/aframe/index_main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -867,7 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -875,7 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -891,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -899,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -907,7 +669,336 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index_tmp.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/lib/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/hidaka.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/nakamura.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="751">
+          <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/nishihara.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/sakuragi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="68" lean-forward="false" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/miyashita.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="69" lean-forward="false" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/nobuki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="66" lean-forward="false" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/moca.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/kawasaki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/satoc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p12.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p11.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p10.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p9.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p13.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p14.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p15.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p8.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p7.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p6.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/p1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/k4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/k3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/img/uchiyama/k2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/uchiyama.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#6;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#7;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#9;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#10;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#12;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#13;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#15;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#16;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#18;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#19;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#21;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#22;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#24;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#25;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#27;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#28;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#30;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#31;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/models/progbox/box_honshoji0316.mtl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/prog_hourou.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="49" column="19" lean-forward="false" selection-start-line="48" selection-start-column="15" selection-end-line="49" selection-end-column="19" />
+          <folding>
+            <element signature="e#3032#3040#0" expanded="true" />
+            <element signature="e#3106#3111#0" expanded="true" />
+            <element signature="e#4296#4304#0" expanded="true" />
+            <element signature="e#5427#5435#0" expanded="true" />
+            <element signature="e#5452#5459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/prog_jodou.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/okuma.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/prog_heishia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1029">
+          <caret line="117" column="6" lean-forward="false" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/schedule.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="61" lean-forward="false" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/aframe/index_main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="889">
+          <caret line="462" column="7" lean-forward="false" selection-start-line="462" selection-start-column="0" selection-end-line="462" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/aframe/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="382" column="71" lean-forward="true" selection-start-line="382" selection-start-column="71" selection-end-line="382" selection-end-column="91" />
+          <folding>
+            <element signature="e#37#343#0" expanded="false" />
+            <element signature="e#381#2375#0" expanded="false" />
+            <element signature="e#2413#2923#0" expanded="false" />
+            <element signature="e#2967#3948#0" expanded="false" />
+            <element signature="e#3989#4262#0" expanded="false" />
+            <element signature="e#4300#4589#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index_new.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="26" column="162" lean-forward="false" selection-start-line="26" selection-start-column="162" selection-end-line="26" selection-end-column="162" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/schedule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="38" column="52" lean-forward="false" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/site/prog_tanaka.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="37" column="38" lean-forward="false" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#4;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#7;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#9;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#10;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#13;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
