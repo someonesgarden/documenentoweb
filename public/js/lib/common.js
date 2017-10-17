@@ -11,11 +11,13 @@ var  toggleaudio = function(audioname=window.nowaudio) {
 
     if(audioname!=""){
         var audio = document.getElementById(audioname);
+
         window.nowaudio = audioname;
 
         if(audio != undefined){
             if (audio.paused) {
                 audio.play();
+
             }else{
                 audio.pause();
                 audio.currentTime = 0;

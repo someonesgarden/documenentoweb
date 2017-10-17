@@ -19,6 +19,7 @@ block content
     audio(src="assets/mp3/nakamura.mp3", id="audio_nakamura")
     audio(src="assets/mp3/nobuki.mp3", id="audio_nobuki")
     audio(src="assets/mp3/okuma.mp3", id="audio_okuma")
+    audio(src="assets/mp3/uchiyama.mp3", id="audio_uchiyama")
     div#loader(style="position: absolute; height: 100%; width: 100%;background-color:green;z-index:0;"): div.spinner(style="margin-top:30%")
     if !mobile
         div.topnav.text-right(style="background-image:url('assets/img/documemento_h60_w350.png');background-size:contain;background-repeat:no-repeat;")
@@ -28,7 +29,7 @@ block content
                     li(style="color:white;margin:5px;border-bottom: solid 3px #EDCAD3;"): a(href="http://documemento.peatix.com/view", target="_blank") Peatixで予約
                     li(style="color:white;margin:5px;border-bottom: solid 3px #EF1A32;"): a(href="http://documementows.peatix.com/", target="_blank") ワークショップ
                     //li(style="color:white;margin:5px;border-bottom: solid 3px #EDCAD3;"): a(href="http://docu-memento.com/data/schedule.pdf", target="_blank") スケジュール
-                    li(style="color:white;margin:5px;border-bottom: solid 3px #F7A0BC;"): a(href="http://docu-memento.com/data/docu-memento_release1011.pdf", target="_blank") 概要
+                    li(style="color:white;margin:5px;border-bottom: solid 3px #F7A0BC;"): a(href="http://docu-memento.com/data/docu-memento_release1017.pdf", target="_blank") 概要
                     li(style="color:white;margin:5px;border-bottom: solid 3px #87CEFA;cursor:pointer;", onclick="window.open('/about', 'mywindow1', 'width=600, height=720, menubar=no, toolbar=no, scrollbars=yes');") 事業案内
                     li(style="color:white;margin:5px;border-bottom: solid 3px #ACD341;", onclick="window.open('/contact', 'mywindow1', 'width=600, height=720, menubar=no, toolbar=no, scrollbars=yes');") お問い合わせ
 
@@ -414,7 +415,7 @@ block content
                         a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
                         a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
-                    a-image(prog, id="yatai0417", type="prog", src="#img_prog_yatai0417", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
+                    a-image(prog, id="yatai0417", type="prog", href="/assets/site/prog_kaihouku.html", src="#img_prog_yatai0417", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
                         a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
@@ -449,14 +450,14 @@ block content
                         a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
                         a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
-                    a-image(prog, id="unagi0410", type="prog", src="#img_prog_unagi0410", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
+                    a-image(prog, id="unagi0410", type="prog", href="/assets/site/prog_hakego.html", src="#img_prog_unagi0410", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
                         a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
                         a-collada-model.d3(position="0.3 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
                         a-collada-model.d4(position="0.75 6.5 0", rotation="0 0 0", scale="1 1 0.2", num3D, num="0", type="limit")
 
-                    a-image(prog, id="unagi0414", type="prog", src="#img_prog_unagi0414", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
+                    a-image(prog, id="unagi0414", type="prog", href="/assets/site/prog_hakego.html", src="#img_prog_unagi0414", width="5", height="13", scale="0.2 0.2 1", auto_rotate)
                         a-collada-model.d1(position="-0.95 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model.d2(position="-0.4 6.5 0", rotation="0 0 0", scale="1.2 1.2 0.2", num3D, num="0")
                         a-collada-model(position="0 6.5 0", rotation="0 0 0", scale="1 1 0.2",'obj-model'="obj: #num_-obj; mtl: #red-mtl")
@@ -547,7 +548,7 @@ block content
                     a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="ota", type="panel", paneler, src="#panel_ota_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_ota_back")
+                a-image(id="ota", type="panel", paneler, href="/assets/site/ota.html", src="#panel_ota_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_ota_back")
                    //
                     a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
@@ -575,7 +576,7 @@ block content
                     a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="uchiyama", type="panel", paneler, href="/assets/site/uchiyama.html",src="#panel_uchiyama_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_uchiyama_back")
+                a-image(id="uchiyama", type="panel", audio="audio_uchiyama", paneler, href="/assets/site/uchiyama.html",src="#panel_uchiyama_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_uchiyama_back")
                    //
                     a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
@@ -610,7 +611,7 @@ block content
                     a-collada-model.d3(position="0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="up")
                     a-collada-model(arrow,scale="0.6 0.6 0.6", type="down")
-                a-image(id="adachi", type="panel", audio="audio_adachi", paneler, src="#panel_adachi_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_adachi_back")
+                a-image(id="adachi", type="panel", href="/assets/site/adachi.html", audio="audio_adachi", paneler, src="#panel_adachi_front", width="4", height="8",position="0 0 3",  scale="0.5 0.5 0.5", backsrc="#panel_adachi_back")
                    //
                     a-collada-model.d1(position="-0.3 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")
                     a-collada-model.d2(position="0 3 0", rotation="0 0 0", scale="0.6 0.6 0.6", num3D, num="0")

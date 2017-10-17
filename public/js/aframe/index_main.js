@@ -383,6 +383,7 @@ about_areamap.on('click', function(){
 // 3d model
 var largehousemove = function(mode,videourl=""){
 
+    console.log("videourl=",videourl);
     var largehouse_y = largehouse.attr("position").y;
 
     var y0 = 0;
