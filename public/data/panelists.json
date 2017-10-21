@@ -1,109 +1,122 @@
 {
-  "kawai": {
-    "name": "河合宏樹",
-    "img": "kawai",
-    "title": "河合さんのタイトル"
+  "sein": {
+    "name": "Sein Lyan Tun",
+    "img": "sein",
+    "title": "アジアの最後のフロンティアから、ドキュメンタリー。"
   },
-  "saitoh": {
-    "name": "さいとうりょうじ",
-    "img": "saitoh",
-    "title": "さいとうさんのタイトル"
+  "wannan": {
+    "name": "汪楠",
+    "img": "wannan",
+    "title": "『ドラゴンから見つめる、明るい未来のドキュメンタリー。』"
   },
-  "ota": {
-    "name": "太田信吾",
-    "img": "ota",
-    "title": "太田さんのタイトル"
-  },
-  "nobuki": {
-    "name": "プロギャンブラーのぶき",
-    "img": "nobuki"
-  },
-  "matsui": {
-    "name": "松井至",
-    "img": "matsui"
-  },
-  "takeoka": {
-    "name": "竹岡寛俊",
-    "img": "takeoka"
-  },
-  "uchiyama": {
-    "name": "内山直樹",
-    "img": "uchiyama",
-    "title": ""
-  },
-  "hidaka": {
-    "name": "日高成樹",
-    "img": "hidaka"
-  },
-  "kawasaki": {
-    "name": "河崎純真"
-  },
-  "kan": {
-    "name": "関強",
-    "img": "kan"
-  },
-  "fujioka": {
-    "name": "藤岡朝子",
-    "img": "fujioka"
-  },
-  "someonesgarden": {
-    "name": "サムワンズガーデン",
-    "img": "someonesgarden"
-  },
-  "yonemoto": {
-    "name": "米本直樹",
-    "img": "yonemoto",
-    "title": "『ドキュメンタリーの未来：その時テレビにできること。』"
-  },
-  "tokyo": {
-    "name": "東京小童",
-    "img": "tokyo"
-  },
-  "nakamura": {
-    "name": "中村真夕",
-    "img": "nakamura"
-  },
-  "okuma": {
-    "name": "奥間勝也",
-    "img": "okuma"
-  },
-  "adachi": {
-    "name": "安達茉莉子",
-    "img":"adachi",
-    "title":"『言葉とイラスト』で物語を。"
-  },
-  "sakuragi": {
-    "name": "桜木奈央子",
-    "img":"sakuragi",
-    "title":"アフリカ星空映画館。子どもたちに「別の生き方の可能性」を"
-  },
-  "miyashita": {
-    "name": "宮下千峰",
-    "img":"miyashita",
-    "title":"私、学校作ります。"
-  },
-  "rikishers": {
-    "name": "リキシャーズ"
-  },
-  "mano": {
-    "name": "真野勉（BRT)"
+  "yanagida": {
+    "name": "柳田香帆",
+    "img": "yanagida",
+    "title": "『“最果て”の芸術祭』"
   },
   "nishihara": {
-    "name": "西原孝至"
+    "name":"西原孝至",
+    "img":"nishihara",
+    "title":"『トーキョーガールズブラボー。』"
   },
-  "nakagome": {
-    "name": "中込孝規"
+  "satoc":{
+    "name":"Sato-C",
+    "img":"satoc",
+    "title":"『サラリーマンでも夢を見るYO。』"
   },
-  "maki": {
-    "name": "Maki (黒瀬 万紀)"
+  "moca": {
+    "name":"MOCA",
+    "img":"moca",
+    "title":"『性転換と自殺超えて。』"
   },
-  "sato": {
-    "name": "SATO-C"
+  "sakuragi": {
+    "name":"桜木奈央子",
+    "img":"sakuragi",
+    "title":"『アフリカ星空映画館。子供達に「別の生き方の可能性」を。』"
   },
-  "kou": {
-    "name": "汪楠"
+  "uchiyama": {
+    "name":"内山直樹",
+    "img":"uchiyama",
+    "title":"『コンゴ民主共和国のプロレスは、やばかった。』"
   },
-  "kuwayama": {
-    "name": "桑山篤"
+  "miyashita": {
+    "name":"宮下千峰",
+    "img":"miyashita",
+    "title":"『私、学校つくります。』"
+  },
+  "adachi": {
+    "name":"安達茉莉子",
+    "img":"adachi",
+    "title":"『言葉とイラストで「物語」を。』"
+  },
+  "nakamura": {
+    "name":"中村真夕",
+    "img":"nakamura",
+    "title":"『鈴木邦男：右翼ってなんだ？。』"
+  },
+  "nobuki": {
+    "name":"プロギャンブラーのぶき",
+    "img":"nobuki",
+    "title":"『世界６周してハッピーのヒントをドキュメンタリー。』"
+  },
+  "yonemoto": {
+    "name":"米本直樹",
+    "img":"yonemoto",
+    "title":"『私が米本です。』"
+  },
+  "kawasaki": {
+    "name":"河崎純真",
+    "img":"kawasaki",
+    "title":"『共感資本論 。 アスペとサイコと自閉症、とドキュメンタリー。』"
+  },
+  "shinpuku": {
+    "name":"新福剣士",
+    "img":"shinpuku",
+    "title":"俺の生き方自体がドキュメンタリー！"
+  },
+  "madben": {
+    "name":"MAD-BENN",
+    "img":"madben",
+    "title":"『ヒップホップを不良から取り戻せ！ビジネスマンラップの逆襲』"
+  },
+  "ota": {
+    "name":"太田信吾",
+    "img":"ota",
+    "title":"『新作ドキュメンタリー映画「言葉、ダイナマイト」(仮題)』"
+  },
+  "kawai": {
+    "name":"河合宏樹",
+    "img":"kawai",
+    "title":"『存在そのものが声』"
+  },
+  "takeoka": {
+    "name":"竹岡寛俊",
+    "img":"takeoka",
+    "title":"『ボケとツッコミ、ドキュメンタリー。』"
+  },
+  "okuma": {
+    "name":"奥間勝也",
+    "img":"okuma",
+    "title":"『沖縄で表現を続けるラッパーRittoをドキュメント』"
+  },
+  "saitoh": {
+    "name":"さいとうりょうじ",
+    "img":"saitoh",
+    "title":"『真理だけを濾過する、音の世界の真実。』"
+  },
+  "kan": {
+    "name":"関強",
+    "img":"kan",
+    "title":"『アジア・中国、日本。ドキュメンタリーの余白。』"
+  },
+  "hidaka": {
+    "name":"日高成樹",
+    "img":"hidaka",
+    "title":"『「いいね！」ボク。』"
+  },
+  "someonesgarden": {
+    "name":"サムワンズガーデン",
+    "img":"someonesgarden",
+    "title":"ゲームチェンジング・ドキュメンタリー"
   }
 }

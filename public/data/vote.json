@@ -1,1 +1,28 @@
-{"vote":{"fujioka":"000","nobuki":"000","yonemoto":"000","saitoh":"000","rikishers":"000","someonesgarden":"000","hidaka":"000","adachi":"000","tokyo":"000","takeoka":"000","matsui":"000","okuma":"000","ota":"000","uchiyama":"000","reset":"000","kuwayama":"000","nakamura":"000","kawai":"000","sakuragi":"000","sato":"000","miyashita":"000","kan":"000"}}
+{
+  "vote": {
+    "yanagida": "039",
+    "nishihara": "039",
+    "satoc": "023",
+    "moca": "022",
+    "sakuragi": "022",
+    "uchiyama": "022",
+    "miyashita": "020",
+    "adachi": "019",
+    "nakamura": "018",
+    "nobuki": "017",
+    "yonemoto": "017",
+    "wannan": "016",
+    "sein": "011",
+    "kawasaki": "010",
+    "shinpuku": "009",
+    "madben": "008",
+    "ota": "007",
+    "kawai": "007",
+    "takeoka": "006",
+    "okuma": "005",
+    "saitoh": "004",
+    "kan": "003",
+    "hidaka": "002",
+    "someonesgarden": "001"
+  }
+}

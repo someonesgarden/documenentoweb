@@ -57,17 +57,15 @@ document.visible_model = infobox;
 
 /////////// VoteDataLoader
 var jsondataloader = function(){
-    /*
     d3.json("data/vote.json", function (error, data) {
         votes = data.vote;
-        console.log("votes");
-        console.log(votes);
+        //console.log("votes");
+        //console.log(votes);
         for(var i = 0; i < panellers.length; i++) setVoteDigit(panellers[i], votes);
     });
-      */
 
     d3.json("data/seats.json", function(error, data){
-        console.log(programs[i]);
+        //console.log(programs[i]);
         for(var i = 0; i< programs.length; i++) setDigit(programs[i], data.seats);
     });
 
@@ -108,8 +106,8 @@ var setDigit = function(v, seats){
     var d3 = v.querySelector('.d3');
     var d4 = v.querySelector('.d4');
 
-    console.log("name=",name);
-    console.log("seats=",seats);
+    //console.log("name=",name);
+    //console.log("seats=",seats);
     if(seats[name]!=undefined){
         var res_str = seats[name].num;
         var max_str = seats[name].max;

@@ -19,6 +19,8 @@
 </head>
 <body style="background-color:#F0E3D2;">
 <div class="container">
+    <div id="sns-area" style="top:0px;"></div>
+    <br><br>
     <div class="row text-center"><img src="/assets/site/img/hidaka.png" style="width:100%;height:auto;padding-top:10px;"/></div>
     <div class="row well-lg">
         <div class="infoarea">
@@ -46,5 +48,10 @@
             <br clear="all"></div>
     </div>
 </div>
+
+<script>// シェア時に使用する値
+var shareUrl = 'http://docu-memento.com:3000/assets/site/hidaka.html'; // 現在のページURLを使用する場合 location.href;
+var shareText = 'ドキュ・メメント映画祭登壇者：日高成樹'; // 現在のページタイトルを使用する場合 document.title;</script>
+<script src="/js/lib/sharebutton.js"></script>
 </body>
 </html>

@@ -37,32 +37,32 @@ block content
             p.btn.btn-default.btn-group-justified(ng-click="resetvotes()") 投票をリセットする
 
 
-        div.row.well-lg
-            div#seat_list.col.col-xs-12
-
-                div.row.panel_area(ng-repeat="(key,val) in seats")
-                    div.col-xs-12.date_area
-                        h1 {{parseDate(val.date) | date:'M/d'}} {{val.time}} <span style="float:right;">@{{val.venue}}</span>
-
-                    div.col-xs-4
-                        h3 予約数 {{val.num | numberFixedLen:2 }}
-                    div.col-xs-4(style="background-color:#fff;")
-                        h3.text-center.vote_button.nr(ng-click="upaction(key,'num')") ↑
-                    div.col-xs-4(style="background-color:#aaa;")
-                        h3.text-center.vote_button.nr(ng-click="downaction(key,'num')") ↓
-
-                    div.col-xs-4
-                        h3(style="color:orange") 最大数 {{val.max | numberFixedLen:2 }}
-                    div.col-xs-4(style="background-color:#ffe;")
-                        h3.text-center.vote_button.nr(style="color:orange", ng-click="upaction(key,'max')") ↑
-                    div.col-xs-4(style="background-color:#bba;")
-                        h3.text-center.vote_button.nr(style="color:orange", ng-click="downaction(key,'max')") ↓
-
-                    div.col.col-xs-4
-                        img.panel_img.ng-cloak(src="assets/img/smt/programs/prog_{{key}}.png")
-                    div.col.col-xs-8.panel_item.text-right
-                        h3(ng-bind-html="val.subtitle")
-                        h4.text-right(ng-bind-html="val.title")
+        //div.row.well-lg
+        //    div#seat_list.col.col-xs-12
+        //
+        //        div.row.panel_area(ng-repeat="(key,val) in seats")
+        //            div.col-xs-12.date_area
+        //                h1 {{parseDate(val.date) | date:'M/d'}} {{val.time}} <span style="float:right;">@{{val.venue}}</span>
+        //
+        //            div.col-xs-4
+        //                h3 予約数 {{val.num | numberFixedLen:2 }}
+        //            div.col-xs-4(style="background-color:#fff;")
+        //                h3.text-center.vote_button.nr(ng-click="upaction(key,'num')") ↑
+        //            div.col-xs-4(style="background-color:#aaa;")
+        //                h3.text-center.vote_button.nr(ng-click="downaction(key,'num')") ↓
+        //
+        //            div.col-xs-4
+        //                h3(style="color:orange") 最大数 {{val.max | numberFixedLen:2 }}
+        //            div.col-xs-4(style="background-color:#ffe;")
+        //                h3.text-center.vote_button.nr(style="color:orange", ng-click="upaction(key,'max')") ↑
+        //            div.col-xs-4(style="background-color:#bba;")
+        //                h3.text-center.vote_button.nr(style="color:orange", ng-click="downaction(key,'max')") ↓
+        //
+        //            div.col.col-xs-4
+        //                img.panel_img.ng-cloak(src="assets/img/smt/programs/prog_{{key}}.png")
+        //            div.col.col-xs-8.panel_item.text-right
+        //                h3(ng-bind-html="val.subtitle")
+        //                h4.text-right(ng-bind-html="val.title")
     script.
         var socketresponse = function (data) {
             console.log(data.value);

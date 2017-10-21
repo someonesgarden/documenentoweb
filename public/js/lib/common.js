@@ -84,7 +84,6 @@ function votesSort(obj){
     for (var i = 0; i < ary.length; i++) {
         obj[ary[i].name] = ary[i].vote;
     }
-
     return obj;
 }
 

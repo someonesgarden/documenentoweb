@@ -18,8 +18,12 @@ html
     script(src="/js/socketio/client.js")
 
     script(src="/vendor/jquery/dist/jquery.js")
+
+
+
     script(src="/vendor/bootstrap/dist/js/bootstrap.js")
     script(src="/vendor/angular/angular.js")
+
     script(src="/vendor/angular-local-storage/dist/angular-local-storage.js")
     script(src="/vendor/angular-animate/angular-animate.js")
     script(src="/vendor/angular-cookies/angular-cookies.js")
@@ -27,6 +31,8 @@ html
     script(src="/vendor/angular-route/angular-route.js")
     script(src="/vendor/angular-sanitize/angular-sanitize.js")
     script(src="/vendor/angular-touch/angular-touch.js")
+
+    script(src="/vendor/angularfire/dist/angularfire.min.js")
 
     script(src="/vendor/d3/d3.js")
     script(src="/vendor/aframe/dist/aframe-master.js")
@@ -45,8 +51,21 @@ html
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Work+Sans")
     link(rel="stylesheet", href="/vendor/bootstrap/dist/css/bootstrap.min.css")
     link(rel="stylesheet", href="/css/style.css")
+    //firebase
+    script(src="/vendor/firebase/firebase.js")
     script.
-      var app = angular.module('vrApp', ["ngResource"]);
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBbe1h3JbFh4PA25cGYG4I6UsJ2I6CgYzM",
+            authDomain: "documemento-658f9.firebaseapp.com",
+            databaseURL: "https://documemento-658f9.firebaseio.com",
+            projectId: "documemento-658f9",
+            storageBucket: "documemento-658f9.appspot.com",
+            messagingSenderId: "135857611062"
+            };
+        var fireApp = firebase.initializeApp(config);
+    script.
+      var app = angular.module('vrApp', ["ngResource","firebase"]);
 
     block header
 

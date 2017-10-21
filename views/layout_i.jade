@@ -29,6 +29,19 @@ html
     link(rel="stylesheet", href="/vendor/bootstrap/dist/css/bootstrap.min.css")
     link(rel="stylesheet", href="/vendor/glyphicons/styles/glyphicons.css")
     link(rel="stylesheet", href="/css/style.css")
+    //firebase
+    script(src="/vendor/firebase/firebase.js")
+    script.
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBbe1h3JbFh4PA25cGYG4I6UsJ2I6CgYzM",
+            authDomain: "documemento-658f9.firebaseapp.com",
+            databaseURL: "https://documemento-658f9.firebaseio.com",
+            projectId: "documemento-658f9",
+            storageBucket: "documemento-658f9.appspot.com",
+            messagingSenderId: "135857611062"
+            };
+        var fireApp = firebase.initializeApp(config);
     script.
         var app = angular.module('voteApp', ["ngResource",'ngSanitize']);
 

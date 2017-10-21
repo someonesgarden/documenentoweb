@@ -90,6 +90,7 @@ router.get('/v', (req, res, next) => {
     //var json    = fs.readFileSync("public/data/panelists.json","utf-8");
     //var obj     = JSON.parse(json);
     //var panels  = obj.panels;
+    console.log("vote_api_server");
     res.render('vote_i', {title: 'DOCU-MEMENTO投票システム', mobile: true});
 });
 

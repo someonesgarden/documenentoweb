@@ -16,7 +16,7 @@ block content
                 a.navbar-brand(href="#")
                     strong DOCUMEMENTO 投票モード
 
-            div.collapse.navbar-collapse
+            div.collapse.navbar-collapse#navbarCollapse
                     ul.nav.navbar-nav
                         li
                             a(href="/i") トップ
@@ -24,8 +24,8 @@ block content
                             a(href="/dev") VRモード
                         li.active
                             a(href="/v") ピッチ投票
-                        li
-                            a(href="/s") 席状況
+                        //li
+                        //    a(href="/s") 席状況
                         li
                             a(href="/admin") 管理者用
 
@@ -35,9 +35,10 @@ block content
         div.row.well-lg
             div.infoarea
                 div.col.col-xs-3.text-danger
-                    p 投票方法
+                    p 投票システムについて
                 div.col-xs-9
-                    p ピッチ登壇者のリストから投票して下さい。
+                    p 携帯とPCサイトがリアルタイムに連動してます。サイトの各登壇者の上にある数字が増えたり減ったりします。
+                    | 今は実験段階ですので、本番が始まったらカウンターをリセットします。
                 br(clear="all")
 
         div.row.well-lg
@@ -45,7 +46,8 @@ block content
                 div.col.col-xs-12
                             div.row.panel_area(ng-repeat="(key,val) in votes")
                                 div.col.col-xs-3
-                                    img.panel_img.ng-cloak(src="assets/img/panelists/p_{{panels[key].img?panels[key].img:'dummy'}}.png")
+                                    a(href="/assets/site/{{panels[key].img}}.html")
+                                        img.panel_img.ng-cloak(src="assets/img/panelists/p_{{panels[key].img?panels[key].img:'dummy'}}.png")
                                 div.col.col-xs-9.panel_item
                                     h4.text-right {{panels[key].name}}
                                     p.text-right {{panels[key].title}}
@@ -72,26 +74,66 @@ block content
 
         var socketseatresponse = function(data) {
         };
+        var ObjArraySort = function(ary, key, order) {
+            var reverse = 1;
+            if (order && order.toLowerCase() == "desc")
+                reverse = -1;
+            ary.sort(function (a, b) {
+                if (a[key] < b[key])
+                    return -1 * reverse;
+                else if (a[key] == b[key])
+                    return 0;
+                else
+                    return 1 * reverse;
+            });
+        }
 
-        app.controller('AppController', ['$scope', '$http','$window',  function ($scope, $http,$window) {
+        var votesSort = function(obj) {
+            var ary = [];
+            for (var i = 0; i < Object.keys(obj).length; i++) {
+                ary[i] = {'vote': obj[Object.keys(obj)[i]], 'name': Object.keys(obj)[i]};
+            }
+            ObjArraySort(ary, 'vote', "desc");
+            obj = {};
+            for (var i = 0; i < ary.length; i++) {
+                obj[ary[i].name] = ary[i].vote;
+            }
+            return obj;
+        };
+
+        app.controller('AppController', ['$scope', '$http','$window','$interval', function ($scope, $http,$window,$interval) {
+
 
             $scope.panels ={};
             $scope.votes = {};
+            $scope.loadVote = function(){
 
-            $http.get('./data/vote.json')
-                .then(function(res){
+                $http.get('./data/vote.json')
+                    .then(function(res){
 
-                    $scope.votes = res.data.vote;
-                    $http.get('./data/panelists.json')
-                        .then(function (res) {
-                            $scope.panels = res.data;
-                            angular.forEach($scope.panels, function (val, key) {
-                                val.vote = $scope.votes[key];
+                        $scope.votes = res.data.vote;
+                        $http.get('./data/panelists.json')
+                            .then(function (res) {
+                                $scope.panels = res.data;
+                                angular.forEach($scope.panels, function (val, key) {
+                                    val.vote = $scope.votes[key];
+                                });
                             });
-                        });
-                });
+                    });
+
+                console.log("load data");
+            };
+
+
+            $scope.loadVote();
+            var timer = $interval(function () {
+                $scope.loadVote();
+            }, 1000*5);
+
+
 
             $scope.upaction = function(key){
+
                 var vote = parseInt($scope.panels[key].vote);
 
                 if (vote < 999 && vote != undefined) {
@@ -99,11 +141,14 @@ block content
                 } else {
                     vote = 0;
                 }
+
+
                 var vote = ('000'+ vote).slice(-3);
                 $scope.panels[key].vote = vote;
                 $scope.votes[key] = vote;
                 $scope.votes = votesSort($scope.votes);
-                if(!$scope.$$phase) {
+
+                if(!$scope.$$phase){
                     $scope.$apply();
                 }
 
@@ -118,6 +163,7 @@ block content
             };
 
             $scope.downaction = function(key){
+
                 var vote = parseInt($scope.panels[key].vote);
                 if(vote>0 && vote != undefined){
                     vote--;

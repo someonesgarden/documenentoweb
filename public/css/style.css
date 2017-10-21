@@ -132,3 +132,41 @@ img.titleheader{
   -webkit-user-select: none; /* Safari、Chromeなど */
   -ms-user-select: none; /* IE10かららしい */
 }
+
+
+p.twitter_icon{
+   width:35px;
+   height:35px;
+   background-image:url('/assets/img/icons/tw_square.png');
+   background-size:contain;
+  margin:3px;
+ }
+
+p.fb_icon{
+  width:35px;
+  height:35px;
+  background-image:url('/assets/img/icons/fb_square.png');
+  background-size:contain;
+  margin:3px;
+}
+
+p.ln_icon{
+  width:35px;
+  height:35px;
+  background-image:url('/assets/img/icons/ln_square.png');
+  background-size:contain;
+  margin:3px;
+}
+
+ a.share_button_a{
+ }
+
+ #sns-area{
+   position:absolute;
+   right:10px;
+   top:70px;
+ }
+
+ .twitter-btn, .facebook-btn, .line-btn{
+   float:left;
+ }
