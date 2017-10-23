@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>旅旅トーク</title><!--socketIO-->
+
+    <script src="/vendor/jquery/dist/jquery.js"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/glyphicons/styles/glyphicons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <style>a, a:hover, a:visited {
+        color: #35bb47;
+    }
+</style>
+</head>
+<body style="background-color:#F0E3D2;">
+<div class="container">
+    <div id="sns-area" style="top:0px;"></div>
+    <br><br>
+    <div class="row text-center"><img src="/assets/site/img/prog_tabitabi.png" style="width:100%;height:auto;padding-top:10px;padding-bottom:10px;"/></div>
+    <div class="row well-lg">
+        <div class="infoarea">
+            <div class="col col-xs-12">
+                <h2>古くから旅人が行き交ってきた東海道に、新世代の旅人たちがやってくる！</h2>
+            </div>
+            <div class="col-xs-12">
+                <p>
+                    ディレクター内山直樹によるドキュメンタリープロジェクト『旅旅しつれいします。』（2017年・NHK総合にて放送）から広がった旅人ネットワークが「KAIDO Books&Coffee」に集結。
+                </p>
+    <p>
+                    すすんで引かれたレールから脱線し、オリジナルな仕事や世界観を作り出す旅人たちが本音でトークセッション。
+        </p>
+                <p>
+
+                ゾッとするような、でもなんだかワクワクするスリリングな話に、耳を傾けよ！
+                    ひとつの視点で世界を定点観測することで研ぎ澄まされてきた彼らの生き様が、交差する瞬間に刮目せよ！
+    </p>
+                <p>
+                    これから旅に出たい人、常識にとらわれない生き方をしたい人、自分の旅（生き方）を作りにきてください。
+                </p>
+                <hr>
+            </div>
+
+            <div class="col-xs-12">
+                <p>
+                   <strong> 11/3(金)　10:00～12:00　＠KAIDO books & coffee</strong>
+                </p>
+                <br>
+            </div>
+            <div class="col-xs-3">
+                <p>
+                    <strong>プロギャンブラーのぶき（旅×ギャンブル）</strong><br>
+                </p>
+            </div>
+            <div class="col-xs-9">
+                <img src="/assets/site/img/prog_tabitabi/nobuki.jpg" style="width:40%;float:right;height:auto;padding-left:12px;"/>
+                <p class="small">
+                    　ラスベガスを拠点に、世界中のカジノで勝ちながら世界6周、82カ国、旅した猛者。TEDxに日本最多の3回登　壇し、小学校から東大まで、２００回講演したそのプレゼン力は必見。<br>
+                </p>
+            </div>
+            <div class="col col-xs-12">
+                <br>
+            </div>
+
+            <div class="col-xs-3">
+                <p>
+                    <strong>中込孝規（旅×ダンス）</strong><br>
+
+                </p>
+            </div>
+            <div class="col-xs-9">
+                <img src="/assets/site/img/prog_tabitabi/nakagome.jpg" style="width:40%;float:right;height:auto;padding-left:12px;"/>
+                <p class="small">
+                    　　　世界一万人にダンスを教え、日本とアフリカの子供をインターネット中継で結ぶダンス教室を主宰。
+                    　　今年3月、世界経済フォーラム、通称ダボス会議にグローバルシェイパーズとして選出される。
+                    <br>
+                </p>
+            </div>
+            <div class="col col-xs-12">
+                <br>
+            </div>
+
+            <div class="col-xs-3">
+                <p>
+                    <strong>佐藤裕一（旅×昆虫食）</strong><br>
+                </p>
+            </div>
+            <div class="col-xs-9">
+                <img src="/assets/site/img/prog_tabitabi/sato.jpg" style="width:40%;float:right;height:auto;padding-left:12px;"/>
+                <p class="small">
+                    　　世界を食料危機から救うため、昆虫食の料理レシピを開発。各国を周りながら、昆虫食を模索する。
+                    　　自室で、食用ゴキブリを飼育するまでの徹底ぶり。
+
+                    <br>
+                </p>
+            </div>
+            <div class="col col-xs-12">
+                <hr>
+            </div>
+
+            <div class="col-xs-12">
+                <p>
+                    <strong> 11/4(土)　10:00～12:00　＠KAIDO books & coffee</strong>
+                </p>
+                <br>
+            </div>
+
+            <div class="col-xs-3">
+                <p>
+                    <strong>リキシャーズ（旅×人力車）</strong><br>
+                </p>
+            </div>
+            <div class="col-xs-9">
+                <img src="/assets/site/img/prog_tabitabi/rikishers.jpg" style="width:40%;float:right;height:auto;padding-left:12px;"/>
+                <p class="small">
+                    　　浅草の俥夫3人組が日本の文化を伝えるために、人力車で世界一周中！夢は東京五輪の開会式に出場。
+                    　　元気印のゆうじ、お笑い担当てんすけん、頼れる兄貴ケニーの三馬鹿トリオがおりなすドラマは、
+                    　　予測不能で見ているだけで楽しい。4日は人力車をひいて会場に登場します！
+                    <br>
+                </p>
+            </div>
+            <div class="col col-xs-12">
+                <br>
+            </div>
+
+            <div class="col-xs-3">
+                <p>
+                    <strong>平船智世子（旅×奇祭）</strong><br>
+                </p>
+            </div>
+            <div class="col-xs-9">
+                <img src="/assets/site/img/prog_tabitabi/hirafune.jpg" style="width:40%;float:right;height:auto;padding-left:12px;"/>
+                <p class="small">
+                    　　脱サラし、世界へ。５５カ国５０の祭り訪問。世界中の奇祭を巡るお祭りハンター。
+                    　　バレンタイン生まれで、ニックネームはちよこから、チョコちゃん。
+
+                    <br>
+                </p>
+            </div>
+            <div class="col col-xs-12">
+                <br>
+            </div>
+
+
+            <div class="col-xs-3">
+                <p>
+                    <strong>田中義巳（旅×フォレストガンプ）</strong><br>
+                </p>
+            </div>
+            <div class="col-xs-9">
+                <img src="/assets/site/img/prog_tabitabi/tanaka.jpg" style="width:40%;float:right;height:auto;padding-left:12px;"/>
+                <p class="small">
+                    　　　アメリカ大陸横断、スペインサンディエゴ巡礼ルート走破、東海道走破など、とにかく走って旅する、　　　　ジャーニーランのパイオニア。元祖フォレスト・ガンプは彼のことだ。
+                    <br>
+                </p>
+            </div>
+            <div class="col col-xs-12">
+                <br>
+            </div>
+
+            <div class="col-xs-3">
+                <p>
+                    <strong>嶋津 晴暉（旅×限界への挑戦）</strong><br>
+                </p>
+            </div>
+            <div class="col-xs-9">
+                <img src="/assets/site/img/prog_tabitabi/shimazu.jpg" style="width:40%;float:right;height:auto;padding-left:12px;"/>
+                <p class="small">
+                    　　　　今年、９月キリマンジャロ登山で、山頂まで残り200Mで生死を行き来した、若干21歳。
+                    　　挑戦し続ける、若者が見つめる先とは。
+                    <br>
+                </p>
+            </div>
+            <div class="col col-xs-12">
+                <br>
+            </div>
+
+            <div class="col-xs-3">
+                <p>
+                    <strong>新福剣士（旅×お祭り男）</strong><br>
+                </p>
+            </div>
+            <div class="col-xs-9">
+                <img src="/assets/site/img/prog_tabitabi/shinpuku.jpg" style="width:40%;float:right;height:auto;padding-left:12px;"/>
+                <p class="small">
+                    　　　2016年タビッポが開催する旅コンテストで優勝。現在世界一周しながらお祭り騒ぎ。
+                    　　映像発信チーム「RAW」のメンバー。
+                    <br>
+                </p>
+            </div>
+            <div class="col col-xs-12">
+                <hr>
+            </div>
+
+
+
+
+            <div class="col-xs-3">
+                <p>
+                    <strong>北野勇樹 (MC)</strong><br>
+                </p>
+            </div>
+            <div class="col-xs-9">
+                <img src="/assets/site/img/prog_tabitabi/kitano.jpg" style="width:40%;float:right;height:auto;padding-left:12px;"/>
+                <p class="small">
+                    　　　大学卒業後、1年8ヶ月で48カ国を周遊。旅先でポテトサラダを売り歩くなど、ツッコミどころ満載の旅人。　帰国後は、旅人講演家として、日本を飛び回る。京都やタイでゲストハウスも経営する実業家でもある。
+                    　株式会社SPACE 取締役。
+
+                    <br>
+                </p>
+            </div>
+            <div class="col col-xs-12">
+                <br>
+            </div>
+
+            <div class="col-xs-3">
+                <p>
+                    <strong>内山直樹 (MC)</strong><br>
+                </p>
+            </div>
+            <div class="col-xs-9">
+                <img src="/assets/site/img/prog_tabitabi/uchiyama.jpg" style="width:40%;float:right;height:auto;padding-left:12px;"/>
+                <p class="small">
+                    　ディレクターとして世界を飛びまわる二児のパパ。学生時代に旅したチベットがきっかけで映像の道へ。　　「旅旅しつれいします。」プロジェクトリーダーであり、またドキュメンタリーチーム「BUG」の中心人物。
+                    　　テレビや劇場にはないドキュメンタリーの新しい可能性を切り開くための旅を続けている。
+                    <br>
+                </p>
+            </div>
+            <div class="col col-xs-12">
+                <br>
+            </div>
+
+
+            <div class="col col-xs-6">
+                <img src="/assets/site/img/prog_tabitabi/1.jpg" style="width:100%;height:auto;"/>
+            </div>
+            <div class="col col-xs-6">
+                <img src="/assets/site/img/prog_tabitabi/2.jpg" style="width:100%;height:auto;"/>
+            </div>
+
+            <div class="col col-xs-12">
+                <br>
+            </div>
+            <div class="col col-xs-6">
+                <img src="/assets/site/img/prog_tabitabi/3.jpg" style="width:100%;height:auto;"/>
+            </div>
+            <div class="col col-xs-6">
+                <img src="/assets/site/img/prog_tabitabi/4.jpg" style="width:100%;height:auto;"/>
+            </div>
+
+            <div class="col col-xs-12">
+                <br>
+            </div>
+            <div class="col col-xs-6">
+                <img src="/assets/site/img/prog_tabitabi/5.jpg" style="width:100%;height:auto;"/>
+            </div>
+            <div class="col col-xs-6">
+                <img src="/assets/site/img/prog_tabitabi/6.jpg" style="width:100%;height:auto;"/>
+            </div>
+
+            <div class="col col-xs-12">
+                <br>
+            </div>
+            <div class="col col-xs-6">
+                <img src="/assets/site/img/prog_tabitabi/7.jpg" style="width:100%;height:auto;"/>
+            </div>
+            <div class="col col-xs-6">
+                <img src="/assets/site/img/prog_tabitabi/8.jpg" style="width:100%;height:auto;"/>
+            </div>
+            <div class="col col-xs-12">
+                <br>
+            </div>
+
+            <div class="col col-xs-12">
+                <img src="/assets/site/img/prog_tabitabi/0.jpg" style="width:100%;height:auto;"/>
+            </div>
+
+
+
+
+            <div class="col col-xs-12">
+                <br>
+            </div>
+
+
+
+            <br clear="all"></div>
+    </div>
+</div>
+<script>// シェア時に使用する値
+var shareUrl = 'http://docu-memento.com/'; // 現在のページURLを使用する場合 location.href;
+var shareText = 'ドキュ・メメント映画祭：旅旅トーク'; // 現在のページタイトルを使用する場合 document.title;</script>
+<script src="/js/lib/sharebutton.js"></script>
+</body>
+</html>

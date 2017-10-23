@@ -34,6 +34,7 @@
     "glyphicons": "^0.0.2",
     "share-button": "^1.0.3",
     "angularfire": "^2.3.0",
-    "firebase": "^4.6.0"
+    "firebase": "^4.6.0",
+    "angular-bootstrap": "0.12.0"
   }
 }

@@ -6,7 +6,7 @@ block header
 
 block content
     nav#myNavbar.navbar.navbar-default.navbar-inverse.navbar-fixed-top(role="navigation")
-        div.container
+        div.container-fluid
             div.navbar-header
                 button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbarCollapse")
                     span.sr-only Toggle navigation
@@ -18,52 +18,88 @@ block content
 
             div.collapse.navbar-collapse#navbarCollapse
                 ul.nav.navbar-nav
-                    li
-                        a(href="/i") トップ
-                    li
-                        a(href="/dev") VRモード
-                    li
-                        a(href="/v") ピッチ投票
-                    li.active
-                        a(href="/s") 席状況
-                    li
-                        a(href="/admin") 管理者用
+                    li: a(href="/i") トップ
+                    li:a(href="/dev") VRモード
+                    li:a(href="/v") ピッチ投票
+                    li.active: a(href="/s") 席状況
+                    li: a(href="/admin") 管理者用
 
-    div.container#AppController(ng-controller="AppController", style="margin-top:57px;")
+    div.container-fluid#AppController(ng-controller="AppController", style="margin-top:57px;")
+
         div.row.well-lg
-            div.col-xs-12
-            h2 管理用
+                div.col-xs-12
+                h2 予約管理用
+                hr
+            div.col-md-4
+                form(data-toggle="validator",role="form")
+                    div.form-group
+                        label.control-label(for="inputname") <span class="label label-danger">必須項目</span> お名前
+                        input#inputname.form-control.has-feedback(type="text", name="name",placeholder="名前を入力", ng-model="reserve.name", data-required-error="名前の入力は必須です", required)
+                        div.help-block.with-errors
+
+                    div.form-group
+                        label.control-label(for="useremail") <span class="label label-danger">必須項目</span> Eメール
+                        input#useremail.form-control(type="text", name="num",placeholder="Eメールを入力", ng-model="reserve.email", data-required-error="Eメールの入力は必須です", required)
+                        div.help-block.with-errors
+
+                    div.form-group
+                        label.control-label(for="num") <span class="label label-danger">必須項目</span> 予約番号
+                        input#num.form-control(type="text", name="num",placeholder="予約番号を入力", ng-model="reserve.num", data-required-error="予約番号の入力は必須です", required)
+                        div.help-block.with-errors
+
+                    div.form-group
+                        label.control-label(for="program") <span class="label label-danger">必須項目</span> プログラム
+                        div.help-block.with-errors
+                        select#program.form-control(name="number", ng-model="reserve.program",  data-required-error="プログラムは必須です", required)
+                            option(ng-repeat="(key,val) in seats", value="{{key}}") {{val.date}}/{{val.time}}/{{val.venue}}  {{val.title}} : {{val.subtitle}}
+                    button#sendbutton.btn.btn-default(type="submit",ng-click="saveReservation()") 登録する
+                hr
+
+                div.col-xs-12
+                    h4 最大席数を変更
+                div.row.panel_area(ng-repeat="(key,val) in seats")
+                    div.col-xs-8
+                        p.small {{parseDate(val.date) | date:'M/d'}} {{val.time}} @{{val.venue}} - {{val.title}} <strong style="float:right;"> 最大席数 {{val.max | numberFixedLen:2 }}</strong>
+                    div.col-xs-2(style="background-color:#ffe;")
+                        h4.text-center.vote_button.nr(style="color:orange", ng-click="upaction(key,'max')") ↑
+                    div.col-xs-2(style="background-color:#bba;")
+                        h4.text-center.vote_button.nr(style="color:orange", ng-click="downaction(key,'max')") ↓
+                    div.col-xs-12
+                        br
+
+            div#seat_list.col.col-md-8
+
+                ul.list-inline
+                    li  ソート
+                    li
+                        a(ng-click="sortReserves('num','asc')") 予約番号順
+                    li
+                        a(ng-click="sortReserves('program','asc')")  プログラム順
+                    li
+                        a(ng-click="sortReserves('name','asc')")  お名前順
+
+                div.row.panel_area
+                    div.col-xs-12(ng-repeat="val in reserves",style="margin:5px;")
+                        p
+                            button.btn.btn-default(style="margin:0px;padding:0px 5px 0px 5px;", ng-click="deleteReserve(val.key)") x
+                            strong &nbsp;&nbsp;No.{{val.num}}[<a href="mailto:{{val.email}}">{{val.name}}</a>] &nbsp;&nbsp;&nbsp;&nbsp;
+                            |    {{seats[val.program].title}}/{{seats[val.program].subtitle}}/{{seats[val.program].venue}}
+
+        div.col-xs-12
+            hr
+            h2 投票管理用
         div.row.well-lg
-            p.btn.btn-default.btn-group-justified(ng-click="resetvotes()") 投票をリセットする
+            div.col-xs-4
+                p 全投稿をリセット
+            div.col-xs-8
+                p.btn.btn-default.btn-group-justified(ng-click="resetvotes()") 投票をリセットする
 
 
-        //div.row.well-lg
-        //    div#seat_list.col.col-xs-12
-        //
-        //        div.row.panel_area(ng-repeat="(key,val) in seats")
-        //            div.col-xs-12.date_area
-        //                h1 {{parseDate(val.date) | date:'M/d'}} {{val.time}} <span style="float:right;">@{{val.venue}}</span>
-        //
-        //            div.col-xs-4
-        //                h3 予約数 {{val.num | numberFixedLen:2 }}
-        //            div.col-xs-4(style="background-color:#fff;")
-        //                h3.text-center.vote_button.nr(ng-click="upaction(key,'num')") ↑
-        //            div.col-xs-4(style="background-color:#aaa;")
-        //                h3.text-center.vote_button.nr(ng-click="downaction(key,'num')") ↓
-        //
-        //            div.col-xs-4
-        //                h3(style="color:orange") 最大数 {{val.max | numberFixedLen:2 }}
-        //            div.col-xs-4(style="background-color:#ffe;")
-        //                h3.text-center.vote_button.nr(style="color:orange", ng-click="upaction(key,'max')") ↑
-        //            div.col-xs-4(style="background-color:#bba;")
-        //                h3.text-center.vote_button.nr(style="color:orange", ng-click="downaction(key,'max')") ↓
-        //
-        //            div.col.col-xs-4
-        //                img.panel_img.ng-cloak(src="assets/img/smt/programs/prog_{{key}}.png")
-        //            div.col.col-xs-8.panel_item.text-right
-        //                h3(ng-bind-html="val.subtitle")
-        //                h4.text-right(ng-bind-html="val.title")
+
+
+    //script(src="/js/lib/firebaseapp.js")
     script.
+
         var socketresponse = function (data) {
             console.log(data.value);
             var element = document.getElementById("AppController");
@@ -76,14 +112,92 @@ block content
             }
         };
 
-        app.controller('AppController', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
+        app.controller('AppController', ['$scope', '$http', '$window', '$firebase', '$firebaseObject', '$firebaseArray',   function ($scope, $http, $window, $firebase,$firebaseObject, $firebaseArray) {
+
+            // -------------- FireBase START  --------------------------------------
+            var ref = firebase.database().ref().child("reserves");
+            //var fary = $firebaseArray(ref);
+            var fobj = $firebaseObject(ref);
+
+            $scope.getReserveById = function(id){
+                return fobj(this.ref.child(id));
+            }
+
+            $scope.getReserveByIndex = function(index){
+                var key = fary.$keyAt(index);
+                console.log(key);
+                var reserveRef = this.ref.child(key);
+                return fobj(reserveRef);
+            };
+
+            $scope.writeReserve = function(postData){
+                // Get a key for a new Post.
+                var newPostKey = firebase.database().ref().child('reserves').push().key;
+                // Write the new post's data simultaneously in the posts list and the user's post list.
+                var updates = {};
+                updates['/form/' + newPostKey] = postData;
+                //updates['/posts/' + newPostKey] = postData;
+                //updates['/user-posts/test/' + newPostKey] = postData;
+                return ref.update(updates);
+            }
+
+            $scope.addReserve = function(item){
+                fobj.$add(item);
+            }
+
+            $scope.updateReserve = function(item){
+                var res =fobj.$save(item);
+                return true;
+            }
+
+            $scope.updateReserveById = function(id){
+                var obj = $firebaseObject(this.ref.child(id));
+                fobj.$save(obj);
+            }
+
+            $scope.removeReserveById = function(id){
+                var obj = $firebaseObject(ref.child('/form/' + id));
+                obj.$remove();
+            };
+
+            $scope.removeReserve = function(item){
+                item.$remove();
+            }
+
+            $scope.removeReserveByIndex = function(index){
+                fobj.$remove(index);
+            };
+
+            // -------------- FireBase END  --------------------------------------
+
+
+
+            ////////////
             $scope.programs = {};
-            $scope.votes = {};
+            $scope.votes    = {};
+            $scope.reserves = [];
+            $scope.sort_key = "num";
+            $scope.sort_order ="desc";
+
+            $scope.loadReserves = function(){
+                fobj.$loaded().then(function (loaded) {
+                    $scope.reserves = [];
+                    angular.forEach(loaded.form, function (val, key) {
+                        val.key = key;
+                        $scope.reserves.push(val);
+                    });
+                });
+                ObjArraySort($scope.reserves, $scope.sort_key, $scope.sort_order);
+            };
+
+            $scope.loadReserves();
+
+            // ------ DATA LOADING -------------------------------------
+
             d3.json("data/vote.json", function (error, data) {
                 $scope.votes = data.vote;
             });
-
 
             $scope.resetvotes = function(){
                 angular.forEach($scope.votes, function (val, key) {
@@ -97,8 +211,9 @@ block content
                             votes:$scope.votes
                         });
                     });
-
             }
+            // ----------------------------------------------
+
 
             $scope.parseDate = function (d) {
                 var rep = d.replace(/-/g, "/");
@@ -106,9 +221,11 @@ block content
                 return new Date(date);
             }
 
-            $http.get('./data/seats.json')
+            $http.get('./data/programs.json')
                 .then(function (res) {
                     $scope.seats = res.data.seats;
+
+                    console.log($scope.seats);
                 });
 
             $scope.upaction = function (key,mode) {
@@ -167,4 +284,42 @@ block content
                         });
                     });
             };
+
+            ///Date Picker
+            $scope.date = new Date();
+            $scope.datePickerOpen = false;
+            $scope.toggleDatePicker = function ($event) {
+                // これが重要！！！
+                $event.stopPropagation();
+                console.log("click picker");
+                $scope.datePickerOpen = !$scope.datePickerOpen;
+            };
+
+
+            //---- ACTION
+            $scope.saveReservation = function(){
+                if($scope.reserve.program!=undefined && $scope.reserve.name!=undefined && $scope.reserve.num!=undefined){
+                    $scope.writeReserve($scope.reserve);
+                }
+                $scope.loadReserves();
+            }
+
+            $scope.sortReserves = function(key,order){
+                $scope.sort_key = key;
+                $scope.sort_order = order;
+
+                ObjArraySort($scope.reserves, $scope.sort_key, $scope.sort_order);
+                if (!$scope.$$phase) {
+                    $scope.$apply();
+                }
+            }
+
+            $scope.deleteReserve = function(key){
+                $scope.removeReserveById(key);
+                $scope.loadReserves();
+                if (!$scope.$$phase) {
+                    $scope.$apply();
+                }
+            }
+
         }]);

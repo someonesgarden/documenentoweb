@@ -51,6 +51,7 @@ var about_areamap = d3.select('#about_areamap');
 // Logo
 var votes;
 var seats;
+var res_counts = {};
 
 document.mode = "infobox";
 document.visible_model = infobox;
@@ -63,12 +64,6 @@ var jsondataloader = function(){
         //console.log(votes);
         for(var i = 0; i < panellers.length; i++) setVoteDigit(panellers[i], votes);
     });
-
-    d3.json("data/seats.json", function(error, data){
-        //console.log(programs[i]);
-        for(var i = 0; i< programs.length; i++) setDigit(programs[i], data.seats);
-    });
-
 };
 
 var setVoteDigit = function(p, votes){
@@ -99,20 +94,24 @@ var setVoteDigit = function(p, votes){
 
 
 
-var setDigit = function(v, seats){
+var setDigit = function(v, seats, res_counts){
     var name = v.getAttribute("id");
     var d1 = v.querySelector('.d1');
     var d2 = v.querySelector('.d2');
     var d3 = v.querySelector('.d3');
     var d4 = v.querySelector('.d4');
 
-    //console.log("name=",name);
-    //console.log("seats=",seats);
     if(seats[name]!=undefined){
-        var res_str = seats[name].num;
+
+
+        var res_str = res_counts[name];
+        if(res_str!=undefined){
+            if(!isNaN(res_str)) res_str =('00' + res_str).slice(-2); //数値の場合、3桁の文字列に変換
+            var d1_ = res_str.substr(0, 1); d1.setAttribute("num", d1_); d1.pause(); d1.play();
+            var d2_ = res_str.substr(1, 1); d2.setAttribute("num", d2_); d2.pause(); d2.play();
+        }
+
         var max_str = seats[name].max;
-        var d1_ = res_str.substr(0, 1); d1.setAttribute("num", d1_); d1.pause(); d1.play();
-        var d2_ = res_str.substr(1, 1); d2.setAttribute("num", d2_); d2.pause(); d2.play();
         var d3_ = max_str.substr(0, 1); d3.setAttribute("num", d3_); d3.pause(); d3.play();
         var d4_ = max_str.substr(1, 1); d4.setAttribute("num", d4_); d4.pause(); d4.play();
     }
@@ -448,12 +447,12 @@ house.on('click',function(){
 //SOCKET.IO
 var socketresponse = function (data) {
     console.log("socketresponse test",data.value.votes);
-    for(var i = 0; i < panellers.length; i++) setVoteDigit(panellers[i], data.value.votes);
+    for(var i = 0; i < panellers.length; i++) setVoteDigit(panellers[i], data.value.votes, res_counts);
 };
 
 var socketseatresponse = function(data){
     console.log("data=",data);
-    for(var i = 0; i< programs.length; i++) setDigit(programs[i], data.value.seats);
+    for(var i = 0; i< programs.length; i++) setDigit(programs[i], data.value.seats, res_counts);
 };
 
 

@@ -24,6 +24,9 @@ html
     script(src="/vendor/angular-route/angular-route.js")
     script(src="/vendor/angular-sanitize/angular-sanitize.js")
     script(src="/vendor/angular-touch/angular-touch.js")
+    script(src="/vendor/angular-bootstrap/ui-bootstrap.js")
+    script(src="/vendor/angular-bootstrap/ui-bootstrap-tpls.js")
+    script(src="/vendor/angularfire/dist/angularfire.min.js")
 
     link(rel="stylesheet", href="https://fonts.googleapis.com/earlyaccess/mplus1p.css")
     link(rel="stylesheet", href="/vendor/bootstrap/dist/css/bootstrap.min.css")
@@ -41,9 +44,11 @@ html
             storageBucket: "documemento-658f9.appspot.com",
             messagingSenderId: "135857611062"
             };
-        var fireApp = firebase.initializeApp(config);
+        firebase.initializeApp(config);
     script.
-        var app = angular.module('voteApp', ["ngResource",'ngSanitize']);
+        var app = angular.module('voteApp', ["ngResource",'ngSanitize','firebase', 'ui.bootstrap']);
+
+
 
     script(src="js/ang_filter/zpad.js")
 

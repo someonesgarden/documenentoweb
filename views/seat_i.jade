@@ -36,16 +36,18 @@ block content
             div#seat_list.col.col-xs-12
 
                 div.row.panel_area(ng-repeat="(key,val) in seats")
-                    div.col-xs-12.date_area
-                        h1 {{parseDate(val.date) | date:'M/d'}} {{val.time}} <span style="float:right;">@{{val.venue}}</span>
-                        h1 <span style="float:right;font-size:22px;"> 予約数 {{val.num | numberFixedLen:2 }} <span style="color:orange;">/  席数{{val.max | numberFixedLen:2 }}</span></span>
+                    div.col-xs-12
+                        p(style="padding-top:5px") {{parseDate(val.date) | date:'M/d'}} {{val.time}}
+                            br
+                            strong @{{val.venue}}
 
-                    div.col.col-xs-4
-                        img.panel_img.ng-cloak(src="assets/img/smt/programs/prog_{{key}}.png")
-                    div.col.col-xs-8.panel_item.text-right
-                        h3(ng-bind-html="val.subtitle")
-                        h4.text-right(ng-bind-html="val.title")
-                        p.text-right(ng-bind-html="val.desc")
+                        span(style="float:right;font-size:16px;position:absolute;top:5px;right:5px;") 予約数 {{val.num | numberFixedLen:2 }}
+                                span(style="color:orange;") / 席数{{val.max | numberFixedLen:2 }}
+                    div.col.col-xs-12.panel_item
+                        p(style="padding:3px;margin:0px;")
+                            strong {{val.title}}
+                        p(style="padding:3px;margin:0px;")  {{val.subtitle}}
+                        p.small(ng-bind-html="val.desc")
 
     script.
         var socketresponse = function (data) {

@@ -162,7 +162,7 @@ router.post('/contactmail', function (req, res, next) {
 router.post('/seatapi', function (req, res, next) {
     var seats = req.body;
     var obj = { "seats": seats };
-    writeFile("public/data/seats.json", JSON.stringify(obj));
+    writeFile("public/data/programs.json", JSON.stringify(obj));
     res.send("seatapi");
 });
 router.post('/voteapi', function (req, res, next) {
