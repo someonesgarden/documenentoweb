@@ -9,7 +9,7 @@ var sky    = document.querySelector('a-sky');
 
 //3dmodel
 var lantan = d3.select("#lantan");
-//var earth = d3.select("#earth");
+var earth = d3.select("#earth");
 var house = d3.select('#house_small');
 var largehouse = d3.select('#house_large');
 var largehouseselector   = document.querySelector('#house_large');
@@ -48,6 +48,7 @@ var about_program = d3.select('#about_program');
 var about_fes = d3.select('#about_fes');
 var about_fes_j = d3.select('#about_fes_j');
 var about_areamap = d3.select('#about_areamap');
+var about_tabitabi = d3.select('#about_tabitabi');
 // Logo
 var votes;
 var seats;
@@ -180,7 +181,8 @@ var switchModel = function (model) {
     switch(model){
 
         case "earth":
-            sky.setAttribute("src", "");
+            //sky.setAttribute("src", "");
+            model_to_change = earth;
             //model_to_change = earth;
             break;
         case "house":
@@ -245,6 +247,32 @@ scene.addEventListener('exit-vr', function () {
 
 
 // About
+
+about_tabitabi.on('click',function(){
+
+    console.log("about_tabitabi");
+    switchModel("earth");
+    //largehousemove("back");
+    largehousemove("video","ayutaya");
+    toggleaudio();
+
+    for (var i = 0; i < topinfos.length; i++) {
+        moveMenuItem2DefPos(topinfos[i]);
+    }
+
+    for (var i = 0; i < programs.length; i++) {
+        moveMenuItem(programs[i], 90);
+    }
+    for (var j = 0; j < panellers.length; j++) {
+        moveMenuItem(panellers[j], 90);
+    }
+
+    for (var j = 0; j < venues.length; j++) {
+        moveMenuItem(venues[j], 90);
+    }
+});
+
+
 about_program.on('click',function(){
     switchModel("house");
     largehousemove("back");
@@ -312,6 +340,7 @@ about_fes_j.on('click', function () {
 
 about_venu.on('click', function () {
     switchModel("lantan");
+    largehousemove("back");
     toggleaudio();
 
     for (var i = 0; i < topinfos.length; i++) {
@@ -426,6 +455,7 @@ var largehousemove = function(mode,videourl=""){
                 largehouseselector.play();
             })
             .onComplete(function () {
+                console.log("onComplete:video off");
                 sky.setAttribute("src", "");
             });
         tween.start();

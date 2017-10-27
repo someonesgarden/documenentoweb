@@ -101,3 +101,42 @@ function ObjArraySort(ary, key, order) {
     });
 }
 
+
+
+/**
+ * 緯度経度から位置を算出します
+ * @param {number} latitude 緯度
+ * @param {number} longitude 経度
+ * @param {number} radius 半径
+ * @returns {THREE.Vector3} 位置
+ */
+function translateGeoCoords(latitude, longitude, radius) {
+
+    console.log("translateGeoCoords");
+    // 仰角
+    var phi = (latitude) * Math.PI / 180;
+    // 方位角
+    var theta = (longitude + 90) * Math.PI / 180;
+
+    var x = -(radius) * Math.cos(phi) * Math.cos(theta);
+    var y = (radius) * Math.sin(phi);
+    var z = (radius) * Math.cos(phi) * Math.sin(theta);
+    return new THREE.Vector3(x,z,y);
+}
+
+
+function quaternionSet(lat, lon, rand){
+    var up          = new THREE.Vector3(0,1,0);
+    var pos_vector  = translateGeoCoords(lat,lon, rand);
+    //this.position.copy(pos_vector);
+
+    var normalAxis  = pos_vector.normalize();
+    var dir         = new THREE.Vector3();             //上記ベクトルとの内積（cosθ）
+    dir.crossVectors(up, normalAxis).normalize();
+
+    var dot = up.dot(normalAxis);     //acos関数を使ってラジアンに変換。
+    var rad = Math.acos(dot);         //回転軸用のベクトルを生成
+    var q   = new THREE.Quaternion();  //計算した回転軸と角度を元にクォータニオンをセットアップ
+    q.setFromAxisAngle(dir, rad);
+    return q;
+};

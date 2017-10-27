@@ -1,6 +1,31 @@
 window.countaction = false;
 
 
+AFRAME.registerComponent('tabi_marker', {
+
+    init:function(){
+
+        var thisentity = this.el;
+
+
+        var lat = thisentity.getAttribute('lat');
+        var lon = thisentity.getAttribute('lon');
+        var place = thisentity.getAttribute('place');
+        var r = thisentity.getAttribute('r');
+
+        var q = quaternionSet(lat,lon,r);
+        var t = translateGeoCoords(lat,lon,r);
+
+        console.log(place);
+        t.y +=1.0;
+        console.log(t);
+        thisentity.setAttribute("position",t);
+        thisentity.setAttribute("rotation",q);
+    }
+
+});
+
+
 AFRAME.registerComponent('panelbox', {
     init:function(){
         var thisentity = this.el;
@@ -333,7 +358,7 @@ AFRAME.registerComponent('curvemenu', {
             var thisentity = this.el;
             var n = thisentity.getAttribute('n');
             thisentity.angle = 0;
-            thisentity.angle_to = 115+15*n;
+            thisentity.angle_to = 105+15*n;
 
             var href = thisentity.getAttribute('href');
 
